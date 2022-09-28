@@ -1,0 +1,39 @@
+pragma solidity >=0.6.0;
+
+import "DePoolLib.sol";
+import "IProxy.sol";
+
+contract ProxyBase {
+
+    address[] m_proxies;
+
+    function getProxy(uint64 roundId) internal view inline returns (address) {
+        return m_proxies[roundId % 2];
+    }
+
+    function _recoverStake(address proxy, uint64 requestId, address elector) pure internal {
+        IProxy(proxy).recover_stake{value: DePoolLib.ELECTOR_FEE + DePoolLib.PROXY_FEE}(requestId, elector);
+    }
+
+    function _sendElectionRequest(
+        address proxy,
+        uint64 requestId,
+        uint64 validatorStake,
+        Request req,
+        address elector
+    )
+    internal pure
+    {
+        // DePoolLib.ELECTOR_FEE ton will be used by Elector to return confirmation back to DePool contract.
+        IProxy(proxy).process_new_stake{value: validatorStake + DePoolLib.ELECTOR_FEE + DePoolLib.PROXY_FEE, flag: 1}(
+            requestId,
+            req.validatorKey,
+            req.stakeAt,
+            req.maxFactor,
+            req.adnlAddr,
+            req.signature,
+            elector
+        );
+    }
+
+}

@@ -1,0 +1,814 @@
+.version sol 0.61.0
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+ENDS
+.loc ../contracts/DePoolProxy.sol, 20
+GETGLOB 9
+GETGLOB 11
+SDEQ
+THROWIFNOT 102
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro process_new_stake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 36
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 256
+	LDU 32
+	LDU 32
+	LDREF
+	ENDS
+	CTOS
+	LDU 256
+	LDREF
+}
+PUSHCONT {
+	LDU 64
+	LDU 256
+	LDU 32
+	LDU 32
+	LDU 256
+	LDREF
+	LDREF
+	ENDS
+	CTOS
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $process_new_stake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro process_new_stake_internal_macro
+.loc ../contracts/DePoolProxy.sol, 24
+GETGLOB 9
+GETGLOB 11
+SDEQ
+THROWIFNOT 102
+.loc ../contracts/DePoolProxy.sol, 27
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 1000000000
+ADD
+UFITS 128
+GEQ
+THROWIFNOT 103
+.loc ../contracts/DePoolProxy.sol, 45
+REVERSE 7, 0
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 90000000
+SUB
+UFITS 128
+ROLL 7
+NEWC
+STSLICECONST x62_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROLLREV 6
+NEWC
+STSLICECONST x4e73744b
+STU 64
+STU 256
+STU 32
+STU 32
+STU 256
+STREF
+STBREFR
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePoolProxy.sol, 0
+
+.macro onStakeAccept
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 51
+LDU 64
+LDU 32
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $onStakeAccept_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	onStakeAccept_internal
+.type	onStakeAccept_internal, @function
+CALL $onStakeAccept_internal_macro$
+
+.macro onStakeAccept_internal_macro
+.loc ../contracts/DePoolProxy.sol, 53
+GETGLOB 9
+XCHG S2
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 90000000
+SUB
+UFITS 128
+GETGLOB 11
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROLLREV 3
+NEWC
+STSLICECONST x267d782e
+STU 64
+STU 32
+STSLICE
+STBREFR
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePoolProxy.sol, 0
+
+.macro onStakeReject
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 61
+LDU 64
+LDU 32
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $onStakeReject_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	onStakeReject_internal
+.type	onStakeReject_internal, @function
+CALL $onStakeReject_internal_macro$
+
+.macro onStakeReject_internal_macro
+.loc ../contracts/DePoolProxy.sol, 62
+GETGLOB 9
+XCHG S2
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 90000000
+SUB
+UFITS 128
+GETGLOB 11
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROLLREV 3
+NEWC
+STSLICECONST x4ed902c9
+STU 64
+STU 32
+STSLICE
+STBREFR
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePoolProxy.sol, 0
+
+.macro recover_stake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 74
+OVER
+PUSHCONT {
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $recover_stake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	recover_stake_internal
+.type	recover_stake_internal, @function
+CALL $recover_stake_internal_macro$
+
+.macro recover_stake_internal_macro
+.loc ../contracts/DePoolProxy.sol, 24
+GETGLOB 9
+GETGLOB 11
+SDEQ
+THROWIFNOT 102
+.loc ../contracts/DePoolProxy.sol, 27
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 1000000000
+ADD
+UFITS 128
+GEQ
+THROWIFNOT 103
+.loc ../contracts/DePoolProxy.sol, 75
+SWAP
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 90000000
+SUB
+UFITS 128
+ROT
+NEWC
+STSLICECONST x62_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1197831204
+STUR 139
+STU 64
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePoolProxy.sol, 0
+
+.macro onSuccessToRecoverStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 79
+LDU 64
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $onSuccessToRecoverStake_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	onSuccessToRecoverStake_internal
+.type	onSuccessToRecoverStake_internal, @function
+CALL $onSuccessToRecoverStake_internal_macro$
+
+.macro onSuccessToRecoverStake_internal_macro
+.loc ../contracts/DePoolProxy.sol, 80
+GETGLOB 9
+SWAP
+DEPTH
+ADDCONST -2
+PICK
+PUSHINT 90000000
+SUB
+UFITS 128
+GETGLOB 11
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROTREV
+NEWC
+STSLICECONST x7cfb41c6
+STU 64
+STSLICE
+STBREFR
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePoolProxy.sol, 0
+
+.macro fallback_macro
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 88
+DEPTH
+ADDCONST -4
+PICK
+.loc ../contracts/DePoolProxy.sol, 89
+LDU 32
+PLDU 64
+.loc ../contracts/DePoolProxy.sol, 90
+SWAP
+PUSHINT 4294967294
+EQUAL
+PUSHCONT {
+	.loc ../contracts/DePoolProxy.sol, 91
+	GETGLOB 9
+	OVER
+	DEPTH
+	ADDCONST -2
+	PICK
+	PUSHINT 90000000
+	SUB
+	UFITS 128
+	GETGLOB 11
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	SWAP
+	STGRAMS
+	PUSHINT 1
+	STUR 107
+	ROTREV
+	NEWC
+	STSLICECONST x21ed32ee
+	STU 64
+	STSLICE
+	STBREFR
+	ENDC
+	PUSHINT 1
+	SENDRAWMSG
+	.loc ../contracts/DePoolProxy.sol, 0
+}
+IF
+.loc ../contracts/DePoolProxy.sol, 0
+DROP
+DUP
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+
+.macro receive_macro
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+
+.macro withdrawExcessTons
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 101
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $withdrawExcessTons_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	withdrawExcessTons_internal
+.type	withdrawExcessTons_internal, @function
+CALL $withdrawExcessTons_internal_macro$
+
+.macro withdrawExcessTons_internal_macro
+.loc ../contracts/DePoolProxy.sol, 102
+GETGLOB 9
+GETGLOB 12
+SDEQ
+THROWIFNOT 104
+.loc ../contracts/DePoolProxy.sol, 103
+GETPARAM 7
+FIRST
+.loc ../contracts/DePoolProxy.sol, 104
+DUP
+PUSHINT 2000000000
+UFITS 64
+GEQ
+PUSHCONT {
+	.loc ../contracts/DePoolProxy.sol, 105
+	DUP
+	PUSHINT 2000000000
+	UFITS 64
+	SUB
+	UFITS 128
+	.loc ../contracts/DePoolProxy.sol, 106
+	GETGLOB 12
+	NEWC
+	STSLICECONST x42_
+	STSLICE
+	SWAP
+	STGRAMS
+	PUSHINT 107
+	STZEROES
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc ../contracts/DePoolProxy.sol, 0
+}
+IF
+.loc ../contracts/DePoolProxy.sol, 0
+DROP
+
+.macro getProxyInfo
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolProxy.sol, 114
+ENDS
+.loc ../contracts/DePoolProxy.sol, 0
+CALLREF {
+	CALL $getProxyInfo_internal_macro$
+}
+PUSH S2
+PUSHCONT {
+	PUSH S4
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	XCHG S2
+	NEWC
+	STSLICECONST xadbc429e
+	STSLICE
+	STU 64
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP2
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getProxyInfo_internal
+.type	getProxyInfo_internal, @function
+CALL $getProxyInfo_internal_macro$
+
+.macro getProxyInfo_internal_macro
+.loc ../contracts/DePoolProxy.sol, 115
+GETGLOB 11
+.loc ../contracts/DePoolProxy.sol, 116
+PUSHINT 1000000000
+.loc ../contracts/DePoolProxy.sol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDU 8
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+ENDS
+SETGLOB 12
+SETGLOB 11
+SETGLOB 10
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 1
+	OVER
+	PUSHINT 64
+	DICTUGET
+	ZEROSWAPIFNOT
+	PUSHCONT {
+		PLDU 8
+	}
+	IF
+	PUSHINT 2
+	PUSH S2
+	PUSHINT 64
+	DICTUGET
+	PUSHCONT {
+		PUSHREFSLICE {
+			.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+		}
+	}
+	IFNOT
+	PUSHINT 3
+	PUSH S3
+	PUSHINT 64
+	DICTUGET
+	PUSHCONT {
+		PUSHREFSLICE {
+			.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+		}
+	}
+	IFNOT
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STU 8
+STSLICE
+GETGLOB 12
+NEWC
+STSLICE
+STBREFR
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
+DROP
+SETGLOB 9
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+PUSHCONT {
+	DROP
+	CALLREF {
+		CALL $fallback_macro$
+	}
+	THROW 0
+}
+IFNOT
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
+}
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SETGLOB 9
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHPOW2 9
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	ROT
+	GETGLOB 2
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+IF
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
+}
+
+.macro public_function_selector
+DUP
+PUSHINT 1437643621
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 327920780
+	EQUAL
+	IFJMPREF {
+		CALL $process_new_stake$
+	}
+	DUP
+	PUSHINT 767312542
+	EQUAL
+	IFJMPREF {
+		CALL $getProxyInfo$
+	}
+	DUP
+	PUSHINT 1347081495
+	EQUAL
+	IFJMPREF {
+		CALL $withdrawExcessTons$
+	}
+	DUP
+	PUSHINT 1437643621
+	EQUAL
+	IFJMPREF {
+		CALL $recover_stake$
+	}
+}
+DUP
+PUSHINT 4184830756
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 1756716863
+	EQUAL
+	IFJMPREF {
+		CALL $constructor$
+	}
+	DUP
+	PUSHINT 4000269644
+	EQUAL
+	IFJMPREF {
+		CALL $onStakeReject$
+	}
+	DUP
+	PUSHINT 4084484172
+	EQUAL
+	IFJMPREF {
+		CALL $onStakeAccept$
+	}
+	DUP
+	PUSHINT 4184830756
+	EQUAL
+	IFJMPREF {
+		CALL $onSuccessToRecoverStake$
+	}
+}
+

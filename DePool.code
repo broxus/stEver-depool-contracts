@@ -1,0 +1,9666 @@
+.version sol 0.61.0
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 64
+	LDREF
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+	LDU 64
+	LDREF
+}
+IFELSE
+LDMSGADDR
+LDU 8
+ENDS
+OVER
+.loc ../contracts/ValidatorBase.sol, 11
+SETGLOB 10
+.loc ../contracts/DePool.sol, 139
+MYADDR
+PARSEMSGADDR
+THIRD
+THROWIF 142
+.loc ../contracts/DePool.sol, 140
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+GETGLOB 2
+EQUAL
+THROWIFNOT 101
+.loc ../contracts/DePool.sol, 141
+GETGLOB 2
+THROWIFNOT 130
+.loc ../contracts/DePool.sol, 142
+PUSH S4
+PUSHINT 1000000000
+GEQ
+THROWIFNOT 129
+.loc ../contracts/DePool.sol, 143
+BLKPUSH 2, 4
+LEQ
+THROWIFNOT 149
+.loc ../contracts/DePool.sol, 144
+PUSH S2
+HASHCU
+PUSHINT 68612731926680353275771529662875919347561914523109591076186968761758067902165
+EQUAL
+THROWIFNOT 141
+.loc ../contracts/DePool.sol, 145
+OVER
+PARSEMSGADDR
+DUP
+FIRST
+EQINT 2
+PUSHCONT {
+	SECOND
+	ISNULL
+}
+PUSHCONT {
+	DROP
+	FALSE
+}
+IFELSE
+THROWIFNOT 133
+.loc ../contracts/DePool.sol, 146
+OVER
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 147
+.loc ../contracts/DePool.sol, 147
+DUP
+GTINT 0
+OVER
+LESSINT 100
+AND
+THROWIFNOT 138
+.loc ../contracts/DePool.sol, 148
+PUSHINT 100
+OVER
+SUB
+UFITS 8
+.loc ../contracts/DePool.sol, 150
+GETPARAM 7
+FIRST
+PUSHINT 10000000000
+PUSHINT 5000000000
+ADD
+UFITS 64
+PUSHINT 1000000000
+ADD
+UFITS 64
+PUSHINT 2
+PUSHINT 1000000000
+DUP
+ADD
+UFITS 64
+MUL
+UFITS 64
+ADD
+UFITS 64
+GEQ
+THROWIFNOT 146
+.loc ../contracts/DePool.sol, 157
+ACCEPT
+.loc ../contracts/DePool.sol, 159
+PUSH S2
+GETGLOB 22
+NEWC
+STONE
+ROTREV
+PUSHINT 267
+DICTSETB
+SETGLOB 22
+.loc ../contracts/DePool.sol, 160
+PUSHINT 0
+PUSHCONT {
+	DUP
+	LESSINT 2
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 161
+	PUSHINT 0
+	NEWC
+	STU 256
+	PUSHINT 0
+	NEWDICT
+	PUSHINT 64
+	DICTUSETB
+	OVER
+	NEWC
+	STU 8
+	PUSHINT 1
+	ROT
+	PUSHINT 64
+	DICTUSETB
+	MYADDR
+	PUSHINT 2
+	ROT
+	PUSHINT 64
+	DICTUSET
+	PUSH S4
+	PUSHINT 3
+	ROT
+	PUSHINT 64
+	DICTUSET
+	NEWC
+	STDICT
+	ENDC
+	PUSH S5
+	NEWC
+	STSLICECONST x2_
+	STOPTREF
+	STOPTREF
+	STZERO
+	ENDC
+	DUP
+	HASHCU
+	NEWC
+	STSLICECONST x9ff_
+	STU 256
+	ENDC
+	CTOS
+	SWAP
+	PUSHINT 1000000000
+	DUP
+	ADD
+	UFITS 64
+	PUSH S2
+	NEWC
+	STSLICECONST x62_
+	STSLICE
+	SWAP
+	STGRAMS
+	PUSHINT 3
+	STUR 107
+	OVER
+	CALLREF {
+		CTOS
+		LDI 1
+		SWAP
+		PUSHCONT {
+			LDI 5
+			NIP
+		}
+		IF
+		LDI 1
+		SWAP
+		PUSHCONT {
+			LDI 2
+			NIP
+		}
+		IF
+		LDOPTREF
+		LDOPTREF
+		LDDICT
+		ENDS
+		BLKDROP 3
+	}
+	STREF
+	STSLICECONST x345aaf9fc_
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc ../contracts/DePool.sol, 172
+	GETGLOB 11
+	UNPAIR
+	OVER
+	INC
+	ROLLREV 3
+	PUSHINT 32
+	DICTUSET
+	PAIR
+	SETGLOB 11
+	.loc ../contracts/DePool.sol, 160
+	INC
+	UFITS 8
+	.loc ../contracts/DePool.sol, 0
+}
+WHILE
+DROP
+.loc ../contracts/DePool.sol, 175
+FALSE
+SETGLOB 16
+.loc ../contracts/DePool.sol, 176
+ROLL 5
+SETGLOB 17
+.loc ../contracts/DePool.sol, 177
+ROLL 4
+SETGLOB 18
+.loc ../contracts/DePool.sol, 178
+SWAP
+SETGLOB 19
+.loc ../contracts/DePool.sol, 179
+SETGLOB 20
+.loc ../contracts/DePool.sol, 180
+DROP2
+GETPARAM 7
+FIRST
+UFITS 64
+PUSHINT 1000000000
+SUB
+UFITS 64
+PUSHINT 2
+PUSHINT 1000000000
+DUP
+ADD
+UFITS 64
+MUL
+UFITS 64
+SUB
+UFITS 64
+SETGLOB 21
+.loc ../contracts/DePool.sol, 184
+CALLREF {
+	CALL $roundTimeParams_internal_macro$
+}
+DROP2
+NIP
+.loc ../contracts/DePool.sol, 185
+CALLREF {
+	CALL $getCurValidatorData_internal_macro$
+}
+NIP
+.loc ../contracts/DePool.sol, 186
+CALLREF {
+	CALL $getPrevValidatorHash_internal_macro$
+}
+.loc ../contracts/DePool.sol, 187
+NOW
+ROT
+ROLL 4
+SUB
+UFITS 32
+GEQ
+.loc ../contracts/DePool.sol, 189
+CALLREF {
+	CALL $generateRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 190
+CALLREF {
+	CALL $generateRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 191
+CALLREF {
+	CALL $generateRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 192
+PUSHINT 1
+SETINDEX 6
+.loc ../contracts/DePool.sol, 193
+CALLREF {
+	CALL $generateRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 194
+PUSHINT 0
+PUSHINT 2
+PUSH S5
+PUSHINT 9
+SETINDEX 6
+POP S6
+PUXC S5, S-1
+SETINDEX 7
+POP S5
+PUXC S4, S-1
+SETINDEX 2
+POP S4
+.loc ../contracts/DePool.sol, 195
+PUSHINT 0
+PUSHINT 2
+PUSH S4
+PUSHINT 6
+SETINDEX 6
+POP S5
+PUXC S4, S-1
+SETINDEX 7
+POP S4
+PUXC S3, S-1
+SETINDEX 2
+POP S3
+.loc ../contracts/DePool.sol, 196
+ROLL 4
+PUSHCONT {
+	PUSH S5
+}
+PUSHCONT {
+	PUSH S4
+}
+IFELSE
+PUXC S3, S-1
+SETINDEX 5
+POP S3
+.loc ../contracts/DePool.sol, 197
+DUP
+FIRST
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 198
+DUP
+FIRST
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 199
+DUP
+FIRST
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 200
+DUP
+FIRST
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+DROP2
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	errorEvent_internal
+.type	errorEvent_internal, @function
+CALL $errorEvent_internal_macro$
+
+.macro errorEvent_internal_macro
+.loc ../contracts/DePool.sol, 222
+PUSHSLICE xc0000000000000000000000000230f5f80
+NEWC
+STSLICE
+STU 16
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.globl	_returnChange_internal
+.type	_returnChange_internal, @function
+CALL $_returnChange_internal_macro$
+
+.macro _returnChange_internal_macro
+.loc ../contracts/DePool.sol, 227
+GETGLOB 9
+NEWC
+STSLICECONST x42_
+STSLICE
+PUSHINT 111
+STZEROES
+ENDC
+PUSHINT 64
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.globl	_sendError_internal
+.type	_sendError_internal, @function
+CALL $_sendError_internal_macro$
+
+.macro _sendError_internal_macro
+.loc ../contracts/DePool.sol, 234
+SWAP
+GETGLOB 9
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+PUSHINT 1058053700
+STUR 143
+STU 32
+STU 64
+ENDC
+PUSHINT 64
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.globl	sendAcceptAndReturnChange_internal
+.type	sendAcceptAndReturnChange_internal, @function
+CALL $sendAcceptAndReturnChange_internal_macro$
+
+.macro sendAcceptAndReturnChange_internal_macro
+.loc ../contracts/DePool.sol, 239
+PUSHINT 0
+DUP
+GETGLOB 9
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+PUSHINT 1058053700
+STUR 143
+STU 32
+STU 64
+ENDC
+PUSHINT 64
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.globl	sendAcceptAndReturnChange128_internal
+.type	sendAcceptAndReturnChange128_internal, @function
+CALL $sendAcceptAndReturnChange128_internal_macro$
+
+.macro sendAcceptAndReturnChange128_internal_macro
+.loc ../contracts/DePool.sol, 244
+GETPARAM 7
+FIRST
+SUBR
+UFITS 128
+PUSHINT 0
+RAWRESERVE
+.loc ../contracts/DePool.sol, 245
+PUSHINT 0
+DUP
+GETGLOB 9
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+PUSHINT 1058053700
+STUR 143
+STU 32
+STU 64
+ENDC
+PUSHPOW2 7
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.macro setAllowedParticipant
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 249
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $setAllowedParticipant_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setAllowedParticipant_internal
+.type	setAllowedParticipant_internal, @function
+CALL $setAllowedParticipant_internal_macro$
+
+.macro setAllowedParticipant_internal_macro
+.loc ../contracts/ValidatorBase.sol, 15
+GETGLOB 9
+GETGLOB 10
+SDEQ
+THROWIFNOT 113
+.loc ../contracts/DePool.sol, 250
+PUSHINT 0
+NEWDICT
+PAIR
+GETGLOB 22
+DUP
+PUSHINT 267
+DICTMIN
+NULLSWAPIFNOT
+PUSHCONT {
+	SWAP
+	PLDI 1
+	PAIR
+}
+IF
+PUSHCONT {
+	DUP
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	PUSH2 S2, S0
+	FIRST
+	SWAP
+	UNPAIR
+	OVER
+	INC
+	ROLLREV 3
+	PUSHINT 32
+	DICTUSET
+	PAIR
+	POP S3
+	FIRST
+	OVER
+	PUSHINT 267
+	DICTGETNEXT
+	NULLSWAPIFNOT
+	PUSHCONT {
+		SWAP
+		PLDI 1
+		PAIR
+	}
+	IF
+}
+WHILE
+DROP2
+FIRST
+LESSINT 2
+THROWIFNOT 150
+.loc ../contracts/DePool.sol, 251
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 0
+RAWRESERVE
+.loc ../contracts/DePool.sol, 252
+GETGLOB 22
+NEWC
+STONE
+ROTREV
+PUSHINT 267
+DICTSETB
+SETGLOB 22
+.loc ../contracts/DePool.sol, 253
+GETGLOB 9
+NEWC
+STSLICECONST x42_
+STSLICE
+PUSHINT 111
+STZEROES
+ENDC
+PUSHPOW2 7
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.globl	setLastRoundInfo_internal
+.type	setLastRoundInfo_internal, @function
+CALL $setLastRoundInfo_internal_macro$
+
+.macro setLastRoundInfo_internal_macro
+.loc ../contracts/DePool.sol, 261
+DUP
+SECOND
+GETGLOB 19
+GETGLOB 20
+PUSH S3
+INDEX 15
+PUSH S4
+INDEX 8
+GETGLOB 10
+GETGLOB 18
+PUSH S7
+INDEX 12
+PUSH S8
+INDEX 14
+PUSH S9
+INDEX 13
+ROLL 10
+INDEX 7
+GETGLOB 16
+TUPLE 12
+.loc ../contracts/DePool.sol, 275
+FALSE
+GETGLOB 15
+ROT
+CALLREF {
+	UNTUPLE 12
+	REVERSE 12, 0
+	NEWC
+	STU 32
+	STU 8
+	STU 8
+	STU 32
+	STU 64
+	STSLICE
+	STU 64
+	STU 64
+	STU 64
+	STU 64
+	STU 8
+	STI 1
+}
+ROTREV
+PUSHINT 1
+DICTISETB
+SETGLOB 15
+.loc ../contracts/DePool.sol, 0
+
+.globl	startRoundCompleting_internal
+.type	startRoundCompleting_internal, @function
+CALL $startRoundCompleting_internal_macro$
+
+.macro startRoundCompleting_internal_macro
+.loc ../contracts/DePool.sol, 279
+SETINDEX 7
+.loc ../contracts/DePool.sol, 280
+PUSHINT 0
+PUSHINT 19
+SETINDEXVAR
+.loc ../contracts/DePool.sol, 281
+PUSHINT 0
+PUSHINT 18
+SETINDEXVAR
+.loc ../contracts/DePool.sol, 283
+DUP
+INDEX 15
+EQINT 0
+OVER
+PUSHINT 16
+INDEXVAR
+DICTEMPTY
+OR
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 284
+	PUSHINT 9
+	SETINDEX 6
+	.loc ../contracts/DePool.sol, 285
+	MYADDR
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	PUSHINT 12669519700468838679097577345632051794083288071575587
+	STUR 175
+	ENDC
+	PUSHINT 0
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 287
+	PUSHINT 8
+	SETINDEX 6
+	.loc ../contracts/DePool.sol, 288
+	DUP
+	INDEX 15
+	OVER
+	FIRST
+	MYADDR
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	PUSHINT 12669519700468838679097577345632051794083288773315153
+	STUR 175
+	STU 64
+	STU 32
+	ENDC
+	PUSHINT 1
+}
+IFELSE
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 291
+DUP
+CALLREF {
+	CALL $toTruncatedRound_internal_macro$
+}
+PUSHSLICE xc0000000000000000000000001
+NEWC
+STSLICE
+SWAP
+NEWC
+STSLICECONST x5b846f7c
+SWAP
+PUSHINT 16
+UNTUPLEVAR
+REVERSE 17, 0
+STU 64
+STU 32
+STU 32
+STU 32
+STU 256
+STU 8
+STU 8
+STU 64
+STU 64
+STU 64
+STI 1
+STU 64
+STU 32
+STU 64
+STU 64
+STU 64
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 292
+DUP
+CALLREF {
+	CALL $setLastRoundInfo_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.globl	cutWithdrawalValue_internal
+.type	cutWithdrawalValue_internal, @function
+CALL $cutWithdrawalValue_internal_macro$
+
+.macro cutWithdrawalValue_internal_macro
+.loc ../contracts/DePool.sol, 301
+PUSHINT 0
+DUP
+.loc ../contracts/DePool.sol, 303
+ROLL 3
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 304
+	PUSH3 S2, S3, S3
+	SECOND
+	ROT
+	ADD
+	UFITS 64
+	SETINDEX 1
+	POP S4
+	.loc ../contracts/DePool.sol, 305
+	PUSH2 S2, S3
+	INDEX 3
+	PUSH S5
+	THIRD
+	MULDIV
+	UFITS 64
+	NIP
+	.loc ../contracts/DePool.sol, 306
+	PUSH S3
+	FIRST
+	MIN
+	.loc ../contracts/DePool.sol, 307
+	PUSH3 S0, S3, S3
+	FIRST
+	ROT
+	SUB
+	UFITS 64
+	SETINDEX 0
+	POP S4
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 310
+NOW
+PUSH S4
+SECOND
+GREATER
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 311
+	NOW
+	PUSH S4
+	SECOND
+	SUB
+	UFITS 64
+	PUSH S4
+	THIRD
+	DIV
+	.loc ../contracts/DePool.sol, 312
+	DUP
+	GTINT 0
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 313
+		PUSH2 S0, S4
+		INDEX 3
+		MUL
+		UFITS 64
+		PUSH S5
+		FIRST
+		MIN
+		POP S3
+		.loc ../contracts/DePool.sol, 314
+		PUSH3 S2, S4, S4
+		FIRST
+		ROT
+		SUB
+		UFITS 64
+		SETINDEX 0
+		POP S5
+		.loc ../contracts/DePool.sol, 315
+		PUSH2 S0, S4
+		THIRD
+		MUL
+		UFITS 64
+		PUSH2 S5, S5
+		SECOND
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 1
+		POP S5
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 0
+	DROP
+}
+IF
+.loc ../contracts/DePool.sol, 319
+PUSH S3
+FIRST
+GETGLOB 17
+LESS
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 320
+	PUSH S3
+	FIRST
+	ADD
+	UFITS 64
+	.loc ../contracts/DePool.sol, 321
+	PUSH S3
+	PUSHINT 0
+	SETINDEX 0
+	POP S4
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 325
+XCHG S2, S3
+.loc ../contracts/DePool.sol, 326
+BLKDROP2 1, 3
+.loc ../contracts/DePool.sol, 0
+
+.globl	_returnOrReinvestForParticipant_internal
+.type	_returnOrReinvestForParticipant_internal, @function
+CALL $_returnOrReinvestForParticipant_internal_macro$
+
+.macro _returnOrReinvestForParticipant_internal_macro
+.loc ../contracts/DePool.sol, 333
+PUSHINT 0
+BLKPUSH 15, 0
+NEWDICT
+PUSHINT 0
+BLKPUSH 7, 0
+PUSHREF {
+}
+TUPLE 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+DUP
+PUSHINT 23
+TUPLEVAR
+PUSH3 S0, S3, S3
+.loc ../contracts/DePoolRounds.sol, 340
+SECOND
+.loc ../contracts/DePoolRounds.sol, 341
+OVER
+THIRD
+.loc ../contracts/DePoolRounds.sol, 343
+ROT
+FIRST
+PUSH S2
+ISNULL
+ZEROSWAPIF
+PUSHCONT {
+	PUSH2 S2, S2
+	ISNULL
+	THROWIF 63
+	FIRST
+}
+IFNOT
+ADD
+UFITS 64
+OVER
+ISNULL
+ZEROSWAPIF
+PUSHCONT {
+	PUSH2 S1, S1
+	ISNULL
+	THROWIF 63
+	FIRST
+}
+IFNOT
+ADD
+UFITS 64
+BLKDROP2 2, 1
+.loc ../contracts/DePool.sol, 342
+PUSH S8
+INDEX 7
+EQINT 7
+.loc ../contracts/DePool.sol, 343
+PUSH S7
+CALLREF {
+	CALL $fetchParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 344
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 345
+	PUSHPOW2DEC 9
+	CALLREF {
+		CALL $errorEvent_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 346
+	BLKSWAP 2, 9
+	SWAP
+	BLKDROP2 9, 2
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 348
+BLKPUSH 2, 0
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 349
+DUP
+FIRST
+DEC
+UFITS 8
+SETINDEX 0
+.loc ../contracts/DePool.sol, 350
+PUSH2 S11, S11
+INDEX 15
+DEC
+UFITS 32
+SETINDEX 15
+POP S12
+.loc ../contracts/DePool.sol, 351
+PUSH S2
+ZEROSWAPIFNOT
+PUSHCONT {
+	PUSH S11
+	INDEX 8
+	PUSH S12
+	INDEX 10
+	SUB
+	UFITS 64
+	PUSH S12
+	INDEX 9
+	SUB
+	UFITS 64
+}
+IF
+.loc ../contracts/DePool.sol, 354
+PUSHINT 0
+PUSH2 S0, S4
+.loc ../contracts/DePool.sol, 356
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 357
+	PUSH S10
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 358
+		PUSH S11
+		FIRST
+		POP S2
+		.loc ../contracts/DePool.sol, 359
+		PUSH2 S1, S2
+		MIN
+		.loc ../contracts/DePool.sol, 360
+		PUSH2 S2, S0
+		SUB
+		UFITS 64
+		POP S3
+		.loc ../contracts/DePool.sol, 361
+		PUSH S3
+		SUBR
+		UFITS 64
+		POP S3
+		.loc ../contracts/DePool.sol, 362
+		PUSH2 S14, S1
+		PUSHINT 18
+		SETINDEXVAR
+		POP S15
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 364
+		PUSH S14
+		INDEX 10
+		PUSH S15
+		INDEX 9
+		ADD
+		UFITS 64
+		PUSH S15
+		PUSHINT 18
+		INDEXVAR
+		SUB
+		UFITS 64
+		PUSH S12
+		FIRST
+		PUSH S16
+		INDEX 8
+		PUSH S17
+		PUSHINT 17
+		INDEXVAR
+		SUB
+		UFITS 64
+		MULDIV
+		UFITS 64
+		POP S2
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 0
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 371
+	PUSH2 S6, S14
+	INDEX 13
+	PUSH S16
+	INDEX 8
+	MULDIV
+	UFITS 64
+	NIP
+	.loc ../contracts/DePool.sol, 372
+	PUSH3 S0, S3, S3
+	SECOND
+	ROT
+	ADD
+	UFITS 64
+	SETINDEX 1
+	POP S4
+	.loc ../contracts/DePool.sol, 373
+	PUSH S11
+	FIRST
+	OVER
+	ADD
+	UFITS 64
+	POP S2
+}
+IFELSE
+.loc ../contracts/DePool.sol, 375
+PUSH3 S1, S14, S14
+PUSHINT 19
+INDEXVAR
+ROT
+ADD
+UFITS 64
+PUSHINT 19
+SETINDEXVAR
+POP S15
+.loc ../contracts/DePool.sol, 378
+PUSH S11
+SECOND
+.loc ../contracts/DePool.sol, 379
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 380
+	BLKPUSH 2, 0
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 381
+	PUSH S7
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 382
+		PUSH S12
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 383
+			DUP
+			FIRST
+			PUSH S5
+			MIN
+			.loc ../contracts/DePool.sol, 384
+			PUSH3 S0, S1, S1
+			FIRST
+			ROT
+			SUB
+			UFITS 64
+			SETINDEX 0
+			POP S2
+			.loc ../contracts/DePool.sol, 385
+			PUSH S5
+			SUBR
+			UFITS 64
+			POP S5
+			.loc ../contracts/DePool.sol, 386
+			DUP
+			FIRST
+			PUSH S17
+			DUP
+			PUSHINT 18
+			INDEXVAR
+			ROT
+			ADD
+			UFITS 64
+			PUSHINT 18
+			SETINDEXVAR
+			POP S17
+		}
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 388
+			PUSH S16
+			INDEX 10
+			PUSH S17
+			INDEX 9
+			ADD
+			UFITS 64
+			PUSH S17
+			PUSHINT 18
+			INDEXVAR
+			SUB
+			UFITS 64
+			OVER
+			FIRST
+			PUSH S18
+			INDEX 8
+			PUSH S19
+			PUSHINT 17
+			INDEXVAR
+			SUB
+			UFITS 64
+			MULDIV
+			UFITS 64
+			SETINDEX 0
+		}
+		IFELSE
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 395
+	DUP
+	FIRST
+	PUSH S17
+	DUP
+	PUSHINT 19
+	INDEXVAR
+	ROT
+	ADD
+	UFITS 64
+	PUSHINT 19
+	SETINDEXVAR
+	POP S17
+	.loc ../contracts/DePool.sol, 396
+	PUSHINT 0
+	.loc ../contracts/DePool.sol, 398
+	SWAP
+	PUSH S13
+	PUSH S18
+	INDEX 7
+	NEQINT 5
+	AND
+	PUSH S13
+	PUSH S19
+	INDEX 4
+	ADD
+	UFITS 32
+	CALLREF {
+		CALL $cutWithdrawalValue_internal_macro$
+	}
+	XCHG S2
+	POP S4
+	POP S2
+	.loc ../contracts/DePool.sol, 403
+	SWAP
+	PUSH S4
+	ADD
+	UFITS 64
+	POP S4
+	.loc ../contracts/DePool.sol, 404
+	DUP
+	GTINT 0
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 405
+		PUSH3 S0, S1, S1
+		ISNULL
+		THROWIF 63
+		INDEX 4
+		NEWC
+		STSLICECONST x42_
+		STSLICE
+		SWAP
+		STGRAMS
+		PUSHINT 107
+		STZEROES
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 0
+	DROP
+}
+IFNOT
+.loc ../contracts/DePool.sol, 410
+PUSHINT 1
+.loc ../contracts/DePool.sol, 411
+PUSH S5
+INDEX 5
+PUSH S4
+MIN
+.loc ../contracts/DePool.sol, 412
+DUP2
+ADD
+UFITS 64
+POP S2
+.loc ../contracts/DePool.sol, 413
+PUSH3 S0, S6, S6
+INDEX 5
+ROT
+SUB
+UFITS 64
+SETINDEX 5
+POP S7
+.loc ../contracts/DePool.sol, 414
+PUSH2 S4, S0
+SUB
+UFITS 64
+POP S5
+.loc ../contracts/DePool.sol, 415
+PUSH S4
+GETGLOB 17
+LESS
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 416
+	PUSH2 S1, S4
+	ADD
+	UFITS 64
+	POP S2
+	.loc ../contracts/DePool.sol, 417
+	PUSHINT 0
+	POP S5
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 420
+PUSHINT 10000000
+.loc ../contracts/DePool.sol, 421
+PUSH2 S2, S0
+LESS
+PUSH2 S6, S1
+GEQ
+PUSH S16
+NOT
+AND
+AND
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 422
+	PUSH2 S5, S0
+	SUB
+	UFITS 64
+	POP S6
+	.loc ../contracts/DePool.sol, 423
+	PUSH2 S2, S0
+	ADD
+	UFITS 64
+	POP S3
+	.loc ../contracts/DePool.sol, 426
+	PUSH2 S4, S0
+	GREATER
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 427
+		PUSH2 S4, S0
+		SUB
+		UFITS 64
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 429
+		PUSHINT 0
+	}
+	IFELSE
+	POP S5
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 433
+PUSH S15
+THIRD
+.loc ../contracts/DePool.sol, 434
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 435
+	BLKPUSH 2, 0
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 436
+	PUSH S11
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 437
+		PUSH S16
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 438
+			DUP
+			FIRST
+			PUSH S9
+			MIN
+			.loc ../contracts/DePool.sol, 439
+			PUSH3 S0, S1, S1
+			FIRST
+			ROT
+			SUB
+			UFITS 64
+			SETINDEX 0
+			POP S2
+			.loc ../contracts/DePool.sol, 440
+			PUSH S9
+			SUBR
+			UFITS 64
+			POP S9
+			.loc ../contracts/DePool.sol, 441
+			DUP
+			FIRST
+			PUSH S21
+			DUP
+			PUSHINT 18
+			INDEXVAR
+			ROT
+			ADD
+			UFITS 64
+			PUSHINT 18
+			SETINDEXVAR
+			POP S21
+		}
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 443
+			PUSH S20
+			INDEX 10
+			PUSH S21
+			INDEX 9
+			ADD
+			UFITS 64
+			PUSH S21
+			PUSHINT 18
+			INDEXVAR
+			SUB
+			UFITS 64
+			OVER
+			FIRST
+			PUSH S22
+			INDEX 8
+			PUSH S23
+			PUSHINT 17
+			INDEXVAR
+			SUB
+			UFITS 64
+			MULDIV
+			UFITS 64
+			SETINDEX 0
+		}
+		IFELSE
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 450
+	DUP
+	FIRST
+	PUSH S21
+	DUP
+	PUSHINT 19
+	INDEXVAR
+	ROT
+	ADD
+	UFITS 64
+	PUSHINT 19
+	SETINDEXVAR
+	POP S21
+	.loc ../contracts/DePool.sol, 451
+	PUSHINT 0
+	.loc ../contracts/DePool.sol, 453
+	OVER
+	FALSE
+	DUP
+	CALLREF {
+		CALL $cutWithdrawalValue_internal_macro$
+	}
+	XCHG S2
+	POP S5
+	POP S2
+	.loc ../contracts/DePool.sol, 454
+	DUP2
+	ADD
+	UFITS 64
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 455
+		DUP2
+		ADD
+		UFITS 64
+		PUSH S3
+		INDEX 4
+		NEWC
+		STSLICECONST x42_
+		STSLICE
+		SWAP
+		STGRAMS
+		PUSHINT 107
+		STZEROES
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 0
+	BLKDROP 3
+}
+IFNOT
+.loc ../contracts/DePool.sol, 459
+GETGLOB 16
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 460
+	PUSH2 S3, S6
+	ADD
+	UFITS 64
+	POP S4
+	.loc ../contracts/DePool.sol, 461
+	PUSH S4
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 462
+		PUSH2 S4, S4
+		ISNULL
+		THROWIF 63
+		FIRST
+		PUSH2 S5, S5
+		ISNULL
+		THROWIF 63
+		INDEX 4
+		NEWC
+		STSLICECONST x42_
+		STSLICE
+		SWAP
+		STGRAMS
+		PUSHINT 107
+		STZEROES
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 463
+		NULL
+		POP S5
+		.loc ../contracts/DePool.sol, 464
+		PUSH2 S8, S8
+		THIRD
+		DEC
+		UFITS 8
+		SETINDEX 2
+		POP S9
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 466
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 467
+		BLKPUSH 2, 0
+		ISNULL
+		THROWIF 63
+		FIRST
+		SWAP
+		DUP
+		ISNULL
+		THROWIF 63
+		INDEX 4
+		NEWC
+		STSLICECONST x42_
+		STSLICE
+		SWAP
+		STGRAMS
+		PUSHINT 107
+		STZEROES
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 468
+		NULL
+		.loc ../contracts/DePool.sol, 469
+		PUSH2 S8, S8
+		INDEX 3
+		DEC
+		UFITS 8
+		SETINDEX 3
+		POP S9
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 472
+	PUSH S4
+	ISNULL
+	NOT
+	DUP
+	PUSHCONT {
+		DROP
+		PUSH2 S4, S4
+		ISNULL
+		THROWIF 63
+		FIRST
+		EQINT 0
+	}
+	IF
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 473
+		NULL
+		POP S5
+		.loc ../contracts/DePool.sol, 474
+		PUSH2 S8, S8
+		THIRD
+		DEC
+		UFITS 8
+		SETINDEX 2
+		POP S9
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 476
+	DUP
+	ISNULL
+	NOT
+	DUP
+	PUSHCONT {
+		DROP
+		BLKPUSH 2, 0
+		ISNULL
+		THROWIF 63
+		FIRST
+		EQINT 0
+	}
+	IF
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 477
+		DROP
+		NULL
+		.loc ../contracts/DePool.sol, 478
+		PUSH2 S8, S8
+		INDEX 3
+		DEC
+		UFITS 8
+		SETINDEX 3
+		POP S9
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 481
+	PUSH S8
+	INDEX 4
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 482
+		PUSH2 S3, S6
+		ADD
+		UFITS 64
+		POP S4
+		.loc ../contracts/DePool.sol, 483
+		PUSHINT 0
+		POP S7
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 485
+	PUSH S18
+	PUSH S9
+	PUSH S19
+	PUSH3 S9, S7, S3
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 213
+		PUSH S2
+		EQINT 0
+		PUSH S2
+		ISNULL
+		PUSH S2
+		ISNULL
+		AND
+		AND
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 214
+			BLKDROP 4
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFJMP
+		.loc ../contracts/DePoolRounds.sol, 217
+		PUSH2 S3, S5
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+		NULLSWAPIFNOT
+		NIP
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 218
+			PUSH2 S5, S5
+			INDEX 15
+			INC
+			UFITS 32
+			SETINDEX 15
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 219
+			PUSH2 S4, S4
+			FIRST
+			INC
+			UFITS 8
+			SETINDEX 0
+			POP S5
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 222
+		PUSH3 S2, S5, S5
+		INDEX 8
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 8
+		POP S6
+		.loc ../contracts/DePoolRounds.sol, 223
+		PUSH2 S3, S5
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+IFREFELSEREF
+{
+			LDU 64
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			LDREF
+			ENDS
+			CTOS
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			ENDS
+			TRIPLE
+}
+{
+			PUSHINT 0
+			NULL
+			DUP
+			TRIPLE
+}
+		.loc ../contracts/DePoolRounds.sol, 224
+		ROLL 3
+		SWAP
+		DUP
+		FIRST
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 0
+		.loc ../contracts/DePoolRounds.sol, 226
+		PUSH S2
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 227
+			PUSH2 S2, S2
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH2 S6, S6
+			INDEX 8
+			ROT
+			ADD
+			UFITS 64
+			SETINDEX 8
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 228
+			PUSH S2
+			SETINDEX 1
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 231
+		OVER
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 232
+			PUSH2 S1, S1
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH2 S6, S6
+			INDEX 8
+			ROT
+			ADD
+			UFITS 64
+			SETINDEX 8
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 233
+			OVER
+			SETINDEX 2
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 236
+		PUSH2 S5, S5
+		PUSHINT 16
+		INDEXVAR
+		ROLL 5
+		SWAP
+		ROLL 3
+		CALLREF {
+			UNTRIPLE
+			XCHG S2
+			NEWC
+			STU 64
+			SWAP
+			DUP
+			ISNULL
+			PUSHCONT {
+				DROP
+				STSLICECONST 0
+			}
+			PUSHCONT {
+				SWAP
+				STSLICECONST 1
+				SWAP
+				UNTUPLE 5
+				REVERSE 6, 0
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			IFELSE
+			NEWC
+			ROT
+			DUP
+			ISNULL
+			PUSHCONT {
+				DROP
+				STSLICECONST 0
+			}
+			PUSHCONT {
+				SWAP
+				STSLICECONST 1
+				SWAP
+				UNTUPLE 5
+				REVERSE 6, 0
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			IFELSE
+			STBREFR
+		}
+		ROTREV
+		PUSHINT 267
+		DICTSETB
+		PUSHINT 16
+		SETINDEXVAR
+		POP S4
+		.loc ../contracts/DePoolRounds.sol, 237
+		DROP2
+		.loc ../contracts/DePoolRounds.sol, 203
+	}
+	CALLX
+	.loc ../contracts/DePoolRounds.sol, 0
+	POP S10
+	POP S19
+}
+IFELSE
+.loc ../contracts/DePool.sol, 488
+BLKDROP 3
+PUSH2 S14, S5
+CALLREF {
+	CALL $_setOrDeleteParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 489
+PUSH S16
+INDEX 7
+ROLL 6
+INDEX 4
+PUSH S14
+THIRD
+ISNULL
+ZEROSWAPIF
+PUSHCONT {
+	PUSH S14
+	THIRD
+	DUP
+	ISNULL
+	THROWIF 63
+	FIRST
+}
+IFNOT
+PUSH S15
+SECOND
+ISNULL
+ZEROSWAPIF
+PUSHCONT {
+	PUSH S15
+	SECOND
+	DUP
+	ISNULL
+	THROWIF 63
+	FIRST
+}
+IFNOT
+ROLL 16
+FIRST
+ROLL 7
+PUSH S19
+FIRST
+ROLL 7
+PUSHINT 18
+ROLLX
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROLLREV 7
+NEWC
+STSLICECONST x444d43f5
+STU 64
+STU 64
+STU 64
+STU 64
+STU 64
+STI 1
+STU 8
+STBREFR
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 499
+BLKDROP 10
+SWAP
+.loc ../contracts/DePool.sol, 0
+
+.globl	_returnOrReinvest_internal
+.type	_returnOrReinvest_internal, @function
+CALL $_returnOrReinvest_internal_macro$
+
+.macro _returnOrReinvest_internal_macro
+.loc ../contracts/DePoolRounds.sol, 174
+GETGLOB 14
+ADDCONST -2
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 175
+GETGLOB 14
+ADDCONST -3
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 0
+INDEX 4
+.loc ../contracts/DePool.sol, 510
+PUSHINT 0
+.loc ../contracts/DePool.sol, 511
+PUSH S4
+INDEX 11
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 512
+	PUSH S4
+	TRUE
+	SETINDEX 11
+	POP S5
+	.loc ../contracts/DePool.sol, 513
+	GETGLOB 10
+	PUSH S5
+	PUSHINT 16
+	INDEXVAR
+	PUSHINT 267
+	DICTGET
+	NULLSWAPIFNOT
+	IFREF {
+		LDU 64
+		LDI 1
+		SWAP
+		NULLSWAPIFNOT
+		PUSHCONT {
+			LDU 64
+			LDU 64
+			LDU 32
+			LDU 64
+			LDMSGADDR
+			ROLLREV 5
+			TUPLE 5
+		}
+		IF
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDI 1
+		SWAP
+		NULLSWAPIFNOT
+		PUSHCONT {
+			LDU 64
+			LDU 64
+			LDU 32
+			LDU 64
+			LDMSGADDR
+			ROLLREV 5
+			TUPLE 5
+		}
+		IF
+		SWAP
+		ENDS
+		TRIPLE
+	}
+	.loc ../contracts/DePool.sol, 514
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 515
+		BLKPUSH 2, 0
+		ISNULL
+		THROWIF 63
+		.loc ../contracts/DePool.sol, 516
+		PUSHINT 1
+		POP S3
+		.loc ../contracts/DePool.sol, 517
+		PUSH2 S6, S6
+		PUSHINT 16
+		INDEXVAR
+		GETGLOB 10
+		SWAP
+		PUSHINT 267
+		DICTDEL
+		DROP
+		PUSHINT 16
+		SETINDEXVAR
+		POP S7
+		.loc ../contracts/DePool.sol, 518
+		PUSH2 S6, S4
+		GETGLOB 10
+		ROLL 3
+		TRUE
+		PUSH S7
+		CALLREF {
+			CALL $_returnOrReinvestForParticipant_internal_macro$
+		}
+		POP S7
+		POP S4
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 0
+	DROP
+}
+IFNOT
+.loc ../contracts/DePool.sol, 522
+PUSHCONT {
+	PUSH2 S0, S3
+	LESS
+	PUSH S5
+	PUSHINT 16
+	INDEXVAR
+	DICTEMPTY
+	NOT
+	AND
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 523
+	PUSH2 S4, S4
+	PUSHINT 16
+	INDEXVAR
+	PUSHINT 267
+	DICTREMMIN
+	NULLSWAPIFNOT
+	IFREF {
+		SWAP
+		LDU 64
+		LDI 1
+		SWAP
+		NULLSWAPIFNOT
+		PUSHCONT {
+			LDU 64
+			LDU 64
+			LDU 32
+			LDU 64
+			LDMSGADDR
+			ROLLREV 5
+			TUPLE 5
+		}
+		IF
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDI 1
+		SWAP
+		NULLSWAPIFNOT
+		PUSHCONT {
+			LDU 64
+			LDU 64
+			LDU 32
+			LDU 64
+			LDMSGADDR
+			ROLLREV 5
+			TUPLE 5
+		}
+		IF
+		SWAP
+		ENDS
+		TRIPLE
+		PAIR
+	}
+	ROTREV
+	PUSHINT 16
+	SETINDEXVAR
+	POP S6
+	DUP
+	ISNULL
+	THROWIF 63
+	UNPAIR
+	.loc ../contracts/DePool.sol, 524
+	PUSH2 S6, S4
+	SWAP2
+	FALSE
+	PUSH S6
+	CALLREF {
+		CALL $_returnOrReinvestForParticipant_internal_macro$
+	}
+	POP S6
+	POP S3
+	.loc ../contracts/DePool.sol, 522
+	INC
+	.loc ../contracts/DePool.sol, 0
+}
+WHILE
+DROP2
+.loc ../contracts/DePoolRounds.sol, 179
+GETGLOB 14
+ADDCONST -2
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 528
+DROP
+DUP
+PUSHINT 16
+INDEXVAR
+DICTEMPTY
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 529
+	PUSHINT 9
+	SETINDEX 6
+	.loc ../contracts/DePool.sol, 530
+	MYADDR
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	PUSHINT 12669519700468838679097577345632051794083288071575587
+	STUR 175
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 0
+
+.macro addOrdinaryStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 542
+LDU 64
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $addOrdinaryStake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	addOrdinaryStake_internal
+.type	addOrdinaryStake_internal, @function
+CALL $addOrdinaryStake_internal_macro$
+
+.macro addOrdinaryStake_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 210
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 543
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 544
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 547
+	GETGLOB 9
+	GETGLOB 22
+	PUSHINT 267
+	DICTGET
+	NULLSWAPIFNOT
+	NIP
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 548
+		PUSHINT 28
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOTJMP
+	.loc ../contracts/DePool.sol, 551
+	DEPTH
+	ADDCONST -2
+	PICK
+	UFITS 64
+	.loc ../contracts/DePool.sol, 552
+	PUSH2 S0, S1
+	PUSHINT 500000000
+	ADD
+	LESS
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 553
+		PUSHINT 21
+		PUSHINT 500000000
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP2
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 555
+	PUSH2 S0, S1
+	SUB
+	UFITS 64
+	.loc ../contracts/DePool.sol, 556
+	PUSH S2
+	GETGLOB 17
+	LESS
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 557
+		PUSHINT 1
+		GETGLOB 17
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 560
+	GETGLOB 9
+	CALLREF {
+		CALL $getOrCreateParticipant_internal_macro$
+	}
+	.loc ../contracts/DePoolRounds.sol, 174
+	GETGLOB 14
+	ADDCONST -2
+	UFITS 64
+	CALLREF {
+		CALL $roundAt_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 562
+	NULL
+	.loc ../contracts/DePool.sol, 563
+	PUSH2 S1, S2
+	GETGLOB 9
+	PUSH3 S8, S3, S3
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 213
+		PUSH S2
+		EQINT 0
+		PUSH S2
+		ISNULL
+		PUSH S2
+		ISNULL
+		AND
+		AND
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 214
+			BLKDROP 4
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFJMP
+		.loc ../contracts/DePoolRounds.sol, 217
+		PUSH2 S3, S5
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+		NULLSWAPIFNOT
+		NIP
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 218
+			PUSH2 S5, S5
+			INDEX 15
+			INC
+			UFITS 32
+			SETINDEX 15
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 219
+			PUSH2 S4, S4
+			FIRST
+			INC
+			UFITS 8
+			SETINDEX 0
+			POP S5
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 222
+		PUSH3 S2, S5, S5
+		INDEX 8
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 8
+		POP S6
+		.loc ../contracts/DePoolRounds.sol, 223
+		PUSH2 S3, S5
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+IFREFELSEREF
+{
+			LDU 64
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			LDREF
+			ENDS
+			CTOS
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			ENDS
+			TRIPLE
+}
+{
+			PUSHINT 0
+			NULL
+			DUP
+			TRIPLE
+}
+		.loc ../contracts/DePoolRounds.sol, 224
+		ROLL 3
+		SWAP
+		DUP
+		FIRST
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 0
+		.loc ../contracts/DePoolRounds.sol, 226
+		PUSH S2
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 227
+			PUSH2 S2, S2
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH2 S6, S6
+			INDEX 8
+			ROT
+			ADD
+			UFITS 64
+			SETINDEX 8
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 228
+			PUSH S2
+			SETINDEX 1
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 231
+		OVER
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 232
+			PUSH2 S1, S1
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH2 S6, S6
+			INDEX 8
+			ROT
+			ADD
+			UFITS 64
+			SETINDEX 8
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 233
+			OVER
+			SETINDEX 2
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 236
+		PUSH2 S5, S5
+		PUSHINT 16
+		INDEXVAR
+		ROLL 5
+		SWAP
+		ROLL 3
+		CALLREF {
+			UNTRIPLE
+			XCHG S2
+			NEWC
+			STU 64
+			SWAP
+			DUP
+			ISNULL
+			PUSHCONT {
+				DROP
+				STSLICECONST 0
+			}
+			PUSHCONT {
+				SWAP
+				STSLICECONST 1
+				SWAP
+				UNTUPLE 5
+				REVERSE 6, 0
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			IFELSE
+			NEWC
+			ROT
+			DUP
+			ISNULL
+			PUSHCONT {
+				DROP
+				STSLICECONST 0
+			}
+			PUSHCONT {
+				SWAP
+				STSLICECONST 1
+				SWAP
+				UNTUPLE 5
+				REVERSE 6, 0
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			IFELSE
+			STBREFR
+		}
+		ROTREV
+		PUSHINT 267
+		DICTSETB
+		PUSHINT 16
+		SETINDEXVAR
+		POP S4
+		.loc ../contracts/DePoolRounds.sol, 237
+		DROP2
+		.loc ../contracts/DePoolRounds.sol, 203
+	}
+	CALLX
+	.loc ../contracts/DePoolRounds.sol, 0
+	POP S4
+	BLKDROP2 2, 1
+	.loc ../contracts/DePoolRounds.sol, 179
+	GETGLOB 14
+	ADDCONST -2
+	UFITS 64
+	SWAP
+	CALLREF {
+		CALL $setRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 565
+	GETGLOB 9
+	SWAP
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 567
+	CALLREF {
+		CALL $sendAcceptAndReturnChange128_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+	DROP2
+	.loc ../contracts/DePool.sol, 542
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro withdrawFromPoolingRound
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 572
+LDU 64
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $withdrawFromPoolingRound_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	withdrawFromPoolingRound_internal
+.type	withdrawFromPoolingRound_internal, @function
+CALL $withdrawFromPoolingRound_internal_macro$
+
+.macro withdrawFromPoolingRound_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 210
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 573
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 574
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 577
+	GETGLOB 9
+	CALLREF {
+		CALL $fetchParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 578
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 579
+		PUSHINT 6
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP2
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 581
+	BLKPUSH 2, 0
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 583
+	PUSHINT 0
+	.loc ../contracts/DePool.sol, 584
+	OVER
+	GETGLOB 9
+	PUSH S5
+	GETGLOB 17
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 174
+		GETGLOB 14
+		ADDCONST -2
+		UFITS 64
+		CALLREF {
+			CALL $roundAt_internal_macro$
+		}
+		.loc ../contracts/DePoolRounds.sol, 313
+		PUSH2 S3, S0
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+		NULLSWAPIFNOT
+		IFREF {
+			LDU 64
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			LDREF
+			ENDS
+			CTOS
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			ENDS
+			TRIPLE
+		}
+		.loc ../contracts/DePoolRounds.sol, 314
+		DUP
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 315
+			PUSHINT 0
+			ROLL 6
+			BLKDROP2 5, 2
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFJMP
+		.loc ../contracts/DePoolRounds.sol, 317
+		DUP
+		ISNULL
+		THROWIF 63
+		.loc ../contracts/DePoolRounds.sol, 318
+		PUSH2 S3, S0
+		FIRST
+		MIN
+		POP S4
+		.loc ../contracts/DePoolRounds.sol, 319
+		PUXC S3, S-1
+		DUP
+		FIRST
+		ROT
+		SUB
+		UFITS 64
+		SETINDEX 0
+		.loc ../contracts/DePoolRounds.sol, 320
+		PUSH3 S3, S1, S1
+		INDEX 8
+		ROT
+		SUB
+		UFITS 64
+		SETINDEX 8
+		POP S2
+		.loc ../contracts/DePoolRounds.sol, 321
+		DUP
+		FIRST
+		ROLL 3
+		LESS
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 322
+			DUP
+			FIRST
+			PUSH2 S2, S2
+			INDEX 8
+			ROT
+			SUB
+			UFITS 64
+			SETINDEX 8
+			POP S2
+			.loc ../contracts/DePoolRounds.sol, 323
+			DUP
+			FIRST
+			PUSH S3
+			ADD
+			UFITS 64
+			POP S3
+			.loc ../contracts/DePoolRounds.sol, 324
+			PUSHINT 0
+			SETINDEX 0
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IF
+		.loc ../contracts/DePoolRounds.sol, 327
+		BLKPUSH 2, 0
+		.loc ../contracts/DePoolRounds.sol, 340
+		SECOND
+		.loc ../contracts/DePoolRounds.sol, 341
+		OVER
+		THIRD
+		.loc ../contracts/DePoolRounds.sol, 343
+		ROT
+		FIRST
+		PUSH S2
+		ISNULL
+		ZEROSWAPIF
+		PUSHCONT {
+			PUSH2 S2, S2
+			ISNULL
+			THROWIF 63
+			FIRST
+		}
+		IFNOT
+		ADD
+		UFITS 64
+		OVER
+		ISNULL
+		ZEROSWAPIF
+		PUSHCONT {
+			PUSH2 S1, S1
+			ISNULL
+			THROWIF 63
+			FIRST
+		}
+		IFNOT
+		ADD
+		UFITS 64
+		BLKDROP2 2, 1
+		.loc ../contracts/DePoolRounds.sol, 0
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 332
+			PUSH3 S0, S1, S1
+			PUSHINT 16
+			INDEXVAR
+			PUXC S6, S-1
+			ROLL 3
+			CALLREF {
+				UNTRIPLE
+				XCHG S2
+				NEWC
+				STU 64
+				SWAP
+				DUP
+				ISNULL
+				PUSHCONT {
+					DROP
+					STSLICECONST 0
+				}
+				PUSHCONT {
+					SWAP
+					STSLICECONST 1
+					SWAP
+					UNTUPLE 5
+					REVERSE 6, 0
+					STU 64
+					STU 64
+					STU 32
+					STU 64
+					STSLICE
+				}
+				IFELSE
+				NEWC
+				ROT
+				DUP
+				ISNULL
+				PUSHCONT {
+					DROP
+					STSLICECONST 0
+				}
+				PUSHCONT {
+					SWAP
+					STSLICECONST 1
+					SWAP
+					UNTUPLE 5
+					REVERSE 6, 0
+					STU 64
+					STU 64
+					STU 32
+					STU 64
+					STSLICE
+				}
+				IFELSE
+				STBREFR
+			}
+			ROTREV
+			PUSHINT 267
+			DICTSETB
+			PUSHINT 16
+			SETINDEXVAR
+			POP S2
+		}
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 328
+			PUSH2 S1, S1
+			INDEX 15
+			DEC
+			UFITS 32
+			SETINDEX 15
+			POP S2
+			.loc ../contracts/DePoolRounds.sol, 329
+			PUSH2 S1, S1
+			PUSHINT 16
+			INDEXVAR
+			PUXC S5, S-1
+			PUSHINT 267
+			DICTDEL
+			DROP
+			PUSHINT 16
+			SETINDEXVAR
+			POP S2
+			.loc ../contracts/DePoolRounds.sol, 330
+			PUSH2 S4, S4
+			FIRST
+			DEC
+			UFITS 8
+			SETINDEX 0
+			POP S5
+		}
+		IFELSE
+		.loc ../contracts/DePoolRounds.sol, 334
+		DROP
+		.loc ../contracts/DePoolRounds.sol, 179
+		GETGLOB 14
+		ADDCONST -2
+		UFITS 64
+		SWAP
+		CALLREF {
+			CALL $setRound_internal_macro$
+		}
+		.loc ../contracts/DePoolRounds.sol, 335
+		ROT
+		BLKDROP2 1, 2
+		.loc ../contracts/DePoolRounds.sol, 304
+	}
+	CALLX
+	.loc ../contracts/DePoolRounds.sol, 0
+	POP S3
+	NIP
+	.loc ../contracts/DePool.sol, 585
+	GETGLOB 9
+	ROT
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 586
+	DUP
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 587
+		PUSHINT 27
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOTJMP
+	.loc ../contracts/DePool.sol, 589
+	GETGLOB 9
+	NEWC
+	STSLICECONST x42_
+	STSLICE
+	SWAP
+	STGRAMS
+	PUSHINT 107
+	STZEROES
+	ENDC
+	PUSHINT 64
+	SENDRAWMSG
+	.loc ../contracts/DePool.sol, 0
+	DROP2
+	.loc ../contracts/DePool.sol, 572
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro addVestingStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 596
+OVER
+PUSHCONT {
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+}
+IFELSE
+LDMSGADDR
+LDU 32
+LDU 32
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $addVestingStake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	addVestingStake_internal
+.type	addVestingStake_internal, @function
+CALL $addVestingStake_internal_macro$
+
+.macro addVestingStake_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 600
+TRUE
+CALLREF {
+	CALL $addVestingOrLock_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro addLockStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 603
+OVER
+PUSHCONT {
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+}
+IFELSE
+LDMSGADDR
+LDU 32
+LDU 32
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $addLockStake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	addLockStake_internal
+.type	addLockStake_internal, @function
+CALL $addLockStake_internal_macro$
+
+.macro addLockStake_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 607
+FALSE
+CALLREF {
+	CALL $addVestingOrLock_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.globl	addVestingOrLock_internal
+.type	addVestingOrLock_internal, @function
+CALL $addVestingOrLock_internal_macro$
+
+.macro addVestingOrLock_internal_macro
+.loc ../contracts/DePool.sol, 619
+GETGLOB 16
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 620
+	PUSHINT 3
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 5
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 623
+PUSH S3
+PARSEMSGADDR
+DUP
+FIRST
+EQINT 2
+PUSHCONT {
+	SECOND
+	ISNULL
+}
+PUSHCONT {
+	DROP
+	FALSE
+}
+IFELSE
+PUSHCONT {
+	PUSHINT 22
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 5
+}
+IFNOTJMP
+.loc ../contracts/DePool.sol, 626
+PUSH S3
+CALLREF {
+	CALL $fetchParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 627
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 628
+	PUSHINT 6
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 6
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 630
+BLKPUSH 2, 0
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 632
+PUSH S2
+PUSHCONT {
+	DUP
+	INDEX 6
+}
+PUSHCONT {
+	DUP
+	INDEX 7
+}
+IFELSE
+.loc ../contracts/DePool.sol, 633
+GETGLOB 9
+OVER
+SDEQ
+PUSHCONT {
+	PUSHINT 23
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 8
+}
+IFNOTJMP
+.loc ../contracts/DePool.sol, 636
+DEPTH
+ADDCONST -2
+PICK
+UFITS 64
+.loc ../contracts/DePool.sol, 637
+PUSH2 S0, S8
+PUSHINT 500000000
+ADD
+LESS
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 638
+	PUSHINT 21
+	PUSHINT 500000000
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 9
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 640
+PUSH2 S0, S8
+SUB
+UFITS 64
+.loc ../contracts/DePool.sol, 642
+PUSH S9
+RSHIFT 1
+.loc ../contracts/DePool.sol, 643
+DUP
+GETGLOB 17
+LESS
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 644
+	PUSHINT 1
+	PUSHINT 2
+	GETGLOB 17
+	MUL
+	UFITS 64
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 11
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 647
+BLKPUSH 2, 8
+GREATER
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 648
+	PUSHINT 10
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 11
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 651
+PUSH S7
+PUSHINT 567648000
+GEQ
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 652
+	PUSHINT 11
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 11
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 655
+PUSH S8
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 656
+	PUSHINT 12
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 11
+	.loc ../contracts/DePool.sol, 0
+}
+IFNOTJMP
+.loc ../contracts/DePool.sol, 659
+PUSH2 S7, S8
+MOD
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 660
+	PUSHINT 13
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 11
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 663
+FALSE ; decl return flag
+PUSH S7
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 664
+	PUSH S5
+	THIRD
+	GTINT 0
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 665
+		PUSHINT 9
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 12
+		PUSHINT 4
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 667
+	PUSH S5
+	PUSHINT 2
+	SETINDEX 2
+	POP S6
+	.loc ../contracts/DePool.sol, 0
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 669
+	PUSH S5
+	INDEX 3
+	GTINT 0
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 670
+		PUSHINT 17
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 12
+		PUSHINT 4
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 672
+	PUSH S5
+	PUSHINT 2
+	SETINDEX 3
+	POP S6
+	.loc ../contracts/DePool.sol, 0
+}
+IFELSE
+IFRET
+.loc ../contracts/DePool.sol, 675
+PUSH3 S0, S8, S7
+MULDIV
+UFITS 64
+.loc ../contracts/DePool.sol, 677
+PUSHINT 0
+PUSHCONT {
+	DUP
+	LESSINT 2
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 678
+	DUP
+	EQINT 0
+	.loc ../contracts/DePool.sol, 679
+	DUP
+	PUSHCONT {
+		PUSH S3
+	}
+	PUSHCONT {
+		PUSH2 S13, S3
+		SUB
+		UFITS 64
+	}
+	IFELSE
+	NOW
+	PUSH2 S13, S4
+	GETGLOB 9
+	TUPLE 5
+	.loc ../contracts/DePool.sol, 687
+	NULL
+	PUSH2 S0, S11
+	.loc ../contracts/DePool.sol, 689
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 690
+		PUSH S2
+		POP S2
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 692
+		PUSH S2
+		NIP
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 695
+	PUSH S3
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 173
+		GETGLOB 14
+		DEC
+		UFITS 64
+		CALLREF {
+			CALL $roundAt_internal_macro$
+		}
+		.loc ../contracts/DePoolRounds.sol, 0
+	}
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 174
+		GETGLOB 14
+		ADDCONST -2
+		UFITS 64
+		CALLREF {
+			CALL $roundAt_internal_macro$
+		}
+		.loc ../contracts/DePoolRounds.sol, 0
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 696
+	PUSH2 S0, S11
+	PUSH S18
+	PUSHINT 0
+	BLKPUSH 2, 6
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 213
+		PUSH S2
+		EQINT 0
+		PUSH S2
+		ISNULL
+		PUSH S2
+		ISNULL
+		AND
+		AND
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 214
+			BLKDROP 4
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFJMP
+		.loc ../contracts/DePoolRounds.sol, 217
+		PUSH2 S3, S5
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+		NULLSWAPIFNOT
+		NIP
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 218
+			PUSH2 S5, S5
+			INDEX 15
+			INC
+			UFITS 32
+			SETINDEX 15
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 219
+			PUSH2 S4, S4
+			FIRST
+			INC
+			UFITS 8
+			SETINDEX 0
+			POP S5
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 222
+		PUSH3 S2, S5, S5
+		INDEX 8
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 8
+		POP S6
+		.loc ../contracts/DePoolRounds.sol, 223
+		PUSH2 S3, S5
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+IFREFELSEREF
+{
+			LDU 64
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			LDREF
+			ENDS
+			CTOS
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			ENDS
+			TRIPLE
+}
+{
+			PUSHINT 0
+			NULL
+			DUP
+			TRIPLE
+}
+		.loc ../contracts/DePoolRounds.sol, 224
+		ROLL 3
+		SWAP
+		DUP
+		FIRST
+		ROT
+		ADD
+		UFITS 64
+		SETINDEX 0
+		.loc ../contracts/DePoolRounds.sol, 226
+		PUSH S2
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 227
+			PUSH2 S2, S2
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH2 S6, S6
+			INDEX 8
+			ROT
+			ADD
+			UFITS 64
+			SETINDEX 8
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 228
+			PUSH S2
+			SETINDEX 1
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 231
+		OVER
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 232
+			PUSH2 S1, S1
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH2 S6, S6
+			INDEX 8
+			ROT
+			ADD
+			UFITS 64
+			SETINDEX 8
+			POP S6
+			.loc ../contracts/DePoolRounds.sol, 233
+			OVER
+			SETINDEX 2
+			.loc ../contracts/DePoolRounds.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePoolRounds.sol, 236
+		PUSH2 S5, S5
+		PUSHINT 16
+		INDEXVAR
+		ROLL 5
+		SWAP
+		ROLL 3
+		CALLREF {
+			UNTRIPLE
+			XCHG S2
+			NEWC
+			STU 64
+			SWAP
+			DUP
+			ISNULL
+			PUSHCONT {
+				DROP
+				STSLICECONST 0
+			}
+			PUSHCONT {
+				SWAP
+				STSLICECONST 1
+				SWAP
+				UNTUPLE 5
+				REVERSE 6, 0
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			IFELSE
+			NEWC
+			ROT
+			DUP
+			ISNULL
+			PUSHCONT {
+				DROP
+				STSLICECONST 0
+			}
+			PUSHCONT {
+				SWAP
+				STSLICECONST 1
+				SWAP
+				UNTUPLE 5
+				REVERSE 6, 0
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			IFELSE
+			STBREFR
+		}
+		ROTREV
+		PUSHINT 267
+		DICTSETB
+		PUSHINT 16
+		SETINDEXVAR
+		POP S4
+		.loc ../contracts/DePoolRounds.sol, 237
+		DROP2
+		.loc ../contracts/DePoolRounds.sol, 203
+	}
+	CALLX
+	.loc ../contracts/DePoolRounds.sol, 0
+	POP S13
+	NIP
+	.loc ../contracts/DePool.sol, 697
+	ROLL 4
+	PUSHCONT {
+		DUP
+		.loc ../contracts/DePoolRounds.sol, 178
+		GETGLOB 14
+		DEC
+	}
+	PUSHCONT {
+		DUP
+		.loc ../contracts/DePoolRounds.sol, 179
+		GETGLOB 14
+		ADDCONST -2
+	}
+	IFELSE
+	UFITS 64
+	SWAP
+	CALLREF {
+		CALL $setRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+	BLKDROP 4
+	.loc ../contracts/DePool.sol, 677
+	INC
+	.loc ../contracts/DePool.sol, 0
+}
+WHILE
+BLKDROP 3
+.loc ../contracts/DePool.sol, 700
+ROLL 8
+ROLL 4
+CALLREF {
+	CALL $_setOrDeleteParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 701
+CALLREF {
+	CALL $sendAcceptAndReturnChange128_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+BLKDROP 7
+
+.macro withdrawPart
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 707
+LDU 64
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $withdrawPart_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	withdrawPart_internal
+.type	withdrawPart_internal, @function
+CALL $withdrawPart_internal_macro$
+
+.macro withdrawPart_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 210
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 708
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 709
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 712
+	GETGLOB 9
+	CALLREF {
+		CALL $fetchParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 713
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 714
+		PUSHINT 6
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP2
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 716
+	DUP
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 718
+	SWAP
+	SETINDEX 5
+	.loc ../contracts/DePool.sol, 719
+	GETGLOB 9
+	SWAP
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 720
+	CALLREF {
+		CALL $sendAcceptAndReturnChange_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 707
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro withdrawAll
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 725
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $withdrawAll_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	withdrawAll_internal
+.type	withdrawAll_internal, @function
+CALL $withdrawAll_internal_macro$
+
+.macro withdrawAll_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 210
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 726
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 727
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 730
+	GETGLOB 9
+	CALLREF {
+		CALL $fetchParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 731
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 732
+		PUSHINT 6
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 734
+	DUP
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 736
+	FALSE
+	SETINDEX 4
+	.loc ../contracts/DePool.sol, 737
+	GETGLOB 9
+	SWAP
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 738
+	CALLREF {
+		CALL $sendAcceptAndReturnChange_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 725
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro cancelWithdrawal
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 742
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $cancelWithdrawal_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	cancelWithdrawal_internal
+.type	cancelWithdrawal_internal, @function
+CALL $cancelWithdrawal_internal_macro$
+
+.macro cancelWithdrawal_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 210
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 743
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 744
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 747
+	GETGLOB 9
+	CALLREF {
+		CALL $fetchParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 748
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 749
+		PUSHINT 6
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 751
+	DUP
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 753
+	TRUE
+	SETINDEX 4
+	.loc ../contracts/DePool.sol, 754
+	PUSHINT 0
+	SETINDEX 5
+	.loc ../contracts/DePool.sol, 755
+	GETGLOB 9
+	SWAP
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 756
+	CALLREF {
+		CALL $sendAcceptAndReturnChange_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 742
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro setVestingDonor
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 761
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $setVestingDonor_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setVestingDonor_internal
+.type	setVestingDonor_internal, @function
+CALL $setVestingDonor_internal_macro$
+
+.macro setVestingDonor_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 762
+TRUE
+CALLREF {
+	CALL $setVestingOrLockDonor_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro setLockDonor
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 766
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $setLockDonor_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setLockDonor_internal
+.type	setLockDonor_internal, @function
+CALL $setLockDonor_internal_macro$
+
+.macro setLockDonor_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 767
+FALSE
+CALLREF {
+	CALL $setVestingOrLockDonor_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.globl	setVestingOrLockDonor_internal
+.type	setVestingOrLockDonor_internal, @function
+CALL $setVestingOrLockDonor_internal_macro$
+
+.macro setVestingOrLockDonor_internal_macro
+.loc ../contracts/DePool.sol, 771
+GETGLOB 16
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 772
+	PUSHINT 3
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	DROP2
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 775
+OVER
+PARSEMSGADDR
+DUP
+FIRST
+EQINT 2
+PUSHCONT {
+	SECOND
+	ISNULL
+}
+PUSHCONT {
+	DROP
+	FALSE
+}
+IFELSE
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 776
+	PUSHINT 22
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	DROP2
+	.loc ../contracts/DePool.sol, 0
+}
+IFNOTJMP
+.loc ../contracts/DePool.sol, 779
+GETGLOB 9
+CALLREF {
+	CALL $fetchParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 780
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 781
+	PUSHINT 6
+	PUSHINT 0
+	CALLREF {
+		CALL $_sendError_internal_macro$
+	}
+	BLKDROP 3
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 783
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 785
+SWAP
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 786
+	OVER
+	SETINDEX 6
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 788
+	OVER
+	SETINDEX 7
+}
+IFELSE
+.loc ../contracts/DePool.sol, 790
+GETGLOB 9
+SWAP
+CALLREF {
+	CALL $_setOrDeleteParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 791
+DROP
+CALLREF {
+	CALL $sendAcceptAndReturnChange_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro transferStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 798
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+LDU 64
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $transferStake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	transferStake_internal
+.type	transferStake_internal, @function
+CALL $transferStake_internal_macro$
+
+.macro transferStake_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 210
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 799
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 800
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP2
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 804
+	OVER
+	PARSEMSGADDR
+	DUP
+	FIRST
+	EQINT 2
+	PUSHCONT {
+		SECOND
+		ISNULL
+	}
+	PUSHCONT {
+		DROP
+		FALSE
+	}
+	IFELSE
+	NOT
+	PUSH S2
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	SDEQ
+	OR
+	PUSHCONT {
+		PUSHINT 22
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		DROP2
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 808
+	GETGLOB 9
+	.loc ../contracts/DePool.sol, 809
+	PUSH2 S0, S2
+	SDEQ
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 810
+		PUSHINT 19
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 813
+	DUP
+	GETGLOB 10
+	SDEQ
+	PUSH S3
+	GETGLOB 10
+	SDEQ
+	OR
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 814
+		PUSHINT 20
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePoolRounds.sol, 176
+	GETGLOB 14
+	ADDCONST -4
+	UFITS 64
+	CALLREF {
+		CALL $roundAt_internal_macro$
+	}
+	.loc ../contracts/DePoolRounds.sol, 0
+	INDEX 6
+	EQINT 8
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 818
+		PUSHINT 26
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 821
+	DUP
+	CALLREF {
+		CALL $fetchParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 822
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 823
+		PUSHINT 6
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 4
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 825
+	BLKPUSH 2, 0
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 827
+	PUSH S3
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 828
+		PUSHPOW2DEC 64
+		POP S4
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 831
+	PUSH S4
+	CALLREF {
+		CALL $getOrCreateParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 833
+	PUSHINT 0
+	DUP
+	.loc ../contracts/DePool.sol, 835
+	GETGLOB 13
+	.loc ../contracts/DePool.sol, 836
+	DUP
+	PUSHINT 64
+	DICTUMINREF
+	NULLSWAPIFNOT
+	IFREF {
+		SWAP
+		CTOS
+		CALLREF {
+			LDU 64
+			LDU 32
+			LDU 32
+			LDU 32
+			LDU 32
+			LDU 256
+			LDU 8
+			OVER
+			GTINT 9
+			THROWIF 73
+			LDU 8
+			OVER
+			GTINT 8
+			THROWIF 73
+			LDU 64
+			LDU 64
+			LDU 64
+			LDI 1
+			LDU 64
+			LDU 64
+			LDU 64
+			LDU 32
+			LDDICT
+			LDU 64
+			LDU 64
+			LDREF
+			ENDS
+			CTOS
+			LDU 64
+			LDU 64
+			LDU 256
+			LDU 32
+			LDU 32
+			LDU 256
+			LDREF
+			ROLLREV 6
+			TUPLE 6
+			SWAP
+			LDREF
+			ENDS
+			CTOS
+			LDMSGADDR
+			LDREF
+			ENDS
+			CTOS
+			LDMSGADDR
+			ENDS
+			PUSHINT 23
+			TUPLEVAR
+		}
+		PAIR
+	}
+	.loc ../contracts/DePool.sol, 837
+	PUSHCONT {
+		DUP
+		ISNULL
+		NOT
+		PUSH2 S3, S9
+		LESS
+		AND
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 838
+		BLKPUSH 2, 0
+		ISNULL
+		THROWIF 63
+		UNPAIR
+		.loc ../contracts/DePool.sol, 839
+		PUSHINT 0
+		PUSH3 S0, S1, S8
+		.loc ../contracts/DePool.sol, 841
+		PUSH3 S10, S13, S15
+		PUSH S17
+		PUSH S12
+		SUB
+		UFITS 64
+		GETGLOB 17
+		PUSHCONT {
+			.loc ../contracts/DePoolRounds.sol, 260
+			PUSH2 S3, S6
+			PUSHINT 16
+			INDEXVAR
+			PUSHINT 267
+			DICTGET
+			NULLSWAPIFNOT
+			IFREF {
+				LDU 64
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				LDREF
+				ENDS
+				CTOS
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				ENDS
+				TRIPLE
+			}
+			.loc ../contracts/DePoolRounds.sol, 261
+			DUP
+			ISNULL
+			PUSHCONT {
+				ROLL 7
+				PUSHINT 0
+				DUP
+				BLKSWAP 2, 8
+				BLKDROP2 5, 5
+			}
+			IFJMP
+			.loc ../contracts/DePoolRounds.sol, 263
+			DUP
+			ISNULL
+			THROWIF 63
+			.loc ../contracts/DePoolRounds.sol, 264
+			PUSH2 S4, S7
+			PUSHINT 16
+			INDEXVAR
+			PUSHINT 267
+			DICTGET
+IFREFELSEREF
+{
+				LDU 64
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				LDREF
+				ENDS
+				CTOS
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				ENDS
+				TRIPLE
+}
+{
+				PUSHINT 0
+				NULL
+				DUP
+				TRIPLE
+}
+			FIRST
+			.loc ../contracts/DePoolRounds.sol, 265
+			PUSHINT 0
+			PUSH2 S0, S2
+			.loc ../contracts/DePoolRounds.sol, 267
+			FIRST
+			PUSH S6
+			GEQ
+			PUSHCONT {
+				.loc ../contracts/DePoolRounds.sol, 268
+				PUSH S3
+				FIRST
+				PUSH S6
+				SUB
+				UFITS 64
+				POP S2
+				.loc ../contracts/DePoolRounds.sol, 269
+				PUSH S5
+			}
+			PUSHCONT {
+				.loc ../contracts/DePoolRounds.sol, 271
+				PUSHINT 0
+				POP S2
+				.loc ../contracts/DePoolRounds.sol, 272
+				PUSH S3
+				FIRST
+			}
+			IFELSE
+			NIP
+			.loc ../contracts/DePoolRounds.sol, 276
+			PUSH2 S6, S10
+			PUSHINT 16
+			INDEXVAR
+			PUSHINT 267
+			DICTGET
+IFREFELSEREF
+{
+				LDU 64
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				LDREF
+				ENDS
+				CTOS
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				ENDS
+				TRIPLE
+}
+{
+				PUSHINT 0
+				NULL
+				DUP
+				TRIPLE
+}
+			FIRST
+			OVER
+			ADD
+			UFITS 64
+			.loc ../contracts/DePoolRounds.sol, 277
+			PUSH S2
+			GTINT 0
+			PUSH2 S3, S6
+			LESS
+			AND
+			SWAP
+			ROLL 6
+			LESS
+			OR
+			PUSHCONT {
+				.loc ../contracts/DePoolRounds.sol, 279
+				ROLL 9
+				PUSHINT 0
+				ROLL 4
+				BLKSWAP 2, 9
+				BLKDROP2 6, 5
+				.loc ../contracts/DePoolRounds.sol, 0
+			}
+			IFJMP
+			.loc ../contracts/DePoolRounds.sol, 282
+			SWAP
+			PUXC S3, S-1
+			SETINDEX 0
+			POP S3
+			.loc ../contracts/DePoolRounds.sol, 283
+			PUSH2 S2, S2
+			.loc ../contracts/DePoolRounds.sol, 340
+			SECOND
+			.loc ../contracts/DePoolRounds.sol, 341
+			OVER
+			THIRD
+			.loc ../contracts/DePoolRounds.sol, 343
+			ROT
+			FIRST
+			PUSH S2
+			ISNULL
+			ZEROSWAPIF
+			PUSHCONT {
+				PUSH2 S2, S2
+				ISNULL
+				THROWIF 63
+				FIRST
+			}
+			IFNOT
+			ADD
+			UFITS 64
+			OVER
+			ISNULL
+			ZEROSWAPIF
+			PUSHCONT {
+				PUSH2 S1, S1
+				ISNULL
+				THROWIF 63
+				FIRST
+			}
+			IFNOT
+			ADD
+			UFITS 64
+			BLKDROP2 2, 1
+			.loc ../contracts/DePoolRounds.sol, 0
+			PUSHCONT {
+				.loc ../contracts/DePoolRounds.sol, 288
+				PUSH3 S2, S8, S8
+				PUSHINT 16
+				INDEXVAR
+				PUXC S8, S-1
+				ROLL 3
+				CALLREF {
+					UNTRIPLE
+					XCHG S2
+					NEWC
+					STU 64
+					SWAP
+					DUP
+					ISNULL
+					PUSHCONT {
+						DROP
+						STSLICECONST 0
+					}
+					PUSHCONT {
+						SWAP
+						STSLICECONST 1
+						SWAP
+						UNTUPLE 5
+						REVERSE 6, 0
+						STU 64
+						STU 64
+						STU 32
+						STU 64
+						STSLICE
+					}
+					IFELSE
+					NEWC
+					ROT
+					DUP
+					ISNULL
+					PUSHCONT {
+						DROP
+						STSLICECONST 0
+					}
+					PUSHCONT {
+						SWAP
+						STSLICECONST 1
+						SWAP
+						UNTUPLE 5
+						REVERSE 6, 0
+						STU 64
+						STU 64
+						STU 32
+						STU 64
+						STSLICE
+					}
+					IFELSE
+					STBREFR
+				}
+				ROTREV
+				PUSHINT 267
+				DICTSETB
+				PUSHINT 16
+				SETINDEXVAR
+				POP S9
+			}
+			PUSHCONT {
+				.loc ../contracts/DePoolRounds.sol, 284
+				PUSH2 S8, S8
+				INDEX 15
+				DEC
+				UFITS 32
+				SETINDEX 15
+				POP S9
+				.loc ../contracts/DePoolRounds.sol, 285
+				PUSH2 S8, S8
+				PUSHINT 16
+				INDEXVAR
+				PUXC S7, S-1
+				PUSHINT 267
+				DICTDEL
+				DROP
+				PUSHINT 16
+				SETINDEXVAR
+				POP S9
+				.loc ../contracts/DePoolRounds.sol, 286
+				PUSH2 S7, S7
+				FIRST
+				DEC
+				UFITS 8
+				SETINDEX 0
+				POP S8
+			}
+			IFELSE
+			.loc ../contracts/DePoolRounds.sol, 291
+			PUSH2 S4, S8
+			PUSHINT 16
+			INDEXVAR
+			PUSHINT 267
+			DICTGET
+			NULLSWAPIFNOT
+			NIP
+			PUSHCONT {
+				.loc ../contracts/DePoolRounds.sol, 292
+				PUSH2 S8, S8
+				INDEX 15
+				INC
+				UFITS 32
+				SETINDEX 15
+				POP S9
+				.loc ../contracts/DePoolRounds.sol, 293
+				PUSH2 S6, S6
+				FIRST
+				INC
+				UFITS 8
+				SETINDEX 0
+				POP S7
+				.loc ../contracts/DePoolRounds.sol, 0
+			}
+			IFNOT
+			.loc ../contracts/DePoolRounds.sol, 295
+			PUSH3 S0, S8, S8
+			PUSHINT 16
+			INDEXVAR
+			ROLL 7
+			TUCK
+			OVER
+			PUSHINT 267
+			DICTGET
+IFREFELSEREF
+{
+				LDU 64
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				LDREF
+				ENDS
+				CTOS
+				LDI 1
+				SWAP
+				NULLSWAPIFNOT
+				PUSHCONT {
+					LDU 64
+					LDU 64
+					LDU 32
+					LDU 64
+					LDMSGADDR
+					ROLLREV 5
+					TUPLE 5
+				}
+				IF
+				SWAP
+				ENDS
+				TRIPLE
+}
+{
+				PUSHINT 0
+				NULL
+				DUP
+				TRIPLE
+}
+			DUP
+			FIRST
+			ROLL 5
+			ADD
+			UFITS 64
+			SETINDEX 0
+			CALLREF {
+				UNTRIPLE
+				XCHG S2
+				NEWC
+				STU 64
+				SWAP
+				DUP
+				ISNULL
+				PUSHCONT {
+					DROP
+					STSLICECONST 0
+				}
+				PUSHCONT {
+					SWAP
+					STSLICECONST 1
+					SWAP
+					UNTUPLE 5
+					REVERSE 6, 0
+					STU 64
+					STU 64
+					STU 32
+					STU 64
+					STSLICE
+				}
+				IFELSE
+				NEWC
+				ROT
+				DUP
+				ISNULL
+				PUSHCONT {
+					DROP
+					STSLICECONST 0
+				}
+				PUSHCONT {
+					SWAP
+					STSLICECONST 1
+					SWAP
+					UNTUPLE 5
+					REVERSE 6, 0
+					STU 64
+					STU 64
+					STU 32
+					STU 64
+					STSLICE
+				}
+				IFELSE
+				STBREFR
+			}
+			ROTREV
+			PUSHINT 267
+			DICTSETB
+			PUSHINT 16
+			SETINDEXVAR
+			POP S8
+			.loc ../contracts/DePoolRounds.sol, 297
+			BLKSWAP 3, 5
+			XCHG S2, S4
+			BLKDROP2 3, 5
+			.loc ../contracts/DePoolRounds.sol, 242
+		}
+		CALLX
+		.loc ../contracts/DePoolRounds.sol, 0
+		REVERSE 5, 0
+		PUSH2 S8, S10
+		ROT
+		CALLREF {
+			PUSHINT 23
+			UNTUPLEVAR
+			PUSHINT 23
+			PUSHINT 0
+			REVX
+			NEWC
+			STU 64
+			STU 32
+			STU 32
+			STU 32
+			STU 32
+			STU 256
+			STU 8
+			STU 8
+			STU 64
+			STU 64
+			STU 64
+			STI 1
+			STU 64
+			STU 64
+			STU 64
+			STU 32
+			STDICT
+			STU 64
+			STU 64
+			ROLLREV 4
+			NEWC
+			STU 64
+			SWAP
+			UNTUPLE 6
+			REVERSE 7, 0
+			STU 64
+			STU 256
+			STU 32
+			STU 32
+			STU 256
+			STREF
+			ROTREV
+			NEWC
+			STSLICE
+			SWAP
+			NEWC
+			STSLICE
+			STBREFR
+			STBREFR
+			STBREFR
+		}
+		ENDC
+		ROTREV
+		PUSHINT 64
+		DICTUSETREF
+		POP S10
+		POP S5
+		POP S3
+		POP S11
+		POP S9
+		.loc ../contracts/DePool.sol, 851
+		SWAP
+		PUSH S6
+		ADD
+		UFITS 64
+		POP S6
+		.loc ../contracts/DePool.sol, 852
+		PUSH S6
+		ADD
+		UFITS 64
+		POP S6
+		.loc ../contracts/DePool.sol, 853
+		DROP
+		PUSH S2
+		PUSHINT 64
+		DICTUGETNEXT
+		NULLSWAPIFNOT
+		IFREF {
+			SWAP
+			PLDREF
+			CTOS
+			CALLREF {
+				LDU 64
+				LDU 32
+				LDU 32
+				LDU 32
+				LDU 32
+				LDU 256
+				LDU 8
+				OVER
+				GTINT 9
+				THROWIF 73
+				LDU 8
+				OVER
+				GTINT 8
+				THROWIF 73
+				LDU 64
+				LDU 64
+				LDU 64
+				LDI 1
+				LDU 64
+				LDU 64
+				LDU 64
+				LDU 32
+				LDDICT
+				LDU 64
+				LDU 64
+				LDREF
+				ENDS
+				CTOS
+				LDU 64
+				LDU 64
+				LDU 256
+				LDU 32
+				LDU 32
+				LDU 256
+				LDREF
+				ROLLREV 6
+				TUPLE 6
+				SWAP
+				LDREF
+				ENDS
+				CTOS
+				LDMSGADDR
+				LDREF
+				ENDS
+				CTOS
+				LDMSGADDR
+				ENDS
+				PUSHINT 23
+				TUPLEVAR
+			}
+			PAIR
+		}
+		NIP
+		.loc ../contracts/DePool.sol, 0
+	}
+	WHILE
+	.loc ../contracts/DePool.sol, 856
+	DROP
+	FALSE ; decl return flag
+	PUSH S8
+	PUSHPOW2DEC 64
+	NEQ
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 857
+		PUSH2 S3, S8
+		LESS
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 858
+			PUSHINT 18
+			PUSHINT 0
+			CALLREF {
+				CALL $_sendError_internal_macro$
+			}
+			BLKDROP 10
+			PUSHINT 4
+			.loc ../contracts/DePool.sol, 0
+		}
+		IFJMP
+		.loc ../contracts/DePool.sol, 861
+		PUSH2 S2, S8
+		LESS
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 862
+			PUSHINT 16
+			PUSHINT 0
+			CALLREF {
+				CALL $_sendError_internal_macro$
+			}
+			BLKDROP 10
+			PUSHINT 4
+			.loc ../contracts/DePool.sol, 0
+		}
+		IFJMP
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 0
+	IFRET
+	.loc ../contracts/DePool.sol, 866
+	SETGLOB 13
+	.loc ../contracts/DePool.sol, 868
+	PUSH S5
+	ROLL 4
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 869
+	PUSH S6
+	ROLL 3
+	CALLREF {
+		CALL $_setOrDeleteParticipant_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 871
+	ROLL 3
+	ROLL 5
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	PUSHINT 9789369574394656757036770681243717074945
+	STUR 135
+	ROTREV
+	NEWC
+	STSLICECONST x23c4771d
+	STSLICE
+	STU 128
+	STBREFR
+	ENDC
+	PUSHINT 1
+	SENDRAWMSG
+	.loc ../contracts/DePool.sol, 872
+	BLKDROP 3
+	CALLREF {
+		CALL $sendAcceptAndReturnChange_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 798
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro participateInElections
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 877
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 256
+	LDU 32
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+	LDU 256
+	LDU 32
+}
+IFELSE
+LDU 32
+LDU 256
+LDREF
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $participateInElections_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	participateInElections_internal
+.type	participateInElections_internal, @function
+CALL $participateInElections_internal_macro$
+
+.macro participateInElections_internal_macro
+.loc ../contracts/ValidatorBase.sol, 15
+GETGLOB 9
+GETGLOB 10
+SDEQ
+THROWIFNOT 113
+.loc ../contracts/ValidatorBase.sol, 16
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 885
+	GETGLOB 16
+	PUSHCONT {
+		PUSHINT 3
+		PUSHINT 0
+		CALLREF {
+			CALL $_sendError_internal_macro$
+		}
+		BLKDROP 6
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 888
+	ACCEPT
+	.loc ../contracts/DePool.sol, 889
+	FALSE ; decl return flag
+	CALLREF {
+		CALL $checkPureDePoolBalance_internal_macro$
+	}
+	PUSHCONT {
+		.loc ../contracts/DePoolRounds.sol, 175
+		GETGLOB 14
+		ADDCONST -3
+		UFITS 64
+		CALLREF {
+			CALL $roundAt_internal_macro$
+		}
+		.loc ../contracts/DePool.sol, 891
+		DUP
+		INDEX 6
+		NEQINT 2
+		PUSHCONT {
+			PUSHINT 24
+			PUSHINT 0
+			CALLREF {
+				CALL $_sendError_internal_macro$
+			}
+			BLKDROP 8
+			PUSHINT 4
+		}
+		IFJMP
+		.loc ../contracts/DePool.sol, 893
+		PUSH2 S5, S0
+		SECOND
+		NEQ
+		PUSHCONT {
+			PUSHINT 25
+			PUSHINT 0
+			CALLREF {
+				CALL $_sendError_internal_macro$
+			}
+			BLKDROP 8
+			PUSHINT 4
+		}
+		IFJMP
+		.loc ../contracts/DePool.sol, 895
+		BLKPUSH 6, 7
+		TUPLE 6
+		PUSHINT 20
+		SETINDEXVAR
+		.loc ../contracts/DePool.sol, 896
+		DUP
+		PUSHINT 22
+		INDEXVAR
+		OVER
+		FIRST
+		PUSH S2
+		INDEX 8
+		PUSH S3
+		PUSHINT 20
+		INDEXVAR
+		PUSH S4
+		PUSHINT 21
+		INDEXVAR
+		CALLREF {
+			CALL $_sendElectionRequest_internal_macro$
+		}
+		.loc ../contracts/DePool.sol, 897
+		PUSHINT 3
+		SETINDEX 6
+		.loc ../contracts/DePoolRounds.sol, 180
+		GETGLOB 14
+		ADDCONST -3
+		UFITS 64
+		SWAP
+		CALLREF {
+			CALL $setRound_internal_macro$
+		}
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 0
+	IFRET
+	.loc ../contracts/DePool.sol, 900
+	BLKDROP 6
+	CALLREF {
+		CALL $_returnChange_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 877
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.globl	generateRound_internal
+.type	generateRound_internal, @function
+CALL $generateRound_internal_macro$
+
+.macro generateRound_internal_macro
+.loc ../contracts/DePool.sol, 906
+GETGLOB 14
+PUSHINT 0
+PUSHPOW2DEC 32
+PUSHINT 0
+BLKPUSH 12, 0
+NEWDICT
+PUSHINT 0
+BLKPUSH 7, 0
+PUSHREF {
+}
+TUPLE 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+GETGLOB 14
+.loc ../contracts/ProxyBase.sol, 11
+MODPOW2 1
+GETGLOB 11
+SECOND
+PUSHINT 32
+DICTUGET
+THROWIFNOT 50
+.loc ../contracts/ProxyBase.sol, 0
+PUSHINT 23
+TUPLEVAR
+.loc ../contracts/DePool.sol, 932
+GETGLOB 14
+INC
+UFITS 64
+SETGLOB 14
+.loc ../contracts/DePool.sol, 0
+
+.globl	updateRound2_internal
+.type	updateRound2_internal, @function
+CALL $updateRound2_internal_macro$
+
+.macro updateRound2_internal_macro
+.loc ../contracts/DePool.sol, 944
+PUSH S3
+INDEX 6
+EQINT 2
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 947
+	PUSH S3
+	PUSHINT 6
+	SETINDEX 6
+	POP S4
+	.loc ../contracts/DePool.sol, 948
+	PUSH S3
+	INDEX 7
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 949
+		PUSH S3
+		PUSHINT 8
+		SETINDEX 7
+		POP S4
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 951
+	PUSH S3
+	PUSHINT 0
+	SETINDEX 2
+	POP S4
+}
+PUSHCONT {
+	PUSH S3
+	INDEX 6
+	EQINT 8
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 953
+		PUSHINT 1
+		PUSH S4
+		FIRST
+		MYADDR
+		FALSE
+		NEWC
+		STSLICECONST x6_
+		STI 1
+		STSLICECONST x1_
+		STSLICE
+		PUSHINT 42045022170482489768618347945393405442363355375726
+		STUR 167
+		STU 64
+		STU 8
+		ENDC
+		PUSHINT 0
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+}
+IFELSE
+.loc ../contracts/DePool.sol, 959
+PUSH S3
+INDEX 5
+ROT
+NEQ
+PUSH S3
+INDEX 5
+ROLL 3
+NEQ
+PUSH S3
+THIRD
+PUSHPOW2DEC 32
+EQUAL
+AND
+AND
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 965
+	PUSH2 S0, S1
+	INDEX 3
+	ADD
+	UFITS 32
+	PUXC S2, S-1
+	SETINDEX 2
+	POP S2
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 969
+DROP
+NOW
+OVER
+THIRD
+ADDCONST 60
+GEQ
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 970
+	DUP
+	INDEX 6
+	EQINT 6
+	OVER
+	INDEX 7
+	NEQINT 0
+	AND
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 974
+		DUP
+		INDEX 7
+		CALLREF {
+			CALL $startRoundCompleting_internal_macro$
+		}
+	}
+	PUSHCONT {
+		DUP
+		INDEX 6
+		EQINT 4
+		OVER
+		INDEX 6
+		EQINT 6
+		OR
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 981
+			PUSHINT 7
+			SETINDEX 6
+			.loc ../contracts/DePool.sol, 982
+			DUP
+			PUSHINT 22
+			INDEXVAR
+			OVER
+			FIRST
+			PUSH S2
+			PUSHINT 21
+			INDEXVAR
+			CALLREF {
+				CALL $_recoverStake_internal_macro$
+			}
+			.loc ../contracts/DePool.sol, 0
+		}
+		IF
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 0
+
+.globl	isEmptyRound_internal
+.type	isEmptyRound_internal, @function
+CALL $isEmptyRound_internal_macro$
+
+.macro isEmptyRound_internal_macro
+.loc ../contracts/DePool.sol, 989
+DUP
+INDEX 6
+EQINT 9
+SWAP
+INDEX 8
+EQINT 0
+OR
+.loc ../contracts/DePool.sol, 0
+
+.globl	updateRounds_internal
+.type	updateRounds_internal, @function
+CALL $updateRounds_internal_macro$
+
+.macro updateRounds_internal_macro
+.loc ../contracts/DePool.sol, 993
+CALLREF {
+	CALL $roundTimeParams_internal_macro$
+}
+DROP2
+.loc ../contracts/DePool.sol, 994
+CALLREF {
+	CALL $getCurValidatorData_internal_macro$
+}
+.loc ../contracts/DePool.sol, 995
+CALLREF {
+	CALL $getPrevValidatorHash_internal_macro$
+}
+.loc ../contracts/DePool.sol, 996
+NOW
+PUSH2 S2, S5
+SUB
+UFITS 32
+GEQ
+.loc ../contracts/DePoolRounds.sol, 173
+GETGLOB 14
+DEC
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 174
+GETGLOB 14
+ADDCONST -2
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 175
+GETGLOB 14
+ADDCONST -3
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 176
+GETGLOB 14
+ADDCONST -4
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1003
+GETGLOB 16
+DUP
+PUSHCONT {
+	DROP
+	DUP
+	CALLREF {
+		CALL $isEmptyRound_internal_macro$
+	}
+	DUP
+	PUSHCONT {
+		DROP
+		OVER
+		CALLREF {
+			CALL $isEmptyRound_internal_macro$
+		}
+		DUP
+		PUSHCONT {
+			DROP
+			PUSH S2
+			CALLREF {
+				CALL $isEmptyRound_internal_macro$
+			}
+			DUP
+			PUSHCONT {
+				DROP
+				PUSH S3
+				CALLREF {
+					CALL $isEmptyRound_internal_macro$
+				}
+			}
+			IF
+		}
+		IF
+	}
+	IF
+}
+IF
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1004
+	GETGLOB 10
+	NEWC
+	STSLICECONST x42_
+	STSLICE
+	PUSHINT 111
+	STZEROES
+	ENDC
+	PUSHINT 160
+	SENDRAWMSG
+	.loc ../contracts/DePool.sol, 1005
+	GETGLOB 2
+	ISNULL
+	IFNOTREF {
+		CALL $c7_to_c4$
+	}
+	THROW 0
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 1008
+PUSH3 S5, S8, S7
+CALLREF {
+	CALL $updateRound2_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1011
+OVER
+INDEX 6
+EQINT 4
+PUSH S2
+INDEX 5
+PUSH S7
+EQUAL
+AND
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1015
+	OVER
+	PUSHINT 5
+	SETINDEX 6
+	POP S2
+	.loc ../contracts/DePool.sol, 1016
+	OVER
+	PUSHINT 22
+	INDEXVAR
+	PUSH S2
+	FIRST
+	PUSH S3
+	PUSHINT 21
+	INDEXVAR
+	CALLREF {
+		CALL $_recoverStake_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 1020
+ROLL 4
+PUSH S2
+INDEX 5
+PUSH S9
+NEQ
+PUSH S2
+INDEX 6
+EQINT 9
+AND
+AND
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1025
+	GETGLOB 13
+	SWAP
+	FIRST
+	SWAP
+	PUSHINT 64
+	DICTUDEL
+	DROP
+	SETGLOB 13
+	.loc ../contracts/DePool.sol, 1026
+	PUSH2 S0, S1
+	.loc ../contracts/DePool.sol, 1027
+	POP S2
+	.loc ../contracts/DePool.sol, 1028
+	PUSH S3
+	POP S3
+	.loc ../contracts/DePool.sol, 1029
+	CALLREF {
+		CALL $generateRound_internal_macro$
+	}
+	POP S4
+	.loc ../contracts/DePool.sol, 1032
+	PUSH3 S4, S7, S6
+	CALLREF {
+		CALL $updateRound2_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 1035
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1036
+		PUSH2 S1, S5
+		SETINDEX 1
+		POP S2
+		.loc ../contracts/DePool.sol, 1037
+		PUSH2 S1, S9
+		SETINDEX 4
+		POP S2
+		.loc ../contracts/DePool.sol, 1038
+		CALLREF {
+			CALL $getElector_internal_macro$
+		}
+		PUXC S2, S-1
+		PUSHINT 21
+		SETINDEXVAR
+		POP S2
+		.loc ../contracts/DePool.sol, 1039
+		PUSH2 S1, S7
+		SETINDEX 5
+		POP S2
+		.loc ../contracts/DePool.sol, 1040
+		CALLREF {
+			CALL $roundTimeParams_internal_macro$
+		}
+		BLKDROP2 3, 1
+		.loc ../contracts/DePool.sol, 1041
+		PUXC S2, S-1
+		SETINDEX 3
+		POP S2
+		.loc ../contracts/DePool.sol, 1043
+		GETGLOB 10
+		PUSH S2
+		PUSHINT 16
+		INDEXVAR
+		PUSHINT 267
+		DICTGET
+IFREFELSEREF
+{
+			LDU 64
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			LDREF
+			ENDS
+			CTOS
+			LDI 1
+			SWAP
+			NULLSWAPIFNOT
+			PUSHCONT {
+				LDU 64
+				LDU 64
+				LDU 32
+				LDU 64
+				LDMSGADDR
+				ROLLREV 5
+				TUPLE 5
+			}
+			IF
+			SWAP
+			ENDS
+			TRIPLE
+}
+{
+			PUSHINT 0
+			NULL
+			DUP
+			TRIPLE
+}
+		.loc ../contracts/DePoolRounds.sol, 340
+		DUP
+		SECOND
+		.loc ../contracts/DePoolRounds.sol, 341
+		OVER
+		THIRD
+		.loc ../contracts/DePoolRounds.sol, 343
+		ROT
+		FIRST
+		PUSH S2
+		ISNULL
+		ZEROSWAPIF
+		PUSHCONT {
+			PUSH2 S2, S2
+			ISNULL
+			THROWIF 63
+			FIRST
+		}
+		IFNOT
+		ADD
+		UFITS 64
+		OVER
+		ISNULL
+		ZEROSWAPIF
+		PUSHCONT {
+			PUSH2 S1, S1
+			ISNULL
+			THROWIF 63
+			FIRST
+		}
+		IFNOT
+		ADD
+		UFITS 64
+		BLKDROP2 2, 1
+		.loc ../contracts/DePoolRounds.sol, 0
+		PUXC S2, S-1
+		PUSHINT 17
+		SETINDEXVAR
+		POP S2
+		.loc ../contracts/DePool.sol, 1044
+		OVER
+		PUSHINT 17
+		INDEXVAR
+		GETGLOB 18
+		GEQ
+		.loc ../contracts/DePool.sol, 1045
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1050
+			OVER
+			PUSHINT 2
+			SETINDEX 6
+			POP S2
+			.loc ../contracts/DePool.sol, 1051
+			OVER
+			PUSHINT 22
+			INDEXVAR
+			PUSH S2
+			SECOND
+			PUSHSLICE xc000000000000000000000000045163712
+			NEWC
+			STSLICE
+			STU 32
+			STSLICE
+			ENDC
+			PUSHINT 0
+			SENDRAWMSG
+		}
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1046
+			OVER
+			PUSHINT 6
+			SETINDEX 6
+			POP S2
+			.loc ../contracts/DePool.sol, 1047
+			OVER
+			PUSHINT 3
+			SETINDEX 7
+			POP S2
+			.loc ../contracts/DePool.sol, 1048
+			OVER
+			PUSHINT 0
+			SETINDEX 2
+			POP S2
+		}
+		IFELSE
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 1056
+	GETGLOB 16
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1057
+		PUSH S2
+		PUSHINT 1
+		SETINDEX 6
+		POP S3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 1060
+ROLL 3
+.loc ../contracts/DePoolRounds.sol, 178
+GETGLOB 14
+DEC
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1061
+ROT
+.loc ../contracts/DePoolRounds.sol, 179
+GETGLOB 14
+ADDCONST -2
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1062
+SWAP
+.loc ../contracts/DePoolRounds.sol, 180
+GETGLOB 14
+ADDCONST -3
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 181
+GETGLOB 14
+ADDCONST -4
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+BLKDROP 6
+
+.globl	checkPureDePoolBalance_internal
+.type	checkPureDePoolBalance_internal, @function
+CALL $checkPureDePoolBalance_internal_macro$
+
+.macro checkPureDePoolBalance_internal_macro
+.loc ../contracts/DePool.sol, 1068
+PUSHINT 0
+CALLREF {
+	CALL $totalParticipantFunds_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1069
+DEPTH
+ADDCONST -2
+PICK
+UFITS 64
+.loc ../contracts/DePool.sol, 1070
+PUSHINT 10000000000
+ROT
+ADD
+ADD
+.loc ../contracts/DePool.sol, 1071
+GETPARAM 7
+FIRST
+OVER
+LESS
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1072
+	GETPARAM 7
+	FIRST
+	SUB
+	UFITS 256
+	.loc ../contracts/DePool.sol, 1073
+	PUSHSLICE xc00000000000000000000000002b7eb1df
+	NEWC
+	STSLICE
+	STU 256
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc ../contracts/DePool.sol, 1074
+	FALSE
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 1076
+DROP
+TRUE
+.loc ../contracts/DePool.sol, 0
+
+.macro ticktock
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1080
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $ticktock_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	ticktock_internal
+.type	ticktock_internal, @function
+CALL $ticktock_internal_macro$
+
+.macro ticktock_internal_macro
+.loc ../contracts/DePool.sol, 209
+GETGLOB 9
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 108
+.loc ../contracts/DePool.sol, 1081
+CALLREF {
+	CALL $checkPureDePoolBalance_internal_macro$
+}
+IFREF {
+	CALL $updateRounds_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1085
+GETGLOB 9
+MYADDR
+SDEQ
+IFNOTREF {
+	CALL $_returnChange_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro completeRoundWithChunk
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1091
+LDU 64
+LDU 8
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $completeRoundWithChunk_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	completeRoundWithChunk_internal
+.type	completeRoundWithChunk_internal, @function
+CALL $completeRoundWithChunk_internal_macro$
+
+.macro completeRoundWithChunk_internal_macro
+.loc ../contracts/DePool.sol, 215
+GETGLOB 9
+MYADDR
+SDEQ
+THROWIFNOT 120
+.loc ../contracts/DePool.sol, 216
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1092
+	ACCEPT
+	.loc ../contracts/DePool.sol, 1093
+	OVER
+	.loc ../contracts/DePoolRounds.sol, 171
+	GETGLOB 14
+	ADDCONST -4
+	UFITS 64
+	EQUAL
+	.loc ../contracts/DePoolRounds.sol, 0
+	GETGLOB 16
+	OR
+	PUSHCONT {
+		DROP2
+	}
+	IFNOTJMP
+	.loc ../contracts/DePool.sol, 1096
+	CALLREF {
+		CALL $checkPureDePoolBalance_internal_macro$
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1097
+		DROP2
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOTJMP
+	.loc ../contracts/DePool.sol, 1099
+	OVER
+	CALLREF {
+		CALL $fetchRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 1100
+	DUP
+	ISNULL
+	THROWIF 519
+	.loc ../contracts/DePool.sol, 1101
+	DUP
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/DePool.sol, 1102
+	DUP
+	INDEX 6
+	NEQINT 8
+	PUSHCONT {
+		BLKDROP 3
+	}
+	IFJMP
+	.loc ../contracts/DePool.sol, 1105
+	OVER
+	CALLREF {
+		CALL $_returnOrReinvest_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 1107
+	OVER
+	LESSINT 25
+	OVER
+	PUSHINT 16
+	INDEXVAR
+	DICTEMPTY
+	NOT
+	AND
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1108
+		PUSHINT 2
+		PUSH S2
+		MUL
+		UFITS 8
+		.loc ../contracts/DePool.sol, 1109
+		DUP
+		LESSINT 25
+		PUSHCONT {
+			DUP
+		}
+		PUSHCONT {
+			PUSH S2
+		}
+		IFELSE
+		PUSH S4
+		MYADDR
+		FALSE
+		NEWC
+		STSLICECONST x6_
+		STI 1
+		STSLICECONST x1_
+		STSLICE
+		PUSHINT 42045022170482489768618347945393405442363355375726
+		STUR 167
+		STU 64
+		STU 8
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 1113
+		DROP
+		PUSH2 S1, S2
+		MYADDR
+		FALSE
+		NEWC
+		STSLICECONST x6_
+		STI 1
+		STSLICECONST x1_
+		STSLICE
+		PUSHINT 42045022170482489768618347945393405442363355375726
+		STUR 167
+		STU 64
+		STU 8
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 1116
+	XCHG S1, S2
+	CALLREF {
+		CALL $setRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+	DROP
+	.loc ../contracts/DePool.sol, 1091
+}
+CALLX
+.loc ../contracts/DePool.sol, 0
+
+.macro completeRound
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1119
+LDU 64
+LDU 32
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $completeRound_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	completeRound_internal
+.type	completeRound_internal, @function
+CALL $completeRound_internal_macro$
+
+.macro completeRound_internal_macro
+.loc ../contracts/DePool.sol, 215
+GETGLOB 9
+MYADDR
+SDEQ
+THROWIFNOT 120
+.loc ../contracts/DePool.sol, 1120
+ACCEPT
+.loc ../contracts/DePool.sol, 1121
+OVER
+.loc ../contracts/DePoolRounds.sol, 171
+GETGLOB 14
+ADDCONST -4
+UFITS 64
+EQUAL
+.loc ../contracts/DePoolRounds.sol, 0
+GETGLOB 16
+OR
+THROWIFNOT 522
+.loc ../contracts/DePool.sol, 1122
+OVER
+CALLREF {
+	CALL $fetchRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1123
+DUP
+ISNULL
+THROWIF 519
+.loc ../contracts/DePool.sol, 1124
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 1125
+INDEX 6
+EQINT 8
+THROWIFNOT 518
+.loc ../contracts/DePool.sol, 1127
+PUSHINT 1
+PUSH S2
+MYADDR
+FALSE
+NEWC
+STSLICECONST x6_
+STI 1
+STSLICECONST x1_
+STSLICE
+PUSHINT 42045022170482489768618347945393405442363355375726
+STUR 167
+STU 64
+STU 8
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 1129
+CALLREF {
+	CALL $c7_to_c4$
+}
+COMMIT
+.loc ../contracts/DePool.sol, 1132
+DUP
+ADDCONST 24
+UFITS 32
+PUSHINT 25
+DIV
+.loc ../contracts/DePool.sol, 1133
+PUSHINT 250
+GREATER
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1135
+	PUSHINT 6250
+	UFITS 32
+	.loc ../contracts/DePool.sol, 1136
+	OVER
+	.loc ../contracts/DePool.sol, 1140
+	PUSHINT 0
+	PUSHCONT {
+		OVER
+		GTINT 0
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1141
+		PUSH2 S1, S2
+		LESS
+		DUP
+		PUSHCONT {
+			DROP
+			DUP
+			INC
+			FITS 256
+			PUSHINT 250
+			EQUAL
+		}
+		IFNOT
+		PUSHCONT {
+			OVER
+		}
+		PUSHCONT {
+			PUSH S2
+		}
+		IFELSE
+		.loc ../contracts/DePool.sol, 1145
+		PUSH2 S0, S5
+		MYADDR
+		FALSE
+		NEWC
+		STSLICECONST x6_
+		STI 1
+		STSLICECONST x1_
+		STSLICE
+		PUSHINT 42045022170482489768618347945393405442362642287185
+		STUR 167
+		STU 64
+		STU 32
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 1146
+		PUSH S2
+		SUBR
+		UFITS 32
+		POP S2
+		.loc ../contracts/DePool.sol, 1140
+		INC
+		FITS 256
+		.loc ../contracts/DePool.sol, 0
+	}
+	WHILE
+	BLKDROP 3
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1149
+	PUSHINT 0
+	PUSHCONT {
+		PUSH2 S0, S1
+		LESS
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1150
+		PUSHINT 25
+		PUSH S3
+		MYADDR
+		FALSE
+		NEWC
+		STSLICECONST x6_
+		STI 1
+		STSLICECONST x1_
+		STSLICE
+		PUSHINT 42045022170482489768618347945393405442363355375726
+		STUR 167
+		STU 64
+		STU 8
+		ENDC
+		PUSHINT 1
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 1149
+		ADDCONST 25
+		.loc ../contracts/DePool.sol, 0
+	}
+	WHILE
+	DROP
+}
+IFELSE
+.loc ../contracts/DePool.sol, 0
+DROP2
+
+.macro onStakeAccept
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1161
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 32
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+	LDU 32
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $onStakeAccept_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	onStakeAccept_internal
+.type	onStakeAccept_internal, @function
+CALL $onStakeAccept_internal_macro$
+
+.macro onStakeAccept_internal_macro
+.loc ../contracts/DePool.sol, 1162
+GETGLOB 9
+PUSHINT 0
+GETGLOB 11
+SECOND
+PUSHINT 32
+DICTUGET
+THROWIFNOT 50
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PUSHINT 1
+	GETGLOB 11
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
+	SDEQ
+}
+IFNOT
+THROWIFNOT 107
+.loc ../contracts/DePool.sol, 1163
+PUSH S2
+CALLREF {
+	CALL $fetchRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1164
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1165
+	PUSHINT 529
+	CALLREF {
+		CALL $errorEvent_internal_macro$
+	}
+	BLKDROP 4
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 1167
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 1168
+GETGLOB 9
+OVER
+PUSHINT 22
+INDEXVAR
+SDEQ
+THROWIFNOT 148
+.loc ../contracts/DePool.sol, 1169
+TUCK
+PUSHINT 21
+INDEXVAR
+SDEQ
+THROWIFNOT 127
+.loc ../contracts/DePool.sol, 1170
+DUP
+FIRST
+PUSH S3
+EQUAL
+THROWIFNOT 126
+.loc ../contracts/DePool.sol, 1171
+DUP
+INDEX 6
+EQINT 3
+THROWIFNOT 125
+.loc ../contracts/DePool.sol, 1173
+ACCEPT
+.loc ../contracts/DePool.sol, 1174
+PUSHINT 4
+SETINDEX 6
+.loc ../contracts/DePool.sol, 1175
+PUSHINT 0
+SETINDEX 7
+.loc ../contracts/DePool.sol, 1176
+ROT
+OVER
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1178
+PUSHINT 20
+INDEXVAR
+FIRST
+PUSHSLICE xc000000000000000000000000021ea8465
+NEWC
+STSLICE
+STU 64
+STU 32
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.macro onStakeReject
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1182
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 32
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+	LDU 32
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $onStakeReject_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	onStakeReject_internal
+.type	onStakeReject_internal, @function
+CALL $onStakeReject_internal_macro$
+
+.macro onStakeReject_internal_macro
+.loc ../contracts/DePool.sol, 1185
+GETGLOB 9
+PUSHINT 0
+GETGLOB 11
+SECOND
+PUSHINT 32
+DICTUGET
+THROWIFNOT 50
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PUSHINT 1
+	GETGLOB 11
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
+	SDEQ
+}
+IFNOT
+THROWIFNOT 107
+.loc ../contracts/DePool.sol, 1186
+PUSH S2
+CALLREF {
+	CALL $fetchRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1187
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1188
+	PUSHINT 529
+	CALLREF {
+		CALL $errorEvent_internal_macro$
+	}
+	BLKDROP 4
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 1190
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 1191
+GETGLOB 9
+OVER
+PUSHINT 22
+INDEXVAR
+SDEQ
+THROWIFNOT 148
+.loc ../contracts/DePool.sol, 1192
+TUCK
+PUSHINT 21
+INDEXVAR
+SDEQ
+THROWIFNOT 127
+.loc ../contracts/DePool.sol, 1193
+DUP
+FIRST
+PUSH S3
+EQUAL
+THROWIFNOT 126
+.loc ../contracts/DePool.sol, 1194
+DUP
+INDEX 6
+EQINT 3
+THROWIFNOT 125
+.loc ../contracts/DePool.sol, 1196
+ACCEPT
+.loc ../contracts/DePool.sol, 1197
+PUSHINT 2
+SETINDEX 6
+.loc ../contracts/DePool.sol, 1198
+PUSHINT 4
+SETINDEX 7
+.loc ../contracts/DePool.sol, 1199
+ROT
+OVER
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1201
+PUSHINT 20
+INDEXVAR
+FIRST
+PUSHSLICE xc0000000000000000000000000098f12c0
+NEWC
+STSLICE
+STU 64
+STU 32
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.globl	totalParticipantFunds_internal
+.type	totalParticipantFunds_internal, @function
+CALL $totalParticipantFunds_internal_macro$
+
+.macro totalParticipantFunds_internal_macro
+.loc ../contracts/DePool.sol, 1206
+PUSHINT 0
+.loc ../contracts/DePool.sol, 1207
+CALLREF {
+	CALL $minRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1208
+PUSHCONT {
+	DUP
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1209
+	DUP
+	ISNULL
+	THROWIF 63
+	UNPAIR
+	.loc ../contracts/DePool.sol, 1210
+	DUP
+	INDEX 6
+	.loc ../contracts/DePool.sol, 1211
+	PUSH2 S2, S4
+	NEQ
+	OVER
+	NEQINT 9
+	AND
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1212
+		DUP
+		EQINT 8
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1213
+			OVER
+			INDEX 7
+			EQINT 7
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1214
+				OVER
+				INDEX 10
+				PUSH S2
+				INDEX 9
+			}
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1216
+				OVER
+				INDEX 8
+				PUSH S2
+				INDEX 13
+			}
+			IFELSE
+			ADD
+			UFITS 64
+			PUSH S2
+			PUSHINT 19
+			INDEXVAR
+			SUB
+			UFITS 64
+			PUSH S4
+			ADD
+			UFITS 64
+			POP S4
+			.loc ../contracts/DePool.sol, 0
+		}
+		PUSHCONT {
+			DUP
+			EQINT 0
+			OVER
+			EQINT 1
+			PUSH S2
+			EQINT 2
+			PUSH S3
+			EQINT 6
+			PUSH S5
+			INDEX 7
+			NEQINT 0
+			AND
+			OR
+			OR
+			OR
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1224
+				OVER
+				INDEX 8
+			}
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1226
+				OVER
+				INDEX 10
+			}
+			IFELSE
+			PUSH S4
+			ADD
+			UFITS 64
+			POP S4
+		}
+		IFELSE
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 1229
+	DROP2
+	CALLREF {
+		CALL $nextRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+}
+WHILE
+.loc ../contracts/DePool.sol, 1231
+DROP
+NIP
+.loc ../contracts/DePool.sol, 0
+
+.globl	cutDePoolReward_internal
+.type	cutDePoolReward_internal, @function
+CALL $cutDePoolReward_internal_macro$
+
+.macro cutDePoolReward_internal_macro
+.loc ../contracts/DePool.sol, 1235
+GETPARAM 7
+FIRST
+UFITS 64
+.loc ../contracts/DePool.sol, 1237
+OVER
+INDEX 8
+PUSH S3
+ADD
+UFITS 64
+ROT
+FIRST
+CALLREF {
+	CALL $totalParticipantFunds_internal_macro$
+}
+ADD
+UFITS 64
+.loc ../contracts/DePool.sol, 1239
+OVER
+GETGLOB 21
+PUSH S2
+ADD
+UFITS 64
+LESS
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1240
+	PUSH S2
+	GETGLOB 21
+	PUSH S2
+	ADD
+	UFITS 64
+	PUSH S3
+	SUB
+	UFITS 64
+	MIN
+	.loc ../contracts/DePool.sol, 1241
+	PUSH S3
+	SUBR
+	UFITS 64
+	POP S3
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 1243
+DROP2
+.loc ../contracts/DePool.sol, 0
+
+.globl	acceptRewardAndStartRoundCompleting_internal
+.type	acceptRewardAndStartRoundCompleting_internal, @function
+CALL $acceptRewardAndStartRoundCompleting_internal_macro$
+
+.macro acceptRewardAndStartRoundCompleting_internal_macro
+.loc ../contracts/DePool.sol, 1247
+OVER
+INDEX 8
+PUSH S2
+INDEX 10
+SUB
+UFITS 64
+.loc ../contracts/DePool.sol, 1248
+SUB
+UFITS 64
+.loc ../contracts/DePool.sol, 1249
+DUP2
+SETINDEX 12
+POP S2
+.loc ../contracts/DePool.sol, 1251
+OVER
+CALLREF {
+	CALL $cutDePoolReward_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1253
+DUP
+PUSHINT 40000000
+PUSH S3
+INDEX 15
+PUSHINT 40000000
+MUL
+UFITS 64
+ADD
+UFITS 64
+MIN
+SUB
+UFITS 64
+.loc ../contracts/DePool.sol, 1255
+DUP
+GETGLOB 19
+PUSHINT 100
+MULDIV
+UFITS 64
+PUXC S2, S-1
+SETINDEX 13
+POP S2
+.loc ../contracts/DePool.sol, 1257
+GETGLOB 20
+PUSHINT 100
+MULDIV
+UFITS 64
+SETINDEX 14
+.loc ../contracts/DePool.sol, 1258
+DUP
+INDEX 14
+GETGLOB 10
+NEWC
+STSLICECONST x42_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 107
+STZEROES
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 1260
+PUSHINT 5
+CALLREF {
+	CALL $startRoundCompleting_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro onSuccessToRecoverStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1265
+OVER
+PUSHCONT {
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $onSuccessToRecoverStake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	onSuccessToRecoverStake_internal
+.type	onSuccessToRecoverStake_internal, @function
+CALL $onSuccessToRecoverStake_internal_macro$
+
+.macro onSuccessToRecoverStake_internal_macro
+.loc ../contracts/DePool.sol, 1266
+GETGLOB 9
+PUSHINT 0
+GETGLOB 11
+SECOND
+PUSHINT 32
+DICTUGET
+THROWIFNOT 50
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PUSHINT 1
+	GETGLOB 11
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
+	SDEQ
+}
+IFNOT
+THROWIFNOT 107
+.loc ../contracts/DePool.sol, 1267
+OVER
+CALLREF {
+	CALL $fetchRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1268
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1269
+	PUSHINT 529
+	CALLREF {
+		CALL $errorEvent_internal_macro$
+	}
+	BLKDROP 3
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 1271
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 1272
+GETGLOB 9
+OVER
+PUSHINT 22
+INDEXVAR
+SDEQ
+THROWIFNOT 148
+.loc ../contracts/DePool.sol, 1273
+TUCK
+PUSHINT 21
+INDEXVAR
+SDEQ
+THROWIFNOT 127
+.loc ../contracts/DePool.sol, 1274
+ACCEPT
+.loc ../contracts/DePool.sol, 1275
+DEPTH
+ADDCONST -2
+PICK
+UFITS 64
+PUSHINT 90000000
+ADD
+UFITS 64
+.loc ../contracts/DePool.sol, 1276
+FALSE ; decl return flag
+PUSH S2
+INDEX 6
+EQINT 5
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1277
+	PUSH2 S1, S2
+	INDEX 8
+	LESS
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1281
+		PUSH S2
+		PUSHINT 6
+		SETINDEX 6
+		POP S3
+		.loc ../contracts/DePool.sol, 1282
+		BLKPUSH 2, 2
+		SETINDEX 10
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1285
+		PUSH S2
+		PUSHINT 6
+		SETINDEX 6
+		POP S3
+		.loc ../contracts/DePool.sol, 1286
+		PUSH S2
+		PUSHINT 6
+		SETINDEX 7
+	}
+	IFELSE
+	POP S3
+	.loc ../contracts/DePool.sol, 0
+}
+PUSHCONT {
+	FALSE ; decl return flag
+	PUSH S3
+	INDEX 6
+	EQINT 7
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1289
+		OVER2
+		SETINDEX 9
+		POP S4
+		.loc ../contracts/DePool.sol, 1290
+		PUSH S3
+		INDEX 8
+		PUSH S4
+		INDEX 10
+		SUB
+		UFITS 64
+		.loc ../contracts/DePool.sol, 1291
+		PUSH2 S0, S3
+		LEQ
+		DUP
+		PUSHCONT {
+			DROP
+			PUSH2 S3, S0
+			PUSHINT 1000000000
+			ADD
+			UFITS 64
+			LEQ
+		}
+		IF
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1292
+			PUSH S4
+			PUSHINT 6
+			CALLREF {
+				CALL $startRoundCompleting_internal_macro$
+			}
+		}
+		PUSHCONT {
+			PUSH2 S3, S0
+			GREATER
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1294
+				BLKPUSH 2, 4
+				CALLREF {
+					CALL $acceptRewardAndStartRoundCompleting_internal_macro$
+				}
+			}
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1296
+				PUSH S4
+				PUSHINT 7
+				CALLREF {
+					CALL $startRoundCompleting_internal_macro$
+				}
+			}
+			IFELSE
+		}
+		IFELSE
+		POP S5
+		.loc ../contracts/DePool.sol, 0
+		DROP
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1299
+		PUSHINT 530
+		CALLREF {
+			CALL $errorEvent_internal_macro$
+		}
+		BLKDROP 5
+		PUSHINT 4
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 0
+	DUP
+	IFRET
+	DROP
+}
+IFELSE
+IFRET
+.loc ../contracts/DePool.sol, 1302
+DROP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro onFailToRecoverStake
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1305
+OVER
+PUSHCONT {
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $onFailToRecoverStake_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	onFailToRecoverStake_internal
+.type	onFailToRecoverStake_internal, @function
+CALL $onFailToRecoverStake_internal_macro$
+
+.macro onFailToRecoverStake_internal_macro
+.loc ../contracts/DePool.sol, 1306
+GETGLOB 9
+PUSHINT 0
+GETGLOB 11
+SECOND
+PUSHINT 32
+DICTUGET
+THROWIFNOT 50
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PUSHINT 1
+	GETGLOB 11
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
+	SDEQ
+}
+IFNOT
+THROWIFNOT 107
+.loc ../contracts/DePool.sol, 1307
+OVER
+CALLREF {
+	CALL $fetchRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1308
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1309
+	PUSHINT 529
+	CALLREF {
+		CALL $errorEvent_internal_macro$
+	}
+	BLKDROP 3
+	.loc ../contracts/DePool.sol, 0
+}
+IFJMP
+.loc ../contracts/DePool.sol, 1311
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 1312
+GETGLOB 9
+OVER
+PUSHINT 22
+INDEXVAR
+SDEQ
+THROWIFNOT 148
+.loc ../contracts/DePool.sol, 1313
+TUCK
+PUSHINT 21
+INDEXVAR
+SDEQ
+THROWIFNOT 127
+.loc ../contracts/DePool.sol, 1314
+ACCEPT
+.loc ../contracts/DePool.sol, 1315
+FALSE ; decl return flag
+OVER
+INDEX 6
+EQINT 5
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1317
+	OVER
+	PUSHINT 6
+	SETINDEX 6
+	POP S2
+	.loc ../contracts/DePool.sol, 0
+}
+PUSHCONT {
+	FALSE ; decl return flag
+	PUSH S2
+	INDEX 6
+	EQINT 7
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1320
+		PUSH S2
+		PUSHINT 7
+		CALLREF {
+			CALL $startRoundCompleting_internal_macro$
+		}
+		POP S3
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1322
+		PUSHINT 521
+		CALLREF {
+			CALL $errorEvent_internal_macro$
+		}
+		BLKDROP 4
+		PUSHINT 4
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 0
+	DUP
+	IFRET
+	DROP
+}
+IFELSE
+IFRET
+.loc ../contracts/DePool.sol, 1324
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro terminator
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1334
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $terminator_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	terminator_internal
+.type	terminator_internal, @function
+CALL $terminator_internal_macro$
+
+.macro terminator_internal_macro
+.loc ../contracts/DePool.sol, 119
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+GETGLOB 2
+EQUAL
+THROWIFNOT 101
+.loc ../contracts/DePool.sol, 1335
+GETGLOB 16
+THROWIF 114
+.loc ../contracts/DePool.sol, 1336
+TRUE
+SETGLOB 16
+.loc ../contracts/DePool.sol, 1337
+CALLREF {
+	CALL $c7_to_c4$
+}
+COMMIT
+.loc ../contracts/DePool.sol, 1338
+ACCEPT
+.loc ../contracts/DePool.sol, 1340
+PUSHINT 0
+CALLREF {
+	CALL $totalParticipantFunds_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1341
+GETPARAM 7
+FIRST
+.loc ../contracts/DePool.sol, 1342
+PUSH2 S0, S1
+GREATER
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1343
+	PUSH2 S0, S1
+	SUB
+	UFITS 128
+	.loc ../contracts/DePool.sol, 1344
+	DUP
+	GETGLOB 21
+	GREATER
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1345
+		DUP
+		GETGLOB 21
+		SUB
+		UFITS 128
+		.loc ../contracts/DePool.sol, 1346
+		GETGLOB 10
+		NEWC
+		STSLICECONST x42_
+		STSLICE
+		SWAP
+		STGRAMS
+		PUSHINT 107
+		STZEROES
+		ENDC
+		PUSHINT 0
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 0
+	}
+	IF
+	.loc ../contracts/DePool.sol, 0
+	DROP
+}
+IF
+.loc ../contracts/DePoolRounds.sol, 173
+DROP2
+GETGLOB 14
+DEC
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 174
+GETGLOB 14
+ADDCONST -2
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 175
+GETGLOB 14
+ADDCONST -3
+UFITS 64
+CALLREF {
+	CALL $roundAt_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1354
+PUSH S2
+PUSHINT 1
+CALLREF {
+	CALL $startRoundCompleting_internal_macro$
+}
+POP S3
+.loc ../contracts/DePool.sol, 1355
+OVER
+PUSHINT 1
+CALLREF {
+	CALL $startRoundCompleting_internal_macro$
+}
+POP S2
+.loc ../contracts/DePool.sol, 1356
+DUP
+INDEX 6
+EQINT 2
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1357
+	PUSHINT 1
+	CALLREF {
+		CALL $startRoundCompleting_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 1359
+PUSHREF {
+	.blob xc000000000000000000000000024035429
+}
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 1360
+ROT
+.loc ../contracts/DePoolRounds.sol, 178
+GETGLOB 14
+DEC
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1361
+SWAP
+.loc ../contracts/DePoolRounds.sol, 179
+GETGLOB 14
+ADDCONST -2
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 180
+GETGLOB 14
+ADDCONST -3
+UFITS 64
+SWAP
+CALLREF {
+	CALL $setRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+
+.macro setValidatorRewardFraction
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1368
+LDU 8
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $setValidatorRewardFraction_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setValidatorRewardFraction_internal
+.type	setValidatorRewardFraction_internal, @function
+CALL $setValidatorRewardFraction_internal_macro$
+
+.macro setValidatorRewardFraction_internal_macro
+.loc ../contracts/DePool.sol, 119
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+GETGLOB 2
+EQUAL
+THROWIFNOT 101
+.loc ../contracts/DePool.sol, 1369
+DUP
+GETGLOB 20
+LESS
+THROWIFNOT 143
+.loc ../contracts/DePool.sol, 1370
+DUP
+GTINT 0
+THROWIFNOT 144
+.loc ../contracts/DePool.sol, 1371
+ACCEPT
+.loc ../contracts/DePool.sol, 1373
+SETGLOB 20
+.loc ../contracts/DePool.sol, 1374
+PUSHINT 100
+GETGLOB 20
+SUB
+UFITS 8
+DUP
+SETGLOB 19
+.loc ../contracts/DePool.sol, 1375
+GETGLOB 20
+PUSHSLICE xc00000000000000000000000002123bdd7
+NEWC
+STSLICE
+STU 8
+STU 8
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.macro receiveFunds
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/DePool.sol, 1379
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $receiveFunds_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	receiveFunds_internal
+.type	receiveFunds_internal, @function
+CALL $receiveFunds_internal_macro$
+
+.macro receiveFunds_internal_macro
+.loc ../contracts/DePool.sol, 0
+
+.macro receive_macro
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/DePool.sol, 1383
+GETGLOB 9
+MYADDR
+SDEQ
+IFNOTREF {
+	CALL $_returnChange_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+DUP
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+
+.macro fallback_macro
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/DePool.sol, 1389
+GETGLOB 9
+MYADDR
+SDEQ
+IFNOTREF {
+	CALL $_returnChange_internal_macro$
+}
+.loc ../contracts/DePool.sol, 0
+DUP
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+
+.macro on_bounce_macro
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1395
+DUP
+LDU 32
+POP S2
+.loc ../contracts/DePool.sol, 1396
+DUP
+PUSHINT 327920780
+EQUAL
+.loc ../contracts/DePool.sol, 1397
+OVER
+PUSHINT 1437643621
+EQUAL
+.loc ../contracts/DePool.sol, 1398
+DUP2
+OR
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1399
+	PUSH S3
+	LDU 64
+	POP S5
+	.loc ../contracts/DePool.sol, 1400
+	DUP
+	CALLREF {
+		CALL $fetchRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 1401
+	PUSH S3
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1402
+		OVER
+		.loc ../contracts/DePoolRounds.sol, 170
+		GETGLOB 14
+		ADDCONST -3
+		UFITS 64
+		EQUAL
+		.loc ../contracts/DePoolRounds.sol, 0
+		THROWIFNOT 524
+		.loc ../contracts/DePool.sol, 1403
+		DUP
+		ISNULL
+		THROWIF 63
+		.loc ../contracts/DePool.sol, 1404
+		DUP
+		INDEX 6
+		EQINT 3
+		THROWIFNOT 525
+		.loc ../contracts/DePool.sol, 1405
+		PUSHINT 2
+		SETINDEX 6
+		.loc ../contracts/DePool.sol, 1406
+		DUP
+		PUSHINT 20
+		INDEXVAR
+		FIRST
+		PUSHSLICE xc0000000000000000000000000296e0d92
+		NEWC
+		STSLICE
+		STU 64
+		ENDC
+		PUSHINT 0
+		SENDRAWMSG
+		.loc ../contracts/DePool.sol, 1407
+	}
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1409
+		OVER
+		.loc ../contracts/DePoolRounds.sol, 171
+		GETGLOB 14
+		ADDCONST -4
+		UFITS 64
+		EQUAL
+		.loc ../contracts/DePoolRounds.sol, 0
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1410
+			DUP
+			ISNULL
+			THROWIF 63
+			.loc ../contracts/DePool.sol, 1411
+			DUP
+			INDEX 6
+			EQINT 7
+			THROWIFNOT 526
+			.loc ../contracts/DePool.sol, 1412
+			PUSHINT 6
+			SETINDEX 6
+			.loc ../contracts/DePool.sol, 1413
+		}
+		PUSHCONT {
+			OVER
+			.loc ../contracts/DePoolRounds.sol, 170
+			GETGLOB 14
+			ADDCONST -3
+			UFITS 64
+			EQUAL
+			.loc ../contracts/DePoolRounds.sol, 0
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1415
+				DUP
+				ISNULL
+				THROWIF 63
+				.loc ../contracts/DePool.sol, 1416
+				DUP
+				INDEX 6
+				EQINT 5
+				THROWIFNOT 527
+				.loc ../contracts/DePool.sol, 1417
+				PUSHINT 4
+				SETINDEX 6
+				.loc ../contracts/DePool.sol, 1418
+			}
+			PUSHCONT {
+				.loc ../contracts/DePool.sol, 1420
+				THROW 528
+			}
+			IFELSE
+		}
+		IFELSE
+		.loc ../contracts/DePool.sol, 1422
+		OVER
+		PUSHSLICE xc000000000000000000000000063d70437
+		NEWC
+		STSLICE
+		STU 64
+		ENDC
+		PUSHINT 0
+		SENDRAWMSG
+	}
+	IFELSE
+	.loc ../contracts/DePool.sol, 1424
+	DUP
+	ISNULL
+	THROWIF 63
+	CALLREF {
+		CALL $setRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+}
+IF
+.loc ../contracts/DePool.sol, 0
+BLKDROP 4
+CALLREF {
+	CALL $c7_to_c4$
+}
+
+.macro getLastRoundInfo
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1430
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $getLastRoundInfo_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getLastRoundInfo_internal
+.type	getLastRoundInfo_internal, @function
+CALL $getLastRoundInfo_internal_macro$
+
+.macro getLastRoundInfo_internal_macro
+.loc ../contracts/DePool.sol, 1431
+GETGLOB 15
+DICTEMPTY
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1433
+	GETGLOB 9
+	NEWC
+	STSLICECONST x62_
+	STSLICE
+	PUSHINT 9789369574394656757036770681243717074945
+	STUR 135
+	PUSHINT 0
+	BLKPUSH 4, 0
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	PUSHINT 0
+	BLKPUSH 5, 0
+	TUPLE 12
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1435
+	FALSE
+	GETGLOB 15
+	PUSHINT 1
+	DICTIGET
+IFREFELSEREF
+{
+		LDU 32
+		LDU 8
+		LDU 8
+		LDU 32
+		LDU 64
+		LDMSGADDR
+		LDU 64
+		LDU 64
+		LDU 64
+		LDU 64
+		LDU 8
+		LDI 1
+		ENDS
+		TUPLE 12
+}
+{
+		PUSHINT 0
+		BLKPUSH 4, 0
+		PUSHREFSLICE {
+			.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+		}
+		PUSHINT 0
+		BLKPUSH 5, 0
+		TUPLE 12
+}
+	GETGLOB 9
+	NEWC
+	STSLICECONST x62_
+	STSLICE
+	PUSHINT 9789369574394656757036770681243717074945
+	STUR 135
+	SWAP
+}
+IFELSE
+NEWC
+STSLICECONST x52733359
+SWAP
+UNTUPLE 12
+REVERSE 13, 0
+STU 32
+STU 8
+STU 8
+STU 32
+STU 64
+STSLICE
+STU 64
+STU 64
+STU 64
+ROLLREV 3
+NEWC
+STU 64
+STU 8
+STI 1
+STBREFR
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/DePool.sol, 0
+
+.macro getParticipantInfo
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1444
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $getParticipantInfo_internal_macro$
+}
+PUSH S9
+PUSHCONT {
+	PUSH S11
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 10, 0
+	NEWC
+	STSLICECONST xfa16c812
+	STU 64
+	STU 64
+	STI 1
+	STU 64
+	STDICT
+	STDICT
+	STDICT
+	STSLICE
+	SWAP
+	NEWC
+	STSLICE
+	STBREFR
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	BLKDROP 9
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getParticipantInfo_internal
+.type	getParticipantInfo_internal, @function
+CALL $getParticipantInfo_internal_macro$
+
+.macro getParticipantInfo_internal_macro
+.loc ../contracts/DePool.sol, 1444
+PUSHINT 0
+BLKPUSH 3, 0
+NEWDICT
+BLKPUSH 2, 0
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+.loc ../contracts/DePool.sol, 1457
+PUSH S8
+CALLREF {
+	CALL $fetchParticipant_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1458
+DUP
+ISNULL
+THROWIF 116
+.loc ../contracts/DePool.sol, 1459
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePool.sol, 1461
+DUP
+INDEX 4
+POP S7
+.loc ../contracts/DePool.sol, 1462
+DUP
+SECOND
+POP S6
+.loc ../contracts/DePool.sol, 1463
+DUP
+INDEX 5
+POP S8
+.loc ../contracts/DePool.sol, 1465
+DUP
+INDEX 6
+POP S2
+.loc ../contracts/DePool.sol, 1466
+INDEX 7
+.loc ../contracts/DePool.sol, 1468
+CALLREF {
+	CALL $minRound_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1469
+PUSHCONT {
+	DUP
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1470
+	DUP
+	ISNULL
+	THROWIF 63
+	UNPAIR
+	.loc ../contracts/DePool.sol, 1471
+	PUSH2 S11, S0
+	PUSHINT 16
+	INDEXVAR
+	PUSHINT 267
+	DICTGET
+	NULLSWAPIFNOT
+	IFREF {
+		LDU 64
+		LDI 1
+		SWAP
+		NULLSWAPIFNOT
+		PUSHCONT {
+			LDU 64
+			LDU 64
+			LDU 32
+			LDU 64
+			LDMSGADDR
+			ROLLREV 5
+			TUPLE 5
+		}
+		IF
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDI 1
+		SWAP
+		NULLSWAPIFNOT
+		PUSHCONT {
+			LDU 64
+			LDU 64
+			LDU 32
+			LDU 64
+			LDMSGADDR
+			ROLLREV 5
+			TUPLE 5
+		}
+		IF
+		SWAP
+		ENDS
+		TRIPLE
+	}
+	.loc ../contracts/DePool.sol, 1472
+	DUP
+	ISNULL
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1473
+		BLKPUSH 2, 0
+		ISNULL
+		THROWIF 63
+		.loc ../contracts/DePool.sol, 1474
+		DUP
+		FIRST
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1475
+			DUP
+			FIRST
+			PUSH2 S9, S3
+			FIRST
+			XCHG S2
+			NEWC
+			STU 64
+			ROTREV
+			PUSHINT 64
+			DICTUSETB
+			POP S9
+			.loc ../contracts/DePool.sol, 1476
+			DUP
+			FIRST
+			PUSH S13
+			ADD
+			UFITS 64
+			POP S13
+			.loc ../contracts/DePool.sol, 0
+		}
+		IF
+		.loc ../contracts/DePool.sol, 1478
+		DUP
+		SECOND
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1479
+			DUP
+			SECOND
+			DUP
+			ISNULL
+			THROWIF 63
+			PUSH2 S8, S3
+			FIRST
+			XCHG S2
+			CALLREF {
+				UNTUPLE 5
+				REVERSE 5, 0
+				NEWC
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			ROTREV
+			PUSHINT 64
+			DICTUSETB
+			POP S8
+			.loc ../contracts/DePool.sol, 1480
+			DUP
+			SECOND
+			DUP
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH S13
+			ADD
+			UFITS 64
+			POP S13
+			.loc ../contracts/DePool.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePool.sol, 1482
+		DUP
+		THIRD
+		ISNULL
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1483
+			DUP
+			THIRD
+			DUP
+			ISNULL
+			THROWIF 63
+			PUSH2 S7, S3
+			FIRST
+			XCHG S2
+			CALLREF {
+				UNTUPLE 5
+				REVERSE 5, 0
+				NEWC
+				STU 64
+				STU 64
+				STU 32
+				STU 64
+				STSLICE
+			}
+			ROTREV
+			PUSHINT 64
+			DICTUSETB
+			POP S7
+			.loc ../contracts/DePool.sol, 1484
+			DUP
+			THIRD
+			DUP
+			ISNULL
+			THROWIF 63
+			FIRST
+			PUSH S13
+			ADD
+			UFITS 64
+			POP S13
+			.loc ../contracts/DePool.sol, 0
+		}
+		IFNOT
+		.loc ../contracts/DePool.sol, 0
+		DROP
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 1487
+	DROP2
+	CALLREF {
+		CALL $nextRound_internal_macro$
+	}
+	.loc ../contracts/DePool.sol, 0
+}
+WHILE
+DROP
+BLKDROP2 1, 9
+.loc ../contracts/DePool.sol, 0
+
+.macro getDePoolInfo
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1492
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $getDePoolInfo_internal_macro$
+}
+PUSH S11
+PUSHCONT {
+	PUSH S13
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 12, 0
+	NEWC
+	STSLICECONST xb175bb5b
+	STI 1
+	STU 64
+	STU 64
+	STU 8
+	STU 8
+	STU 64
+	STSLICE
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	STU 64
+	STU 64
+	SWAP
+	NEWC
+	STU 64
+	STBREFR
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	BLKDROP 11
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getDePoolInfo_internal
+.type	getDePoolInfo_internal, @function
+CALL $getDePoolInfo_internal_macro$
+
+.macro getDePoolInfo_internal_macro
+.loc ../contracts/DePool.sol, 1508
+GETGLOB 16
+.loc ../contracts/DePool.sol, 1509
+GETGLOB 17
+.loc ../contracts/DePool.sol, 1510
+GETGLOB 18
+.loc ../contracts/DePool.sol, 1511
+GETGLOB 19
+.loc ../contracts/DePool.sol, 1512
+GETGLOB 20
+.loc ../contracts/DePool.sol, 1513
+GETGLOB 21
+.loc ../contracts/DePool.sol, 1515
+GETGLOB 10
+.loc ../contracts/DePool.sol, 1516
+GETGLOB 11
+.loc ../contracts/DePool.sol, 1518
+PUSHINT 500000000
+.loc ../contracts/DePool.sol, 1519
+PUSHINT 40000000
+.loc ../contracts/DePool.sol, 1520
+PUSHINT 90000000
+.loc ../contracts/DePool.sol, 0
+
+.macro getParticipants
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1524
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $getParticipants_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 2317555183
+	STUR 130
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.macro getParticipants_internal_macro
+.loc ../contracts/DePool.sol, 1524
+PUSHINT 0
+NEWDICT
+PAIR
+.loc ../contracts/DePool.sol, 1525
+NEWDICT
+.loc ../contracts/DePool.sol, 1526
+GETGLOB 12
+PUSHINT 267
+DICTMINREF
+NULLSWAPIFNOT
+IFREF {
+	SWAP
+	CTOS
+	CALLREF {
+		LDU 8
+		LDU 64
+		LDU 8
+		LDU 8
+		LDI 1
+		LDU 64
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		TUPLE 8
+	}
+	PAIR
+}
+.loc ../contracts/DePool.sol, 1527
+PUSHCONT {
+	DUP
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc ../contracts/DePool.sol, 1528
+	DUP
+	ISNULL
+	THROWIF 63
+	UNPAIR
+	DROP
+	.loc ../contracts/DePool.sol, 1529
+	PUSH2 S0, S1
+	PUSHINT 267
+	DICTGET
+	NULLSWAPIFNOT
+	NIP
+	PUSHCONT {
+		.loc ../contracts/DePool.sol, 1530
+		PUSH2 S0, S1
+		NEWC
+		STONE
+		ROTREV
+		PUSHINT 267
+		DICTSETB
+		POP S2
+		.loc ../contracts/DePool.sol, 1531
+		PUSH2 S0, S2
+		UNPAIR
+		OVER
+		INC
+		ROLLREV 3
+		PUSHINT 32
+		DICTUSET
+		PAIR
+		POP S3
+		.loc ../contracts/DePool.sol, 0
+	}
+	IFNOT
+	.loc ../contracts/DePool.sol, 1533
+	GETGLOB 12
+	PUSHINT 267
+	DICTGETNEXT
+	NULLSWAPIFNOT
+	IFREF {
+		SWAP
+		PLDREF
+		CTOS
+		CALLREF {
+			LDU 8
+			LDU 64
+			LDU 8
+			LDU 8
+			LDI 1
+			LDU 64
+			LDMSGADDR
+			LDREF
+			ENDS
+			CTOS
+			LDMSGADDR
+			ENDS
+			TUPLE 8
+		}
+		PAIR
+	}
+	.loc ../contracts/DePool.sol, 0
+}
+WHILE
+DROP2
+.loc ../contracts/DePool.sol, 0
+
+.macro getDePoolBalance
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePool.sol, 1537
+ENDS
+.loc ../contracts/DePool.sol, 0
+CALLREF {
+	CALL $getDePoolBalance_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 3962902098
+	STUR 130
+	STI 256
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getDePoolBalance_internal
+.type	getDePoolBalance_internal, @function
+CALL $getDePoolBalance_internal_macro$
+
+.macro getDePoolBalance_internal_macro
+.loc ../contracts/DePool.sol, 1538
+PUSHINT 0
+CALLREF {
+	CALL $totalParticipantFunds_internal_macro$
+}
+.loc ../contracts/DePool.sol, 1539
+GETPARAM 7
+FIRST
+.loc ../contracts/DePool.sol, 1540
+SUBR
+FITS 256
+.loc ../contracts/DePool.sol, 0
+
+.globl	roundAt_internal
+.type	roundAt_internal, @function
+CALL $roundAt_internal_macro$
+
+.macro roundAt_internal_macro
+.loc ../contracts/DePoolRounds.sol, 184
+GETGLOB 13
+PUSHINT 64
+DICTUGETREF
+NULLSWAPIFNOT
+IFREF {
+	CTOS
+	CALLREF {
+		LDU 64
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 256
+		LDU 8
+		OVER
+		GTINT 9
+		THROWIF 73
+		LDU 8
+		OVER
+		GTINT 8
+		THROWIF 73
+		LDU 64
+		LDU 64
+		LDU 64
+		LDI 1
+		LDU 64
+		LDU 64
+		LDU 64
+		LDU 32
+		LDDICT
+		LDU 64
+		LDU 64
+		LDREF
+		ENDS
+		CTOS
+		LDU 64
+		LDU 64
+		LDU 256
+		LDU 32
+		LDU 32
+		LDU 256
+		LDREF
+		ROLLREV 6
+		TUPLE 6
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		PUSHINT 23
+		TUPLEVAR
+	}
+}
+DUP
+ISNULL
+THROWIF 63
+.loc ../contracts/DePoolRounds.sol, 0
+
+.globl	fetchRound_internal
+.type	fetchRound_internal, @function
+CALL $fetchRound_internal_macro$
+
+.macro fetchRound_internal_macro
+.loc ../contracts/DePoolRounds.sol, 188
+GETGLOB 13
+PUSHINT 64
+DICTUGETREF
+NULLSWAPIFNOT
+IFREF {
+	CTOS
+	CALLREF {
+		LDU 64
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 256
+		LDU 8
+		OVER
+		GTINT 9
+		THROWIF 73
+		LDU 8
+		OVER
+		GTINT 8
+		THROWIF 73
+		LDU 64
+		LDU 64
+		LDU 64
+		LDI 1
+		LDU 64
+		LDU 64
+		LDU 64
+		LDU 32
+		LDDICT
+		LDU 64
+		LDU 64
+		LDREF
+		ENDS
+		CTOS
+		LDU 64
+		LDU 64
+		LDU 256
+		LDU 32
+		LDU 32
+		LDU 256
+		LDREF
+		ROLLREV 6
+		TUPLE 6
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		PUSHINT 23
+		TUPLEVAR
+	}
+}
+.loc ../contracts/DePoolRounds.sol, 0
+
+.globl	setRound_internal
+.type	setRound_internal, @function
+CALL $setRound_internal_macro$
+
+.macro setRound_internal_macro
+.loc ../contracts/DePoolRounds.sol, 192
+GETGLOB 13
+SWAP
+CALLREF {
+	PUSHINT 23
+	UNTUPLEVAR
+	PUSHINT 23
+	PUSHINT 0
+	REVX
+	NEWC
+	STU 64
+	STU 32
+	STU 32
+	STU 32
+	STU 32
+	STU 256
+	STU 8
+	STU 8
+	STU 64
+	STU 64
+	STU 64
+	STI 1
+	STU 64
+	STU 64
+	STU 64
+	STU 32
+	STDICT
+	STU 64
+	STU 64
+	ROLLREV 4
+	NEWC
+	STU 64
+	SWAP
+	UNTUPLE 6
+	REVERSE 7, 0
+	STU 64
+	STU 256
+	STU 32
+	STU 32
+	STU 256
+	STREF
+	ROTREV
+	NEWC
+	STSLICE
+	SWAP
+	NEWC
+	STSLICE
+	STBREFR
+	STBREFR
+	STBREFR
+}
+ENDC
+ROTREV
+PUSHINT 64
+DICTUSETREF
+SETGLOB 13
+.loc ../contracts/DePoolRounds.sol, 0
+
+.globl	minRound_internal
+.type	minRound_internal, @function
+CALL $minRound_internal_macro$
+
+.macro minRound_internal_macro
+.loc ../contracts/DePoolRounds.sol, 196
+GETGLOB 13
+PUSHINT 64
+DICTUMINREF
+NULLSWAPIFNOT
+IFREF {
+	SWAP
+	CTOS
+	CALLREF {
+		LDU 64
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 256
+		LDU 8
+		OVER
+		GTINT 9
+		THROWIF 73
+		LDU 8
+		OVER
+		GTINT 8
+		THROWIF 73
+		LDU 64
+		LDU 64
+		LDU 64
+		LDI 1
+		LDU 64
+		LDU 64
+		LDU 64
+		LDU 32
+		LDDICT
+		LDU 64
+		LDU 64
+		LDREF
+		ENDS
+		CTOS
+		LDU 64
+		LDU 64
+		LDU 256
+		LDU 32
+		LDU 32
+		LDU 256
+		LDREF
+		ROLLREV 6
+		TUPLE 6
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		PUSHINT 23
+		TUPLEVAR
+	}
+	PAIR
+}
+.loc ../contracts/DePoolRounds.sol, 0
+
+.globl	nextRound_internal
+.type	nextRound_internal, @function
+CALL $nextRound_internal_macro$
+
+.macro nextRound_internal_macro
+.loc ../contracts/DePoolRounds.sol, 200
+GETGLOB 13
+PUSHINT 64
+DICTUGETNEXT
+NULLSWAPIFNOT
+IFREF {
+	SWAP
+	PLDREF
+	CTOS
+	CALLREF {
+		LDU 64
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 32
+		LDU 256
+		LDU 8
+		OVER
+		GTINT 9
+		THROWIF 73
+		LDU 8
+		OVER
+		GTINT 8
+		THROWIF 73
+		LDU 64
+		LDU 64
+		LDU 64
+		LDI 1
+		LDU 64
+		LDU 64
+		LDU 64
+		LDU 32
+		LDDICT
+		LDU 64
+		LDU 64
+		LDREF
+		ENDS
+		CTOS
+		LDU 64
+		LDU 64
+		LDU 256
+		LDU 32
+		LDU 32
+		LDU 256
+		LDREF
+		ROLLREV 6
+		TUPLE 6
+		SWAP
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		PUSHINT 23
+		TUPLEVAR
+	}
+	PAIR
+}
+.loc ../contracts/DePoolRounds.sol, 0
+
+.globl	toTruncatedRound_internal
+.type	toTruncatedRound_internal, @function
+CALL $toTruncatedRound_internal_macro$
+
+.macro toTruncatedRound_internal_macro
+.loc ../contracts/DePoolRounds.sol, 374
+DUP
+FIRST
+OVER
+SECOND
+PUSH S2
+THIRD
+PUSH S3
+INDEX 3
+PUSH S4
+INDEX 5
+PUSH S5
+INDEX 6
+PUSH S6
+INDEX 7
+PUSH S7
+INDEX 8
+PUSH S8
+INDEX 9
+PUSH S9
+INDEX 10
+PUSH S10
+INDEX 11
+PUSH S11
+INDEX 13
+PUSH S12
+INDEX 15
+PUSH S13
+PUSHINT 17
+INDEXVAR
+PUSH S14
+PUSHINT 18
+INDEXVAR
+ROLL 15
+PUSHINT 19
+INDEXVAR
+PUSHINT 16
+TUPLEVAR
+.loc ../contracts/DePoolRounds.sol, 0
+
+.macro getRounds
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/DePoolRounds.sol, 396
+ENDS
+.loc ../contracts/DePoolRounds.sol, 0
+CALLREF {
+	CALL $getRounds_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 2938385145
+	STUR 130
+	STDICT
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.macro getRounds_internal_macro
+.loc ../contracts/DePoolRounds.sol, 396
+NEWDICT
+.loc ../contracts/DePoolRounds.sol, 397
+CALLREF {
+	CALL $minRound_internal_macro$
+}
+.loc ../contracts/DePoolRounds.sol, 398
+PUSHCONT {
+	DUP
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc ../contracts/DePoolRounds.sol, 399
+	DUP
+	ISNULL
+	THROWIF 63
+	UNPAIR
+	.loc ../contracts/DePoolRounds.sol, 400
+	CALLREF {
+		CALL $toTruncatedRound_internal_macro$
+	}
+	.loc ../contracts/DePoolRounds.sol, 401
+	PUSH2 S0, S2
+	ROT
+	FIRST
+	XCHG S2
+	CALLREF {
+		PUSHINT 16
+		UNTUPLEVAR
+		REVERSE 16, 0
+		NEWC
+		STU 64
+		STU 32
+		STU 32
+		STU 32
+		STU 256
+		STU 8
+		STU 8
+		STU 64
+		STU 64
+		STU 64
+		STI 1
+		STU 64
+		STU 32
+		STU 64
+		STU 64
+		STU 64
+	}
+	ROTREV
+	PUSHINT 64
+	DICTUSETB
+	POP S2
+	.loc ../contracts/DePoolRounds.sol, 402
+	CALLREF {
+		CALL $nextRound_internal_macro$
+	}
+	.loc ../contracts/DePoolRounds.sol, 0
+}
+WHILE
+DROP
+.loc ../contracts/DePoolRounds.sol, 0
+
+.globl	getOrCreateParticipant_internal
+.type	getOrCreateParticipant_internal, @function
+CALL $getOrCreateParticipant_internal_macro$
+
+.macro getOrCreateParticipant_internal_macro
+.loc ../contracts/ParticipantBase.sol, 12
+GETGLOB 12
+PUSHINT 267
+DICTGETREF
+NULLSWAPIFNOT
+IFREF {
+	CTOS
+	CALLREF {
+		LDU 8
+		LDU 64
+		LDU 8
+		LDU 8
+		LDI 1
+		LDU 64
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		TUPLE 8
+	}
+}
+.loc ../contracts/ParticipantBase.sol, 13
+DUP
+ISNULL
+PUSHCONT {
+	.loc ../contracts/ParticipantBase.sol, 14
+	DUP
+	ISNULL
+	THROWIF 63
+	.loc ../contracts/ParticipantBase.sol, 0
+}
+IFNOTJMP
+.loc ../contracts/ParticipantBase.sol, 16
+DROP
+PUSHINT 0
+BLKPUSH 3, 0
+TRUE
+PUSHINT 0
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+DUP
+TUPLE 8
+.loc ../contracts/ParticipantBase.sol, 0
+
+.globl	fetchParticipant_internal
+.type	fetchParticipant_internal, @function
+CALL $fetchParticipant_internal_macro$
+
+.macro fetchParticipant_internal_macro
+.loc ../contracts/ParticipantBase.sol, 30
+GETGLOB 12
+PUSHINT 267
+DICTGETREF
+NULLSWAPIFNOT
+IFREF {
+	CTOS
+	CALLREF {
+		LDU 8
+		LDU 64
+		LDU 8
+		LDU 8
+		LDI 1
+		LDU 64
+		LDMSGADDR
+		LDREF
+		ENDS
+		CTOS
+		LDMSGADDR
+		ENDS
+		TUPLE 8
+	}
+}
+.loc ../contracts/ParticipantBase.sol, 0
+
+.globl	_setOrDeleteParticipant_internal
+.type	_setOrDeleteParticipant_internal, @function
+CALL $_setOrDeleteParticipant_internal_macro$
+
+.macro _setOrDeleteParticipant_internal_macro
+.loc ../contracts/ParticipantBase.sol, 34
+DUP
+FIRST
+PUSHCONT {
+	.loc ../contracts/ParticipantBase.sol, 37
+	OVER
+	GETGLOB 12
+	PUSH S2
+	CALLREF {
+		UNTUPLE 8
+		REVERSE 8, 0
+		NEWC
+		STU 8
+		STU 64
+		STU 8
+		STU 8
+		STI 1
+		STU 64
+		STSLICE
+		SWAP
+		NEWC
+		STSLICE
+		STBREFR
+	}
+	ENDC
+	ROTREV
+	PUSHINT 267
+	DICTSETREF
+}
+PUSHCONT {
+	.loc ../contracts/ParticipantBase.sol, 35
+	OVER
+	GETGLOB 12
+	PUSHINT 267
+	DICTDEL
+	DROP
+}
+IFELSE
+SETGLOB 12
+.loc ../contracts/ParticipantBase.sol, 0
+DROP2
+
+.globl	getCurValidatorData_internal
+.type	getCurValidatorData_internal, @function
+CALL $getCurValidatorData_internal_macro$
+
+.macro getCurValidatorData_internal_macro
+.loc ../contracts/ConfigParamsBase.sol, 6
+PUSHINT 0
+DUP
+.loc ../contracts/ConfigParamsBase.sol, 7
+PUSHINT 34
+CONFIGPARAM
+DUP
+PUSHCONT {
+	PUSHREF {
+	}
+	SWAP
+}
+IFNOT
+.loc ../contracts/ConfigParamsBase.sol, 8
+THROWIFNOT 508
+.loc ../contracts/ConfigParamsBase.sol, 9
+CTOS
+.loc ../contracts/ConfigParamsBase.sol, 10
+LDU 8
+LDU 32
+PLDU 32
+XCHG S2
+DROP
+POP S2
+.loc ../contracts/ConfigParamsBase.sol, 11
+OVER
+POP S3
+.loc ../contracts/ConfigParamsBase.sol, 0
+
+.globl	getPrevValidatorHash_internal
+.type	getPrevValidatorHash_internal, @function
+CALL $getPrevValidatorHash_internal_macro$
+
+.macro getPrevValidatorHash_internal_macro
+.loc ../contracts/ConfigParamsBase.sol, 15
+PUSHINT 32
+CONFIGPARAM
+DUP
+PUSHCONT {
+	PUSHREF {
+	}
+	SWAP
+}
+IFNOT
+.loc ../contracts/ConfigParamsBase.sol, 16
+THROWIFNOT 507
+.loc ../contracts/ConfigParamsBase.sol, 17
+CTOS
+.loc ../contracts/ConfigParamsBase.sol, 18
+LDU 8
+PLDU 32
+NIP
+.loc ../contracts/ConfigParamsBase.sol, 0
+
+.globl	roundTimeParams_internal
+.type	roundTimeParams_internal, @function
+CALL $roundTimeParams_internal_macro$
+
+.macro roundTimeParams_internal_macro
+.loc ../contracts/ConfigParamsBase.sol, 21
+PUSHINT 0
+BLKPUSH 3, 0
+.loc ../contracts/ConfigParamsBase.sol, 28
+PUSHINT 15
+CONFIGPARAM
+PUSHCONT {
+	CTOS
+	LDU 32
+	LDU 32
+	LDU 32
+	LDU 32
+	ENDS
+	TRUE
+}
+PUSHCONT {
+	PUSHINT 0
+	BLKPUSH 4, 0
+}
+IFELSE
+REVERSE 5, 0
+POP S8
+POP S6
+POP S4
+POP S2
+.loc ../contracts/ConfigParamsBase.sol, 29
+THROWIFNOT 509
+.loc ../contracts/ConfigParamsBase.sol, 0
+
+.globl	getMaxStakeFactor_internal
+.type	getMaxStakeFactor_internal, @function
+CALL $getMaxStakeFactor_internal_macro$
+
+.macro getMaxStakeFactor_internal_macro
+.loc ../contracts/ConfigParamsBase.sol, 33
+PUSHINT 17
+CONFIGPARAM
+DUP
+PUSHCONT {
+	PUSHREF {
+	}
+	SWAP
+}
+IFNOT
+.loc ../contracts/ConfigParamsBase.sol, 34
+THROWIFNOT 516
+.loc ../contracts/ConfigParamsBase.sol, 35
+CTOS
+.loc ../contracts/ConfigParamsBase.sol, 36
+LDGRAMS
+NIP
+.loc ../contracts/ConfigParamsBase.sol, 37
+LDGRAMS
+NIP
+.loc ../contracts/ConfigParamsBase.sol, 38
+LDGRAMS
+NIP
+.loc ../contracts/ConfigParamsBase.sol, 39
+PLDU 32
+.loc ../contracts/ConfigParamsBase.sol, 0
+
+.globl	getElector_internal
+.type	getElector_internal, @function
+CALL $getElector_internal_macro$
+
+.macro getElector_internal_macro
+.loc ../contracts/ConfigParamsBase.sol, 43
+PUSHINT 1
+CONFIGPARAM
+DUP
+PUSHCONT {
+	PUSHREF {
+	}
+	SWAP
+}
+IFNOT
+.loc ../contracts/ConfigParamsBase.sol, 44
+THROWIFNOT 517
+.loc ../contracts/ConfigParamsBase.sol, 45
+CTOS
+.loc ../contracts/ConfigParamsBase.sol, 46
+PLDU 256
+.loc ../contracts/ConfigParamsBase.sol, 47
+PUSHINT -1
+NEWC
+STSLICECONST x9_
+STI 8
+STU 256
+ENDC
+CTOS
+.loc ../contracts/ConfigParamsBase.sol, 0
+
+.globl	_recoverStake_internal
+.type	_recoverStake_internal, @function
+CALL $_recoverStake_internal_macro$
+
+.macro _recoverStake_internal_macro
+.loc ../contracts/ProxyBase.sol, 15
+SWAP
+PUSHINT 1000000000
+PUSHINT 90000000
+ADD
+UFITS 64
+ROLL 3
+NEWC
+STSLICECONST x62_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROTREV
+NEWC
+STSLICECONST x55b0b365
+STU 64
+STSLICE
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/ProxyBase.sol, 0
+
+.globl	_sendElectionRequest_internal
+.type	_sendElectionRequest_internal, @function
+CALL $_sendElectionRequest_internal_macro$
+
+.macro _sendElectionRequest_internal_macro
+.loc ../contracts/ProxyBase.sol, 28
+OVER
+INDEX 5
+PUSH S2
+INDEX 4
+PUSH S3
+INDEX 3
+PUSH S4
+THIRD
+ROLL 5
+SECOND
+BLKSWAP 2, 6
+PUSHINT 1000000000
+ADD
+UFITS 64
+PUSHINT 90000000
+ADD
+UFITS 64
+ROLL 8
+NEWC
+STSLICECONST x62_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 1
+STUR 107
+ROLLREV 7
+NEWC
+STSLICECONST x138bac8c
+STU 64
+STU 256
+STU 32
+STU 32
+STU 256
+STREF
+SWAP
+NEWC
+STSLICE
+STBREFR
+STBREFR
+ENDC
+PUSHINT 1
+SENDRAWMSG
+.loc ../contracts/ProxyBase.sol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDMSGADDR
+LDU 32
+LDDICT
+ROTREV
+PAIR
+SWAP
+LDDICT
+LDDICT
+LDU 64
+LDREF
+ENDS
+CTOS
+LDDICT
+LDI 1
+LDU 64
+LDU 64
+LDU 8
+LDU 8
+LDU 64
+LDDICT
+ENDS
+SETGLOB 22
+SETGLOB 21
+SETGLOB 20
+SETGLOB 19
+SETGLOB 18
+SETGLOB 17
+SETGLOB 16
+SETGLOB 15
+SETGLOB 14
+SETGLOB 13
+SETGLOB 12
+SETGLOB 11
+SETGLOB 10
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	PUSHINT 0
+	NEWDICT
+	PAIR
+	NEWDICT
+	DUP
+	PUSHINT 0
+	NEWDICT
+	PUSHINT 0
+	BLKPUSH 5, 0
+	NEWDICT
+	SETGLOB 22
+	SETGLOB 21
+	SETGLOB 20
+	SETGLOB 19
+	SETGLOB 18
+	SETGLOB 17
+	SETGLOB 16
+	SETGLOB 15
+	SETGLOB 14
+	SETGLOB 13
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+	PUSHINT 0
+	SETGLOB 14
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 22
+GETGLOB 21
+GETGLOB 20
+GETGLOB 19
+GETGLOB 18
+GETGLOB 17
+GETGLOB 16
+GETGLOB 15
+GETGLOB 14
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STSLICE
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+STDICT
+STDICT
+STU 64
+ROLLREV 8
+NEWC
+STDICT
+STI 1
+STU 64
+STU 64
+STU 8
+STU 8
+STU 64
+STDICT
+STBREFR
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
+DROP
+SETGLOB 9
+MODPOW2 1
+IFJMPREF {
+	OVER
+	LDSLICE 32
+	NIP
+	CALL $on_bounce_macro$
+}
+OVER
+SEMPTY ; isEmpty
+DUP
+PUSHCONT {
+	DROP
+	OVER
+	LDUQ 32  ; [funcId] body' ok
+	PUSHCONT {
+		DROP
+		CALLREF {
+			CALL $fallback_macro$
+		}
+		THROW 0
+	}
+	IFNOT
+	OVER
+	EQINT 0 ; funcId body' isZero
+	DUP
+	PUSHCONT {
+		BLKDROP2 2, 1
+	}
+	IF
+}
+IFNOT
+IFJMPREF {
+	CALL $receive_macro$
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
+}
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SETGLOB 9
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHPOW2 9
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	ROT
+	GETGLOB 2
+	DUP
+	SETGLOB 5
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+IF
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; expireAt msgSlice
+SWAP
+NOW ; msgSlice expireAt now
+GREATER ; msgSlice expireAt>now
+THROWIFNOT 57
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
+}
+
+.macro allowedParticipants
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 22
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000a460e92d
+	NEWC
+	STSLICE
+	STDICT
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro public_function_selector
+DUP
+PUSHINT 1322844873
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 322401098
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 170071535
+		EQUAL
+		IFJMPREF {
+			CALL $getParticipants$
+		}
+		DUP
+		PUSHINT 179050749
+		EQUAL
+		IFJMPREF {
+			CALL $addOrdinaryStake$
+		}
+		DUP
+		PUSHINT 317981552
+		EQUAL
+		IFJMPREF {
+			CALL $withdrawAll$
+		}
+		DUP
+		PUSHINT 322401098
+		EQUAL
+		IFJMPREF {
+			CALL $cancelWithdrawal$
+		}
+	}
+	DUP
+	PUSHINT 679516195
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 569193198
+		EQUAL
+		IFJMPREF {
+			CALL $onFailToRecoverStake$
+		}
+		DUP
+		PUSHINT 610330925
+		EQUAL
+		IFJMPREF {
+			CALL $allowedParticipants$
+		}
+		DUP
+		PUSHINT 645756974
+		EQUAL
+		IFJMPREF {
+			CALL $onStakeAccept$
+		}
+		DUP
+		PUSHINT 679516195
+		EQUAL
+		IFJMPREF {
+			CALL $ticktock$
+		}
+	}
+	DUP
+	PUSHINT 1001131646
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 790901497
+		EQUAL
+		IFJMPREF {
+			CALL $getRounds$
+		}
+		DUP
+		PUSHINT 829799259
+		EQUAL
+		IFJMPREF {
+			CALL $getDePoolInfo$
+		}
+		DUP
+		PUSHINT 991977415
+		EQUAL
+		IFJMPREF {
+			CALL $setAllowedParticipant$
+		}
+		DUP
+		PUSHINT 1001131646
+		EQUAL
+		IFJMPREF {
+			CALL $terminator$
+		}
+	}
+	DUP
+	PUSHINT 1322844873
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1081738786
+		EQUAL
+		IFJMPREF {
+			CALL $addLockStake$
+		}
+		DUP
+		PUSHINT 1236773697
+		EQUAL
+		IFJMPREF {
+			CALL $setLockDonor$
+		}
+		DUP
+		PUSHINT 1316189259
+		EQUAL
+		IFJMPREF {
+			CALL $participateInElections$
+		}
+		DUP
+		PUSHINT 1322844873
+		EQUAL
+		IFJMPREF {
+			CALL $onStakeReject$
+		}
+	}
+}
+DUP
+PUSHINT 2096841158
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 1642014066
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1362002560
+		EQUAL
+		IFJMPREF {
+			CALL $constructor$
+		}
+		DUP
+		PUSHINT 1381255761
+		EQUAL
+		IFJMPREF {
+			CALL $completeRound$
+		}
+		DUP
+		PUSHINT 1473519816
+		EQUAL
+		IFJMPREF {
+			CALL $setVestingDonor$
+		}
+		DUP
+		PUSHINT 1642014066
+		EQUAL
+		IFJMPREF {
+			CALL $getLastRoundInfo$
+		}
+	}
+	DUP
+	PUSHINT 1898212622
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1745928014
+		EQUAL
+		IFJMPREF {
+			CALL $transferStake$
+		}
+		DUP
+		PUSHINT 1749338091
+		EQUAL
+		IFJMPREF {
+			CALL $receiveFunds$
+		}
+		DUP
+		PUSHINT 1815418450
+		EQUAL
+		IFJMPREF {
+			CALL $getDePoolBalance$
+		}
+		DUP
+		PUSHINT 1898212622
+		EQUAL
+		IFJMPREF {
+			CALL $setValidatorRewardFraction$
+		}
+	}
+	DUP
+	PUSHINT 2073458374
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1903783592
+		EQUAL
+		IFJMPREF {
+			CALL $addVestingStake$
+		}
+		DUP
+		PUSHINT 1961843497
+		EQUAL
+		IFJMPREF {
+			CALL $withdrawFromPoolingRound$
+		}
+		DUP
+		PUSHINT 2048313362
+		EQUAL
+		IFJMPREF {
+			CALL $getParticipantInfo$
+		}
+		DUP
+		PUSHINT 2073458374
+		EQUAL
+		IFJMPREF {
+			CALL $withdrawPart$
+		}
+	}
+	DUP
+	PUSHINT 2096841158
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 2094344302
+		EQUAL
+		IFJMPREF {
+			CALL $completeRoundWithChunk$
+		}
+		DUP
+		PUSHINT 2096841158
+		EQUAL
+		IFJMPREF {
+			CALL $onSuccessToRecoverStake$
+		}
+	}
+}
+
