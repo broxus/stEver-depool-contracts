@@ -28,7 +28,7 @@ Answers to frequently asked questions can be found [here](https://docs.ton.dev/8
     - [6. Deploy Contracts](#6-deploy-contracts)
         - [6.1. Deploy DePool contract to the basechain](#61-deploy-depool-contract-to-the-basechain)
         - [6.2. (Optional) Deploy DePool Helper contract to the basechain](#62-optional-deploy-depool-helper-contract-to-the-basechain)
-        - [6.3. Deploy StEverVault strategy](#63-deploy-stEverVault-strategy)
+        - [6.3. Deploy StEverVault strategy](#63-deploy-stevervault-strategy)
     - [7. Configure DePool State Update method](#7-configure-depool-state-update-method)
         - [State update through Multisig Contract](#state-update-through-multisig-contract)
         - [State update through DePool Helper contract (temporarily unavailable)](#state-update-through-depool-helper-contract-temporarily-unavailable)
