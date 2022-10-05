@@ -29,7 +29,7 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
 
 
     // Hash of code of proxy contract
-    uint256 constant PROXY_CODE_HASH = 0x97b16e18c77314be4fbe21420cd482c14d1dd0aeae478d8ec0dd084f9ac6c6d5;
+    uint256 constant PROXY_CODE_HASH = 0x435368efa80a95345edaec790c37957cd296fb0021071202fd90854641f5bb10;
     event Debug(string message);
     // Status codes for messages sent back to participants as result of
     // operations (add/remove/continue/withdraw stake):
