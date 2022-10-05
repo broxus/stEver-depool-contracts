@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -36,7 +36,7 @@ LDU 8
 ENDS
 .loc ../contracts/IParticipant.sol, 0
 CALLREF {
-	CALL $onRoundComplete_internal_macro$
+	CALL $onRoundComplete_14513b01_internal_macro$
 }
 DROP
 CALLREF {
@@ -44,7 +44,7 @@ CALLREF {
 }
 THROW 0
 
-.macro onRoundComplete_internal_macro
+.macro onRoundComplete_14513b01_internal_macro
 .loc ../contracts/IParticipant.sol, 35
 BLKDROP 7
 .loc ../contracts/IParticipant.sol, 0
@@ -64,7 +64,7 @@ LDU 64
 ENDS
 .loc ../contracts/IParticipant.sol, 0
 CALLREF {
-	CALL $receiveAnswer_internal_macro$
+	CALL $receiveAnswer_81808287_internal_macro$
 }
 DROP
 CALLREF {
@@ -72,7 +72,7 @@ CALLREF {
 }
 THROW 0
 
-.macro receiveAnswer_internal_macro
+.macro receiveAnswer_81808287_internal_macro
 .loc ../contracts/IParticipant.sol, 47
 DROP2
 .loc ../contracts/IParticipant.sol, 0
@@ -99,7 +99,7 @@ LDU 128
 ENDS
 .loc ../contracts/IParticipant.sol, 0
 CALLREF {
-	CALL $onTransfer_internal_macro$
+	CALL $onTransfer_733d56ae_internal_macro$
 }
 DROP
 CALLREF {
@@ -107,7 +107,7 @@ CALLREF {
 }
 THROW 0
 
-.macro onTransfer_internal_macro
+.macro onTransfer_733d56ae_internal_macro
 .loc ../contracts/IParticipant.sol, 51
 DROP2
 .loc ../contracts/IParticipant.sol, 0

@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -59,7 +59,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $process_new_stake_internal_macro$
+	CALL $process_new_stake_ceee2488_internal_macro$
 }
 DROP
 CALLREF {
@@ -67,7 +67,7 @@ CALLREF {
 }
 THROW 0
 
-.macro process_new_stake_internal_macro
+.macro process_new_stake_ceee2488_internal_macro
 .loc ../contracts/DePoolProxy.sol, 24
 GETGLOB 9
 GETGLOB 11
@@ -130,18 +130,18 @@ LDU 32
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $onStakeAccept_internal_macro$
+	CALL $onStakeAccept_0ef2c095_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	onStakeAccept_internal
-.type	onStakeAccept_internal, @function
-CALL $onStakeAccept_internal_macro$
+.globl	onStakeAccept_0ef2c095_internal
+.type	onStakeAccept_0ef2c095_internal, @function
+CALL $onStakeAccept_0ef2c095_internal_macro$
 
-.macro onStakeAccept_internal_macro
+.macro onStakeAccept_0ef2c095_internal_macro
 .loc ../contracts/DePoolProxy.sol, 53
 GETGLOB 9
 XCHG S2
@@ -189,18 +189,18 @@ LDU 32
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $onStakeReject_internal_macro$
+	CALL $onStakeReject_8f2cf700_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	onStakeReject_internal
-.type	onStakeReject_internal, @function
-CALL $onStakeReject_internal_macro$
+.globl	onStakeReject_8f2cf700_internal
+.type	onStakeReject_8f2cf700_internal, @function
+CALL $onStakeReject_8f2cf700_internal_macro$
 
-.macro onStakeReject_internal_macro
+.macro onStakeReject_8f2cf700_internal_macro
 .loc ../contracts/DePoolProxy.sol, 62
 GETGLOB 9
 XCHG S2
@@ -258,7 +258,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $recover_stake_internal_macro$
+	CALL $recover_stake_9f030e0c_internal_macro$
 }
 DROP
 CALLREF {
@@ -266,11 +266,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	recover_stake_internal
-.type	recover_stake_internal, @function
-CALL $recover_stake_internal_macro$
+.globl	recover_stake_9f030e0c_internal
+.type	recover_stake_9f030e0c_internal, @function
+CALL $recover_stake_9f030e0c_internal_macro$
 
-.macro recover_stake_internal_macro
+.macro recover_stake_9f030e0c_internal_macro
 .loc ../contracts/DePoolProxy.sol, 24
 GETGLOB 9
 GETGLOB 11
@@ -323,18 +323,18 @@ LDU 64
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $onSuccessToRecoverStake_internal_macro$
+	CALL $onSuccessToRecoverStake_e4a7e66e_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	onSuccessToRecoverStake_internal
-.type	onSuccessToRecoverStake_internal, @function
-CALL $onSuccessToRecoverStake_internal_macro$
+.globl	onSuccessToRecoverStake_e4a7e66e_internal
+.type	onSuccessToRecoverStake_e4a7e66e_internal, @function
+CALL $onSuccessToRecoverStake_e4a7e66e_internal_macro$
 
-.macro onSuccessToRecoverStake_internal_macro
+.macro onSuccessToRecoverStake_e4a7e66e_internal_macro
 .loc ../contracts/DePoolProxy.sol, 80
 GETGLOB 9
 SWAP
@@ -451,18 +451,18 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $withdrawExcessTons_internal_macro$
+	CALL $withdrawExcessTons_67cc2de7_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	withdrawExcessTons_internal
-.type	withdrawExcessTons_internal, @function
-CALL $withdrawExcessTons_internal_macro$
+.globl	withdrawExcessTons_67cc2de7_internal
+.type	withdrawExcessTons_67cc2de7_internal, @function
+CALL $withdrawExcessTons_67cc2de7_internal_macro$
 
-.macro withdrawExcessTons_internal_macro
+.macro withdrawExcessTons_67cc2de7_internal_macro
 .loc ../contracts/DePoolProxy.sol, 102
 GETGLOB 9
 GETGLOB 12
@@ -514,7 +514,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolProxy.sol, 0
 CALLREF {
-	CALL $getProxyInfo_internal_macro$
+	CALL $getProxyInfo_1246ea56_internal_macro$
 }
 PUSH S2
 PUSHCONT {
@@ -548,11 +548,11 @@ IFREF {
 }
 THROW 0
 
-.globl	getProxyInfo_internal
-.type	getProxyInfo_internal, @function
-CALL $getProxyInfo_internal_macro$
+.globl	getProxyInfo_1246ea56_internal
+.type	getProxyInfo_1246ea56_internal, @function
+CALL $getProxyInfo_1246ea56_internal_macro$
 
-.macro getProxyInfo_internal_macro
+.macro getProxyInfo_1246ea56_internal_macro
 .loc ../contracts/DePoolProxy.sol, 115
 GETGLOB 11
 .loc ../contracts/DePoolProxy.sol, 116

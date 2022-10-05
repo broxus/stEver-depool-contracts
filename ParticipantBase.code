@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -16,11 +16,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	getOrCreateParticipant_internal
-.type	getOrCreateParticipant_internal, @function
-CALL $getOrCreateParticipant_internal_macro$
+.globl	getOrCreateParticipant_870b9686_internal
+.type	getOrCreateParticipant_870b9686_internal, @function
+CALL $getOrCreateParticipant_870b9686_internal_macro$
 
-.macro getOrCreateParticipant_internal_macro
+.macro getOrCreateParticipant_870b9686_internal_macro
 .loc ../contracts/ParticipantBase.sol, 12
 GETGLOB 10
 PUSHINT 267
@@ -66,11 +66,11 @@ DUP
 TUPLE 8
 .loc ../contracts/ParticipantBase.sol, 0
 
-.globl	fetchParticipant_internal
-.type	fetchParticipant_internal, @function
-CALL $fetchParticipant_internal_macro$
+.globl	fetchParticipant_738c2c87_internal
+.type	fetchParticipant_738c2c87_internal, @function
+CALL $fetchParticipant_738c2c87_internal_macro$
 
-.macro fetchParticipant_internal_macro
+.macro fetchParticipant_738c2c87_internal_macro
 .loc ../contracts/ParticipantBase.sol, 30
 GETGLOB 10
 PUSHINT 267
@@ -96,11 +96,11 @@ IFREF {
 }
 .loc ../contracts/ParticipantBase.sol, 0
 
-.globl	_setOrDeleteParticipant_internal
-.type	_setOrDeleteParticipant_internal, @function
-CALL $_setOrDeleteParticipant_internal_macro$
+.globl	_setOrDeleteParticipant_a31677f8_internal
+.type	_setOrDeleteParticipant_a31677f8_internal, @function
+CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 
-.macro _setOrDeleteParticipant_internal_macro
+.macro _setOrDeleteParticipant_a31677f8_internal_macro
 .loc ../contracts/ParticipantBase.sol, 34
 DUP
 FIRST

@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -41,18 +41,18 @@ LDREF
 ENDS
 .loc ../contracts/Participant.sol, 0
 CALLREF {
-	CALL $sendTransaction_internal_macro$
+	CALL $sendTransaction_15500dc5_internal_macro$
 }
 IFREF {
 	CALL $c7_to_c4$
 }
 THROW 0
 
-.globl	sendTransaction_internal
-.type	sendTransaction_internal, @function
-CALL $sendTransaction_internal_macro$
+.globl	sendTransaction_15500dc5_internal
+.type	sendTransaction_15500dc5_internal, @function
+CALL $sendTransaction_15500dc5_internal_macro$
 
-.macro sendTransaction_internal_macro
+.macro sendTransaction_15500dc5_internal_macro
 .loc ../contracts/Participant.sol, 17
 GETGLOB 5
 DUP

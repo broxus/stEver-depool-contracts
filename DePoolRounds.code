@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -16,11 +16,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	roundAt_internal
-.type	roundAt_internal, @function
-CALL $roundAt_internal_macro$
+.globl	roundAt_efe99a24_internal
+.type	roundAt_efe99a24_internal, @function
+CALL $roundAt_efe99a24_internal_macro$
 
-.macro roundAt_internal_macro
+.macro roundAt_efe99a24_internal_macro
 .loc ../contracts/DePoolRounds.sol, 184
 GETGLOB 10
 PUSHINT 64
@@ -85,11 +85,11 @@ ISNULL
 THROWIF 63
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	fetchRound_internal
-.type	fetchRound_internal, @function
-CALL $fetchRound_internal_macro$
+.globl	fetchRound_d130e988_internal
+.type	fetchRound_d130e988_internal, @function
+CALL $fetchRound_d130e988_internal_macro$
 
-.macro fetchRound_internal_macro
+.macro fetchRound_d130e988_internal_macro
 .loc ../contracts/DePoolRounds.sol, 188
 GETGLOB 10
 PUSHINT 64
@@ -151,11 +151,11 @@ IFREF {
 }
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	setRound_internal
-.type	setRound_internal, @function
-CALL $setRound_internal_macro$
+.globl	setRound_35d1b2f6_internal
+.type	setRound_35d1b2f6_internal, @function
+CALL $setRound_35d1b2f6_internal_macro$
 
-.macro setRound_internal_macro
+.macro setRound_35d1b2f6_internal_macro
 .loc ../contracts/DePoolRounds.sol, 192
 GETGLOB 10
 SWAP
@@ -214,11 +214,11 @@ DICTUSETREF
 SETGLOB 10
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	minRound_internal
-.type	minRound_internal, @function
-CALL $minRound_internal_macro$
+.globl	minRound_bdc18b15_internal
+.type	minRound_bdc18b15_internal, @function
+CALL $minRound_bdc18b15_internal_macro$
 
-.macro minRound_internal_macro
+.macro minRound_bdc18b15_internal_macro
 .loc ../contracts/DePoolRounds.sol, 196
 GETGLOB 10
 PUSHINT 64
@@ -282,11 +282,11 @@ IFREF {
 }
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	nextRound_internal
-.type	nextRound_internal, @function
-CALL $nextRound_internal_macro$
+.globl	nextRound_da54d41d_internal
+.type	nextRound_da54d41d_internal, @function
+CALL $nextRound_da54d41d_internal_macro$
 
-.macro nextRound_internal_macro
+.macro nextRound_da54d41d_internal_macro
 .loc ../contracts/DePoolRounds.sol, 200
 GETGLOB 10
 PUSHINT 64
@@ -351,11 +351,11 @@ IFREF {
 }
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	toTruncatedRound_internal
-.type	toTruncatedRound_internal, @function
-CALL $toTruncatedRound_internal_macro$
+.globl	toTruncatedRound_3c8490ce_internal
+.type	toTruncatedRound_3c8490ce_internal, @function
+CALL $toTruncatedRound_3c8490ce_internal_macro$
 
-.macro toTruncatedRound_internal_macro
+.macro toTruncatedRound_3c8490ce_internal_macro
 .loc ../contracts/DePoolRounds.sol, 374
 DUP
 FIRST
@@ -409,7 +409,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolRounds.sol, 0
 CALLREF {
-	CALL $getRounds_internal_macro$
+	CALL $getRounds_6984d070_internal_macro$
 }
 OVER
 PUSHCONT {
@@ -438,12 +438,12 @@ IFREF {
 }
 THROW 0
 
-.macro getRounds_internal_macro
+.macro getRounds_6984d070_internal_macro
 .loc ../contracts/DePoolRounds.sol, 396
 NEWDICT
 .loc ../contracts/DePoolRounds.sol, 397
 CALLREF {
-	CALL $minRound_internal_macro$
+	CALL $minRound_bdc18b15_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 398
 PUSHCONT {
@@ -459,7 +459,7 @@ PUSHCONT {
 	UNPAIR
 	.loc ../contracts/DePoolRounds.sol, 400
 	CALLREF {
-		CALL $toTruncatedRound_internal_macro$
+		CALL $toTruncatedRound_3c8490ce_internal_macro$
 	}
 	.loc ../contracts/DePoolRounds.sol, 401
 	PUSH2 S0, S2
@@ -494,7 +494,7 @@ PUSHCONT {
 	POP S2
 	.loc ../contracts/DePoolRounds.sol, 402
 	CALLREF {
-		CALL $nextRound_internal_macro$
+		CALL $nextRound_da54d41d_internal_macro$
 	}
 	.loc ../contracts/DePoolRounds.sol, 0
 }

@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -16,11 +16,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	getCurValidatorData_internal
-.type	getCurValidatorData_internal, @function
-CALL $getCurValidatorData_internal_macro$
+.globl	getCurValidatorData_61ae336b_internal
+.type	getCurValidatorData_61ae336b_internal, @function
+CALL $getCurValidatorData_61ae336b_internal_macro$
 
-.macro getCurValidatorData_internal_macro
+.macro getCurValidatorData_61ae336b_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 6
 PUSHINT 0
 DUP
@@ -50,11 +50,11 @@ OVER
 POP S3
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	getPrevValidatorHash_internal
-.type	getPrevValidatorHash_internal, @function
-CALL $getPrevValidatorHash_internal_macro$
+.globl	getPrevValidatorHash_22954fac_internal
+.type	getPrevValidatorHash_22954fac_internal, @function
+CALL $getPrevValidatorHash_22954fac_internal_macro$
 
-.macro getPrevValidatorHash_internal_macro
+.macro getPrevValidatorHash_22954fac_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 15
 PUSHINT 32
 CONFIGPARAM
@@ -75,11 +75,11 @@ PLDU 32
 NIP
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	roundTimeParams_internal
-.type	roundTimeParams_internal, @function
-CALL $roundTimeParams_internal_macro$
+.globl	roundTimeParams_73c24cb0_internal
+.type	roundTimeParams_73c24cb0_internal, @function
+CALL $roundTimeParams_73c24cb0_internal_macro$
 
-.macro roundTimeParams_internal_macro
+.macro roundTimeParams_73c24cb0_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 21
 PUSHINT 0
 BLKPUSH 3, 0
@@ -109,11 +109,11 @@ POP S2
 THROWIFNOT 509
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	getMaxStakeFactor_internal
-.type	getMaxStakeFactor_internal, @function
-CALL $getMaxStakeFactor_internal_macro$
+.globl	getMaxStakeFactor_3562a37c_internal
+.type	getMaxStakeFactor_3562a37c_internal, @function
+CALL $getMaxStakeFactor_3562a37c_internal_macro$
 
-.macro getMaxStakeFactor_internal_macro
+.macro getMaxStakeFactor_3562a37c_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 33
 PUSHINT 17
 CONFIGPARAM
@@ -141,11 +141,11 @@ NIP
 PLDU 32
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	getElector_internal
-.type	getElector_internal, @function
-CALL $getElector_internal_macro$
+.globl	getElector_28167edb_internal
+.type	getElector_28167edb_internal, @function
+CALL $getElector_28167edb_internal_macro$
 
-.macro getElector_internal_macro
+.macro getElector_28167edb_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 43
 PUSHINT 1
 CONFIGPARAM

@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -61,7 +61,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $updateDePoolPoolAddress_internal_macro$
+	CALL $updateDePoolPoolAddress_fb96c880_internal_macro$
 }
 DROP
 CALLREF {
@@ -69,11 +69,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	updateDePoolPoolAddress_internal
-.type	updateDePoolPoolAddress_internal, @function
-CALL $updateDePoolPoolAddress_internal_macro$
+.globl	updateDePoolPoolAddress_fb96c880_internal
+.type	updateDePoolPoolAddress_fb96c880_internal, @function
+CALL $updateDePoolPoolAddress_fb96c880_internal_macro$
 
-.macro updateDePoolPoolAddress_internal_macro
+.macro updateDePoolPoolAddress_fb96c880_internal_macro
 .loc ../contracts/DePoolHelper.sol, 35
 GETGLOB 5
 DUP
@@ -125,7 +125,7 @@ LDU 256
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $initTimer_internal_macro$
+	CALL $initTimer_7a81159d_internal_macro$
 }
 DROP
 CALLREF {
@@ -133,11 +133,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	initTimer_internal
-.type	initTimer_internal, @function
-CALL $initTimer_internal_macro$
+.globl	initTimer_7a81159d_internal
+.type	initTimer_7a81159d_internal, @function
+CALL $initTimer_7a81159d_internal_macro$
 
-.macro initTimer_internal_macro
+.macro initTimer_7a81159d_internal_macro
 .loc ../contracts/DePoolHelper.sol, 35
 GETGLOB 5
 DUP
@@ -197,7 +197,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $onTimer_internal_macro$
+	CALL $onTimer_cd5090b2_internal_macro$
 }
 DROP
 CALLREF {
@@ -205,11 +205,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	onTimer_internal
-.type	onTimer_internal, @function
-CALL $onTimer_internal_macro$
+.globl	onTimer_cd5090b2_internal
+.type	onTimer_cd5090b2_internal, @function
+CALL $onTimer_cd5090b2_internal_macro$
 
-.macro onTimer_internal_macro
+.macro onTimer_cd5090b2_internal_macro
 .loc ../contracts/DePoolHelper.sol, 71
 GETGLOB 12
 .loc ../contracts/DePoolHelper.sol, 72
@@ -281,7 +281,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $sendTicktock_internal_macro$
+	CALL $sendTicktock_f33dceed_internal_macro$
 }
 DROP
 CALLREF {
@@ -289,11 +289,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	sendTicktock_internal
-.type	sendTicktock_internal, @function
-CALL $sendTicktock_internal_macro$
+.globl	sendTicktock_f33dceed_internal
+.type	sendTicktock_f33dceed_internal, @function
+CALL $sendTicktock_f33dceed_internal_macro$
 
-.macro sendTicktock_internal_macro
+.macro sendTicktock_f33dceed_internal_macro
 .loc ../contracts/DePoolHelper.sol, 35
 GETGLOB 5
 DUP
@@ -337,7 +337,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $getDePoolPoolAddress_internal_macro$
+	CALL $getDePoolPoolAddress_e0b147cf_internal_macro$
 }
 OVER
 PUSHCONT {
@@ -370,11 +370,11 @@ IFREF {
 }
 THROW 0
 
-.globl	getDePoolPoolAddress_internal
-.type	getDePoolPoolAddress_internal, @function
-CALL $getDePoolPoolAddress_internal_macro$
+.globl	getDePoolPoolAddress_e0b147cf_internal
+.type	getDePoolPoolAddress_e0b147cf_internal, @function
+CALL $getDePoolPoolAddress_e0b147cf_internal_macro$
 
-.macro getDePoolPoolAddress_internal_macro
+.macro getDePoolPoolAddress_e0b147cf_internal_macro
 .loc ../contracts/DePoolHelper.sol, 90
 GETGLOB 10
 .loc ../contracts/DePoolHelper.sol, 0
@@ -392,7 +392,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $getHistory_internal_macro$
+	CALL $getHistory_aa15efc8_internal_macro$
 }
 OVER
 PUSHCONT {
@@ -425,11 +425,11 @@ IFREF {
 }
 THROW 0
 
-.globl	getHistory_internal
-.type	getHistory_internal, @function
-CALL $getHistory_internal_macro$
+.globl	getHistory_aa15efc8_internal
+.type	getHistory_aa15efc8_internal, @function
+CALL $getHistory_aa15efc8_internal_macro$
 
-.macro getHistory_internal_macro
+.macro getHistory_aa15efc8_internal_macro
 .loc ../contracts/DePoolHelper.sol, 94
 GETGLOB 11
 .loc ../contracts/DePoolHelper.sol, 0
@@ -448,7 +448,7 @@ LDREF
 ENDS
 .loc ../contracts/DePoolHelper.sol, 0
 CALLREF {
-	CALL $upgrade_internal_macro$
+	CALL $upgrade_7916ae0d_internal_macro$
 }
 DROP
 CALLREF {
@@ -456,11 +456,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	upgrade_internal
-.type	upgrade_internal, @function
-CALL $upgrade_internal_macro$
+.globl	upgrade_7916ae0d_internal
+.type	upgrade_7916ae0d_internal, @function
+CALL $upgrade_7916ae0d_internal_macro$
 
-.macro upgrade_internal_macro
+.macro upgrade_7916ae0d_internal_macro
 .loc ../contracts/DePoolHelper.sol, 35
 GETGLOB 5
 DUP
@@ -563,18 +563,18 @@ LDREF
 ENDS
 .loc ../contracts/Participant.sol, 0
 CALLREF {
-	CALL $sendTransaction_internal_macro$
+	CALL $sendTransaction_15500dc5_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	sendTransaction_internal
-.type	sendTransaction_internal, @function
-CALL $sendTransaction_internal_macro$
+.globl	sendTransaction_15500dc5_internal
+.type	sendTransaction_15500dc5_internal, @function
+CALL $sendTransaction_15500dc5_internal_macro$
 
-.macro sendTransaction_internal_macro
+.macro sendTransaction_15500dc5_internal_macro
 .loc ../contracts/Participant.sol, 17
 GETGLOB 5
 DUP

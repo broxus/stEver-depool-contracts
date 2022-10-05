@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -273,18 +273,18 @@ UFITS 64
 SETGLOB 21
 .loc ../contracts/DePool.sol, 184
 CALLREF {
-	CALL $roundTimeParams_internal_macro$
+	CALL $roundTimeParams_73c24cb0_internal_macro$
 }
 DROP2
 NIP
 .loc ../contracts/DePool.sol, 185
 CALLREF {
-	CALL $getCurValidatorData_internal_macro$
+	CALL $getCurValidatorData_61ae336b_internal_macro$
 }
 NIP
 .loc ../contracts/DePool.sol, 186
 CALLREF {
-	CALL $getPrevValidatorHash_internal_macro$
+	CALL $getPrevValidatorHash_22954fac_internal_macro$
 }
 .loc ../contracts/DePool.sol, 187
 NOW
@@ -295,22 +295,22 @@ UFITS 32
 GEQ
 .loc ../contracts/DePool.sol, 189
 CALLREF {
-	CALL $generateRound_internal_macro$
+	CALL $generateRound_ebbb0126_internal_macro$
 }
 .loc ../contracts/DePool.sol, 190
 CALLREF {
-	CALL $generateRound_internal_macro$
+	CALL $generateRound_ebbb0126_internal_macro$
 }
 .loc ../contracts/DePool.sol, 191
 CALLREF {
-	CALL $generateRound_internal_macro$
+	CALL $generateRound_ebbb0126_internal_macro$
 }
 .loc ../contracts/DePool.sol, 192
 PUSHINT 1
 SETINDEX 6
 .loc ../contracts/DePool.sol, 193
 CALLREF {
-	CALL $generateRound_internal_macro$
+	CALL $generateRound_ebbb0126_internal_macro$
 }
 .loc ../contracts/DePool.sol, 194
 PUSHINT 0
@@ -355,28 +355,28 @@ DUP
 FIRST
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 198
 DUP
 FIRST
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 199
 DUP
 FIRST
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 200
 DUP
 FIRST
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 DROP2
@@ -385,11 +385,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	errorEvent_internal
-.type	errorEvent_internal, @function
-CALL $errorEvent_internal_macro$
+.globl	errorEvent_bd4f4fc9_internal
+.type	errorEvent_bd4f4fc9_internal, @function
+CALL $errorEvent_bd4f4fc9_internal_macro$
 
-.macro errorEvent_internal_macro
+.macro errorEvent_bd4f4fc9_internal_macro
 .loc ../contracts/DePool.sol, 222
 PUSHSLICE xc0000000000000000000000000230f5f80
 NEWC
@@ -400,11 +400,11 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/DePool.sol, 0
 
-.globl	_returnChange_internal
-.type	_returnChange_internal, @function
-CALL $_returnChange_internal_macro$
+.globl	_returnChange_260d9040_internal
+.type	_returnChange_260d9040_internal, @function
+CALL $_returnChange_260d9040_internal_macro$
 
-.macro _returnChange_internal_macro
+.macro _returnChange_260d9040_internal_macro
 .loc ../contracts/DePool.sol, 227
 GETGLOB 9
 NEWC
@@ -417,11 +417,11 @@ PUSHINT 64
 SENDRAWMSG
 .loc ../contracts/DePool.sol, 0
 
-.globl	_sendError_internal
-.type	_sendError_internal, @function
-CALL $_sendError_internal_macro$
+.globl	_sendError_96842984_internal
+.type	_sendError_96842984_internal, @function
+CALL $_sendError_96842984_internal_macro$
 
-.macro _sendError_internal_macro
+.macro _sendError_96842984_internal_macro
 .loc ../contracts/DePool.sol, 234
 SWAP
 GETGLOB 9
@@ -440,11 +440,11 @@ PUSHINT 64
 SENDRAWMSG
 .loc ../contracts/DePool.sol, 0
 
-.globl	sendAcceptAndReturnChange_internal
-.type	sendAcceptAndReturnChange_internal, @function
-CALL $sendAcceptAndReturnChange_internal_macro$
+.globl	sendAcceptAndReturnChange_facfbc02_internal
+.type	sendAcceptAndReturnChange_facfbc02_internal, @function
+CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 
-.macro sendAcceptAndReturnChange_internal_macro
+.macro sendAcceptAndReturnChange_facfbc02_internal_macro
 .loc ../contracts/DePool.sol, 239
 PUSHINT 0
 DUP
@@ -464,11 +464,11 @@ PUSHINT 64
 SENDRAWMSG
 .loc ../contracts/DePool.sol, 0
 
-.globl	sendAcceptAndReturnChange128_internal
-.type	sendAcceptAndReturnChange128_internal, @function
-CALL $sendAcceptAndReturnChange128_internal_macro$
+.globl	sendAcceptAndReturnChange128_97c1eb12_internal
+.type	sendAcceptAndReturnChange128_97c1eb12_internal, @function
+CALL $sendAcceptAndReturnChange128_97c1eb12_internal_macro$
 
-.macro sendAcceptAndReturnChange128_internal_macro
+.macro sendAcceptAndReturnChange128_97c1eb12_internal_macro
 .loc ../contracts/DePool.sol, 244
 GETPARAM 7
 FIRST
@@ -516,7 +516,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $setAllowedParticipant_internal_macro$
+	CALL $setAllowedParticipant_178e319d_internal_macro$
 }
 DROP
 CALLREF {
@@ -524,11 +524,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	setAllowedParticipant_internal
-.type	setAllowedParticipant_internal, @function
-CALL $setAllowedParticipant_internal_macro$
+.globl	setAllowedParticipant_178e319d_internal
+.type	setAllowedParticipant_178e319d_internal, @function
+CALL $setAllowedParticipant_178e319d_internal_macro$
 
-.macro setAllowedParticipant_internal_macro
+.macro setAllowedParticipant_178e319d_internal_macro
 .loc ../contracts/ValidatorBase.sol, 15
 GETGLOB 9
 GETGLOB 10
@@ -613,11 +613,11 @@ PUSHPOW2 7
 SENDRAWMSG
 .loc ../contracts/DePool.sol, 0
 
-.globl	setLastRoundInfo_internal
-.type	setLastRoundInfo_internal, @function
-CALL $setLastRoundInfo_internal_macro$
+.globl	setLastRoundInfo_f77e87f2_internal
+.type	setLastRoundInfo_f77e87f2_internal, @function
+CALL $setLastRoundInfo_f77e87f2_internal_macro$
 
-.macro setLastRoundInfo_internal_macro
+.macro setLastRoundInfo_f77e87f2_internal_macro
 .loc ../contracts/DePool.sol, 261
 DUP
 SECOND
@@ -666,11 +666,11 @@ DICTISETB
 SETGLOB 15
 .loc ../contracts/DePool.sol, 0
 
-.globl	startRoundCompleting_internal
-.type	startRoundCompleting_internal, @function
-CALL $startRoundCompleting_internal_macro$
+.globl	startRoundCompleting_f756a4fe_internal
+.type	startRoundCompleting_f756a4fe_internal, @function
+CALL $startRoundCompleting_f756a4fe_internal_macro$
 
-.macro startRoundCompleting_internal_macro
+.macro startRoundCompleting_f756a4fe_internal_macro
 .loc ../contracts/DePool.sol, 279
 SETINDEX 7
 .loc ../contracts/DePool.sol, 280
@@ -735,7 +735,7 @@ SENDRAWMSG
 .loc ../contracts/DePool.sol, 291
 DUP
 CALLREF {
-	CALL $toTruncatedRound_internal_macro$
+	CALL $toTruncatedRound_3c8490ce_internal_macro$
 }
 PUSHSLICE xc0000000000000000000000001
 NEWC
@@ -770,15 +770,15 @@ SENDRAWMSG
 .loc ../contracts/DePool.sol, 292
 DUP
 CALLREF {
-	CALL $setLastRoundInfo_internal_macro$
+	CALL $setLastRoundInfo_f77e87f2_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
-.globl	cutWithdrawalValue_internal
-.type	cutWithdrawalValue_internal, @function
-CALL $cutWithdrawalValue_internal_macro$
+.globl	cutWithdrawalValue_3b724030_internal
+.type	cutWithdrawalValue_3b724030_internal, @function
+CALL $cutWithdrawalValue_3b724030_internal_macro$
 
-.macro cutWithdrawalValue_internal_macro
+.macro cutWithdrawalValue_3b724030_internal_macro
 .loc ../contracts/DePool.sol, 301
 PUSHINT 0
 DUP
@@ -896,11 +896,11 @@ XCHG S2, S3
 BLKDROP2 1, 3
 .loc ../contracts/DePool.sol, 0
 
-.globl	_returnOrReinvestForParticipant_internal
-.type	_returnOrReinvestForParticipant_internal, @function
-CALL $_returnOrReinvestForParticipant_internal_macro$
+.globl	_returnOrReinvestForParticipant_a85e2ad4_internal
+.type	_returnOrReinvestForParticipant_a85e2ad4_internal, @function
+CALL $_returnOrReinvestForParticipant_a85e2ad4_internal_macro$
 
-.macro _returnOrReinvestForParticipant_internal_macro
+.macro _returnOrReinvestForParticipant_a85e2ad4_internal_macro
 .loc ../contracts/DePool.sol, 333
 PUSHINT 0
 BLKPUSH 15, 0
@@ -957,7 +957,7 @@ EQINT 7
 .loc ../contracts/DePool.sol, 343
 PUSH S7
 CALLREF {
-	CALL $fetchParticipant_internal_macro$
+	CALL $fetchParticipant_738c2c87_internal_macro$
 }
 .loc ../contracts/DePool.sol, 344
 DUP
@@ -966,7 +966,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 345
 	PUSHPOW2DEC 9
 	CALLREF {
-		CALL $errorEvent_internal_macro$
+		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 346
 	BLKSWAP 2, 9
@@ -1199,8 +1199,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 396
 	PUSHINT 0
 	.loc ../contracts/DePool.sol, 398
-	SWAP
-	PUSH S13
+	XCPU S1, S13
 	PUSH S18
 	INDEX 7
 	NEQINT 5
@@ -1211,14 +1210,13 @@ PUSHCONT {
 	ADD
 	UFITS 32
 	CALLREF {
-		CALL $cutWithdrawalValue_internal_macro$
+		CALL $cutWithdrawalValue_3b724030_internal_macro$
 	}
 	XCHG S2
 	POP S4
 	POP S2
 	.loc ../contracts/DePool.sol, 403
-	SWAP
-	PUSH S4
+	XCPU S1, S4
 	ADD
 	UFITS 64
 	POP S4
@@ -1428,7 +1426,7 @@ PUSHCONT {
 	FALSE
 	DUP
 	CALLREF {
-		CALL $cutWithdrawalValue_internal_macro$
+		CALL $cutWithdrawalValue_3b724030_internal_macro$
 	}
 	XCHG S2
 	POP S5
@@ -1514,8 +1512,7 @@ PUSHCONT {
 		ISNULL
 		THROWIF 63
 		FIRST
-		SWAP
-		DUP
+		XCPU S1, S0
 		ISNULL
 		THROWIF 63
 		INDEX 4
@@ -1720,8 +1717,7 @@ IFREFELSEREF
 }
 		.loc ../contracts/DePoolRounds.sol, 224
 		ROLL 3
-		SWAP
-		DUP
+		XCPU S1, S0
 		FIRST
 		ROT
 		ADD
@@ -1783,8 +1779,7 @@ IFREFELSEREF
 			XCHG S2
 			NEWC
 			STU 64
-			SWAP
-			DUP
+			XCPU S1, S0
 			ISNULL
 			PUSHCONT {
 				DROP
@@ -1846,7 +1841,7 @@ IFELSE
 BLKDROP 3
 PUSH2 S14, S5
 CALLREF {
-	CALL $_setOrDeleteParticipant_internal_macro$
+	CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 }
 .loc ../contracts/DePool.sol, 489
 PUSH S16
@@ -1916,24 +1911,24 @@ BLKDROP 10
 SWAP
 .loc ../contracts/DePool.sol, 0
 
-.globl	_returnOrReinvest_internal
-.type	_returnOrReinvest_internal, @function
-CALL $_returnOrReinvest_internal_macro$
+.globl	_returnOrReinvest_00bdd5b7_internal
+.type	_returnOrReinvest_00bdd5b7_internal, @function
+CALL $_returnOrReinvest_00bdd5b7_internal_macro$
 
-.macro _returnOrReinvest_internal_macro
+.macro _returnOrReinvest_00bdd5b7_internal_macro
 .loc ../contracts/DePoolRounds.sol, 174
 GETGLOB 14
 ADDCONST -2
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 175
 GETGLOB 14
 ADDCONST -3
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 0
 INDEX 4
@@ -2022,7 +2017,7 @@ PUSHCONT {
 		TRUE
 		PUSH S7
 		CALLREF {
-			CALL $_returnOrReinvestForParticipant_internal_macro$
+			CALL $_returnOrReinvestForParticipant_a85e2ad4_internal_macro$
 		}
 		POP S7
 		POP S4
@@ -2104,7 +2099,7 @@ PUSHCONT {
 	FALSE
 	PUSH S6
 	CALLREF {
-		CALL $_returnOrReinvestForParticipant_internal_macro$
+		CALL $_returnOrReinvestForParticipant_a85e2ad4_internal_macro$
 	}
 	POP S6
 	POP S3
@@ -2120,7 +2115,7 @@ ADDCONST -2
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 528
 DROP
@@ -2164,7 +2159,7 @@ LDU 64
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $addOrdinaryStake_internal_macro$
+	CALL $addOrdinaryStake_52cda513_internal_macro$
 }
 DROP
 CALLREF {
@@ -2172,11 +2167,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	addOrdinaryStake_internal
-.type	addOrdinaryStake_internal, @function
-CALL $addOrdinaryStake_internal_macro$
+.globl	addOrdinaryStake_52cda513_internal
+.type	addOrdinaryStake_52cda513_internal, @function
+CALL $addOrdinaryStake_52cda513_internal_macro$
 
-.macro addOrdinaryStake_internal_macro
+.macro addOrdinaryStake_52cda513_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -2193,7 +2188,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
 		.loc ../contracts/DePool.sol, 0
@@ -2211,7 +2206,7 @@ PUSHCONT {
 		PUSHINT 28
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
 		.loc ../contracts/DePool.sol, 0
@@ -2232,7 +2227,7 @@ PUSHCONT {
 		PUSHINT 21
 		PUSHINT 500000000
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
 		.loc ../contracts/DePool.sol, 0
@@ -2251,7 +2246,7 @@ PUSHCONT {
 		PUSHINT 1
 		GETGLOB 17
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
 		.loc ../contracts/DePool.sol, 0
@@ -2260,14 +2255,14 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 560
 	GETGLOB 9
 	CALLREF {
-		CALL $getOrCreateParticipant_internal_macro$
+		CALL $getOrCreateParticipant_870b9686_internal_macro$
 	}
 	.loc ../contracts/DePoolRounds.sol, 174
 	GETGLOB 14
 	ADDCONST -2
 	UFITS 64
 	CALLREF {
-		CALL $roundAt_internal_macro$
+		CALL $roundAt_efe99a24_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 562
 	NULL
@@ -2376,8 +2371,7 @@ IFREFELSEREF
 }
 		.loc ../contracts/DePoolRounds.sol, 224
 		ROLL 3
-		SWAP
-		DUP
+		XCPU S1, S0
 		FIRST
 		ROT
 		ADD
@@ -2439,8 +2433,7 @@ IFREFELSEREF
 			XCHG S2
 			NEWC
 			STU 64
-			SWAP
-			DUP
+			XCPU S1, S0
 			ISNULL
 			PUSHCONT {
 				DROP
@@ -2502,17 +2495,17 @@ IFREFELSEREF
 	UFITS 64
 	SWAP
 	CALLREF {
-		CALL $setRound_internal_macro$
+		CALL $setRound_35d1b2f6_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 565
 	GETGLOB 9
 	SWAP
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 567
 	CALLREF {
-		CALL $sendAcceptAndReturnChange128_internal_macro$
+		CALL $sendAcceptAndReturnChange128_97c1eb12_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 	DROP2
@@ -2535,7 +2528,7 @@ LDU 64
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $withdrawFromPoolingRound_internal_macro$
+	CALL $withdrawFromPoolingRound_829c0f38_internal_macro$
 }
 DROP
 CALLREF {
@@ -2543,11 +2536,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	withdrawFromPoolingRound_internal
-.type	withdrawFromPoolingRound_internal, @function
-CALL $withdrawFromPoolingRound_internal_macro$
+.globl	withdrawFromPoolingRound_829c0f38_internal
+.type	withdrawFromPoolingRound_829c0f38_internal, @function
+CALL $withdrawFromPoolingRound_829c0f38_internal_macro$
 
-.macro withdrawFromPoolingRound_internal_macro
+.macro withdrawFromPoolingRound_829c0f38_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -2564,7 +2557,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
 		.loc ../contracts/DePool.sol, 0
@@ -2573,7 +2566,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 577
 	GETGLOB 9
 	CALLREF {
-		CALL $fetchParticipant_internal_macro$
+		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 578
 	DUP
@@ -2583,7 +2576,7 @@ PUSHCONT {
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
 		.loc ../contracts/DePool.sol, 0
@@ -2606,7 +2599,7 @@ PUSHCONT {
 		ADDCONST -2
 		UFITS 64
 		CALLREF {
-			CALL $roundAt_internal_macro$
+			CALL $roundAt_efe99a24_internal_macro$
 		}
 		.loc ../contracts/DePoolRounds.sol, 313
 		PUSH2 S3, S0
@@ -2764,8 +2757,7 @@ PUSHCONT {
 				XCHG S2
 				NEWC
 				STU 64
-				SWAP
-				DUP
+				XCPU S1, S0
 				ISNULL
 				PUSHCONT {
 					DROP
@@ -2850,7 +2842,7 @@ PUSHCONT {
 		UFITS 64
 		SWAP
 		CALLREF {
-			CALL $setRound_internal_macro$
+			CALL $setRound_35d1b2f6_internal_macro$
 		}
 		.loc ../contracts/DePoolRounds.sol, 335
 		ROT
@@ -2865,7 +2857,7 @@ PUSHCONT {
 	GETGLOB 9
 	ROT
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 586
 	DUP
@@ -2874,7 +2866,7 @@ PUSHCONT {
 		PUSHINT 27
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
 		.loc ../contracts/DePool.sol, 0
@@ -2926,7 +2918,7 @@ LDU 32
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $addVestingStake_internal_macro$
+	CALL $addVestingStake_91fa1856_internal_macro$
 }
 DROP
 CALLREF {
@@ -2934,11 +2926,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	addVestingStake_internal
-.type	addVestingStake_internal, @function
-CALL $addVestingStake_internal_macro$
+.globl	addVestingStake_91fa1856_internal
+.type	addVestingStake_91fa1856_internal, @function
+CALL $addVestingStake_91fa1856_internal_macro$
 
-.macro addVestingStake_internal_macro
+.macro addVestingStake_91fa1856_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -2949,7 +2941,7 @@ THROWIF 108
 .loc ../contracts/DePool.sol, 600
 TRUE
 CALLREF {
-	CALL $addVestingOrLock_internal_macro$
+	CALL $addVestingOrLock_13bfad9f_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -2980,7 +2972,7 @@ LDU 32
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $addLockStake_internal_macro$
+	CALL $addLockStake_391cb0af_internal_macro$
 }
 DROP
 CALLREF {
@@ -2988,11 +2980,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	addLockStake_internal
-.type	addLockStake_internal, @function
-CALL $addLockStake_internal_macro$
+.globl	addLockStake_391cb0af_internal
+.type	addLockStake_391cb0af_internal, @function
+CALL $addLockStake_391cb0af_internal_macro$
 
-.macro addLockStake_internal_macro
+.macro addLockStake_391cb0af_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -3003,15 +2995,15 @@ THROWIF 108
 .loc ../contracts/DePool.sol, 607
 FALSE
 CALLREF {
-	CALL $addVestingOrLock_internal_macro$
+	CALL $addVestingOrLock_13bfad9f_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
-.globl	addVestingOrLock_internal
-.type	addVestingOrLock_internal, @function
-CALL $addVestingOrLock_internal_macro$
+.globl	addVestingOrLock_13bfad9f_internal
+.type	addVestingOrLock_13bfad9f_internal, @function
+CALL $addVestingOrLock_13bfad9f_internal_macro$
 
-.macro addVestingOrLock_internal_macro
+.macro addVestingOrLock_13bfad9f_internal_macro
 .loc ../contracts/DePool.sol, 619
 GETGLOB 16
 PUSHCONT {
@@ -3019,7 +3011,7 @@ PUSHCONT {
 	PUSHINT 3
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 5
 	.loc ../contracts/DePool.sol, 0
@@ -3044,7 +3036,7 @@ PUSHCONT {
 	PUSHINT 22
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 5
 }
@@ -3052,7 +3044,7 @@ IFNOTJMP
 .loc ../contracts/DePool.sol, 626
 PUSH S3
 CALLREF {
-	CALL $fetchParticipant_internal_macro$
+	CALL $fetchParticipant_738c2c87_internal_macro$
 }
 .loc ../contracts/DePool.sol, 627
 DUP
@@ -3062,7 +3054,7 @@ PUSHCONT {
 	PUSHINT 6
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 6
 	.loc ../contracts/DePool.sol, 0
@@ -3091,7 +3083,7 @@ PUSHCONT {
 	PUSHINT 23
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 8
 }
@@ -3111,7 +3103,7 @@ PUSHCONT {
 	PUSHINT 21
 	PUSHINT 500000000
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 9
 	.loc ../contracts/DePool.sol, 0
@@ -3136,7 +3128,7 @@ PUSHCONT {
 	MUL
 	UFITS 64
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
 	.loc ../contracts/DePool.sol, 0
@@ -3150,7 +3142,7 @@ PUSHCONT {
 	PUSHINT 10
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
 	.loc ../contracts/DePool.sol, 0
@@ -3165,7 +3157,7 @@ PUSHCONT {
 	PUSHINT 11
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
 	.loc ../contracts/DePool.sol, 0
@@ -3178,7 +3170,7 @@ PUSHCONT {
 	PUSHINT 12
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
 	.loc ../contracts/DePool.sol, 0
@@ -3192,7 +3184,7 @@ PUSHCONT {
 	PUSHINT 13
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
 	.loc ../contracts/DePool.sol, 0
@@ -3211,7 +3203,7 @@ PUSHCONT {
 		PUSHINT 9
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 12
 		PUSHINT 4
@@ -3235,7 +3227,7 @@ PUSHCONT {
 		PUSHINT 17
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 12
 		PUSHINT 4
@@ -3303,7 +3295,7 @@ PUSHCONT {
 		DEC
 		UFITS 64
 		CALLREF {
-			CALL $roundAt_internal_macro$
+			CALL $roundAt_efe99a24_internal_macro$
 		}
 		.loc ../contracts/DePoolRounds.sol, 0
 	}
@@ -3313,7 +3305,7 @@ PUSHCONT {
 		ADDCONST -2
 		UFITS 64
 		CALLREF {
-			CALL $roundAt_internal_macro$
+			CALL $roundAt_efe99a24_internal_macro$
 		}
 		.loc ../contracts/DePoolRounds.sol, 0
 	}
@@ -3424,8 +3416,7 @@ IFREFELSEREF
 }
 		.loc ../contracts/DePoolRounds.sol, 224
 		ROLL 3
-		SWAP
-		DUP
+		XCPU S1, S0
 		FIRST
 		ROT
 		ADD
@@ -3487,8 +3478,7 @@ IFREFELSEREF
 			XCHG S2
 			NEWC
 			STU 64
-			SWAP
-			DUP
+			XCPU S1, S0
 			ISNULL
 			PUSHCONT {
 				DROP
@@ -3562,7 +3552,7 @@ IFREFELSEREF
 	UFITS 64
 	SWAP
 	CALLREF {
-		CALL $setRound_internal_macro$
+		CALL $setRound_35d1b2f6_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 	BLKDROP 4
@@ -3576,11 +3566,11 @@ BLKDROP 3
 ROLL 8
 ROLL 4
 CALLREF {
-	CALL $_setOrDeleteParticipant_internal_macro$
+	CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 }
 .loc ../contracts/DePool.sol, 701
 CALLREF {
-	CALL $sendAcceptAndReturnChange128_internal_macro$
+	CALL $sendAcceptAndReturnChange128_97c1eb12_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 BLKDROP 7
@@ -3599,7 +3589,7 @@ LDU 64
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $withdrawPart_internal_macro$
+	CALL $withdrawPart_65bb0d95_internal_macro$
 }
 DROP
 CALLREF {
@@ -3607,11 +3597,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	withdrawPart_internal
-.type	withdrawPart_internal, @function
-CALL $withdrawPart_internal_macro$
+.globl	withdrawPart_65bb0d95_internal
+.type	withdrawPart_65bb0d95_internal, @function
+CALL $withdrawPart_65bb0d95_internal_macro$
 
-.macro withdrawPart_internal_macro
+.macro withdrawPart_65bb0d95_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -3628,7 +3618,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
 		.loc ../contracts/DePool.sol, 0
@@ -3637,7 +3627,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 712
 	GETGLOB 9
 	CALLREF {
-		CALL $fetchParticipant_internal_macro$
+		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 713
 	DUP
@@ -3647,7 +3637,7 @@ PUSHCONT {
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
 		.loc ../contracts/DePool.sol, 0
@@ -3664,11 +3654,11 @@ PUSHCONT {
 	GETGLOB 9
 	SWAP
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 720
 	CALLREF {
-		CALL $sendAcceptAndReturnChange_internal_macro$
+		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 707
 }
@@ -3688,7 +3678,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $withdrawAll_internal_macro$
+	CALL $withdrawAll_853828b6_internal_macro$
 }
 DROP
 CALLREF {
@@ -3696,11 +3686,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	withdrawAll_internal
-.type	withdrawAll_internal, @function
-CALL $withdrawAll_internal_macro$
+.globl	withdrawAll_853828b6_internal
+.type	withdrawAll_853828b6_internal, @function
+CALL $withdrawAll_853828b6_internal_macro$
 
-.macro withdrawAll_internal_macro
+.macro withdrawAll_853828b6_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -3717,7 +3707,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		.loc ../contracts/DePool.sol, 0
 	}
@@ -3725,7 +3715,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 730
 	GETGLOB 9
 	CALLREF {
-		CALL $fetchParticipant_internal_macro$
+		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 731
 	DUP
@@ -3735,7 +3725,7 @@ PUSHCONT {
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
 		.loc ../contracts/DePool.sol, 0
@@ -3752,11 +3742,11 @@ PUSHCONT {
 	GETGLOB 9
 	SWAP
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 738
 	CALLREF {
-		CALL $sendAcceptAndReturnChange_internal_macro$
+		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 725
 }
@@ -3776,7 +3766,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $cancelWithdrawal_internal_macro$
+	CALL $cancelWithdrawal_22611280_internal_macro$
 }
 DROP
 CALLREF {
@@ -3784,11 +3774,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	cancelWithdrawal_internal
-.type	cancelWithdrawal_internal, @function
-CALL $cancelWithdrawal_internal_macro$
+.globl	cancelWithdrawal_22611280_internal
+.type	cancelWithdrawal_22611280_internal, @function
+CALL $cancelWithdrawal_22611280_internal_macro$
 
-.macro cancelWithdrawal_internal_macro
+.macro cancelWithdrawal_22611280_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -3805,7 +3795,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		.loc ../contracts/DePool.sol, 0
 	}
@@ -3813,7 +3803,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 747
 	GETGLOB 9
 	CALLREF {
-		CALL $fetchParticipant_internal_macro$
+		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 748
 	DUP
@@ -3823,7 +3813,7 @@ PUSHCONT {
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
 		.loc ../contracts/DePool.sol, 0
@@ -3843,11 +3833,11 @@ PUSHCONT {
 	GETGLOB 9
 	SWAP
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 756
 	CALLREF {
-		CALL $sendAcceptAndReturnChange_internal_macro$
+		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 742
 }
@@ -3875,7 +3865,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $setVestingDonor_internal_macro$
+	CALL $setVestingDonor_fa1c64c3_internal_macro$
 }
 DROP
 CALLREF {
@@ -3883,11 +3873,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	setVestingDonor_internal
-.type	setVestingDonor_internal, @function
-CALL $setVestingDonor_internal_macro$
+.globl	setVestingDonor_fa1c64c3_internal
+.type	setVestingDonor_fa1c64c3_internal, @function
+CALL $setVestingDonor_fa1c64c3_internal_macro$
 
-.macro setVestingDonor_internal_macro
+.macro setVestingDonor_fa1c64c3_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -3898,7 +3888,7 @@ THROWIF 108
 .loc ../contracts/DePool.sol, 762
 TRUE
 CALLREF {
-	CALL $setVestingOrLockDonor_internal_macro$
+	CALL $setVestingOrLockDonor_1b8346e4_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -3923,7 +3913,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $setLockDonor_internal_macro$
+	CALL $setLockDonor_70426eff_internal_macro$
 }
 DROP
 CALLREF {
@@ -3931,11 +3921,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	setLockDonor_internal
-.type	setLockDonor_internal, @function
-CALL $setLockDonor_internal_macro$
+.globl	setLockDonor_70426eff_internal
+.type	setLockDonor_70426eff_internal, @function
+CALL $setLockDonor_70426eff_internal_macro$
 
-.macro setLockDonor_internal_macro
+.macro setLockDonor_70426eff_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -3946,15 +3936,15 @@ THROWIF 108
 .loc ../contracts/DePool.sol, 767
 FALSE
 CALLREF {
-	CALL $setVestingOrLockDonor_internal_macro$
+	CALL $setVestingOrLockDonor_1b8346e4_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
-.globl	setVestingOrLockDonor_internal
-.type	setVestingOrLockDonor_internal, @function
-CALL $setVestingOrLockDonor_internal_macro$
+.globl	setVestingOrLockDonor_1b8346e4_internal
+.type	setVestingOrLockDonor_1b8346e4_internal, @function
+CALL $setVestingOrLockDonor_1b8346e4_internal_macro$
 
-.macro setVestingOrLockDonor_internal_macro
+.macro setVestingOrLockDonor_1b8346e4_internal_macro
 .loc ../contracts/DePool.sol, 771
 GETGLOB 16
 PUSHCONT {
@@ -3962,7 +3952,7 @@ PUSHCONT {
 	PUSHINT 3
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	DROP2
 	.loc ../contracts/DePool.sol, 0
@@ -3988,7 +3978,7 @@ PUSHCONT {
 	PUSHINT 22
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	DROP2
 	.loc ../contracts/DePool.sol, 0
@@ -3997,7 +3987,7 @@ IFNOTJMP
 .loc ../contracts/DePool.sol, 779
 GETGLOB 9
 CALLREF {
-	CALL $fetchParticipant_internal_macro$
+	CALL $fetchParticipant_738c2c87_internal_macro$
 }
 .loc ../contracts/DePool.sol, 780
 DUP
@@ -4007,7 +3997,7 @@ PUSHCONT {
 	PUSHINT 6
 	PUSHINT 0
 	CALLREF {
-		CALL $_sendError_internal_macro$
+		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 3
 	.loc ../contracts/DePool.sol, 0
@@ -4034,12 +4024,12 @@ IFELSE
 GETGLOB 9
 SWAP
 CALLREF {
-	CALL $_setOrDeleteParticipant_internal_macro$
+	CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 }
 .loc ../contracts/DePool.sol, 791
 DROP
 CALLREF {
-	CALL $sendAcceptAndReturnChange_internal_macro$
+	CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -4065,7 +4055,7 @@ LDU 64
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $transferStake_internal_macro$
+	CALL $transferStake_3a8c4971_internal_macro$
 }
 DROP
 CALLREF {
@@ -4073,11 +4063,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	transferStake_internal
-.type	transferStake_internal, @function
-CALL $transferStake_internal_macro$
+.globl	transferStake_3a8c4971_internal
+.type	transferStake_3a8c4971_internal, @function
+CALL $transferStake_3a8c4971_internal_macro$
 
-.macro transferStake_internal_macro
+.macro transferStake_3a8c4971_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -4094,7 +4084,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
 		.loc ../contracts/DePool.sol, 0
@@ -4126,7 +4116,7 @@ PUSHCONT {
 		PUSHINT 22
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
 	}
@@ -4141,7 +4131,7 @@ PUSHCONT {
 		PUSHINT 19
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
 		.loc ../contracts/DePool.sol, 0
@@ -4160,7 +4150,7 @@ PUSHCONT {
 		PUSHINT 20
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
 		.loc ../contracts/DePool.sol, 0
@@ -4171,7 +4161,7 @@ PUSHCONT {
 	ADDCONST -4
 	UFITS 64
 	CALLREF {
-		CALL $roundAt_internal_macro$
+		CALL $roundAt_efe99a24_internal_macro$
 	}
 	.loc ../contracts/DePoolRounds.sol, 0
 	INDEX 6
@@ -4181,7 +4171,7 @@ PUSHCONT {
 		PUSHINT 26
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
 		.loc ../contracts/DePool.sol, 0
@@ -4190,7 +4180,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 821
 	DUP
 	CALLREF {
-		CALL $fetchParticipant_internal_macro$
+		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 822
 	DUP
@@ -4200,7 +4190,7 @@ PUSHCONT {
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 4
 		.loc ../contracts/DePool.sol, 0
@@ -4222,7 +4212,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 831
 	PUSH S4
 	CALLREF {
-		CALL $getOrCreateParticipant_internal_macro$
+		CALL $getOrCreateParticipant_870b9686_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 833
 	PUSHINT 0
@@ -4578,8 +4568,7 @@ IFREFELSEREF
 					XCHG S2
 					NEWC
 					STU 64
-					SWAP
-					DUP
+					XCPU S1, S0
 					ISNULL
 					PUSHCONT {
 						DROP
@@ -4745,8 +4734,7 @@ IFREFELSEREF
 				XCHG S2
 				NEWC
 				STU 64
-				SWAP
-				DUP
+				XCPU S1, S0
 				ISNULL
 				PUSHCONT {
 					DROP
@@ -4863,8 +4851,7 @@ IFREFELSEREF
 		POP S11
 		POP S9
 		.loc ../contracts/DePool.sol, 851
-		SWAP
-		PUSH S6
+		XCPU S1, S6
 		ADD
 		UFITS 64
 		POP S6
@@ -4955,7 +4942,7 @@ IFREFELSEREF
 			PUSHINT 18
 			PUSHINT 0
 			CALLREF {
-				CALL $_sendError_internal_macro$
+				CALL $_sendError_96842984_internal_macro$
 			}
 			BLKDROP 10
 			PUSHINT 4
@@ -4970,7 +4957,7 @@ IFREFELSEREF
 			PUSHINT 16
 			PUSHINT 0
 			CALLREF {
-				CALL $_sendError_internal_macro$
+				CALL $_sendError_96842984_internal_macro$
 			}
 			BLKDROP 10
 			PUSHINT 4
@@ -4988,13 +4975,13 @@ IFREFELSEREF
 	PUSH S5
 	ROLL 4
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 869
 	PUSH S6
 	ROLL 3
 	CALLREF {
-		CALL $_setOrDeleteParticipant_internal_macro$
+		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 871
 	ROLL 3
@@ -5019,7 +5006,7 @@ IFREFELSEREF
 	.loc ../contracts/DePool.sol, 872
 	BLKDROP 3
 	CALLREF {
-		CALL $sendAcceptAndReturnChange_internal_macro$
+		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 798
 }
@@ -5057,7 +5044,7 @@ LDREF
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $participateInElections_internal_macro$
+	CALL $participateInElections_09a8c347_internal_macro$
 }
 DROP
 CALLREF {
@@ -5065,11 +5052,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	participateInElections_internal
-.type	participateInElections_internal, @function
-CALL $participateInElections_internal_macro$
+.globl	participateInElections_09a8c347_internal
+.type	participateInElections_09a8c347_internal, @function
+CALL $participateInElections_09a8c347_internal_macro$
 
-.macro participateInElections_internal_macro
+.macro participateInElections_09a8c347_internal_macro
 .loc ../contracts/ValidatorBase.sol, 15
 GETGLOB 9
 GETGLOB 10
@@ -5083,7 +5070,7 @@ PUSHCONT {
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
-			CALL $_sendError_internal_macro$
+			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 6
 	}
@@ -5093,7 +5080,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 889
 	FALSE ; decl return flag
 	CALLREF {
-		CALL $checkPureDePoolBalance_internal_macro$
+		CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 	}
 	PUSHCONT {
 		.loc ../contracts/DePoolRounds.sol, 175
@@ -5101,7 +5088,7 @@ PUSHCONT {
 		ADDCONST -3
 		UFITS 64
 		CALLREF {
-			CALL $roundAt_internal_macro$
+			CALL $roundAt_efe99a24_internal_macro$
 		}
 		.loc ../contracts/DePool.sol, 891
 		DUP
@@ -5111,7 +5098,7 @@ PUSHCONT {
 			PUSHINT 24
 			PUSHINT 0
 			CALLREF {
-				CALL $_sendError_internal_macro$
+				CALL $_sendError_96842984_internal_macro$
 			}
 			BLKDROP 8
 			PUSHINT 4
@@ -5125,7 +5112,7 @@ PUSHCONT {
 			PUSHINT 25
 			PUSHINT 0
 			CALLREF {
-				CALL $_sendError_internal_macro$
+				CALL $_sendError_96842984_internal_macro$
 			}
 			BLKDROP 8
 			PUSHINT 4
@@ -5151,7 +5138,7 @@ PUSHCONT {
 		PUSHINT 21
 		INDEXVAR
 		CALLREF {
-			CALL $_sendElectionRequest_internal_macro$
+			CALL $_sendElectionRequest_52528db9_internal_macro$
 		}
 		.loc ../contracts/DePool.sol, 897
 		PUSHINT 3
@@ -5162,7 +5149,7 @@ PUSHCONT {
 		UFITS 64
 		SWAP
 		CALLREF {
-			CALL $setRound_internal_macro$
+			CALL $setRound_35d1b2f6_internal_macro$
 		}
 		.loc ../contracts/DePool.sol, 0
 	}
@@ -5172,18 +5159,18 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 900
 	BLKDROP 6
 	CALLREF {
-		CALL $_returnChange_internal_macro$
+		CALL $_returnChange_260d9040_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 877
 }
 CALLX
 .loc ../contracts/DePool.sol, 0
 
-.globl	generateRound_internal
-.type	generateRound_internal, @function
-CALL $generateRound_internal_macro$
+.globl	generateRound_ebbb0126_internal
+.type	generateRound_ebbb0126_internal, @function
+CALL $generateRound_ebbb0126_internal_macro$
 
-.macro generateRound_internal_macro
+.macro generateRound_ebbb0126_internal_macro
 .loc ../contracts/DePool.sol, 906
 GETGLOB 14
 PUSHINT 0
@@ -5217,11 +5204,11 @@ UFITS 64
 SETGLOB 14
 .loc ../contracts/DePool.sol, 0
 
-.globl	updateRound2_internal
-.type	updateRound2_internal, @function
-CALL $updateRound2_internal_macro$
+.globl	updateRound2_d5ebbeae_internal
+.type	updateRound2_d5ebbeae_internal, @function
+CALL $updateRound2_d5ebbeae_internal_macro$
 
-.macro updateRound2_internal_macro
+.macro updateRound2_d5ebbeae_internal_macro
 .loc ../contracts/DePool.sol, 944
 PUSH S3
 INDEX 6
@@ -5326,7 +5313,7 @@ PUSHCONT {
 		DUP
 		INDEX 7
 		CALLREF {
-			CALL $startRoundCompleting_internal_macro$
+			CALL $startRoundCompleting_f756a4fe_internal_macro$
 		}
 	}
 	PUSHCONT {
@@ -5351,7 +5338,7 @@ PUSHCONT {
 			PUSHINT 21
 			INDEXVAR
 			CALLREF {
-				CALL $_recoverStake_internal_macro$
+				CALL $_recoverStake_2ed56c97_internal_macro$
 			}
 			.loc ../contracts/DePool.sol, 0
 		}
@@ -5363,11 +5350,11 @@ PUSHCONT {
 IF
 .loc ../contracts/DePool.sol, 0
 
-.globl	isEmptyRound_internal
-.type	isEmptyRound_internal, @function
-CALL $isEmptyRound_internal_macro$
+.globl	isEmptyRound_5e3598c9_internal
+.type	isEmptyRound_5e3598c9_internal, @function
+CALL $isEmptyRound_5e3598c9_internal_macro$
 
-.macro isEmptyRound_internal_macro
+.macro isEmptyRound_5e3598c9_internal_macro
 .loc ../contracts/DePool.sol, 989
 DUP
 INDEX 6
@@ -5378,23 +5365,23 @@ EQINT 0
 OR
 .loc ../contracts/DePool.sol, 0
 
-.globl	updateRounds_internal
-.type	updateRounds_internal, @function
-CALL $updateRounds_internal_macro$
+.globl	updateRounds_ec375038_internal
+.type	updateRounds_ec375038_internal, @function
+CALL $updateRounds_ec375038_internal_macro$
 
-.macro updateRounds_internal_macro
+.macro updateRounds_ec375038_internal_macro
 .loc ../contracts/DePool.sol, 993
 CALLREF {
-	CALL $roundTimeParams_internal_macro$
+	CALL $roundTimeParams_73c24cb0_internal_macro$
 }
 DROP2
 .loc ../contracts/DePool.sol, 994
 CALLREF {
-	CALL $getCurValidatorData_internal_macro$
+	CALL $getCurValidatorData_61ae336b_internal_macro$
 }
 .loc ../contracts/DePool.sol, 995
 CALLREF {
-	CALL $getPrevValidatorHash_internal_macro$
+	CALL $getPrevValidatorHash_22954fac_internal_macro$
 }
 .loc ../contracts/DePool.sol, 996
 NOW
@@ -5407,28 +5394,28 @@ GETGLOB 14
 DEC
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 174
 GETGLOB 14
 ADDCONST -2
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 175
 GETGLOB 14
 ADDCONST -3
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 176
 GETGLOB 14
 ADDCONST -4
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1003
 GETGLOB 16
@@ -5437,28 +5424,28 @@ PUSHCONT {
 	DROP
 	DUP
 	CALLREF {
-		CALL $isEmptyRound_internal_macro$
+		CALL $isEmptyRound_5e3598c9_internal_macro$
 	}
 	DUP
 	PUSHCONT {
 		DROP
 		OVER
 		CALLREF {
-			CALL $isEmptyRound_internal_macro$
+			CALL $isEmptyRound_5e3598c9_internal_macro$
 		}
 		DUP
 		PUSHCONT {
 			DROP
 			PUSH S2
 			CALLREF {
-				CALL $isEmptyRound_internal_macro$
+				CALL $isEmptyRound_5e3598c9_internal_macro$
 			}
 			DUP
 			PUSHCONT {
 				DROP
 				PUSH S3
 				CALLREF {
-					CALL $isEmptyRound_internal_macro$
+					CALL $isEmptyRound_5e3598c9_internal_macro$
 				}
 			}
 			IF
@@ -5492,7 +5479,7 @@ IF
 .loc ../contracts/DePool.sol, 1008
 PUSH3 S5, S8, S7
 CALLREF {
-	CALL $updateRound2_internal_macro$
+	CALL $updateRound2_d5ebbeae_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1011
 OVER
@@ -5519,7 +5506,7 @@ PUSHCONT {
 	PUSHINT 21
 	INDEXVAR
 	CALLREF {
-		CALL $_recoverStake_internal_macro$
+		CALL $_recoverStake_2ed56c97_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 }
@@ -5554,13 +5541,13 @@ PUSHCONT {
 	POP S3
 	.loc ../contracts/DePool.sol, 1029
 	CALLREF {
-		CALL $generateRound_internal_macro$
+		CALL $generateRound_ebbb0126_internal_macro$
 	}
 	POP S4
 	.loc ../contracts/DePool.sol, 1032
 	PUSH3 S4, S7, S6
 	CALLREF {
-		CALL $updateRound2_internal_macro$
+		CALL $updateRound2_d5ebbeae_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 1035
 	GETGLOB 16
@@ -5575,7 +5562,7 @@ PUSHCONT {
 		POP S2
 		.loc ../contracts/DePool.sol, 1038
 		CALLREF {
-			CALL $getElector_internal_macro$
+			CALL $getElector_28167edb_internal_macro$
 		}
 		PUXC S2, S-1
 		PUSHINT 21
@@ -5587,7 +5574,7 @@ PUSHCONT {
 		POP S2
 		.loc ../contracts/DePool.sol, 1040
 		CALLREF {
-			CALL $roundTimeParams_internal_macro$
+			CALL $roundTimeParams_73c24cb0_internal_macro$
 		}
 		BLKDROP2 3, 1
 		.loc ../contracts/DePool.sol, 1041
@@ -5688,8 +5675,25 @@ IFREFELSEREF
 		PUSHINT 17
 		INDEXVAR
 		GETGLOB 18
-		GEQ
+		LESS
 		.loc ../contracts/DePool.sol, 1045
+		PUSHCONT {
+			.loc ../contracts/DePool.sol, 1046
+			OVER
+			PUSHINT 6
+			SETINDEX 6
+			POP S2
+			.loc ../contracts/DePool.sol, 1047
+			OVER
+			PUSHINT 3
+			SETINDEX 7
+			POP S2
+			.loc ../contracts/DePool.sol, 1048
+			OVER
+			PUSHINT 0
+			SETINDEX 2
+			POP S2
+		}
 		PUSHCONT {
 			.loc ../contracts/DePool.sol, 1050
 			OVER
@@ -5710,23 +5714,6 @@ IFREFELSEREF
 			ENDC
 			PUSHINT 0
 			SENDRAWMSG
-		}
-		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1046
-			OVER
-			PUSHINT 6
-			SETINDEX 6
-			POP S2
-			.loc ../contracts/DePool.sol, 1047
-			OVER
-			PUSHINT 3
-			SETINDEX 7
-			POP S2
-			.loc ../contracts/DePool.sol, 1048
-			OVER
-			PUSHINT 0
-			SETINDEX 2
-			POP S2
 		}
 		IFELSE
 		.loc ../contracts/DePool.sol, 0
@@ -5754,7 +5741,7 @@ DEC
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1061
 ROT
@@ -5764,7 +5751,7 @@ ADDCONST -2
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1062
 SWAP
@@ -5774,7 +5761,7 @@ ADDCONST -3
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 181
 GETGLOB 14
@@ -5782,20 +5769,20 @@ ADDCONST -4
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 BLKDROP 6
 
-.globl	checkPureDePoolBalance_internal
-.type	checkPureDePoolBalance_internal, @function
-CALL $checkPureDePoolBalance_internal_macro$
+.globl	checkPureDePoolBalance_ad433b79_internal
+.type	checkPureDePoolBalance_ad433b79_internal, @function
+CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 
-.macro checkPureDePoolBalance_internal_macro
+.macro checkPureDePoolBalance_ad433b79_internal_macro
 .loc ../contracts/DePool.sol, 1068
 PUSHINT 0
 CALLREF {
-	CALL $totalParticipantFunds_internal_macro$
+	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1069
 DEPTH
@@ -5849,7 +5836,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $ticktock_internal_macro$
+	CALL $ticktock_3e036d63_internal_macro$
 }
 DROP
 CALLREF {
@@ -5857,11 +5844,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	ticktock_internal
-.type	ticktock_internal, @function
-CALL $ticktock_internal_macro$
+.globl	ticktock_3e036d63_internal
+.type	ticktock_3e036d63_internal, @function
+CALL $ticktock_3e036d63_internal_macro$
 
-.macro ticktock_internal_macro
+.macro ticktock_3e036d63_internal_macro
 .loc ../contracts/DePool.sol, 209
 GETGLOB 9
 PUSHREFSLICE {
@@ -5871,17 +5858,17 @@ SDEQ
 THROWIF 108
 .loc ../contracts/DePool.sol, 1081
 CALLREF {
-	CALL $checkPureDePoolBalance_internal_macro$
+	CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 }
 IFREF {
-	CALL $updateRounds_internal_macro$
+	CALL $updateRounds_ec375038_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1085
 GETGLOB 9
 MYADDR
 SDEQ
 IFNOTREF {
-	CALL $_returnChange_internal_macro$
+	CALL $_returnChange_260d9040_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -5900,7 +5887,7 @@ LDU 8
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $completeRoundWithChunk_internal_macro$
+	CALL $completeRoundWithChunk_82a3b012_internal_macro$
 }
 DROP
 CALLREF {
@@ -5908,11 +5895,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	completeRoundWithChunk_internal
-.type	completeRoundWithChunk_internal, @function
-CALL $completeRoundWithChunk_internal_macro$
+.globl	completeRoundWithChunk_82a3b012_internal
+.type	completeRoundWithChunk_82a3b012_internal, @function
+CALL $completeRoundWithChunk_82a3b012_internal_macro$
 
-.macro completeRoundWithChunk_internal_macro
+.macro completeRoundWithChunk_82a3b012_internal_macro
 .loc ../contracts/DePool.sol, 215
 GETGLOB 9
 MYADDR
@@ -5938,7 +5925,7 @@ PUSHCONT {
 	IFNOTJMP
 	.loc ../contracts/DePool.sol, 1096
 	CALLREF {
-		CALL $checkPureDePoolBalance_internal_macro$
+		CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 	}
 	PUSHCONT {
 		.loc ../contracts/DePool.sol, 1097
@@ -5949,7 +5936,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1099
 	OVER
 	CALLREF {
-		CALL $fetchRound_internal_macro$
+		CALL $fetchRound_d130e988_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 1100
 	DUP
@@ -5970,7 +5957,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1105
 	OVER
 	CALLREF {
-		CALL $_returnOrReinvest_internal_macro$
+		CALL $_returnOrReinvest_00bdd5b7_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 1107
 	OVER
@@ -6035,7 +6022,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1116
 	XCHG S1, S2
 	CALLREF {
-		CALL $setRound_internal_macro$
+		CALL $setRound_35d1b2f6_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 	DROP
@@ -6059,7 +6046,7 @@ LDU 32
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $completeRound_internal_macro$
+	CALL $completeRound_bf67132c_internal_macro$
 }
 DROP
 CALLREF {
@@ -6067,11 +6054,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	completeRound_internal
-.type	completeRound_internal, @function
-CALL $completeRound_internal_macro$
+.globl	completeRound_bf67132c_internal
+.type	completeRound_bf67132c_internal, @function
+CALL $completeRound_bf67132c_internal_macro$
 
-.macro completeRound_internal_macro
+.macro completeRound_bf67132c_internal_macro
 .loc ../contracts/DePool.sol, 215
 GETGLOB 9
 MYADDR
@@ -6093,7 +6080,7 @@ THROWIFNOT 522
 .loc ../contracts/DePool.sol, 1122
 OVER
 CALLREF {
-	CALL $fetchRound_internal_macro$
+	CALL $fetchRound_d130e988_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1123
 DUP
@@ -6263,7 +6250,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $onStakeAccept_internal_macro$
+	CALL $onStakeAccept_27c4467a_internal_macro$
 }
 DROP
 CALLREF {
@@ -6271,11 +6258,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	onStakeAccept_internal
-.type	onStakeAccept_internal, @function
-CALL $onStakeAccept_internal_macro$
+.globl	onStakeAccept_27c4467a_internal
+.type	onStakeAccept_27c4467a_internal, @function
+CALL $onStakeAccept_27c4467a_internal_macro$
 
-.macro onStakeAccept_internal_macro
+.macro onStakeAccept_27c4467a_internal_macro
 .loc ../contracts/DePool.sol, 1162
 GETGLOB 9
 PUSHINT 0
@@ -6302,7 +6289,7 @@ THROWIFNOT 107
 .loc ../contracts/DePool.sol, 1163
 PUSH S2
 CALLREF {
-	CALL $fetchRound_internal_macro$
+	CALL $fetchRound_d130e988_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1164
 DUP
@@ -6311,7 +6298,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1165
 	PUSHINT 529
 	CALLREF {
-		CALL $errorEvent_internal_macro$
+		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 4
 	.loc ../contracts/DePool.sol, 0
@@ -6357,7 +6344,7 @@ SETINDEX 7
 ROT
 OVER
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1178
 PUSHINT 20
@@ -6400,7 +6387,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $onStakeReject_internal_macro$
+	CALL $onStakeReject_3b6912fb_internal_macro$
 }
 DROP
 CALLREF {
@@ -6408,11 +6395,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	onStakeReject_internal
-.type	onStakeReject_internal, @function
-CALL $onStakeReject_internal_macro$
+.globl	onStakeReject_3b6912fb_internal
+.type	onStakeReject_3b6912fb_internal, @function
+CALL $onStakeReject_3b6912fb_internal_macro$
 
-.macro onStakeReject_internal_macro
+.macro onStakeReject_3b6912fb_internal_macro
 .loc ../contracts/DePool.sol, 1185
 GETGLOB 9
 PUSHINT 0
@@ -6439,7 +6426,7 @@ THROWIFNOT 107
 .loc ../contracts/DePool.sol, 1186
 PUSH S2
 CALLREF {
-	CALL $fetchRound_internal_macro$
+	CALL $fetchRound_d130e988_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1187
 DUP
@@ -6448,7 +6435,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1188
 	PUSHINT 529
 	CALLREF {
-		CALL $errorEvent_internal_macro$
+		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 4
 	.loc ../contracts/DePool.sol, 0
@@ -6494,7 +6481,7 @@ SETINDEX 7
 ROT
 OVER
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1201
 PUSHINT 20
@@ -6510,16 +6497,16 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/DePool.sol, 0
 
-.globl	totalParticipantFunds_internal
-.type	totalParticipantFunds_internal, @function
-CALL $totalParticipantFunds_internal_macro$
+.globl	totalParticipantFunds_b67587bf_internal
+.type	totalParticipantFunds_b67587bf_internal, @function
+CALL $totalParticipantFunds_b67587bf_internal_macro$
 
-.macro totalParticipantFunds_internal_macro
+.macro totalParticipantFunds_b67587bf_internal_macro
 .loc ../contracts/DePool.sol, 1206
 PUSHINT 0
 .loc ../contracts/DePool.sol, 1207
 CALLREF {
-	CALL $minRound_internal_macro$
+	CALL $minRound_bdc18b15_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1208
 PUSHCONT {
@@ -6618,7 +6605,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1229
 	DROP2
 	CALLREF {
-		CALL $nextRound_internal_macro$
+		CALL $nextRound_da54d41d_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 }
@@ -6628,11 +6615,11 @@ DROP
 NIP
 .loc ../contracts/DePool.sol, 0
 
-.globl	cutDePoolReward_internal
-.type	cutDePoolReward_internal, @function
-CALL $cutDePoolReward_internal_macro$
+.globl	cutDePoolReward_35b96c94_internal
+.type	cutDePoolReward_35b96c94_internal, @function
+CALL $cutDePoolReward_35b96c94_internal_macro$
 
-.macro cutDePoolReward_internal_macro
+.macro cutDePoolReward_35b96c94_internal_macro
 .loc ../contracts/DePool.sol, 1235
 GETPARAM 7
 FIRST
@@ -6646,7 +6633,7 @@ UFITS 64
 ROT
 FIRST
 CALLREF {
-	CALL $totalParticipantFunds_internal_macro$
+	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
 ADD
 UFITS 64
@@ -6680,11 +6667,11 @@ IF
 DROP2
 .loc ../contracts/DePool.sol, 0
 
-.globl	acceptRewardAndStartRoundCompleting_internal
-.type	acceptRewardAndStartRoundCompleting_internal, @function
-CALL $acceptRewardAndStartRoundCompleting_internal_macro$
+.globl	acceptRewardAndStartRoundCompleting_58a60f67_internal
+.type	acceptRewardAndStartRoundCompleting_58a60f67_internal, @function
+CALL $acceptRewardAndStartRoundCompleting_58a60f67_internal_macro$
 
-.macro acceptRewardAndStartRoundCompleting_internal_macro
+.macro acceptRewardAndStartRoundCompleting_58a60f67_internal_macro
 .loc ../contracts/DePool.sol, 1247
 OVER
 INDEX 8
@@ -6702,7 +6689,7 @@ POP S2
 .loc ../contracts/DePool.sol, 1251
 OVER
 CALLREF {
-	CALL $cutDePoolReward_internal_macro$
+	CALL $cutDePoolReward_35b96c94_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1253
 DUP
@@ -6749,7 +6736,7 @@ SENDRAWMSG
 .loc ../contracts/DePool.sol, 1260
 PUSHINT 5
 CALLREF {
-	CALL $startRoundCompleting_internal_macro$
+	CALL $startRoundCompleting_f756a4fe_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -6778,7 +6765,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $onSuccessToRecoverStake_internal_macro$
+	CALL $onSuccessToRecoverStake_bcc583bd_internal_macro$
 }
 DROP
 CALLREF {
@@ -6786,11 +6773,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	onSuccessToRecoverStake_internal
-.type	onSuccessToRecoverStake_internal, @function
-CALL $onSuccessToRecoverStake_internal_macro$
+.globl	onSuccessToRecoverStake_bcc583bd_internal
+.type	onSuccessToRecoverStake_bcc583bd_internal, @function
+CALL $onSuccessToRecoverStake_bcc583bd_internal_macro$
 
-.macro onSuccessToRecoverStake_internal_macro
+.macro onSuccessToRecoverStake_bcc583bd_internal_macro
 .loc ../contracts/DePool.sol, 1266
 GETGLOB 9
 PUSHINT 0
@@ -6817,7 +6804,7 @@ THROWIFNOT 107
 .loc ../contracts/DePool.sol, 1267
 OVER
 CALLREF {
-	CALL $fetchRound_internal_macro$
+	CALL $fetchRound_d130e988_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1268
 DUP
@@ -6826,7 +6813,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1269
 	PUSHINT 529
 	CALLREF {
-		CALL $errorEvent_internal_macro$
+		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 3
 	.loc ../contracts/DePool.sol, 0
@@ -6929,7 +6916,7 @@ PUSHCONT {
 			PUSH S4
 			PUSHINT 6
 			CALLREF {
-				CALL $startRoundCompleting_internal_macro$
+				CALL $startRoundCompleting_f756a4fe_internal_macro$
 			}
 		}
 		PUSHCONT {
@@ -6939,7 +6926,7 @@ PUSHCONT {
 				.loc ../contracts/DePool.sol, 1294
 				BLKPUSH 2, 4
 				CALLREF {
-					CALL $acceptRewardAndStartRoundCompleting_internal_macro$
+					CALL $acceptRewardAndStartRoundCompleting_58a60f67_internal_macro$
 				}
 			}
 			PUSHCONT {
@@ -6947,7 +6934,7 @@ PUSHCONT {
 				PUSH S4
 				PUSHINT 7
 				CALLREF {
-					CALL $startRoundCompleting_internal_macro$
+					CALL $startRoundCompleting_f756a4fe_internal_macro$
 				}
 			}
 			IFELSE
@@ -6961,7 +6948,7 @@ PUSHCONT {
 		.loc ../contracts/DePool.sol, 1299
 		PUSHINT 530
 		CALLREF {
-			CALL $errorEvent_internal_macro$
+			CALL $errorEvent_bd4f4fc9_internal_macro$
 		}
 		BLKDROP 5
 		PUSHINT 4
@@ -6977,7 +6964,7 @@ IFRET
 .loc ../contracts/DePool.sol, 1302
 DROP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -7006,7 +6993,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $onFailToRecoverStake_internal_macro$
+	CALL $onFailToRecoverStake_a7cc9bcd_internal_macro$
 }
 DROP
 CALLREF {
@@ -7014,11 +7001,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	onFailToRecoverStake_internal
-.type	onFailToRecoverStake_internal, @function
-CALL $onFailToRecoverStake_internal_macro$
+.globl	onFailToRecoverStake_a7cc9bcd_internal
+.type	onFailToRecoverStake_a7cc9bcd_internal, @function
+CALL $onFailToRecoverStake_a7cc9bcd_internal_macro$
 
-.macro onFailToRecoverStake_internal_macro
+.macro onFailToRecoverStake_a7cc9bcd_internal_macro
 .loc ../contracts/DePool.sol, 1306
 GETGLOB 9
 PUSHINT 0
@@ -7045,7 +7032,7 @@ THROWIFNOT 107
 .loc ../contracts/DePool.sol, 1307
 OVER
 CALLREF {
-	CALL $fetchRound_internal_macro$
+	CALL $fetchRound_d130e988_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1308
 DUP
@@ -7054,7 +7041,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1309
 	PUSHINT 529
 	CALLREF {
-		CALL $errorEvent_internal_macro$
+		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 3
 	.loc ../contracts/DePool.sol, 0
@@ -7102,7 +7089,7 @@ PUSHCONT {
 		PUSH S2
 		PUSHINT 7
 		CALLREF {
-			CALL $startRoundCompleting_internal_macro$
+			CALL $startRoundCompleting_f756a4fe_internal_macro$
 		}
 		POP S3
 	}
@@ -7110,7 +7097,7 @@ PUSHCONT {
 		.loc ../contracts/DePool.sol, 1322
 		PUSHINT 521
 		CALLREF {
-			CALL $errorEvent_internal_macro$
+			CALL $errorEvent_bd4f4fc9_internal_macro$
 		}
 		BLKDROP 4
 		PUSHINT 4
@@ -7125,7 +7112,7 @@ IFELSE
 IFRET
 .loc ../contracts/DePool.sol, 1324
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -7142,7 +7129,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $terminator_internal_macro$
+	CALL $terminator_a9898b9b_internal_macro$
 }
 DROP
 CALLREF {
@@ -7150,11 +7137,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	terminator_internal
-.type	terminator_internal, @function
-CALL $terminator_internal_macro$
+.globl	terminator_a9898b9b_internal
+.type	terminator_a9898b9b_internal, @function
+CALL $terminator_a9898b9b_internal_macro$
 
-.macro terminator_internal_macro
+.macro terminator_a9898b9b_internal_macro
 .loc ../contracts/DePool.sol, 119
 GETGLOB 5
 DUP
@@ -7183,7 +7170,7 @@ ACCEPT
 .loc ../contracts/DePool.sol, 1340
 PUSHINT 0
 CALLREF {
-	CALL $totalParticipantFunds_internal_macro$
+	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1341
 GETPARAM 7
@@ -7231,34 +7218,34 @@ GETGLOB 14
 DEC
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 174
 GETGLOB 14
 ADDCONST -2
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 175
 GETGLOB 14
 ADDCONST -3
 UFITS 64
 CALLREF {
-	CALL $roundAt_internal_macro$
+	CALL $roundAt_efe99a24_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1354
 PUSH S2
 PUSHINT 1
 CALLREF {
-	CALL $startRoundCompleting_internal_macro$
+	CALL $startRoundCompleting_f756a4fe_internal_macro$
 }
 POP S3
 .loc ../contracts/DePool.sol, 1355
 OVER
 PUSHINT 1
 CALLREF {
-	CALL $startRoundCompleting_internal_macro$
+	CALL $startRoundCompleting_f756a4fe_internal_macro$
 }
 POP S2
 .loc ../contracts/DePool.sol, 1356
@@ -7269,7 +7256,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1357
 	PUSHINT 1
 	CALLREF {
-		CALL $startRoundCompleting_internal_macro$
+		CALL $startRoundCompleting_f756a4fe_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 }
@@ -7288,7 +7275,7 @@ DEC
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1361
 SWAP
@@ -7298,7 +7285,7 @@ ADDCONST -2
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 180
 GETGLOB 14
@@ -7306,7 +7293,7 @@ ADDCONST -3
 UFITS 64
 SWAP
 CALLREF {
-	CALL $setRound_internal_macro$
+	CALL $setRound_35d1b2f6_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 
@@ -7324,7 +7311,7 @@ LDU 8
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $setValidatorRewardFraction_internal_macro$
+	CALL $setValidatorRewardFraction_48eaf800_internal_macro$
 }
 DROP
 CALLREF {
@@ -7332,11 +7319,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	setValidatorRewardFraction_internal
-.type	setValidatorRewardFraction_internal, @function
-CALL $setValidatorRewardFraction_internal_macro$
+.globl	setValidatorRewardFraction_48eaf800_internal
+.type	setValidatorRewardFraction_48eaf800_internal, @function
+CALL $setValidatorRewardFraction_48eaf800_internal_macro$
 
-.macro setValidatorRewardFraction_internal_macro
+.macro setValidatorRewardFraction_48eaf800_internal_macro
 .loc ../contracts/DePool.sol, 119
 GETGLOB 5
 DUP
@@ -7389,18 +7376,18 @@ THROWIFNOT 76
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $receiveFunds_internal_macro$
+	CALL $receiveFunds_005c33e1_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	receiveFunds_internal
-.type	receiveFunds_internal, @function
-CALL $receiveFunds_internal_macro$
+.globl	receiveFunds_005c33e1_internal
+.type	receiveFunds_005c33e1_internal, @function
+CALL $receiveFunds_005c33e1_internal_macro$
 
-.macro receiveFunds_internal_macro
+.macro receiveFunds_005c33e1_internal_macro
 .loc ../contracts/DePool.sol, 0
 
 .macro receive_macro
@@ -7411,7 +7398,7 @@ GETGLOB 9
 MYADDR
 SDEQ
 IFNOTREF {
-	CALL $_returnChange_internal_macro$
+	CALL $_returnChange_260d9040_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 DUP
@@ -7427,7 +7414,7 @@ GETGLOB 9
 MYADDR
 SDEQ
 IFNOTREF {
-	CALL $_returnChange_internal_macro$
+	CALL $_returnChange_260d9040_internal_macro$
 }
 .loc ../contracts/DePool.sol, 0
 DUP
@@ -7466,7 +7453,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1400
 	DUP
 	CALLREF {
-		CALL $fetchRound_internal_macro$
+		CALL $fetchRound_d130e988_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 1401
 	PUSH S3
@@ -7576,7 +7563,7 @@ PUSHCONT {
 	ISNULL
 	THROWIF 63
 	CALLREF {
-		CALL $setRound_internal_macro$
+		CALL $setRound_35d1b2f6_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 }
@@ -7600,18 +7587,18 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $getLastRoundInfo_internal_macro$
+	CALL $getLastRoundInfo_705e798e_internal_macro$
 }
 IFREF {
 	CALL $upd_only_time_in_c4$
 }
 THROW 0
 
-.globl	getLastRoundInfo_internal
-.type	getLastRoundInfo_internal, @function
-CALL $getLastRoundInfo_internal_macro$
+.globl	getLastRoundInfo_705e798e_internal
+.type	getLastRoundInfo_705e798e_internal, @function
+CALL $getLastRoundInfo_705e798e_internal_macro$
 
-.macro getLastRoundInfo_internal_macro
+.macro getLastRoundInfo_705e798e_internal_macro
 .loc ../contracts/DePool.sol, 1431
 GETGLOB 15
 DICTEMPTY
@@ -7721,7 +7708,7 @@ LDMSGADDR
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $getParticipantInfo_internal_macro$
+	CALL $getParticipantInfo_71bdce55_internal_macro$
 }
 PUSH S9
 PUSHCONT {
@@ -7765,11 +7752,11 @@ IFREF {
 }
 THROW 0
 
-.globl	getParticipantInfo_internal
-.type	getParticipantInfo_internal, @function
-CALL $getParticipantInfo_internal_macro$
+.globl	getParticipantInfo_71bdce55_internal
+.type	getParticipantInfo_71bdce55_internal, @function
+CALL $getParticipantInfo_71bdce55_internal_macro$
 
-.macro getParticipantInfo_internal_macro
+.macro getParticipantInfo_71bdce55_internal_macro
 .loc ../contracts/DePool.sol, 1444
 PUSHINT 0
 BLKPUSH 3, 0
@@ -7781,7 +7768,7 @@ PUSHREFSLICE {
 .loc ../contracts/DePool.sol, 1457
 PUSH S8
 CALLREF {
-	CALL $fetchParticipant_internal_macro$
+	CALL $fetchParticipant_738c2c87_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1458
 DUP
@@ -7811,7 +7798,7 @@ POP S2
 INDEX 7
 .loc ../contracts/DePool.sol, 1468
 CALLREF {
-	CALL $minRound_internal_macro$
+	CALL $minRound_bdc18b15_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1469
 PUSHCONT {
@@ -7993,7 +7980,7 @@ PUSHCONT {
 	.loc ../contracts/DePool.sol, 1487
 	DROP2
 	CALLREF {
-		CALL $nextRound_internal_macro$
+		CALL $nextRound_da54d41d_internal_macro$
 	}
 	.loc ../contracts/DePool.sol, 0
 }
@@ -8015,7 +8002,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $getDePoolInfo_internal_macro$
+	CALL $getDePoolInfo_b7297b54_internal_macro$
 }
 PUSH S11
 PUSHCONT {
@@ -8065,11 +8052,11 @@ IFREF {
 }
 THROW 0
 
-.globl	getDePoolInfo_internal
-.type	getDePoolInfo_internal, @function
-CALL $getDePoolInfo_internal_macro$
+.globl	getDePoolInfo_b7297b54_internal
+.type	getDePoolInfo_b7297b54_internal, @function
+CALL $getDePoolInfo_b7297b54_internal_macro$
 
-.macro getDePoolInfo_internal_macro
+.macro getDePoolInfo_b7297b54_internal_macro
 .loc ../contracts/DePool.sol, 1508
 GETGLOB 16
 .loc ../contracts/DePool.sol, 1509
@@ -8107,7 +8094,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $getParticipants_internal_macro$
+	CALL $getParticipants_5aa68ac0_internal_macro$
 }
 OVER
 PUSHCONT {
@@ -8140,7 +8127,7 @@ IFREF {
 }
 THROW 0
 
-.macro getParticipants_internal_macro
+.macro getParticipants_5aa68ac0_internal_macro
 .loc ../contracts/DePool.sol, 1524
 PUSHINT 0
 NEWDICT
@@ -8258,7 +8245,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePool.sol, 0
 CALLREF {
-	CALL $getDePoolBalance_internal_macro$
+	CALL $getDePoolBalance_c0ed9a9f_internal_macro$
 }
 OVER
 PUSHCONT {
@@ -8287,15 +8274,15 @@ IFREF {
 }
 THROW 0
 
-.globl	getDePoolBalance_internal
-.type	getDePoolBalance_internal, @function
-CALL $getDePoolBalance_internal_macro$
+.globl	getDePoolBalance_c0ed9a9f_internal
+.type	getDePoolBalance_c0ed9a9f_internal, @function
+CALL $getDePoolBalance_c0ed9a9f_internal_macro$
 
-.macro getDePoolBalance_internal_macro
+.macro getDePoolBalance_c0ed9a9f_internal_macro
 .loc ../contracts/DePool.sol, 1538
 PUSHINT 0
 CALLREF {
-	CALL $totalParticipantFunds_internal_macro$
+	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
 .loc ../contracts/DePool.sol, 1539
 GETPARAM 7
@@ -8305,11 +8292,11 @@ SUBR
 FITS 256
 .loc ../contracts/DePool.sol, 0
 
-.globl	roundAt_internal
-.type	roundAt_internal, @function
-CALL $roundAt_internal_macro$
+.globl	roundAt_efe99a24_internal
+.type	roundAt_efe99a24_internal, @function
+CALL $roundAt_efe99a24_internal_macro$
 
-.macro roundAt_internal_macro
+.macro roundAt_efe99a24_internal_macro
 .loc ../contracts/DePoolRounds.sol, 184
 GETGLOB 13
 PUSHINT 64
@@ -8374,11 +8361,11 @@ ISNULL
 THROWIF 63
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	fetchRound_internal
-.type	fetchRound_internal, @function
-CALL $fetchRound_internal_macro$
+.globl	fetchRound_d130e988_internal
+.type	fetchRound_d130e988_internal, @function
+CALL $fetchRound_d130e988_internal_macro$
 
-.macro fetchRound_internal_macro
+.macro fetchRound_d130e988_internal_macro
 .loc ../contracts/DePoolRounds.sol, 188
 GETGLOB 13
 PUSHINT 64
@@ -8440,11 +8427,11 @@ IFREF {
 }
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	setRound_internal
-.type	setRound_internal, @function
-CALL $setRound_internal_macro$
+.globl	setRound_35d1b2f6_internal
+.type	setRound_35d1b2f6_internal, @function
+CALL $setRound_35d1b2f6_internal_macro$
 
-.macro setRound_internal_macro
+.macro setRound_35d1b2f6_internal_macro
 .loc ../contracts/DePoolRounds.sol, 192
 GETGLOB 13
 SWAP
@@ -8503,11 +8490,11 @@ DICTUSETREF
 SETGLOB 13
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	minRound_internal
-.type	minRound_internal, @function
-CALL $minRound_internal_macro$
+.globl	minRound_bdc18b15_internal
+.type	minRound_bdc18b15_internal, @function
+CALL $minRound_bdc18b15_internal_macro$
 
-.macro minRound_internal_macro
+.macro minRound_bdc18b15_internal_macro
 .loc ../contracts/DePoolRounds.sol, 196
 GETGLOB 13
 PUSHINT 64
@@ -8571,11 +8558,11 @@ IFREF {
 }
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	nextRound_internal
-.type	nextRound_internal, @function
-CALL $nextRound_internal_macro$
+.globl	nextRound_da54d41d_internal
+.type	nextRound_da54d41d_internal, @function
+CALL $nextRound_da54d41d_internal_macro$
 
-.macro nextRound_internal_macro
+.macro nextRound_da54d41d_internal_macro
 .loc ../contracts/DePoolRounds.sol, 200
 GETGLOB 13
 PUSHINT 64
@@ -8640,11 +8627,11 @@ IFREF {
 }
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	toTruncatedRound_internal
-.type	toTruncatedRound_internal, @function
-CALL $toTruncatedRound_internal_macro$
+.globl	toTruncatedRound_3c8490ce_internal
+.type	toTruncatedRound_3c8490ce_internal, @function
+CALL $toTruncatedRound_3c8490ce_internal_macro$
 
-.macro toTruncatedRound_internal_macro
+.macro toTruncatedRound_3c8490ce_internal_macro
 .loc ../contracts/DePoolRounds.sol, 374
 DUP
 FIRST
@@ -8698,7 +8685,7 @@ IFREF {
 ENDS
 .loc ../contracts/DePoolRounds.sol, 0
 CALLREF {
-	CALL $getRounds_internal_macro$
+	CALL $getRounds_6984d070_internal_macro$
 }
 OVER
 PUSHCONT {
@@ -8727,12 +8714,12 @@ IFREF {
 }
 THROW 0
 
-.macro getRounds_internal_macro
+.macro getRounds_6984d070_internal_macro
 .loc ../contracts/DePoolRounds.sol, 396
 NEWDICT
 .loc ../contracts/DePoolRounds.sol, 397
 CALLREF {
-	CALL $minRound_internal_macro$
+	CALL $minRound_bdc18b15_internal_macro$
 }
 .loc ../contracts/DePoolRounds.sol, 398
 PUSHCONT {
@@ -8748,7 +8735,7 @@ PUSHCONT {
 	UNPAIR
 	.loc ../contracts/DePoolRounds.sol, 400
 	CALLREF {
-		CALL $toTruncatedRound_internal_macro$
+		CALL $toTruncatedRound_3c8490ce_internal_macro$
 	}
 	.loc ../contracts/DePoolRounds.sol, 401
 	PUSH2 S0, S2
@@ -8783,7 +8770,7 @@ PUSHCONT {
 	POP S2
 	.loc ../contracts/DePoolRounds.sol, 402
 	CALLREF {
-		CALL $nextRound_internal_macro$
+		CALL $nextRound_da54d41d_internal_macro$
 	}
 	.loc ../contracts/DePoolRounds.sol, 0
 }
@@ -8791,11 +8778,11 @@ WHILE
 DROP
 .loc ../contracts/DePoolRounds.sol, 0
 
-.globl	getOrCreateParticipant_internal
-.type	getOrCreateParticipant_internal, @function
-CALL $getOrCreateParticipant_internal_macro$
+.globl	getOrCreateParticipant_870b9686_internal
+.type	getOrCreateParticipant_870b9686_internal, @function
+CALL $getOrCreateParticipant_870b9686_internal_macro$
 
-.macro getOrCreateParticipant_internal_macro
+.macro getOrCreateParticipant_870b9686_internal_macro
 .loc ../contracts/ParticipantBase.sol, 12
 GETGLOB 12
 PUSHINT 267
@@ -8843,11 +8830,11 @@ DUP
 TUPLE 8
 .loc ../contracts/ParticipantBase.sol, 0
 
-.globl	fetchParticipant_internal
-.type	fetchParticipant_internal, @function
-CALL $fetchParticipant_internal_macro$
+.globl	fetchParticipant_738c2c87_internal
+.type	fetchParticipant_738c2c87_internal, @function
+CALL $fetchParticipant_738c2c87_internal_macro$
 
-.macro fetchParticipant_internal_macro
+.macro fetchParticipant_738c2c87_internal_macro
 .loc ../contracts/ParticipantBase.sol, 30
 GETGLOB 12
 PUSHINT 267
@@ -8873,11 +8860,11 @@ IFREF {
 }
 .loc ../contracts/ParticipantBase.sol, 0
 
-.globl	_setOrDeleteParticipant_internal
-.type	_setOrDeleteParticipant_internal, @function
-CALL $_setOrDeleteParticipant_internal_macro$
+.globl	_setOrDeleteParticipant_a31677f8_internal
+.type	_setOrDeleteParticipant_a31677f8_internal, @function
+CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 
-.macro _setOrDeleteParticipant_internal_macro
+.macro _setOrDeleteParticipant_a31677f8_internal_macro
 .loc ../contracts/ParticipantBase.sol, 34
 DUP
 FIRST
@@ -8920,11 +8907,11 @@ SETGLOB 12
 .loc ../contracts/ParticipantBase.sol, 0
 DROP2
 
-.globl	getCurValidatorData_internal
-.type	getCurValidatorData_internal, @function
-CALL $getCurValidatorData_internal_macro$
+.globl	getCurValidatorData_61ae336b_internal
+.type	getCurValidatorData_61ae336b_internal, @function
+CALL $getCurValidatorData_61ae336b_internal_macro$
 
-.macro getCurValidatorData_internal_macro
+.macro getCurValidatorData_61ae336b_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 6
 PUSHINT 0
 DUP
@@ -8954,11 +8941,11 @@ OVER
 POP S3
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	getPrevValidatorHash_internal
-.type	getPrevValidatorHash_internal, @function
-CALL $getPrevValidatorHash_internal_macro$
+.globl	getPrevValidatorHash_22954fac_internal
+.type	getPrevValidatorHash_22954fac_internal, @function
+CALL $getPrevValidatorHash_22954fac_internal_macro$
 
-.macro getPrevValidatorHash_internal_macro
+.macro getPrevValidatorHash_22954fac_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 15
 PUSHINT 32
 CONFIGPARAM
@@ -8979,11 +8966,11 @@ PLDU 32
 NIP
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	roundTimeParams_internal
-.type	roundTimeParams_internal, @function
-CALL $roundTimeParams_internal_macro$
+.globl	roundTimeParams_73c24cb0_internal
+.type	roundTimeParams_73c24cb0_internal, @function
+CALL $roundTimeParams_73c24cb0_internal_macro$
 
-.macro roundTimeParams_internal_macro
+.macro roundTimeParams_73c24cb0_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 21
 PUSHINT 0
 BLKPUSH 3, 0
@@ -9013,11 +9000,11 @@ POP S2
 THROWIFNOT 509
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	getMaxStakeFactor_internal
-.type	getMaxStakeFactor_internal, @function
-CALL $getMaxStakeFactor_internal_macro$
+.globl	getMaxStakeFactor_3562a37c_internal
+.type	getMaxStakeFactor_3562a37c_internal, @function
+CALL $getMaxStakeFactor_3562a37c_internal_macro$
 
-.macro getMaxStakeFactor_internal_macro
+.macro getMaxStakeFactor_3562a37c_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 33
 PUSHINT 17
 CONFIGPARAM
@@ -9045,11 +9032,11 @@ NIP
 PLDU 32
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	getElector_internal
-.type	getElector_internal, @function
-CALL $getElector_internal_macro$
+.globl	getElector_28167edb_internal
+.type	getElector_28167edb_internal, @function
+CALL $getElector_28167edb_internal_macro$
 
-.macro getElector_internal_macro
+.macro getElector_28167edb_internal_macro
 .loc ../contracts/ConfigParamsBase.sol, 43
 PUSHINT 1
 CONFIGPARAM
@@ -9076,11 +9063,11 @@ ENDC
 CTOS
 .loc ../contracts/ConfigParamsBase.sol, 0
 
-.globl	_recoverStake_internal
-.type	_recoverStake_internal, @function
-CALL $_recoverStake_internal_macro$
+.globl	_recoverStake_2ed56c97_internal
+.type	_recoverStake_2ed56c97_internal, @function
+CALL $_recoverStake_2ed56c97_internal_macro$
 
-.macro _recoverStake_internal_macro
+.macro _recoverStake_2ed56c97_internal_macro
 .loc ../contracts/ProxyBase.sol, 15
 SWAP
 PUSHINT 1000000000
@@ -9106,11 +9093,11 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/ProxyBase.sol, 0
 
-.globl	_sendElectionRequest_internal
-.type	_sendElectionRequest_internal, @function
-CALL $_sendElectionRequest_internal_macro$
+.globl	_sendElectionRequest_52528db9_internal
+.type	_sendElectionRequest_52528db9_internal, @function
+CALL $_sendElectionRequest_52528db9_internal_macro$
 
-.macro _sendElectionRequest_internal_macro
+.macro _sendElectionRequest_52528db9_internal_macro
 .loc ../contracts/ProxyBase.sol, 28
 OVER
 INDEX 5

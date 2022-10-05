@@ -1,4 +1,4 @@
-.version sol 0.61.0
+.version sol 0.62.0
 
 .macro constructor
 DROP
@@ -16,11 +16,11 @@ CALLREF {
 }
 THROW 0
 
-.globl	_recoverStake_internal
-.type	_recoverStake_internal, @function
-CALL $_recoverStake_internal_macro$
+.globl	_recoverStake_2ed56c97_internal
+.type	_recoverStake_2ed56c97_internal, @function
+CALL $_recoverStake_2ed56c97_internal_macro$
 
-.macro _recoverStake_internal_macro
+.macro _recoverStake_2ed56c97_internal_macro
 .loc ../contracts/ProxyBase.sol, 15
 SWAP
 PUSHINT 1000000000
@@ -46,11 +46,11 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/ProxyBase.sol, 0
 
-.globl	_sendElectionRequest_internal
-.type	_sendElectionRequest_internal, @function
-CALL $_sendElectionRequest_internal_macro$
+.globl	_sendElectionRequest_52528db9_internal
+.type	_sendElectionRequest_52528db9_internal, @function
+CALL $_sendElectionRequest_52528db9_internal_macro$
 
-.macro _sendElectionRequest_internal_macro
+.macro _sendElectionRequest_52528db9_internal_macro
 .loc ../contracts/ProxyBase.sol, 28
 OVER
 INDEX 5
