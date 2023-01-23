@@ -18,7 +18,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/DePoolHelper.sol, 35
+.loc ../contracts/DePoolHelper.tsol, 35
 GETGLOB 5
 DUP
 ISNULL
@@ -30,11 +30,11 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePoolHelper.sol, 36
+.loc ../contracts/DePoolHelper.tsol, 36
 ACCEPT
-.loc ../contracts/DePoolHelper.sol, 31
+.loc ../contracts/DePoolHelper.tsol, 31
 SETGLOB 10
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -49,7 +49,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 44
+.loc ../contracts/DePoolHelper.tsol, 44
 OVER
 PUSHCONT {
 	LDREF
@@ -59,7 +59,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $updateDePoolPoolAddress_fb96c880_internal_macro$
 }
@@ -74,7 +74,7 @@ THROW 0
 CALL $updateDePoolPoolAddress_fb96c880_internal_macro$
 
 .macro updateDePoolPoolAddress_fb96c880_internal_macro
-.loc ../contracts/DePoolHelper.sol, 35
+.loc ../contracts/DePoolHelper.tsol, 35
 GETGLOB 5
 DUP
 ISNULL
@@ -86,9 +86,9 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePoolHelper.sol, 36
+.loc ../contracts/DePoolHelper.tsol, 36
 ACCEPT
-.loc ../contracts/DePoolHelper.sol, 45
+.loc ../contracts/DePoolHelper.tsol, 45
 GETGLOB 10
 GETGLOB 11
 UNPAIR
@@ -99,9 +99,9 @@ PUSHINT 32
 DICTUSET
 PAIR
 SETGLOB 11
-.loc ../contracts/DePoolHelper.sol, 46
+.loc ../contracts/DePoolHelper.tsol, 46
 SETGLOB 10
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 
 .macro initTimer
 DROP
@@ -112,7 +112,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 56
+.loc ../contracts/DePoolHelper.tsol, 56
 OVER
 PUSHCONT {
 	LDREF
@@ -123,7 +123,7 @@ IF
 LDMSGADDR
 LDU 256
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $initTimer_7a81159d_internal_macro$
 }
@@ -138,7 +138,7 @@ THROW 0
 CALL $initTimer_7a81159d_internal_macro$
 
 .macro initTimer_7a81159d_internal_macro
-.loc ../contracts/DePoolHelper.sol, 35
+.loc ../contracts/DePoolHelper.tsol, 35
 GETGLOB 5
 DUP
 ISNULL
@@ -150,21 +150,21 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePoolHelper.sol, 36
+.loc ../contracts/DePoolHelper.tsol, 36
 ACCEPT
-.loc ../contracts/DePoolHelper.sol, 57
+.loc ../contracts/DePoolHelper.tsol, 57
 OVER
 SETGLOB 12
-.loc ../contracts/DePoolHelper.sol, 58
+.loc ../contracts/DePoolHelper.tsol, 58
 DUP
 SETGLOB 13
-.loc ../contracts/DePoolHelper.sol, 65
+.loc ../contracts/DePoolHelper.tsol, 65
 DUP
 PUSHINT 400000
 MUL
 PUSHINT 1008000000
 ADD
-.loc ../contracts/DePoolHelper.sol, 66
+.loc ../contracts/DePoolHelper.tsol, 66
 UFITS 128
 ROT
 NEWC
@@ -182,7 +182,7 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 
 .macro onTimer
 DROP
@@ -193,9 +193,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 70
+.loc ../contracts/DePoolHelper.tsol, 70
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $onTimer_cd5090b2_internal_macro$
 }
@@ -210,11 +210,11 @@ THROW 0
 CALL $onTimer_cd5090b2_internal_macro$
 
 .macro onTimer_cd5090b2_internal_macro
-.loc ../contracts/DePoolHelper.sol, 71
+.loc ../contracts/DePoolHelper.tsol, 71
 GETGLOB 12
-.loc ../contracts/DePoolHelper.sol, 72
+.loc ../contracts/DePoolHelper.tsol, 72
 GETGLOB 13
-.loc ../contracts/DePoolHelper.sol, 73
+.loc ../contracts/DePoolHelper.tsol, 73
 GETGLOB 9
 PUSH S2
 SDEQ
@@ -222,7 +222,7 @@ OVER
 GTINT 0
 AND
 PUSHCONT {
-	.loc ../contracts/DePoolHelper.sol, 74
+	.loc ../contracts/DePoolHelper.tsol, 74
 	PUSHINT 1000000000
 	UFITS 128
 	GETGLOB 10
@@ -236,15 +236,15 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc ../contracts/DePoolHelper.sol, 75
+	.loc ../contracts/DePoolHelper.tsol, 75
 	DUP2
-	.loc ../contracts/DePoolHelper.sol, 65
+	.loc ../contracts/DePoolHelper.tsol, 65
 	DUP
 	PUSHINT 400000
 	MUL
 	PUSHINT 1008000000
 	ADD
-	.loc ../contracts/DePoolHelper.sol, 66
+	.loc ../contracts/DePoolHelper.tsol, 66
 	UFITS 128
 	ROT
 	NEWC
@@ -262,10 +262,10 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc ../contracts/DePoolHelper.sol, 0
+	.loc ../contracts/DePoolHelper.tsol, 0
 }
 IF
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 DROP2
 
 .macro sendTicktock
@@ -277,9 +277,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 81
+.loc ../contracts/DePoolHelper.tsol, 81
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $sendTicktock_f33dceed_internal_macro$
 }
@@ -294,7 +294,7 @@ THROW 0
 CALL $sendTicktock_f33dceed_internal_macro$
 
 .macro sendTicktock_f33dceed_internal_macro
-.loc ../contracts/DePoolHelper.sol, 35
+.loc ../contracts/DePoolHelper.tsol, 35
 GETGLOB 5
 DUP
 ISNULL
@@ -306,9 +306,9 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePoolHelper.sol, 36
+.loc ../contracts/DePoolHelper.tsol, 36
 ACCEPT
-.loc ../contracts/DePoolHelper.sol, 82
+.loc ../contracts/DePoolHelper.tsol, 82
 PUSHINT 1000000000
 UFITS 128
 GETGLOB 10
@@ -322,7 +322,7 @@ STUR 139
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 
 .macro getDePoolPoolAddress
 DROP
@@ -333,9 +333,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 89
+.loc ../contracts/DePoolHelper.tsol, 89
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $getDePoolPoolAddress_e0b147cf_internal_macro$
 }
@@ -375,9 +375,9 @@ THROW 0
 CALL $getDePoolPoolAddress_e0b147cf_internal_macro$
 
 .macro getDePoolPoolAddress_e0b147cf_internal_macro
-.loc ../contracts/DePoolHelper.sol, 90
+.loc ../contracts/DePoolHelper.tsol, 90
 GETGLOB 10
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 
 .macro getHistory
 DROP
@@ -388,9 +388,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 93
+.loc ../contracts/DePoolHelper.tsol, 93
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $getHistory_aa15efc8_internal_macro$
 }
@@ -430,9 +430,9 @@ THROW 0
 CALL $getHistory_aa15efc8_internal_macro$
 
 .macro getHistory_aa15efc8_internal_macro
-.loc ../contracts/DePoolHelper.sol, 94
+.loc ../contracts/DePoolHelper.tsol, 94
 GETGLOB 11
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 
 .macro upgrade
 DROP
@@ -443,10 +443,10 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 101
+.loc ../contracts/DePoolHelper.tsol, 101
 LDREF
 ENDS
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $upgrade_7916ae0d_internal_macro$
 }
@@ -461,7 +461,7 @@ THROW 0
 CALL $upgrade_7916ae0d_internal_macro$
 
 .macro upgrade_7916ae0d_internal_macro
-.loc ../contracts/DePoolHelper.sol, 35
+.loc ../contracts/DePoolHelper.tsol, 35
 GETGLOB 5
 DUP
 ISNULL
@@ -473,17 +473,17 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePoolHelper.sol, 36
+.loc ../contracts/DePoolHelper.tsol, 36
 ACCEPT
-.loc ../contracts/DePoolHelper.sol, 102
+.loc ../contracts/DePoolHelper.tsol, 102
 CALLREF {
 	CALL $c7_to_c4$
 }
 COMMIT
-.loc ../contracts/DePoolHelper.sol, 103
+.loc ../contracts/DePoolHelper.tsol, 103
 DUP
 SETCODE
-.loc ../contracts/DePoolHelper.sol, 104
+.loc ../contracts/DePoolHelper.tsol, 104
 CTOS
 DUP
 PUSHSLICE x8adb35
@@ -497,15 +497,15 @@ PLDREF
 CTOS
 BLESS
 POP C3
-.loc ../contracts/DePoolHelper.sol, 105
+.loc ../contracts/DePoolHelper.tsol, 105
 CALLREF {
 	CALL $:onCodeUpgrade$
 }
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 
 .internal-alias :onCodeUpgrade, 2
 .internal :onCodeUpgrade
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -520,7 +520,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -533,7 +533,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolHelper.sol, 0
+.loc ../contracts/DePoolHelper.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -547,7 +547,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/Participant.sol, 10
+.loc ../contracts/Participant.tsol, 10
 OVER
 PUSHCONT {
 	LDREF
@@ -561,7 +561,7 @@ LDI 1
 LDU 16
 LDREF
 ENDS
-.loc ../contracts/Participant.sol, 0
+.loc ../contracts/Participant.tsol, 0
 CALLREF {
 	CALL $sendTransaction_15500dc5_internal_macro$
 }
@@ -575,7 +575,7 @@ THROW 0
 CALL $sendTransaction_15500dc5_internal_macro$
 
 .macro sendTransaction_15500dc5_internal_macro
-.loc ../contracts/Participant.sol, 17
+.loc ../contracts/Participant.tsol, 17
 GETGLOB 5
 DUP
 ISNULL
@@ -587,9 +587,9 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/Participant.sol, 18
+.loc ../contracts/Participant.tsol, 18
 ACCEPT
-.loc ../contracts/Participant.sol, 19
+.loc ../contracts/Participant.tsol, 19
 ROLL 3
 BLKSWAP 2, 3
 NEWC
@@ -605,7 +605,7 @@ STREF
 ENDC
 SWAP
 SENDRAWMSG
-.loc ../contracts/Participant.sol, 0
+.loc ../contracts/Participant.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

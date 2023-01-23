@@ -1,6 +1,6 @@
 pragma solidity >=0.6.0;
-import "DePoolLib.sol";
-import "IProxy.sol";
+import "DePoolLib.tsol";
+import "IProxy.tsol";
 
 
 contract ParticipantBase {

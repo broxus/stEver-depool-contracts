@@ -25,7 +25,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/Participant.sol, 10
+.loc ../contracts/Participant.tsol, 10
 OVER
 PUSHCONT {
 	LDREF
@@ -39,7 +39,7 @@ LDI 1
 LDU 16
 LDREF
 ENDS
-.loc ../contracts/Participant.sol, 0
+.loc ../contracts/Participant.tsol, 0
 CALLREF {
 	CALL $sendTransaction_15500dc5_internal_macro$
 }
@@ -53,7 +53,7 @@ THROW 0
 CALL $sendTransaction_15500dc5_internal_macro$
 
 .macro sendTransaction_15500dc5_internal_macro
-.loc ../contracts/Participant.sol, 17
+.loc ../contracts/Participant.tsol, 17
 GETGLOB 5
 DUP
 ISNULL
@@ -65,9 +65,9 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/Participant.sol, 18
+.loc ../contracts/Participant.tsol, 18
 ACCEPT
-.loc ../contracts/Participant.sol, 19
+.loc ../contracts/Participant.tsol, 19
 ROLL 3
 BLKSWAP 2, 3
 NEWC
@@ -83,7 +83,7 @@ STREF
 ENDC
 SWAP
 SENDRAWMSG
-.loc ../contracts/Participant.sol, 0
+.loc ../contracts/Participant.tsol, 0
 
 .macro receive_macro
 GETGLOB 6
@@ -93,7 +93,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/Participant.sol, 0
+.loc ../contracts/Participant.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -106,7 +106,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/Participant.sol, 0
+.loc ../contracts/Participant.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }

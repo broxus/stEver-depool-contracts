@@ -4,28 +4,28 @@ pragma solidity >=0.6.0;
 pragma AbiHeader expire;
 pragma AbiHeader time;
 
-import "ValidatorBase.sol";
-import "ProxyBase.sol";
-import "ConfigParamsBase.sol";
-import "ParticipantBase.sol";
-import "IDePoolInfoGetter.sol";
-import "DePoolProxy.sol";
-import "DePoolRounds.sol";
-import "IDePool.sol";
-import "IParticipant.sol";
+import "ValidatorBase.tsol";
+import "ProxyBase.tsol";
+import "ConfigParamsBase.tsol";
+import "ParticipantBase.tsol";
+import "IDePoolInfoGetter.tsol";
+import "DePoolProxy.tsol";
+import "DePoolRounds.tsol";
+import "IDePool.tsol";
+import "IParticipant.tsol";
 
 contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, RoundsBase, IDePool {
 
     // Fee for 'addOrdinaryStake/addVesting/addLockStake' that will be returned
-    uint64 constant STAKE_FEE = 0.5 ton;
+    uint64 constant STAKE_FEE = 0.5 ever;
     // Fee for returning/reinvesting participant's stake when rounds are completed.
-    uint64 constant RET_OR_REINV_FEE = 40 milliton;
+    uint64 constant RET_OR_REINV_FEE = 40_000_000;
     // Number of participant's stakes reinvested in 1 transaction.
     uint8 constant MAX_MSGS_PER_TR = 25;
     // Max count of output actions
     uint16 constant MAX_QTY_OF_OUT_ACTIONS = 250; // Real value is equal 255
     // Value attached to message for self call
-    uint64 constant VALUE_FOR_SELF_CALL = 1 ton;
+    uint64 constant VALUE_FOR_SELF_CALL = 1 ever;
 
 
     // Hash of code of proxy contract
@@ -74,9 +74,9 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
     // Value of balance which DePool tries to maintain (by subtracting necessary value from each round reward)
     uint64 m_balanceThreshold;
     // Value of DePool's balance below which ticktock and participateInElections functions don't execute
-    uint64 constant CRITICAL_THRESHOLD = 10 ton;
+    uint64 constant CRITICAL_THRESHOLD = 10 ever;
     // Min delta between m_balanceThreshold and CRITICAL_THRESHOLD
-    uint64 constant MIN_DELTA = 5 ton;
+    uint64 constant MIN_DELTA = 5 ever;
     // mapping of allowed participants
     mapping  (address => bool) public allowedParticipants;
 
@@ -139,7 +139,7 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
         require(address(this).wid == 0, Errors.NOT_WORKCHAIN0);
         require(msg.pubkey() == tvm.pubkey(), Errors.IS_NOT_OWNER);
         require(tvm.pubkey() != 0, Errors.CONSTRUCTOR_NO_PUBKEY);
-        require(minStake >= 1 ton, Errors.BAD_STAKES);
+        require(minStake >= 1 ever, Errors.BAD_STAKES);
         require(minStake <= validatorAssurance, Errors.BAD_MIN_STAKE_AND_ASSURANCE);
         require(tvm.hash(proxyCode) == PROXY_CODE_HASH, Errors.BAD_PROXY_CODE);
         require(validatorWallet.isStdAddrWithoutAnyCast(), Errors.VALIDATOR_IS_NOT_STD);
@@ -162,7 +162,8 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
                 new DePoolProxyContract{
                     wid: -1,
                     value: DePoolLib.MIN_PROXY_BALANCE + DePoolLib.PROXY_CONSTRUCTOR_FEE,
-                    code: proxyCode ,
+                    code: proxyCode,
+                    flag: 1,
                     varInit: {
                         m_id: i,
                         m_dePool: address(this),
@@ -282,7 +283,7 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
 
         if (round.participantQty == 0 || round.stakes.empty()) {
             round.step = RoundStep.Completed;
-            this.ticktock{value: VALUE_FOR_SELF_CALL, bounce: false}();
+            this.ticktock{value: VALUE_FOR_SELF_CALL, bounce: false, flag: 1}();
         } else {
             round.step = RoundStep.Completing;
             this.completeRound{flag: 1, bounce: false, value: VALUE_FOR_SELF_CALL}(round.id, round.participantQty);
@@ -527,7 +528,7 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
         setRound0(round0);
         if (round2.stakes.empty()) {
             round2.step = RoundStep.Completed;
-            this.ticktock{value: VALUE_FOR_SELF_CALL, bounce: false}();
+            this.ticktock{value: VALUE_FOR_SELF_CALL, bounce: false, flag: 1}();
         }
         return round2;
     }
@@ -950,7 +951,7 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
             }
             round2.unfreeze = 0;
         } else if (round2.step == RoundStep.Completing) {
-            this.completeRoundWithChunk{bounce: false}(round2.id, 1);
+            this.completeRoundWithChunk{bounce: false, flag: 1}(round2.id, 1);
             // For situations when there exists stake with value==V, but DePool balance == (V - epsilon)
             // In such situations some extra funds must be sent to DePool balance (See function 'receiveFunds')
         }

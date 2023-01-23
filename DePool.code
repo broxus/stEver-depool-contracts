@@ -28,14 +28,14 @@ LDMSGADDR
 LDU 8
 ENDS
 OVER
-.loc ../contracts/ValidatorBase.sol, 11
+.loc ../contracts/ValidatorBase.tsol, 11
 SETGLOB 10
-.loc ../contracts/DePool.sol, 139
+.loc ../contracts/DePool.tsol, 139
 MYADDR
 PARSEMSGADDR
 THIRD
 THROWIF 142
-.loc ../contracts/DePool.sol, 140
+.loc ../contracts/DePool.tsol, 140
 GETGLOB 5
 DUP
 ISNULL
@@ -47,25 +47,25 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePool.sol, 141
+.loc ../contracts/DePool.tsol, 141
 GETGLOB 2
 THROWIFNOT 130
-.loc ../contracts/DePool.sol, 142
+.loc ../contracts/DePool.tsol, 142
 PUSH S4
 PUSHINT 1000000000
 GEQ
 THROWIFNOT 129
-.loc ../contracts/DePool.sol, 143
+.loc ../contracts/DePool.tsol, 143
 BLKPUSH 2, 4
 LEQ
 THROWIFNOT 149
-.loc ../contracts/DePool.sol, 144
+.loc ../contracts/DePool.tsol, 144
 PUSH S2
 HASHCU
 PUSHINT 30452333404199592112219573795545515906228695830248230517907891238599201766160
 EQUAL
 THROWIFNOT 141
-.loc ../contracts/DePool.sol, 145
+.loc ../contracts/DePool.tsol, 145
 OVER
 PARSEMSGADDR
 DUP
@@ -81,26 +81,26 @@ PUSHCONT {
 }
 IFELSE
 THROWIFNOT 133
-.loc ../contracts/DePool.sol, 146
+.loc ../contracts/DePool.tsol, 146
 OVER
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 147
-.loc ../contracts/DePool.sol, 147
+.loc ../contracts/DePool.tsol, 147
 DUP
 GTINT 0
 OVER
 LESSINT 100
 AND
 THROWIFNOT 138
-.loc ../contracts/DePool.sol, 148
+.loc ../contracts/DePool.tsol, 148
 PUSHINT 100
 OVER
 SUB
 UFITS 8
-.loc ../contracts/DePool.sol, 150
+.loc ../contracts/DePool.tsol, 150
 GETPARAM 7
 FIRST
 PUSHINT 10000000000
@@ -121,9 +121,9 @@ ADD
 UFITS 64
 GEQ
 THROWIFNOT 146
-.loc ../contracts/DePool.sol, 157
+.loc ../contracts/DePool.tsol, 157
 ACCEPT
-.loc ../contracts/DePool.sol, 159
+.loc ../contracts/DePool.tsol, 159
 PUSH S2
 GETGLOB 22
 NEWC
@@ -132,14 +132,14 @@ ROTREV
 PUSHINT 267
 DICTSETB
 SETGLOB 22
-.loc ../contracts/DePool.sol, 160
+.loc ../contracts/DePool.tsol, 160
 PUSHINT 0
 PUSHCONT {
 	DUP
 	LESSINT 2
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 161
+	.loc ../contracts/DePool.tsol, 161
 	PUSHINT 0
 	NEWC
 	STU 256
@@ -220,9 +220,9 @@ PUSHCONT {
 	STREF
 	STSLICECONST x345aaf9fc_
 	ENDC
-	PUSHINT 0
+	PUSHINT 1
 	SENDRAWMSG
-	.loc ../contracts/DePool.sol, 172
+	.loc ../contracts/DePool.tsol, 173
 	GETGLOB 11
 	UNPAIR
 	OVER
@@ -232,28 +232,28 @@ PUSHCONT {
 	DICTUSET
 	PAIR
 	SETGLOB 11
-	.loc ../contracts/DePool.sol, 160
+	.loc ../contracts/DePool.tsol, 160
 	INC
 	UFITS 8
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 WHILE
 DROP
-.loc ../contracts/DePool.sol, 175
+.loc ../contracts/DePool.tsol, 176
 FALSE
 SETGLOB 16
-.loc ../contracts/DePool.sol, 176
+.loc ../contracts/DePool.tsol, 177
 ROLL 5
 SETGLOB 17
-.loc ../contracts/DePool.sol, 177
+.loc ../contracts/DePool.tsol, 178
 ROLL 4
 SETGLOB 18
-.loc ../contracts/DePool.sol, 178
+.loc ../contracts/DePool.tsol, 179
 SWAP
 SETGLOB 19
-.loc ../contracts/DePool.sol, 179
+.loc ../contracts/DePool.tsol, 180
 SETGLOB 20
-.loc ../contracts/DePool.sol, 180
+.loc ../contracts/DePool.tsol, 181
 DROP2
 GETPARAM 7
 FIRST
@@ -271,48 +271,48 @@ UFITS 64
 SUB
 UFITS 64
 SETGLOB 21
-.loc ../contracts/DePool.sol, 184
+.loc ../contracts/DePool.tsol, 185
 CALLREF {
 	CALL $roundTimeParams_73c24cb0_internal_macro$
 }
 DROP2
 NIP
-.loc ../contracts/DePool.sol, 185
+.loc ../contracts/DePool.tsol, 186
 CALLREF {
 	CALL $getCurValidatorData_61ae336b_internal_macro$
 }
 NIP
-.loc ../contracts/DePool.sol, 186
+.loc ../contracts/DePool.tsol, 187
 CALLREF {
 	CALL $getPrevValidatorHash_22954fac_internal_macro$
 }
-.loc ../contracts/DePool.sol, 187
+.loc ../contracts/DePool.tsol, 188
 NOW
 ROT
 ROLL 4
 SUB
 UFITS 32
 GEQ
-.loc ../contracts/DePool.sol, 189
+.loc ../contracts/DePool.tsol, 190
 CALLREF {
 	CALL $generateRound_ebbb0126_internal_macro$
 }
-.loc ../contracts/DePool.sol, 190
+.loc ../contracts/DePool.tsol, 191
 CALLREF {
 	CALL $generateRound_ebbb0126_internal_macro$
 }
-.loc ../contracts/DePool.sol, 191
+.loc ../contracts/DePool.tsol, 192
 CALLREF {
 	CALL $generateRound_ebbb0126_internal_macro$
 }
-.loc ../contracts/DePool.sol, 192
+.loc ../contracts/DePool.tsol, 193
 PUSHINT 1
 SETINDEX 6
-.loc ../contracts/DePool.sol, 193
+.loc ../contracts/DePool.tsol, 194
 CALLREF {
 	CALL $generateRound_ebbb0126_internal_macro$
 }
-.loc ../contracts/DePool.sol, 194
+.loc ../contracts/DePool.tsol, 195
 PUSHINT 0
 PUSHINT 2
 PUSH S5
@@ -325,7 +325,7 @@ POP S5
 PUXC S4, S-1
 SETINDEX 2
 POP S4
-.loc ../contracts/DePool.sol, 195
+.loc ../contracts/DePool.tsol, 196
 PUSHINT 0
 PUSHINT 2
 PUSH S4
@@ -338,7 +338,7 @@ POP S4
 PUXC S3, S-1
 SETINDEX 2
 POP S3
-.loc ../contracts/DePool.sol, 196
+.loc ../contracts/DePool.tsol, 197
 ROLL 4
 PUSHCONT {
 	PUSH S5
@@ -350,35 +350,35 @@ IFELSE
 PUXC S3, S-1
 SETINDEX 5
 POP S3
-.loc ../contracts/DePool.sol, 197
+.loc ../contracts/DePool.tsol, 198
 DUP
 FIRST
 SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 198
+.loc ../contracts/DePool.tsol, 199
 DUP
 FIRST
 SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 199
+.loc ../contracts/DePool.tsol, 200
 DUP
 FIRST
 SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 200
+.loc ../contracts/DePool.tsol, 201
 DUP
 FIRST
 SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 DROP2
 CALLREF {
 	CALL $c7_to_c4$
@@ -390,7 +390,7 @@ THROW 0
 CALL $errorEvent_bd4f4fc9_internal_macro$
 
 .macro errorEvent_bd4f4fc9_internal_macro
-.loc ../contracts/DePool.sol, 222
+.loc ../contracts/DePool.tsol, 223
 PUSHSLICE xc0000000000000000000000000230f5f80
 NEWC
 STSLICE
@@ -398,14 +398,14 @@ STU 16
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	_returnChange_260d9040_internal
 .type	_returnChange_260d9040_internal, @function
 CALL $_returnChange_260d9040_internal_macro$
 
 .macro _returnChange_260d9040_internal_macro
-.loc ../contracts/DePool.sol, 227
+.loc ../contracts/DePool.tsol, 228
 GETGLOB 9
 NEWC
 STSLICECONST x42_
@@ -415,14 +415,14 @@ STZEROES
 ENDC
 PUSHINT 64
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	_sendError_96842984_internal
 .type	_sendError_96842984_internal, @function
 CALL $_sendError_96842984_internal_macro$
 
 .macro _sendError_96842984_internal_macro
-.loc ../contracts/DePool.sol, 234
+.loc ../contracts/DePool.tsol, 235
 SWAP
 GETGLOB 9
 FALSE
@@ -438,14 +438,14 @@ STU 64
 ENDC
 PUSHINT 64
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	sendAcceptAndReturnChange_facfbc02_internal
 .type	sendAcceptAndReturnChange_facfbc02_internal, @function
 CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 
 .macro sendAcceptAndReturnChange_facfbc02_internal_macro
-.loc ../contracts/DePool.sol, 239
+.loc ../contracts/DePool.tsol, 240
 PUSHINT 0
 DUP
 GETGLOB 9
@@ -462,21 +462,21 @@ STU 64
 ENDC
 PUSHINT 64
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	sendAcceptAndReturnChange128_97c1eb12_internal
 .type	sendAcceptAndReturnChange128_97c1eb12_internal, @function
 CALL $sendAcceptAndReturnChange128_97c1eb12_internal_macro$
 
 .macro sendAcceptAndReturnChange128_97c1eb12_internal_macro
-.loc ../contracts/DePool.sol, 244
+.loc ../contracts/DePool.tsol, 245
 GETPARAM 7
 FIRST
 SUBR
 UFITS 128
 PUSHINT 0
 RAWRESERVE
-.loc ../contracts/DePool.sol, 245
+.loc ../contracts/DePool.tsol, 246
 PUSHINT 0
 DUP
 GETGLOB 9
@@ -493,7 +493,7 @@ STU 64
 ENDC
 PUSHPOW2 7
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro setAllowedParticipant
 DROP
@@ -504,7 +504,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 249
+.loc ../contracts/DePool.tsol, 250
 OVER
 PUSHCONT {
 	LDREF
@@ -514,7 +514,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $setAllowedParticipant_178e319d_internal_macro$
 }
@@ -529,12 +529,12 @@ THROW 0
 CALL $setAllowedParticipant_178e319d_internal_macro$
 
 .macro setAllowedParticipant_178e319d_internal_macro
-.loc ../contracts/ValidatorBase.sol, 15
+.loc ../contracts/ValidatorBase.tsol, 15
 GETGLOB 9
 GETGLOB 10
 SDEQ
 THROWIFNOT 113
-.loc ../contracts/DePool.sol, 250
+.loc ../contracts/DePool.tsol, 251
 PUSHINT 0
 NEWDICT
 PAIR
@@ -583,7 +583,7 @@ DROP2
 FIRST
 LESSINT 2
 THROWIFNOT 150
-.loc ../contracts/DePool.sol, 251
+.loc ../contracts/DePool.tsol, 252
 GETPARAM 7
 FIRST
 DEPTH
@@ -593,7 +593,7 @@ SUB
 UFITS 128
 PUSHINT 0
 RAWRESERVE
-.loc ../contracts/DePool.sol, 252
+.loc ../contracts/DePool.tsol, 253
 GETGLOB 22
 NEWC
 STONE
@@ -601,7 +601,7 @@ ROTREV
 PUSHINT 267
 DICTSETB
 SETGLOB 22
-.loc ../contracts/DePool.sol, 253
+.loc ../contracts/DePool.tsol, 254
 GETGLOB 9
 NEWC
 STSLICECONST x42_
@@ -611,14 +611,14 @@ STZEROES
 ENDC
 PUSHPOW2 7
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	setLastRoundInfo_f77e87f2_internal
 .type	setLastRoundInfo_f77e87f2_internal, @function
 CALL $setLastRoundInfo_f77e87f2_internal_macro$
 
 .macro setLastRoundInfo_f77e87f2_internal_macro
-.loc ../contracts/DePool.sol, 261
+.loc ../contracts/DePool.tsol, 262
 DUP
 SECOND
 GETGLOB 19
@@ -639,7 +639,7 @@ ROLL 10
 INDEX 7
 GETGLOB 16
 TUPLE 12
-.loc ../contracts/DePool.sol, 275
+.loc ../contracts/DePool.tsol, 276
 FALSE
 GETGLOB 15
 ROT
@@ -664,24 +664,24 @@ ROTREV
 PUSHINT 1
 DICTISETB
 SETGLOB 15
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	startRoundCompleting_f756a4fe_internal
 .type	startRoundCompleting_f756a4fe_internal, @function
 CALL $startRoundCompleting_f756a4fe_internal_macro$
 
 .macro startRoundCompleting_f756a4fe_internal_macro
-.loc ../contracts/DePool.sol, 279
+.loc ../contracts/DePool.tsol, 280
 SETINDEX 7
-.loc ../contracts/DePool.sol, 280
+.loc ../contracts/DePool.tsol, 281
 PUSHINT 0
 PUSHINT 19
 SETINDEXVAR
-.loc ../contracts/DePool.sol, 281
+.loc ../contracts/DePool.tsol, 282
 PUSHINT 0
 PUSHINT 18
 SETINDEXVAR
-.loc ../contracts/DePool.sol, 283
+.loc ../contracts/DePool.tsol, 284
 DUP
 INDEX 15
 EQINT 0
@@ -691,10 +691,10 @@ INDEXVAR
 DICTEMPTY
 OR
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 284
+	.loc ../contracts/DePool.tsol, 285
 	PUSHINT 9
 	SETINDEX 6
-	.loc ../contracts/DePool.sol, 285
+	.loc ../contracts/DePool.tsol, 286
 	MYADDR
 	FALSE
 	NEWC
@@ -704,14 +704,12 @@ PUSHCONT {
 	STSLICE
 	PUSHINT 12669519700468838679097577345632051794083288071575587
 	STUR 175
-	ENDC
-	PUSHINT 0
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 287
+	.loc ../contracts/DePool.tsol, 288
 	PUSHINT 8
 	SETINDEX 6
-	.loc ../contracts/DePool.sol, 288
+	.loc ../contracts/DePool.tsol, 289
 	DUP
 	INDEX 15
 	OVER
@@ -727,12 +725,12 @@ PUSHCONT {
 	STUR 175
 	STU 64
 	STU 32
-	ENDC
-	PUSHINT 1
 }
 IFELSE
+ENDC
+PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 291
+.loc ../contracts/DePool.tsol, 292
 DUP
 CALLREF {
 	CALL $toTruncatedRound_3c8490ce_internal_macro$
@@ -767,25 +765,25 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 292
+.loc ../contracts/DePool.tsol, 293
 DUP
 CALLREF {
 	CALL $setLastRoundInfo_f77e87f2_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	cutWithdrawalValue_3b724030_internal
 .type	cutWithdrawalValue_3b724030_internal, @function
 CALL $cutWithdrawalValue_3b724030_internal_macro$
 
 .macro cutWithdrawalValue_3b724030_internal_macro
-.loc ../contracts/DePool.sol, 301
+.loc ../contracts/DePool.tsol, 302
 PUSHINT 0
 DUP
-.loc ../contracts/DePool.sol, 303
+.loc ../contracts/DePool.tsol, 304
 ROLL 3
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 304
+	.loc ../contracts/DePool.tsol, 305
 	PUSH3 S2, S3, S3
 	SECOND
 	ROT
@@ -793,7 +791,7 @@ PUSHCONT {
 	UFITS 64
 	SETINDEX 1
 	POP S4
-	.loc ../contracts/DePool.sol, 305
+	.loc ../contracts/DePool.tsol, 306
 	PUSH2 S2, S3
 	INDEX 3
 	PUSH S5
@@ -801,11 +799,11 @@ PUSHCONT {
 	MULDIV
 	UFITS 64
 	NIP
-	.loc ../contracts/DePool.sol, 306
+	.loc ../contracts/DePool.tsol, 307
 	PUSH S3
 	FIRST
 	MIN
-	.loc ../contracts/DePool.sol, 307
+	.loc ../contracts/DePool.tsol, 308
 	PUSH3 S0, S3, S3
 	FIRST
 	ROT
@@ -813,16 +811,16 @@ PUSHCONT {
 	UFITS 64
 	SETINDEX 0
 	POP S4
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 310
+.loc ../contracts/DePool.tsol, 311
 NOW
 PUSH S4
 SECOND
 GREATER
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 311
+	.loc ../contracts/DePool.tsol, 312
 	NOW
 	PUSH S4
 	SECOND
@@ -831,11 +829,11 @@ PUSHCONT {
 	PUSH S4
 	THIRD
 	DIV
-	.loc ../contracts/DePool.sol, 312
+	.loc ../contracts/DePool.tsol, 313
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 313
+		.loc ../contracts/DePool.tsol, 314
 		PUSH2 S0, S4
 		INDEX 3
 		MUL
@@ -844,7 +842,7 @@ PUSHCONT {
 		FIRST
 		MIN
 		POP S3
-		.loc ../contracts/DePool.sol, 314
+		.loc ../contracts/DePool.tsol, 315
 		PUSH3 S2, S4, S4
 		FIRST
 		ROT
@@ -852,7 +850,7 @@ PUSHCONT {
 		UFITS 64
 		SETINDEX 0
 		POP S5
-		.loc ../contracts/DePool.sol, 315
+		.loc ../contracts/DePool.tsol, 316
 		PUSH2 S0, S4
 		THIRD
 		MUL
@@ -864,44 +862,44 @@ PUSHCONT {
 		UFITS 64
 		SETINDEX 1
 		POP S5
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP
 }
 IF
-.loc ../contracts/DePool.sol, 319
+.loc ../contracts/DePool.tsol, 320
 PUSH S3
 FIRST
 GETGLOB 17
 LESS
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 320
+	.loc ../contracts/DePool.tsol, 321
 	PUSH S3
 	FIRST
 	ADD
 	UFITS 64
-	.loc ../contracts/DePool.sol, 321
+	.loc ../contracts/DePool.tsol, 322
 	PUSH S3
 	PUSHINT 0
 	SETINDEX 0
 	POP S4
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 325
+.loc ../contracts/DePool.tsol, 326
 XCHG S2, S3
-.loc ../contracts/DePool.sol, 326
+.loc ../contracts/DePool.tsol, 327
 BLKDROP2 1, 3
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	_returnOrReinvestForParticipant_a85e2ad4_internal
 .type	_returnOrReinvestForParticipant_a85e2ad4_internal, @function
 CALL $_returnOrReinvestForParticipant_a85e2ad4_internal_macro$
 
 .macro _returnOrReinvestForParticipant_a85e2ad4_internal_macro
-.loc ../contracts/DePool.sol, 333
+.loc ../contracts/DePool.tsol, 334
 PUSHINT 0
 BLKPUSH 15, 0
 NEWDICT
@@ -917,12 +915,12 @@ DUP
 PUSHINT 23
 TUPLEVAR
 PUSH3 S0, S3, S3
-.loc ../contracts/DePoolRounds.sol, 340
+.loc ../contracts/DePoolRounds.tsol, 340
 SECOND
-.loc ../contracts/DePoolRounds.sol, 341
+.loc ../contracts/DePoolRounds.tsol, 341
 OVER
 THIRD
-.loc ../contracts/DePoolRounds.sol, 343
+.loc ../contracts/DePoolRounds.tsol, 343
 ROT
 FIRST
 PUSH S2
@@ -950,49 +948,49 @@ IFNOT
 ADD
 UFITS 64
 BLKDROP2 2, 1
-.loc ../contracts/DePool.sol, 342
+.loc ../contracts/DePool.tsol, 343
 PUSH S8
 INDEX 7
 EQINT 7
-.loc ../contracts/DePool.sol, 343
+.loc ../contracts/DePool.tsol, 344
 PUSH S7
 CALLREF {
 	CALL $fetchParticipant_738c2c87_internal_macro$
 }
-.loc ../contracts/DePool.sol, 344
+.loc ../contracts/DePool.tsol, 345
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 345
+	.loc ../contracts/DePool.tsol, 346
 	PUSHPOW2DEC 9
 	CALLREF {
 		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 346
+	.loc ../contracts/DePool.tsol, 347
 	BLKSWAP 2, 9
 	SWAP
 	BLKDROP2 9, 2
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 348
+.loc ../contracts/DePool.tsol, 349
 BLKPUSH 2, 0
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 349
+.loc ../contracts/DePool.tsol, 350
 DUP
 FIRST
 DEC
 UFITS 8
 SETINDEX 0
-.loc ../contracts/DePool.sol, 350
+.loc ../contracts/DePool.tsol, 351
 PUSH2 S11, S11
 INDEX 15
 DEC
 UFITS 32
 SETINDEX 15
 POP S12
-.loc ../contracts/DePool.sol, 351
+.loc ../contracts/DePool.tsol, 352
 PUSH S2
 ZEROSWAPIFNOT
 PUSHCONT {
@@ -1008,39 +1006,39 @@ PUSHCONT {
 	UFITS 64
 }
 IF
-.loc ../contracts/DePool.sol, 354
+.loc ../contracts/DePool.tsol, 355
 PUSHINT 0
 PUSH2 S0, S4
-.loc ../contracts/DePool.sol, 356
+.loc ../contracts/DePool.tsol, 357
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 357
+	.loc ../contracts/DePool.tsol, 358
 	PUSH S10
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 358
+		.loc ../contracts/DePool.tsol, 359
 		PUSH S11
 		FIRST
 		POP S2
-		.loc ../contracts/DePool.sol, 359
+		.loc ../contracts/DePool.tsol, 360
 		PUSH2 S1, S2
 		MIN
-		.loc ../contracts/DePool.sol, 360
+		.loc ../contracts/DePool.tsol, 361
 		PUSH2 S2, S0
 		SUB
 		UFITS 64
 		POP S3
-		.loc ../contracts/DePool.sol, 361
+		.loc ../contracts/DePool.tsol, 362
 		PUSH S3
 		SUBR
 		UFITS 64
 		POP S3
-		.loc ../contracts/DePool.sol, 362
+		.loc ../contracts/DePool.tsol, 363
 		PUSH2 S14, S1
 		PUSHINT 18
 		SETINDEXVAR
 		POP S15
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 364
+		.loc ../contracts/DePool.tsol, 365
 		PUSH S14
 		INDEX 10
 		PUSH S15
@@ -1066,10 +1064,10 @@ PUSHCONT {
 		POP S2
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 371
+	.loc ../contracts/DePool.tsol, 372
 	PUSH2 S6, S14
 	INDEX 13
 	PUSH S16
@@ -1077,7 +1075,7 @@ PUSHCONT {
 	MULDIV
 	UFITS 64
 	NIP
-	.loc ../contracts/DePool.sol, 372
+	.loc ../contracts/DePool.tsol, 373
 	PUSH3 S0, S3, S3
 	SECOND
 	ROT
@@ -1085,7 +1083,7 @@ PUSHCONT {
 	UFITS 64
 	SETINDEX 1
 	POP S4
-	.loc ../contracts/DePool.sol, 373
+	.loc ../contracts/DePool.tsol, 374
 	PUSH S11
 	FIRST
 	OVER
@@ -1094,7 +1092,7 @@ PUSHCONT {
 	POP S2
 }
 IFELSE
-.loc ../contracts/DePool.sol, 375
+.loc ../contracts/DePool.tsol, 376
 PUSH3 S1, S14, S14
 PUSHINT 19
 INDEXVAR
@@ -1104,29 +1102,29 @@ UFITS 64
 PUSHINT 19
 SETINDEXVAR
 POP S15
-.loc ../contracts/DePool.sol, 378
+.loc ../contracts/DePool.tsol, 379
 PUSH S11
 SECOND
-.loc ../contracts/DePool.sol, 379
+.loc ../contracts/DePool.tsol, 380
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 380
+	.loc ../contracts/DePool.tsol, 381
 	BLKPUSH 2, 0
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 381
+	.loc ../contracts/DePool.tsol, 382
 	PUSH S7
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 382
+		.loc ../contracts/DePool.tsol, 383
 		PUSH S12
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 383
+			.loc ../contracts/DePool.tsol, 384
 			DUP
 			FIRST
 			PUSH S5
 			MIN
-			.loc ../contracts/DePool.sol, 384
+			.loc ../contracts/DePool.tsol, 385
 			PUSH3 S0, S1, S1
 			FIRST
 			ROT
@@ -1134,12 +1132,12 @@ PUSHCONT {
 			UFITS 64
 			SETINDEX 0
 			POP S2
-			.loc ../contracts/DePool.sol, 385
+			.loc ../contracts/DePool.tsol, 386
 			PUSH S5
 			SUBR
 			UFITS 64
 			POP S5
-			.loc ../contracts/DePool.sol, 386
+			.loc ../contracts/DePool.tsol, 387
 			DUP
 			FIRST
 			PUSH S17
@@ -1154,7 +1152,7 @@ PUSHCONT {
 			POP S17
 		}
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 388
+			.loc ../contracts/DePool.tsol, 389
 			PUSH S16
 			INDEX 10
 			PUSH S17
@@ -1180,10 +1178,10 @@ PUSHCONT {
 			SETINDEX 0
 		}
 		IFELSE
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 395
+	.loc ../contracts/DePool.tsol, 396
 	DUP
 	FIRST
 	PUSH S17
@@ -1196,9 +1194,9 @@ PUSHCONT {
 	PUSHINT 19
 	SETINDEXVAR
 	POP S17
-	.loc ../contracts/DePool.sol, 396
+	.loc ../contracts/DePool.tsol, 397
 	PUSHINT 0
-	.loc ../contracts/DePool.sol, 398
+	.loc ../contracts/DePool.tsol, 399
 	XCPU S1, S13
 	PUSH S18
 	INDEX 7
@@ -1215,16 +1213,16 @@ PUSHCONT {
 	XCHG S2
 	POP S4
 	POP S2
-	.loc ../contracts/DePool.sol, 403
+	.loc ../contracts/DePool.tsol, 404
 	XCPU S1, S4
 	ADD
 	UFITS 64
 	POP S4
-	.loc ../contracts/DePool.sol, 404
+	.loc ../contracts/DePool.tsol, 405
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 405
+		.loc ../contracts/DePool.tsol, 406
 		PUSH3 S0, S1, S1
 		ISNULL
 		THROWIF 63
@@ -1239,26 +1237,26 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP
 }
 IFNOT
-.loc ../contracts/DePool.sol, 410
+.loc ../contracts/DePool.tsol, 411
 PUSHINT 1
-.loc ../contracts/DePool.sol, 411
+.loc ../contracts/DePool.tsol, 412
 PUSH S5
 INDEX 5
 PUSH S4
 MIN
-.loc ../contracts/DePool.sol, 412
+.loc ../contracts/DePool.tsol, 413
 DUP2
 ADD
 UFITS 64
 POP S2
-.loc ../contracts/DePool.sol, 413
+.loc ../contracts/DePool.tsol, 414
 PUSH3 S0, S6, S6
 INDEX 5
 ROT
@@ -1266,30 +1264,30 @@ SUB
 UFITS 64
 SETINDEX 5
 POP S7
-.loc ../contracts/DePool.sol, 414
+.loc ../contracts/DePool.tsol, 415
 PUSH2 S4, S0
 SUB
 UFITS 64
 POP S5
-.loc ../contracts/DePool.sol, 415
+.loc ../contracts/DePool.tsol, 416
 PUSH S4
 GETGLOB 17
 LESS
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 416
+	.loc ../contracts/DePool.tsol, 417
 	PUSH2 S1, S4
 	ADD
 	UFITS 64
 	POP S2
-	.loc ../contracts/DePool.sol, 417
+	.loc ../contracts/DePool.tsol, 418
 	PUSHINT 0
 	POP S5
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 420
+.loc ../contracts/DePool.tsol, 421
 PUSHINT 10000000
-.loc ../contracts/DePool.sol, 421
+.loc ../contracts/DePool.tsol, 422
 PUSH2 S2, S0
 LESS
 PUSH2 S6, S1
@@ -1299,57 +1297,57 @@ NOT
 AND
 AND
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 422
+	.loc ../contracts/DePool.tsol, 423
 	PUSH2 S5, S0
 	SUB
 	UFITS 64
 	POP S6
-	.loc ../contracts/DePool.sol, 423
+	.loc ../contracts/DePool.tsol, 424
 	PUSH2 S2, S0
 	ADD
 	UFITS 64
 	POP S3
-	.loc ../contracts/DePool.sol, 426
+	.loc ../contracts/DePool.tsol, 427
 	PUSH2 S4, S0
 	GREATER
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 427
+		.loc ../contracts/DePool.tsol, 428
 		PUSH2 S4, S0
 		SUB
 		UFITS 64
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 429
+		.loc ../contracts/DePool.tsol, 430
 		PUSHINT 0
 	}
 	IFELSE
 	POP S5
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 433
+.loc ../contracts/DePool.tsol, 434
 PUSH S15
 THIRD
-.loc ../contracts/DePool.sol, 434
+.loc ../contracts/DePool.tsol, 435
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 435
+	.loc ../contracts/DePool.tsol, 436
 	BLKPUSH 2, 0
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 436
+	.loc ../contracts/DePool.tsol, 437
 	PUSH S11
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 437
+		.loc ../contracts/DePool.tsol, 438
 		PUSH S16
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 438
+			.loc ../contracts/DePool.tsol, 439
 			DUP
 			FIRST
 			PUSH S9
 			MIN
-			.loc ../contracts/DePool.sol, 439
+			.loc ../contracts/DePool.tsol, 440
 			PUSH3 S0, S1, S1
 			FIRST
 			ROT
@@ -1357,12 +1355,12 @@ PUSHCONT {
 			UFITS 64
 			SETINDEX 0
 			POP S2
-			.loc ../contracts/DePool.sol, 440
+			.loc ../contracts/DePool.tsol, 441
 			PUSH S9
 			SUBR
 			UFITS 64
 			POP S9
-			.loc ../contracts/DePool.sol, 441
+			.loc ../contracts/DePool.tsol, 442
 			DUP
 			FIRST
 			PUSH S21
@@ -1377,7 +1375,7 @@ PUSHCONT {
 			POP S21
 		}
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 443
+			.loc ../contracts/DePool.tsol, 444
 			PUSH S20
 			INDEX 10
 			PUSH S21
@@ -1403,10 +1401,10 @@ PUSHCONT {
 			SETINDEX 0
 		}
 		IFELSE
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 450
+	.loc ../contracts/DePool.tsol, 451
 	DUP
 	FIRST
 	PUSH S21
@@ -1419,9 +1417,9 @@ PUSHCONT {
 	PUSHINT 19
 	SETINDEXVAR
 	POP S21
-	.loc ../contracts/DePool.sol, 451
+	.loc ../contracts/DePool.tsol, 452
 	PUSHINT 0
-	.loc ../contracts/DePool.sol, 453
+	.loc ../contracts/DePool.tsol, 454
 	OVER
 	FALSE
 	DUP
@@ -1431,12 +1429,12 @@ PUSHCONT {
 	XCHG S2
 	POP S5
 	POP S2
-	.loc ../contracts/DePool.sol, 454
+	.loc ../contracts/DePool.tsol, 455
 	DUP2
 	ADD
 	UFITS 64
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 455
+		.loc ../contracts/DePool.tsol, 456
 		DUP2
 		ADD
 		UFITS 64
@@ -1452,26 +1450,26 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	BLKDROP 3
 }
 IFNOT
-.loc ../contracts/DePool.sol, 459
+.loc ../contracts/DePool.tsol, 460
 GETGLOB 16
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 460
+	.loc ../contracts/DePool.tsol, 461
 	PUSH2 S3, S6
 	ADD
 	UFITS 64
 	POP S4
-	.loc ../contracts/DePool.sol, 461
+	.loc ../contracts/DePool.tsol, 462
 	PUSH S4
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 462
+		.loc ../contracts/DePool.tsol, 463
 		PUSH2 S4, S4
 		ISNULL
 		THROWIF 63
@@ -1490,24 +1488,24 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 463
+		.loc ../contracts/DePool.tsol, 464
 		NULL
 		POP S5
-		.loc ../contracts/DePool.sol, 464
+		.loc ../contracts/DePool.tsol, 465
 		PUSH2 S8, S8
 		THIRD
 		DEC
 		UFITS 8
 		SETINDEX 2
 		POP S9
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 466
+	.loc ../contracts/DePool.tsol, 467
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 467
+		.loc ../contracts/DePool.tsol, 468
 		BLKPUSH 2, 0
 		ISNULL
 		THROWIF 63
@@ -1526,21 +1524,21 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 468
+		.loc ../contracts/DePool.tsol, 469
 		NULL
-		.loc ../contracts/DePool.sol, 469
+		.loc ../contracts/DePool.tsol, 470
 		PUSH2 S8, S8
 		INDEX 3
 		DEC
 		UFITS 8
 		SETINDEX 3
 		POP S9
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 472
+	.loc ../contracts/DePool.tsol, 473
 	PUSH S4
 	ISNULL
 	NOT
@@ -1555,20 +1553,20 @@ PUSHCONT {
 	}
 	IF
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 473
+		.loc ../contracts/DePool.tsol, 474
 		NULL
 		POP S5
-		.loc ../contracts/DePool.sol, 474
+		.loc ../contracts/DePool.tsol, 475
 		PUSH2 S8, S8
 		THIRD
 		DEC
 		UFITS 8
 		SETINDEX 2
 		POP S9
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 476
+	.loc ../contracts/DePool.tsol, 477
 	DUP
 	ISNULL
 	NOT
@@ -1583,41 +1581,41 @@ PUSHCONT {
 	}
 	IF
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 477
+		.loc ../contracts/DePool.tsol, 478
 		DROP
 		NULL
-		.loc ../contracts/DePool.sol, 478
+		.loc ../contracts/DePool.tsol, 479
 		PUSH2 S8, S8
 		INDEX 3
 		DEC
 		UFITS 8
 		SETINDEX 3
 		POP S9
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 481
+	.loc ../contracts/DePool.tsol, 482
 	PUSH S8
 	INDEX 4
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 482
+		.loc ../contracts/DePool.tsol, 483
 		PUSH2 S3, S6
 		ADD
 		UFITS 64
 		POP S4
-		.loc ../contracts/DePool.sol, 483
+		.loc ../contracts/DePool.tsol, 484
 		PUSHINT 0
 		POP S7
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 485
+	.loc ../contracts/DePool.tsol, 486
 	PUSH S18
 	PUSH S9
 	PUSH S19
 	PUSH3 S9, S7, S3
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 213
+		.loc ../contracts/DePoolRounds.tsol, 213
 		PUSH S2
 		EQINT 0
 		PUSH S2
@@ -1627,12 +1625,12 @@ PUSHCONT {
 		AND
 		AND
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 214
+			.loc ../contracts/DePoolRounds.tsol, 214
 			BLKDROP 4
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFJMP
-		.loc ../contracts/DePoolRounds.sol, 217
+		.loc ../contracts/DePoolRounds.tsol, 217
 		PUSH2 S3, S5
 		PUSHINT 16
 		INDEXVAR
@@ -1641,24 +1639,24 @@ PUSHCONT {
 		NULLSWAPIFNOT
 		NIP
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 218
+			.loc ../contracts/DePoolRounds.tsol, 218
 			PUSH2 S5, S5
 			INDEX 15
 			INC
 			UFITS 32
 			SETINDEX 15
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 219
+			.loc ../contracts/DePoolRounds.tsol, 219
 			PUSH2 S4, S4
 			FIRST
 			INC
 			UFITS 8
 			SETINDEX 0
 			POP S5
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 222
+		.loc ../contracts/DePoolRounds.tsol, 222
 		PUSH3 S2, S5, S5
 		INDEX 8
 		ROT
@@ -1666,7 +1664,7 @@ PUSHCONT {
 		UFITS 64
 		SETINDEX 8
 		POP S6
-		.loc ../contracts/DePoolRounds.sol, 223
+		.loc ../contracts/DePoolRounds.tsol, 223
 		PUSH2 S3, S5
 		PUSHINT 16
 		INDEXVAR
@@ -1715,7 +1713,7 @@ IFREFELSEREF
 			DUP
 			TRIPLE
 }
-		.loc ../contracts/DePoolRounds.sol, 224
+		.loc ../contracts/DePoolRounds.tsol, 224
 		ROLL 3
 		XCPU S1, S0
 		FIRST
@@ -1723,11 +1721,11 @@ IFREFELSEREF
 		ADD
 		UFITS 64
 		SETINDEX 0
-		.loc ../contracts/DePoolRounds.sol, 226
+		.loc ../contracts/DePoolRounds.tsol, 226
 		PUSH S2
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 227
+			.loc ../contracts/DePoolRounds.tsol, 227
 			PUSH2 S2, S2
 			ISNULL
 			THROWIF 63
@@ -1739,17 +1737,17 @@ IFREFELSEREF
 			UFITS 64
 			SETINDEX 8
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 228
+			.loc ../contracts/DePoolRounds.tsol, 228
 			PUSH S2
 			SETINDEX 1
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 231
+		.loc ../contracts/DePoolRounds.tsol, 231
 		OVER
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 232
+			.loc ../contracts/DePoolRounds.tsol, 232
 			PUSH2 S1, S1
 			ISNULL
 			THROWIF 63
@@ -1761,13 +1759,13 @@ IFREFELSEREF
 			UFITS 64
 			SETINDEX 8
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 233
+			.loc ../contracts/DePoolRounds.tsol, 233
 			OVER
 			SETINDEX 2
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 236
+		.loc ../contracts/DePoolRounds.tsol, 236
 		PUSH2 S5, S5
 		PUSHINT 16
 		INDEXVAR
@@ -1827,23 +1825,23 @@ IFREFELSEREF
 		PUSHINT 16
 		SETINDEXVAR
 		POP S4
-		.loc ../contracts/DePoolRounds.sol, 237
+		.loc ../contracts/DePoolRounds.tsol, 237
 		DROP2
-		.loc ../contracts/DePoolRounds.sol, 203
+		.loc ../contracts/DePoolRounds.tsol, 203
 	}
 	CALLX
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 	POP S10
 	POP S19
 }
 IFELSE
-.loc ../contracts/DePool.sol, 488
+.loc ../contracts/DePool.tsol, 489
 BLKDROP 3
 PUSH2 S14, S5
 CALLREF {
 	CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 }
-.loc ../contracts/DePool.sol, 489
+.loc ../contracts/DePool.tsol, 490
 PUSH S16
 INDEX 7
 ROLL 6
@@ -1906,44 +1904,44 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 499
+.loc ../contracts/DePool.tsol, 500
 BLKDROP 10
 SWAP
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	_returnOrReinvest_00bdd5b7_internal
 .type	_returnOrReinvest_00bdd5b7_internal, @function
 CALL $_returnOrReinvest_00bdd5b7_internal_macro$
 
 .macro _returnOrReinvest_00bdd5b7_internal_macro
-.loc ../contracts/DePoolRounds.sol, 174
+.loc ../contracts/DePoolRounds.tsol, 174
 GETGLOB 14
 ADDCONST -2
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 175
+.loc ../contracts/DePoolRounds.tsol, 175
 GETGLOB 14
 ADDCONST -3
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 INDEX 4
-.loc ../contracts/DePool.sol, 510
+.loc ../contracts/DePool.tsol, 511
 PUSHINT 0
-.loc ../contracts/DePool.sol, 511
+.loc ../contracts/DePool.tsol, 512
 PUSH S4
 INDEX 11
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 512
+	.loc ../contracts/DePool.tsol, 513
 	PUSH S4
 	TRUE
 	SETINDEX 11
 	POP S5
-	.loc ../contracts/DePool.sol, 513
+	.loc ../contracts/DePool.tsol, 514
 	GETGLOB 10
 	PUSH S5
 	PUSHINT 16
@@ -1987,18 +1985,18 @@ PUSHCONT {
 		ENDS
 		TRIPLE
 	}
-	.loc ../contracts/DePool.sol, 514
+	.loc ../contracts/DePool.tsol, 515
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 515
+		.loc ../contracts/DePool.tsol, 516
 		BLKPUSH 2, 0
 		ISNULL
 		THROWIF 63
-		.loc ../contracts/DePool.sol, 516
+		.loc ../contracts/DePool.tsol, 517
 		PUSHINT 1
 		POP S3
-		.loc ../contracts/DePool.sol, 517
+		.loc ../contracts/DePool.tsol, 518
 		PUSH2 S6, S6
 		PUSHINT 16
 		INDEXVAR
@@ -2010,7 +2008,7 @@ PUSHCONT {
 		PUSHINT 16
 		SETINDEXVAR
 		POP S7
-		.loc ../contracts/DePool.sol, 518
+		.loc ../contracts/DePool.tsol, 519
 		PUSH2 S6, S4
 		GETGLOB 10
 		ROLL 3
@@ -2021,14 +2019,14 @@ PUSHCONT {
 		}
 		POP S7
 		POP S4
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP
 }
 IFNOT
-.loc ../contracts/DePool.sol, 522
+.loc ../contracts/DePool.tsol, 523
 PUSHCONT {
 	PUSH2 S0, S3
 	LESS
@@ -2040,7 +2038,7 @@ PUSHCONT {
 	AND
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 523
+	.loc ../contracts/DePool.tsol, 524
 	PUSH2 S4, S4
 	PUSHINT 16
 	INDEXVAR
@@ -2093,7 +2091,7 @@ PUSHCONT {
 	ISNULL
 	THROWIF 63
 	UNPAIR
-	.loc ../contracts/DePool.sol, 524
+	.loc ../contracts/DePool.tsol, 525
 	PUSH2 S6, S4
 	SWAP2
 	FALSE
@@ -2103,13 +2101,13 @@ PUSHCONT {
 	}
 	POP S6
 	POP S3
-	.loc ../contracts/DePool.sol, 522
+	.loc ../contracts/DePool.tsol, 523
 	INC
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 WHILE
 DROP2
-.loc ../contracts/DePoolRounds.sol, 179
+.loc ../contracts/DePoolRounds.tsol, 179
 GETGLOB 14
 ADDCONST -2
 UFITS 64
@@ -2117,17 +2115,17 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 528
+.loc ../contracts/DePool.tsol, 529
 DROP
 DUP
 PUSHINT 16
 INDEXVAR
 DICTEMPTY
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 529
+	.loc ../contracts/DePool.tsol, 530
 	PUSHINT 9
 	SETINDEX 6
-	.loc ../contracts/DePool.sol, 530
+	.loc ../contracts/DePool.tsol, 531
 	MYADDR
 	FALSE
 	NEWC
@@ -2138,12 +2136,12 @@ PUSHCONT {
 	PUSHINT 12669519700468838679097577345632051794083288071575587
 	STUR 175
 	ENDC
-	PUSHINT 0
+	PUSHINT 1
 	SENDRAWMSG
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro addOrdinaryStake
 DROP
@@ -2154,10 +2152,10 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 542
+.loc ../contracts/DePool.tsol, 543
 LDU 64
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $addOrdinaryStake_52cda513_internal_macro$
 }
@@ -2172,29 +2170,29 @@ THROW 0
 CALL $addOrdinaryStake_52cda513_internal_macro$
 
 .macro addOrdinaryStake_52cda513_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 210
+.loc ../contracts/DePool.tsol, 211
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 543
+	.loc ../contracts/DePool.tsol, 544
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 544
+		.loc ../contracts/DePool.tsol, 545
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 547
+	.loc ../contracts/DePool.tsol, 548
 	GETGLOB 9
 	GETGLOB 22
 	PUSHINT 267
@@ -2202,76 +2200,76 @@ PUSHCONT {
 	NULLSWAPIFNOT
 	NIP
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 548
+		.loc ../contracts/DePool.tsol, 549
 		PUSHINT 28
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOTJMP
-	.loc ../contracts/DePool.sol, 551
+	.loc ../contracts/DePool.tsol, 552
 	DEPTH
 	ADDCONST -2
 	PICK
 	UFITS 64
-	.loc ../contracts/DePool.sol, 552
+	.loc ../contracts/DePool.tsol, 553
 	PUSH2 S0, S1
 	PUSHINT 500000000
 	ADD
 	LESS
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 553
+		.loc ../contracts/DePool.tsol, 554
 		PUSHINT 21
 		PUSHINT 500000000
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 555
+	.loc ../contracts/DePool.tsol, 556
 	PUSH2 S0, S1
 	SUB
 	UFITS 64
-	.loc ../contracts/DePool.sol, 556
+	.loc ../contracts/DePool.tsol, 557
 	PUSH S2
 	GETGLOB 17
 	LESS
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 557
+		.loc ../contracts/DePool.tsol, 558
 		PUSHINT 1
 		GETGLOB 17
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 560
+	.loc ../contracts/DePool.tsol, 561
 	GETGLOB 9
 	CALLREF {
 		CALL $getOrCreateParticipant_870b9686_internal_macro$
 	}
-	.loc ../contracts/DePoolRounds.sol, 174
+	.loc ../contracts/DePoolRounds.tsol, 174
 	GETGLOB 14
 	ADDCONST -2
 	UFITS 64
 	CALLREF {
 		CALL $roundAt_efe99a24_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 562
+	.loc ../contracts/DePool.tsol, 563
 	NULL
-	.loc ../contracts/DePool.sol, 563
+	.loc ../contracts/DePool.tsol, 564
 	PUSH2 S1, S2
 	GETGLOB 9
 	PUSH3 S8, S3, S3
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 213
+		.loc ../contracts/DePoolRounds.tsol, 213
 		PUSH S2
 		EQINT 0
 		PUSH S2
@@ -2281,12 +2279,12 @@ PUSHCONT {
 		AND
 		AND
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 214
+			.loc ../contracts/DePoolRounds.tsol, 214
 			BLKDROP 4
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFJMP
-		.loc ../contracts/DePoolRounds.sol, 217
+		.loc ../contracts/DePoolRounds.tsol, 217
 		PUSH2 S3, S5
 		PUSHINT 16
 		INDEXVAR
@@ -2295,24 +2293,24 @@ PUSHCONT {
 		NULLSWAPIFNOT
 		NIP
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 218
+			.loc ../contracts/DePoolRounds.tsol, 218
 			PUSH2 S5, S5
 			INDEX 15
 			INC
 			UFITS 32
 			SETINDEX 15
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 219
+			.loc ../contracts/DePoolRounds.tsol, 219
 			PUSH2 S4, S4
 			FIRST
 			INC
 			UFITS 8
 			SETINDEX 0
 			POP S5
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 222
+		.loc ../contracts/DePoolRounds.tsol, 222
 		PUSH3 S2, S5, S5
 		INDEX 8
 		ROT
@@ -2320,7 +2318,7 @@ PUSHCONT {
 		UFITS 64
 		SETINDEX 8
 		POP S6
-		.loc ../contracts/DePoolRounds.sol, 223
+		.loc ../contracts/DePoolRounds.tsol, 223
 		PUSH2 S3, S5
 		PUSHINT 16
 		INDEXVAR
@@ -2369,7 +2367,7 @@ IFREFELSEREF
 			DUP
 			TRIPLE
 }
-		.loc ../contracts/DePoolRounds.sol, 224
+		.loc ../contracts/DePoolRounds.tsol, 224
 		ROLL 3
 		XCPU S1, S0
 		FIRST
@@ -2377,11 +2375,11 @@ IFREFELSEREF
 		ADD
 		UFITS 64
 		SETINDEX 0
-		.loc ../contracts/DePoolRounds.sol, 226
+		.loc ../contracts/DePoolRounds.tsol, 226
 		PUSH S2
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 227
+			.loc ../contracts/DePoolRounds.tsol, 227
 			PUSH2 S2, S2
 			ISNULL
 			THROWIF 63
@@ -2393,17 +2391,17 @@ IFREFELSEREF
 			UFITS 64
 			SETINDEX 8
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 228
+			.loc ../contracts/DePoolRounds.tsol, 228
 			PUSH S2
 			SETINDEX 1
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 231
+		.loc ../contracts/DePoolRounds.tsol, 231
 		OVER
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 232
+			.loc ../contracts/DePoolRounds.tsol, 232
 			PUSH2 S1, S1
 			ISNULL
 			THROWIF 63
@@ -2415,13 +2413,13 @@ IFREFELSEREF
 			UFITS 64
 			SETINDEX 8
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 233
+			.loc ../contracts/DePoolRounds.tsol, 233
 			OVER
 			SETINDEX 2
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 236
+		.loc ../contracts/DePoolRounds.tsol, 236
 		PUSH2 S5, S5
 		PUSHINT 16
 		INDEXVAR
@@ -2481,15 +2479,15 @@ IFREFELSEREF
 		PUSHINT 16
 		SETINDEXVAR
 		POP S4
-		.loc ../contracts/DePoolRounds.sol, 237
+		.loc ../contracts/DePoolRounds.tsol, 237
 		DROP2
-		.loc ../contracts/DePoolRounds.sol, 203
+		.loc ../contracts/DePoolRounds.tsol, 203
 	}
 	CALLX
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 	POP S4
 	BLKDROP2 2, 1
-	.loc ../contracts/DePoolRounds.sol, 179
+	.loc ../contracts/DePoolRounds.tsol, 179
 	GETGLOB 14
 	ADDCONST -2
 	UFITS 64
@@ -2497,22 +2495,22 @@ IFREFELSEREF
 	CALLREF {
 		CALL $setRound_35d1b2f6_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 565
+	.loc ../contracts/DePool.tsol, 566
 	GETGLOB 9
 	SWAP
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 567
+	.loc ../contracts/DePool.tsol, 568
 	CALLREF {
 		CALL $sendAcceptAndReturnChange128_97c1eb12_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP2
-	.loc ../contracts/DePool.sol, 542
+	.loc ../contracts/DePool.tsol, 543
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro withdrawFromPoolingRound
 DROP
@@ -2523,10 +2521,10 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 572
+.loc ../contracts/DePool.tsol, 573
 LDU 64
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $withdrawFromPoolingRound_829c0f38_internal_macro$
 }
@@ -2541,67 +2539,67 @@ THROW 0
 CALL $withdrawFromPoolingRound_829c0f38_internal_macro$
 
 .macro withdrawFromPoolingRound_829c0f38_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 210
+.loc ../contracts/DePool.tsol, 211
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 573
+	.loc ../contracts/DePool.tsol, 574
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 574
+		.loc ../contracts/DePool.tsol, 575
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 577
+	.loc ../contracts/DePool.tsol, 578
 	GETGLOB 9
 	CALLREF {
 		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 578
+	.loc ../contracts/DePool.tsol, 579
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 579
+		.loc ../contracts/DePool.tsol, 580
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 581
+	.loc ../contracts/DePool.tsol, 582
 	BLKPUSH 2, 0
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 583
+	.loc ../contracts/DePool.tsol, 584
 	PUSHINT 0
-	.loc ../contracts/DePool.sol, 584
+	.loc ../contracts/DePool.tsol, 585
 	OVER
 	GETGLOB 9
 	PUSH S5
 	GETGLOB 17
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 174
+		.loc ../contracts/DePoolRounds.tsol, 174
 		GETGLOB 14
 		ADDCONST -2
 		UFITS 64
 		CALLREF {
 			CALL $roundAt_efe99a24_internal_macro$
 		}
-		.loc ../contracts/DePoolRounds.sol, 313
+		.loc ../contracts/DePoolRounds.tsol, 313
 		PUSH2 S3, S0
 		PUSHINT 16
 		INDEXVAR
@@ -2644,27 +2642,27 @@ PUSHCONT {
 			ENDS
 			TRIPLE
 		}
-		.loc ../contracts/DePoolRounds.sol, 314
+		.loc ../contracts/DePoolRounds.tsol, 314
 		DUP
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 315
+			.loc ../contracts/DePoolRounds.tsol, 315
 			PUSHINT 0
 			ROLL 6
 			BLKDROP2 5, 2
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFJMP
-		.loc ../contracts/DePoolRounds.sol, 317
+		.loc ../contracts/DePoolRounds.tsol, 317
 		DUP
 		ISNULL
 		THROWIF 63
-		.loc ../contracts/DePoolRounds.sol, 318
+		.loc ../contracts/DePoolRounds.tsol, 318
 		PUSH2 S3, S0
 		FIRST
 		MIN
 		POP S4
-		.loc ../contracts/DePoolRounds.sol, 319
+		.loc ../contracts/DePoolRounds.tsol, 319
 		PUXC S3, S-1
 		DUP
 		FIRST
@@ -2672,7 +2670,7 @@ PUSHCONT {
 		SUB
 		UFITS 64
 		SETINDEX 0
-		.loc ../contracts/DePoolRounds.sol, 320
+		.loc ../contracts/DePoolRounds.tsol, 320
 		PUSH3 S3, S1, S1
 		INDEX 8
 		ROT
@@ -2680,13 +2678,13 @@ PUSHCONT {
 		UFITS 64
 		SETINDEX 8
 		POP S2
-		.loc ../contracts/DePoolRounds.sol, 321
+		.loc ../contracts/DePoolRounds.tsol, 321
 		DUP
 		FIRST
 		ROLL 3
 		LESS
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 322
+			.loc ../contracts/DePoolRounds.tsol, 322
 			DUP
 			FIRST
 			PUSH2 S2, S2
@@ -2696,27 +2694,27 @@ PUSHCONT {
 			UFITS 64
 			SETINDEX 8
 			POP S2
-			.loc ../contracts/DePoolRounds.sol, 323
+			.loc ../contracts/DePoolRounds.tsol, 323
 			DUP
 			FIRST
 			PUSH S3
 			ADD
 			UFITS 64
 			POP S3
-			.loc ../contracts/DePoolRounds.sol, 324
+			.loc ../contracts/DePoolRounds.tsol, 324
 			PUSHINT 0
 			SETINDEX 0
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IF
-		.loc ../contracts/DePoolRounds.sol, 327
+		.loc ../contracts/DePoolRounds.tsol, 327
 		BLKPUSH 2, 0
-		.loc ../contracts/DePoolRounds.sol, 340
+		.loc ../contracts/DePoolRounds.tsol, 340
 		SECOND
-		.loc ../contracts/DePoolRounds.sol, 341
+		.loc ../contracts/DePoolRounds.tsol, 341
 		OVER
 		THIRD
-		.loc ../contracts/DePoolRounds.sol, 343
+		.loc ../contracts/DePoolRounds.tsol, 343
 		ROT
 		FIRST
 		PUSH S2
@@ -2744,9 +2742,9 @@ PUSHCONT {
 		ADD
 		UFITS 64
 		BLKDROP2 2, 1
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 332
+			.loc ../contracts/DePoolRounds.tsol, 332
 			PUSH3 S0, S1, S1
 			PUSHINT 16
 			INDEXVAR
@@ -2807,14 +2805,14 @@ PUSHCONT {
 			POP S2
 		}
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 328
+			.loc ../contracts/DePoolRounds.tsol, 328
 			PUSH2 S1, S1
 			INDEX 15
 			DEC
 			UFITS 32
 			SETINDEX 15
 			POP S2
-			.loc ../contracts/DePoolRounds.sol, 329
+			.loc ../contracts/DePoolRounds.tsol, 329
 			PUSH2 S1, S1
 			PUSHINT 16
 			INDEXVAR
@@ -2825,7 +2823,7 @@ PUSHCONT {
 			PUSHINT 16
 			SETINDEXVAR
 			POP S2
-			.loc ../contracts/DePoolRounds.sol, 330
+			.loc ../contracts/DePoolRounds.tsol, 330
 			PUSH2 S4, S4
 			FIRST
 			DEC
@@ -2834,9 +2832,9 @@ PUSHCONT {
 			POP S5
 		}
 		IFELSE
-		.loc ../contracts/DePoolRounds.sol, 334
+		.loc ../contracts/DePoolRounds.tsol, 334
 		DROP
-		.loc ../contracts/DePoolRounds.sol, 179
+		.loc ../contracts/DePoolRounds.tsol, 179
 		GETGLOB 14
 		ADDCONST -2
 		UFITS 64
@@ -2844,35 +2842,35 @@ PUSHCONT {
 		CALLREF {
 			CALL $setRound_35d1b2f6_internal_macro$
 		}
-		.loc ../contracts/DePoolRounds.sol, 335
+		.loc ../contracts/DePoolRounds.tsol, 335
 		ROT
 		BLKDROP2 1, 2
-		.loc ../contracts/DePoolRounds.sol, 304
+		.loc ../contracts/DePoolRounds.tsol, 304
 	}
 	CALLX
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 	POP S3
 	NIP
-	.loc ../contracts/DePool.sol, 585
+	.loc ../contracts/DePool.tsol, 586
 	GETGLOB 9
 	ROT
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 586
+	.loc ../contracts/DePool.tsol, 587
 	DUP
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 587
+		.loc ../contracts/DePool.tsol, 588
 		PUSHINT 27
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOTJMP
-	.loc ../contracts/DePool.sol, 589
+	.loc ../contracts/DePool.tsol, 590
 	GETGLOB 9
 	NEWC
 	STSLICECONST x42_
@@ -2884,12 +2882,12 @@ PUSHCONT {
 	ENDC
 	PUSHINT 64
 	SENDRAWMSG
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP2
-	.loc ../contracts/DePool.sol, 572
+	.loc ../contracts/DePool.tsol, 573
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro addVestingStake
 DROP
@@ -2900,7 +2898,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 596
+.loc ../contracts/DePool.tsol, 597
 OVER
 PUSHCONT {
 	LDU 64
@@ -2916,7 +2914,7 @@ LDMSGADDR
 LDU 32
 LDU 32
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $addVestingStake_91fa1856_internal_macro$
 }
@@ -2931,19 +2929,19 @@ THROW 0
 CALL $addVestingStake_91fa1856_internal_macro$
 
 .macro addVestingStake_91fa1856_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 600
+.loc ../contracts/DePool.tsol, 601
 TRUE
 CALLREF {
 	CALL $addVestingOrLock_13bfad9f_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro addLockStake
 DROP
@@ -2954,7 +2952,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 603
+.loc ../contracts/DePool.tsol, 604
 OVER
 PUSHCONT {
 	LDU 64
@@ -2970,7 +2968,7 @@ LDMSGADDR
 LDU 32
 LDU 32
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $addLockStake_391cb0af_internal_macro$
 }
@@ -2985,39 +2983,39 @@ THROW 0
 CALL $addLockStake_391cb0af_internal_macro$
 
 .macro addLockStake_391cb0af_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 607
+.loc ../contracts/DePool.tsol, 608
 FALSE
 CALLREF {
 	CALL $addVestingOrLock_13bfad9f_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	addVestingOrLock_13bfad9f_internal
 .type	addVestingOrLock_13bfad9f_internal, @function
 CALL $addVestingOrLock_13bfad9f_internal_macro$
 
 .macro addVestingOrLock_13bfad9f_internal_macro
-.loc ../contracts/DePool.sol, 619
+.loc ../contracts/DePool.tsol, 620
 GETGLOB 16
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 620
+	.loc ../contracts/DePool.tsol, 621
 	PUSHINT 3
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 5
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 623
+.loc ../contracts/DePool.tsol, 624
 PUSH S3
 PARSEMSGADDR
 DUP
@@ -3041,30 +3039,30 @@ PUSHCONT {
 	BLKDROP 5
 }
 IFNOTJMP
-.loc ../contracts/DePool.sol, 626
+.loc ../contracts/DePool.tsol, 627
 PUSH S3
 CALLREF {
 	CALL $fetchParticipant_738c2c87_internal_macro$
 }
-.loc ../contracts/DePool.sol, 627
+.loc ../contracts/DePool.tsol, 628
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 628
+	.loc ../contracts/DePool.tsol, 629
 	PUSHINT 6
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 6
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 630
+.loc ../contracts/DePool.tsol, 631
 BLKPUSH 2, 0
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 632
+.loc ../contracts/DePool.tsol, 633
 PUSH S2
 PUSHCONT {
 	DUP
@@ -3075,7 +3073,7 @@ PUSHCONT {
 	INDEX 7
 }
 IFELSE
-.loc ../contracts/DePool.sol, 633
+.loc ../contracts/DePool.tsol, 634
 GETGLOB 9
 OVER
 SDEQ
@@ -3088,40 +3086,40 @@ PUSHCONT {
 	BLKDROP 8
 }
 IFNOTJMP
-.loc ../contracts/DePool.sol, 636
+.loc ../contracts/DePool.tsol, 637
 DEPTH
 ADDCONST -2
 PICK
 UFITS 64
-.loc ../contracts/DePool.sol, 637
+.loc ../contracts/DePool.tsol, 638
 PUSH2 S0, S8
 PUSHINT 500000000
 ADD
 LESS
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 638
+	.loc ../contracts/DePool.tsol, 639
 	PUSHINT 21
 	PUSHINT 500000000
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 9
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 640
+.loc ../contracts/DePool.tsol, 641
 PUSH2 S0, S8
 SUB
 UFITS 64
-.loc ../contracts/DePool.sol, 642
+.loc ../contracts/DePool.tsol, 643
 PUSH S9
 RSHIFT 1
-.loc ../contracts/DePool.sol, 643
+.loc ../contracts/DePool.tsol, 644
 DUP
 GETGLOB 17
 LESS
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 644
+	.loc ../contracts/DePool.tsol, 645
 	PUSHINT 1
 	PUSHINT 2
 	GETGLOB 17
@@ -3131,75 +3129,75 @@ PUSHCONT {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 647
+.loc ../contracts/DePool.tsol, 648
 BLKPUSH 2, 8
 GREATER
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 648
+	.loc ../contracts/DePool.tsol, 649
 	PUSHINT 10
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 651
+.loc ../contracts/DePool.tsol, 652
 PUSH S7
 PUSHINT 567648000
 GEQ
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 652
+	.loc ../contracts/DePool.tsol, 653
 	PUSHINT 11
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 655
+.loc ../contracts/DePool.tsol, 656
 PUSH S8
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 656
+	.loc ../contracts/DePool.tsol, 657
 	PUSHINT 12
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFNOTJMP
-.loc ../contracts/DePool.sol, 659
+.loc ../contracts/DePool.tsol, 660
 PUSH2 S7, S8
 MOD
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 660
+	.loc ../contracts/DePool.tsol, 661
 	PUSHINT 13
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 11
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 663
+.loc ../contracts/DePool.tsol, 664
 FALSE ; decl return flag
 PUSH S7
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 664
+	.loc ../contracts/DePool.tsol, 665
 	PUSH S5
 	THIRD
 	GTINT 0
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 665
+		.loc ../contracts/DePool.tsol, 666
 		PUSHINT 9
 		PUSHINT 0
 		CALLREF {
@@ -3207,23 +3205,23 @@ PUSHCONT {
 		}
 		BLKDROP 12
 		PUSHINT 4
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 667
+	.loc ../contracts/DePool.tsol, 668
 	PUSH S5
 	PUSHINT 2
 	SETINDEX 2
 	POP S6
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 669
+	.loc ../contracts/DePool.tsol, 670
 	PUSH S5
 	INDEX 3
 	GTINT 0
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 670
+		.loc ../contracts/DePool.tsol, 671
 		PUSHINT 17
 		PUSHINT 0
 		CALLREF {
@@ -3231,33 +3229,33 @@ PUSHCONT {
 		}
 		BLKDROP 12
 		PUSHINT 4
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 672
+	.loc ../contracts/DePool.tsol, 673
 	PUSH S5
 	PUSHINT 2
 	SETINDEX 3
 	POP S6
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFELSE
 IFRET
-.loc ../contracts/DePool.sol, 675
+.loc ../contracts/DePool.tsol, 676
 PUSH3 S0, S8, S7
 MULDIV
 UFITS 64
-.loc ../contracts/DePool.sol, 677
+.loc ../contracts/DePool.tsol, 678
 PUSHINT 0
 PUSHCONT {
 	DUP
 	LESSINT 2
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 678
+	.loc ../contracts/DePool.tsol, 679
 	DUP
 	EQINT 0
-	.loc ../contracts/DePool.sol, 679
+	.loc ../contracts/DePool.tsol, 680
 	DUP
 	PUSHCONT {
 		PUSH S3
@@ -3272,51 +3270,51 @@ PUSHCONT {
 	PUSH2 S13, S4
 	GETGLOB 9
 	TUPLE 5
-	.loc ../contracts/DePool.sol, 687
+	.loc ../contracts/DePool.tsol, 688
 	NULL
 	PUSH2 S0, S11
-	.loc ../contracts/DePool.sol, 689
+	.loc ../contracts/DePool.tsol, 690
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 690
+		.loc ../contracts/DePool.tsol, 691
 		PUSH S2
 		POP S2
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 692
+		.loc ../contracts/DePool.tsol, 693
 		PUSH S2
 		NIP
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 695
+	.loc ../contracts/DePool.tsol, 696
 	PUSH S3
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 173
+		.loc ../contracts/DePoolRounds.tsol, 173
 		GETGLOB 14
 		DEC
 		UFITS 64
 		CALLREF {
 			CALL $roundAt_efe99a24_internal_macro$
 		}
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 	}
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 174
+		.loc ../contracts/DePoolRounds.tsol, 174
 		GETGLOB 14
 		ADDCONST -2
 		UFITS 64
 		CALLREF {
 			CALL $roundAt_efe99a24_internal_macro$
 		}
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 696
+	.loc ../contracts/DePool.tsol, 697
 	PUSH2 S0, S11
 	PUSH S18
 	PUSHINT 0
 	BLKPUSH 2, 6
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 213
+		.loc ../contracts/DePoolRounds.tsol, 213
 		PUSH S2
 		EQINT 0
 		PUSH S2
@@ -3326,12 +3324,12 @@ PUSHCONT {
 		AND
 		AND
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 214
+			.loc ../contracts/DePoolRounds.tsol, 214
 			BLKDROP 4
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFJMP
-		.loc ../contracts/DePoolRounds.sol, 217
+		.loc ../contracts/DePoolRounds.tsol, 217
 		PUSH2 S3, S5
 		PUSHINT 16
 		INDEXVAR
@@ -3340,24 +3338,24 @@ PUSHCONT {
 		NULLSWAPIFNOT
 		NIP
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 218
+			.loc ../contracts/DePoolRounds.tsol, 218
 			PUSH2 S5, S5
 			INDEX 15
 			INC
 			UFITS 32
 			SETINDEX 15
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 219
+			.loc ../contracts/DePoolRounds.tsol, 219
 			PUSH2 S4, S4
 			FIRST
 			INC
 			UFITS 8
 			SETINDEX 0
 			POP S5
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 222
+		.loc ../contracts/DePoolRounds.tsol, 222
 		PUSH3 S2, S5, S5
 		INDEX 8
 		ROT
@@ -3365,7 +3363,7 @@ PUSHCONT {
 		UFITS 64
 		SETINDEX 8
 		POP S6
-		.loc ../contracts/DePoolRounds.sol, 223
+		.loc ../contracts/DePoolRounds.tsol, 223
 		PUSH2 S3, S5
 		PUSHINT 16
 		INDEXVAR
@@ -3414,7 +3412,7 @@ IFREFELSEREF
 			DUP
 			TRIPLE
 }
-		.loc ../contracts/DePoolRounds.sol, 224
+		.loc ../contracts/DePoolRounds.tsol, 224
 		ROLL 3
 		XCPU S1, S0
 		FIRST
@@ -3422,11 +3420,11 @@ IFREFELSEREF
 		ADD
 		UFITS 64
 		SETINDEX 0
-		.loc ../contracts/DePoolRounds.sol, 226
+		.loc ../contracts/DePoolRounds.tsol, 226
 		PUSH S2
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 227
+			.loc ../contracts/DePoolRounds.tsol, 227
 			PUSH2 S2, S2
 			ISNULL
 			THROWIF 63
@@ -3438,17 +3436,17 @@ IFREFELSEREF
 			UFITS 64
 			SETINDEX 8
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 228
+			.loc ../contracts/DePoolRounds.tsol, 228
 			PUSH S2
 			SETINDEX 1
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 231
+		.loc ../contracts/DePoolRounds.tsol, 231
 		OVER
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 232
+			.loc ../contracts/DePoolRounds.tsol, 232
 			PUSH2 S1, S1
 			ISNULL
 			THROWIF 63
@@ -3460,13 +3458,13 @@ IFREFELSEREF
 			UFITS 64
 			SETINDEX 8
 			POP S6
-			.loc ../contracts/DePoolRounds.sol, 233
+			.loc ../contracts/DePoolRounds.tsol, 233
 			OVER
 			SETINDEX 2
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePoolRounds.sol, 236
+		.loc ../contracts/DePoolRounds.tsol, 236
 		PUSH2 S5, S5
 		PUSHINT 16
 		INDEXVAR
@@ -3526,25 +3524,25 @@ IFREFELSEREF
 		PUSHINT 16
 		SETINDEXVAR
 		POP S4
-		.loc ../contracts/DePoolRounds.sol, 237
+		.loc ../contracts/DePoolRounds.tsol, 237
 		DROP2
-		.loc ../contracts/DePoolRounds.sol, 203
+		.loc ../contracts/DePoolRounds.tsol, 203
 	}
 	CALLX
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 	POP S13
 	NIP
-	.loc ../contracts/DePool.sol, 697
+	.loc ../contracts/DePool.tsol, 698
 	ROLL 4
 	PUSHCONT {
 		DUP
-		.loc ../contracts/DePoolRounds.sol, 178
+		.loc ../contracts/DePoolRounds.tsol, 178
 		GETGLOB 14
 		DEC
 	}
 	PUSHCONT {
 		DUP
-		.loc ../contracts/DePoolRounds.sol, 179
+		.loc ../contracts/DePoolRounds.tsol, 179
 		GETGLOB 14
 		ADDCONST -2
 	}
@@ -3554,25 +3552,25 @@ IFREFELSEREF
 	CALLREF {
 		CALL $setRound_35d1b2f6_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	BLKDROP 4
-	.loc ../contracts/DePool.sol, 677
+	.loc ../contracts/DePool.tsol, 678
 	INC
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 WHILE
 BLKDROP 3
-.loc ../contracts/DePool.sol, 700
+.loc ../contracts/DePool.tsol, 701
 ROLL 8
 ROLL 4
 CALLREF {
 	CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 }
-.loc ../contracts/DePool.sol, 701
+.loc ../contracts/DePool.tsol, 702
 CALLREF {
 	CALL $sendAcceptAndReturnChange128_97c1eb12_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 BLKDROP 7
 
 .macro withdrawPart
@@ -3584,10 +3582,10 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 707
+.loc ../contracts/DePool.tsol, 708
 LDU 64
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $withdrawPart_65bb0d95_internal_macro$
 }
@@ -3602,68 +3600,68 @@ THROW 0
 CALL $withdrawPart_65bb0d95_internal_macro$
 
 .macro withdrawPart_65bb0d95_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 210
+.loc ../contracts/DePool.tsol, 211
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 708
+	.loc ../contracts/DePool.tsol, 709
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 709
+		.loc ../contracts/DePool.tsol, 710
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 712
+	.loc ../contracts/DePool.tsol, 713
 	GETGLOB 9
 	CALLREF {
 		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 713
+	.loc ../contracts/DePool.tsol, 714
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 714
+		.loc ../contracts/DePool.tsol, 715
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 716
+	.loc ../contracts/DePool.tsol, 717
 	DUP
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 718
+	.loc ../contracts/DePool.tsol, 719
 	SWAP
 	SETINDEX 5
-	.loc ../contracts/DePool.sol, 719
+	.loc ../contracts/DePool.tsol, 720
 	GETGLOB 9
 	SWAP
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 720
+	.loc ../contracts/DePool.tsol, 721
 	CALLREF {
 		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 707
+	.loc ../contracts/DePool.tsol, 708
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro withdrawAll
 DROP
@@ -3674,9 +3672,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 725
+.loc ../contracts/DePool.tsol, 726
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $withdrawAll_853828b6_internal_macro$
 }
@@ -3691,67 +3689,67 @@ THROW 0
 CALL $withdrawAll_853828b6_internal_macro$
 
 .macro withdrawAll_853828b6_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 210
+.loc ../contracts/DePool.tsol, 211
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 726
+	.loc ../contracts/DePool.tsol, 727
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 727
+		.loc ../contracts/DePool.tsol, 728
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 730
+	.loc ../contracts/DePool.tsol, 731
 	GETGLOB 9
 	CALLREF {
 		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 731
+	.loc ../contracts/DePool.tsol, 732
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 732
+		.loc ../contracts/DePool.tsol, 733
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 734
+	.loc ../contracts/DePool.tsol, 735
 	DUP
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 736
+	.loc ../contracts/DePool.tsol, 737
 	FALSE
 	SETINDEX 4
-	.loc ../contracts/DePool.sol, 737
+	.loc ../contracts/DePool.tsol, 738
 	GETGLOB 9
 	SWAP
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 738
+	.loc ../contracts/DePool.tsol, 739
 	CALLREF {
 		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 725
+	.loc ../contracts/DePool.tsol, 726
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro cancelWithdrawal
 DROP
@@ -3762,9 +3760,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 742
+.loc ../contracts/DePool.tsol, 743
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $cancelWithdrawal_22611280_internal_macro$
 }
@@ -3779,70 +3777,70 @@ THROW 0
 CALL $cancelWithdrawal_22611280_internal_macro$
 
 .macro cancelWithdrawal_22611280_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 210
+.loc ../contracts/DePool.tsol, 211
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 743
+	.loc ../contracts/DePool.tsol, 744
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 744
+		.loc ../contracts/DePool.tsol, 745
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 747
+	.loc ../contracts/DePool.tsol, 748
 	GETGLOB 9
 	CALLREF {
 		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 748
+	.loc ../contracts/DePool.tsol, 749
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 749
+		.loc ../contracts/DePool.tsol, 750
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 751
+	.loc ../contracts/DePool.tsol, 752
 	DUP
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 753
+	.loc ../contracts/DePool.tsol, 754
 	TRUE
 	SETINDEX 4
-	.loc ../contracts/DePool.sol, 754
+	.loc ../contracts/DePool.tsol, 755
 	PUSHINT 0
 	SETINDEX 5
-	.loc ../contracts/DePool.sol, 755
+	.loc ../contracts/DePool.tsol, 756
 	GETGLOB 9
 	SWAP
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 756
+	.loc ../contracts/DePool.tsol, 757
 	CALLREF {
 		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 742
+	.loc ../contracts/DePool.tsol, 743
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro setVestingDonor
 DROP
@@ -3853,7 +3851,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 761
+.loc ../contracts/DePool.tsol, 762
 OVER
 PUSHCONT {
 	LDREF
@@ -3863,7 +3861,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $setVestingDonor_fa1c64c3_internal_macro$
 }
@@ -3878,19 +3876,19 @@ THROW 0
 CALL $setVestingDonor_fa1c64c3_internal_macro$
 
 .macro setVestingDonor_fa1c64c3_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 762
+.loc ../contracts/DePool.tsol, 763
 TRUE
 CALLREF {
 	CALL $setVestingOrLockDonor_1b8346e4_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro setLockDonor
 DROP
@@ -3901,7 +3899,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 766
+.loc ../contracts/DePool.tsol, 767
 OVER
 PUSHCONT {
 	LDREF
@@ -3911,7 +3909,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $setLockDonor_70426eff_internal_macro$
 }
@@ -3926,39 +3924,39 @@ THROW 0
 CALL $setLockDonor_70426eff_internal_macro$
 
 .macro setLockDonor_70426eff_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 767
+.loc ../contracts/DePool.tsol, 768
 FALSE
 CALLREF {
 	CALL $setVestingOrLockDonor_1b8346e4_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	setVestingOrLockDonor_1b8346e4_internal
 .type	setVestingOrLockDonor_1b8346e4_internal, @function
 CALL $setVestingOrLockDonor_1b8346e4_internal_macro$
 
 .macro setVestingOrLockDonor_1b8346e4_internal_macro
-.loc ../contracts/DePool.sol, 771
+.loc ../contracts/DePool.tsol, 772
 GETGLOB 16
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 772
+	.loc ../contracts/DePool.tsol, 773
 	PUSHINT 3
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	DROP2
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 775
+.loc ../contracts/DePool.tsol, 776
 OVER
 PARSEMSGADDR
 DUP
@@ -3974,64 +3972,64 @@ PUSHCONT {
 }
 IFELSE
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 776
+	.loc ../contracts/DePool.tsol, 777
 	PUSHINT 22
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	DROP2
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFNOTJMP
-.loc ../contracts/DePool.sol, 779
+.loc ../contracts/DePool.tsol, 780
 GETGLOB 9
 CALLREF {
 	CALL $fetchParticipant_738c2c87_internal_macro$
 }
-.loc ../contracts/DePool.sol, 780
+.loc ../contracts/DePool.tsol, 781
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 781
+	.loc ../contracts/DePool.tsol, 782
 	PUSHINT 6
 	PUSHINT 0
 	CALLREF {
 		CALL $_sendError_96842984_internal_macro$
 	}
 	BLKDROP 3
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 783
+.loc ../contracts/DePool.tsol, 784
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 785
+.loc ../contracts/DePool.tsol, 786
 SWAP
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 786
+	.loc ../contracts/DePool.tsol, 787
 	OVER
 	SETINDEX 6
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 788
+	.loc ../contracts/DePool.tsol, 789
 	OVER
 	SETINDEX 7
 }
 IFELSE
-.loc ../contracts/DePool.sol, 790
+.loc ../contracts/DePool.tsol, 791
 GETGLOB 9
 SWAP
 CALLREF {
 	CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 }
-.loc ../contracts/DePool.sol, 791
+.loc ../contracts/DePool.tsol, 792
 DROP
 CALLREF {
 	CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro transferStake
 DROP
@@ -4042,7 +4040,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 798
+.loc ../contracts/DePool.tsol, 799
 OVER
 PUSHCONT {
 	LDREF
@@ -4053,7 +4051,7 @@ IF
 LDMSGADDR
 LDU 64
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $transferStake_3a8c4971_internal_macro$
 }
@@ -4068,29 +4066,29 @@ THROW 0
 CALL $transferStake_3a8c4971_internal_macro$
 
 .macro transferStake_3a8c4971_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 210
+.loc ../contracts/DePool.tsol, 211
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 799
+	.loc ../contracts/DePool.tsol, 800
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 800
+		.loc ../contracts/DePool.tsol, 801
 		PUSHINT 3
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		DROP2
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 804
+	.loc ../contracts/DePool.tsol, 805
 	OVER
 	PARSEMSGADDR
 	DUP
@@ -4121,23 +4119,23 @@ PUSHCONT {
 		DROP2
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 808
+	.loc ../contracts/DePool.tsol, 809
 	GETGLOB 9
-	.loc ../contracts/DePool.sol, 809
+	.loc ../contracts/DePool.tsol, 810
 	PUSH2 S0, S2
 	SDEQ
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 810
+		.loc ../contracts/DePool.tsol, 811
 		PUSHINT 19
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 813
+	.loc ../contracts/DePool.tsol, 814
 	DUP
 	GETGLOB 10
 	SDEQ
@@ -4146,80 +4144,80 @@ PUSHCONT {
 	SDEQ
 	OR
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 814
+		.loc ../contracts/DePool.tsol, 815
 		PUSHINT 20
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePoolRounds.sol, 176
+	.loc ../contracts/DePoolRounds.tsol, 176
 	GETGLOB 14
 	ADDCONST -4
 	UFITS 64
 	CALLREF {
 		CALL $roundAt_efe99a24_internal_macro$
 	}
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 	INDEX 6
 	EQINT 8
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 818
+		.loc ../contracts/DePool.tsol, 819
 		PUSHINT 26
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 821
+	.loc ../contracts/DePool.tsol, 822
 	DUP
 	CALLREF {
 		CALL $fetchParticipant_738c2c87_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 822
+	.loc ../contracts/DePool.tsol, 823
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 823
+		.loc ../contracts/DePool.tsol, 824
 		PUSHINT 6
 		PUSHINT 0
 		CALLREF {
 			CALL $_sendError_96842984_internal_macro$
 		}
 		BLKDROP 4
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 825
+	.loc ../contracts/DePool.tsol, 826
 	BLKPUSH 2, 0
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 827
+	.loc ../contracts/DePool.tsol, 828
 	PUSH S3
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 828
+		.loc ../contracts/DePool.tsol, 829
 		PUSHPOW2DEC 64
 		POP S4
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 831
+	.loc ../contracts/DePool.tsol, 832
 	PUSH S4
 	CALLREF {
 		CALL $getOrCreateParticipant_870b9686_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 833
+	.loc ../contracts/DePool.tsol, 834
 	PUSHINT 0
 	DUP
-	.loc ../contracts/DePool.sol, 835
+	.loc ../contracts/DePool.tsol, 836
 	GETGLOB 13
-	.loc ../contracts/DePool.sol, 836
+	.loc ../contracts/DePool.tsol, 837
 	DUP
 	PUSHINT 64
 	DICTUMINREF
@@ -4280,7 +4278,7 @@ PUSHCONT {
 		}
 		PAIR
 	}
-	.loc ../contracts/DePool.sol, 837
+	.loc ../contracts/DePool.tsol, 838
 	PUSHCONT {
 		DUP
 		ISNULL
@@ -4290,15 +4288,15 @@ PUSHCONT {
 		AND
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 838
+		.loc ../contracts/DePool.tsol, 839
 		BLKPUSH 2, 0
 		ISNULL
 		THROWIF 63
 		UNPAIR
-		.loc ../contracts/DePool.sol, 839
+		.loc ../contracts/DePool.tsol, 840
 		PUSHINT 0
 		PUSH3 S0, S1, S8
-		.loc ../contracts/DePool.sol, 841
+		.loc ../contracts/DePool.tsol, 842
 		PUSH3 S10, S13, S15
 		PUSH S17
 		PUSH S12
@@ -4306,7 +4304,7 @@ PUSHCONT {
 		UFITS 64
 		GETGLOB 17
 		PUSHCONT {
-			.loc ../contracts/DePoolRounds.sol, 260
+			.loc ../contracts/DePoolRounds.tsol, 260
 			PUSH2 S3, S6
 			PUSHINT 16
 			INDEXVAR
@@ -4349,7 +4347,7 @@ PUSHCONT {
 				ENDS
 				TRIPLE
 			}
-			.loc ../contracts/DePoolRounds.sol, 261
+			.loc ../contracts/DePoolRounds.tsol, 261
 			DUP
 			ISNULL
 			PUSHCONT {
@@ -4360,11 +4358,11 @@ PUSHCONT {
 				BLKDROP2 5, 5
 			}
 			IFJMP
-			.loc ../contracts/DePoolRounds.sol, 263
+			.loc ../contracts/DePoolRounds.tsol, 263
 			DUP
 			ISNULL
 			THROWIF 63
-			.loc ../contracts/DePoolRounds.sol, 264
+			.loc ../contracts/DePoolRounds.tsol, 264
 			PUSH2 S4, S7
 			PUSHINT 16
 			INDEXVAR
@@ -4414,35 +4412,35 @@ IFREFELSEREF
 				TRIPLE
 }
 			FIRST
-			.loc ../contracts/DePoolRounds.sol, 265
+			.loc ../contracts/DePoolRounds.tsol, 265
 			PUSHINT 0
 			PUSH2 S0, S2
-			.loc ../contracts/DePoolRounds.sol, 267
+			.loc ../contracts/DePoolRounds.tsol, 267
 			FIRST
 			PUSH S6
 			GEQ
 			PUSHCONT {
-				.loc ../contracts/DePoolRounds.sol, 268
+				.loc ../contracts/DePoolRounds.tsol, 268
 				PUSH S3
 				FIRST
 				PUSH S6
 				SUB
 				UFITS 64
 				POP S2
-				.loc ../contracts/DePoolRounds.sol, 269
+				.loc ../contracts/DePoolRounds.tsol, 269
 				PUSH S5
 			}
 			PUSHCONT {
-				.loc ../contracts/DePoolRounds.sol, 271
+				.loc ../contracts/DePoolRounds.tsol, 271
 				PUSHINT 0
 				POP S2
-				.loc ../contracts/DePoolRounds.sol, 272
+				.loc ../contracts/DePoolRounds.tsol, 272
 				PUSH S3
 				FIRST
 			}
 			IFELSE
 			NIP
-			.loc ../contracts/DePoolRounds.sol, 276
+			.loc ../contracts/DePoolRounds.tsol, 276
 			PUSH2 S6, S10
 			PUSHINT 16
 			INDEXVAR
@@ -4495,7 +4493,7 @@ IFREFELSEREF
 			OVER
 			ADD
 			UFITS 64
-			.loc ../contracts/DePoolRounds.sol, 277
+			.loc ../contracts/DePoolRounds.tsol, 277
 			PUSH S2
 			GTINT 0
 			PUSH2 S3, S6
@@ -4506,28 +4504,28 @@ IFREFELSEREF
 			LESS
 			OR
 			PUSHCONT {
-				.loc ../contracts/DePoolRounds.sol, 279
+				.loc ../contracts/DePoolRounds.tsol, 279
 				ROLL 9
 				PUSHINT 0
 				ROLL 4
 				BLKSWAP 2, 9
 				BLKDROP2 6, 5
-				.loc ../contracts/DePoolRounds.sol, 0
+				.loc ../contracts/DePoolRounds.tsol, 0
 			}
 			IFJMP
-			.loc ../contracts/DePoolRounds.sol, 282
+			.loc ../contracts/DePoolRounds.tsol, 282
 			SWAP
 			PUXC S3, S-1
 			SETINDEX 0
 			POP S3
-			.loc ../contracts/DePoolRounds.sol, 283
+			.loc ../contracts/DePoolRounds.tsol, 283
 			PUSH2 S2, S2
-			.loc ../contracts/DePoolRounds.sol, 340
+			.loc ../contracts/DePoolRounds.tsol, 340
 			SECOND
-			.loc ../contracts/DePoolRounds.sol, 341
+			.loc ../contracts/DePoolRounds.tsol, 341
 			OVER
 			THIRD
-			.loc ../contracts/DePoolRounds.sol, 343
+			.loc ../contracts/DePoolRounds.tsol, 343
 			ROT
 			FIRST
 			PUSH S2
@@ -4555,9 +4553,9 @@ IFREFELSEREF
 			ADD
 			UFITS 64
 			BLKDROP2 2, 1
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 			PUSHCONT {
-				.loc ../contracts/DePoolRounds.sol, 288
+				.loc ../contracts/DePoolRounds.tsol, 288
 				PUSH3 S2, S8, S8
 				PUSHINT 16
 				INDEXVAR
@@ -4618,14 +4616,14 @@ IFREFELSEREF
 				POP S9
 			}
 			PUSHCONT {
-				.loc ../contracts/DePoolRounds.sol, 284
+				.loc ../contracts/DePoolRounds.tsol, 284
 				PUSH2 S8, S8
 				INDEX 15
 				DEC
 				UFITS 32
 				SETINDEX 15
 				POP S9
-				.loc ../contracts/DePoolRounds.sol, 285
+				.loc ../contracts/DePoolRounds.tsol, 285
 				PUSH2 S8, S8
 				PUSHINT 16
 				INDEXVAR
@@ -4636,7 +4634,7 @@ IFREFELSEREF
 				PUSHINT 16
 				SETINDEXVAR
 				POP S9
-				.loc ../contracts/DePoolRounds.sol, 286
+				.loc ../contracts/DePoolRounds.tsol, 286
 				PUSH2 S7, S7
 				FIRST
 				DEC
@@ -4645,7 +4643,7 @@ IFREFELSEREF
 				POP S8
 			}
 			IFELSE
-			.loc ../contracts/DePoolRounds.sol, 291
+			.loc ../contracts/DePoolRounds.tsol, 291
 			PUSH2 S4, S8
 			PUSHINT 16
 			INDEXVAR
@@ -4654,24 +4652,24 @@ IFREFELSEREF
 			NULLSWAPIFNOT
 			NIP
 			PUSHCONT {
-				.loc ../contracts/DePoolRounds.sol, 292
+				.loc ../contracts/DePoolRounds.tsol, 292
 				PUSH2 S8, S8
 				INDEX 15
 				INC
 				UFITS 32
 				SETINDEX 15
 				POP S9
-				.loc ../contracts/DePoolRounds.sol, 293
+				.loc ../contracts/DePoolRounds.tsol, 293
 				PUSH2 S6, S6
 				FIRST
 				INC
 				UFITS 8
 				SETINDEX 0
 				POP S7
-				.loc ../contracts/DePoolRounds.sol, 0
+				.loc ../contracts/DePoolRounds.tsol, 0
 			}
 			IFNOT
-			.loc ../contracts/DePoolRounds.sol, 295
+			.loc ../contracts/DePoolRounds.tsol, 295
 			PUSH3 S0, S8, S8
 			PUSHINT 16
 			INDEXVAR
@@ -4782,14 +4780,14 @@ IFREFELSEREF
 			PUSHINT 16
 			SETINDEXVAR
 			POP S8
-			.loc ../contracts/DePoolRounds.sol, 297
+			.loc ../contracts/DePoolRounds.tsol, 297
 			BLKSWAP 3, 5
 			XCHG S2, S4
 			BLKDROP2 3, 5
-			.loc ../contracts/DePoolRounds.sol, 242
+			.loc ../contracts/DePoolRounds.tsol, 242
 		}
 		CALLX
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 		REVERSE 5, 0
 		PUSH2 S8, S10
 		ROT
@@ -4850,17 +4848,17 @@ IFREFELSEREF
 		POP S3
 		POP S11
 		POP S9
-		.loc ../contracts/DePool.sol, 851
+		.loc ../contracts/DePool.tsol, 852
 		XCPU S1, S6
 		ADD
 		UFITS 64
 		POP S6
-		.loc ../contracts/DePool.sol, 852
+		.loc ../contracts/DePool.tsol, 853
 		PUSH S6
 		ADD
 		UFITS 64
 		POP S6
-		.loc ../contracts/DePool.sol, 853
+		.loc ../contracts/DePool.tsol, 854
 		DROP
 		PUSH S2
 		PUSHINT 64
@@ -4924,21 +4922,21 @@ IFREFELSEREF
 			PAIR
 		}
 		NIP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	WHILE
-	.loc ../contracts/DePool.sol, 856
+	.loc ../contracts/DePool.tsol, 857
 	DROP
 	FALSE ; decl return flag
 	PUSH S8
 	PUSHPOW2DEC 64
 	NEQ
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 857
+		.loc ../contracts/DePool.tsol, 858
 		PUSH2 S3, S8
 		LESS
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 858
+			.loc ../contracts/DePool.tsol, 859
 			PUSHINT 18
 			PUSHINT 0
 			CALLREF {
@@ -4946,14 +4944,14 @@ IFREFELSEREF
 			}
 			BLKDROP 10
 			PUSHINT 4
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		IFJMP
-		.loc ../contracts/DePool.sol, 861
+		.loc ../contracts/DePool.tsol, 862
 		PUSH2 S2, S8
 		LESS
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 862
+			.loc ../contracts/DePool.tsol, 863
 			PUSHINT 16
 			PUSHINT 0
 			CALLREF {
@@ -4961,29 +4959,29 @@ IFREFELSEREF
 			}
 			BLKDROP 10
 			PUSHINT 4
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		IFJMP
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	IFRET
-	.loc ../contracts/DePool.sol, 866
+	.loc ../contracts/DePool.tsol, 867
 	SETGLOB 13
-	.loc ../contracts/DePool.sol, 868
+	.loc ../contracts/DePool.tsol, 869
 	PUSH S5
 	ROLL 4
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 869
+	.loc ../contracts/DePool.tsol, 870
 	PUSH S6
 	ROLL 3
 	CALLREF {
 		CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 871
+	.loc ../contracts/DePool.tsol, 872
 	ROLL 3
 	ROLL 5
 	FALSE
@@ -5003,15 +5001,15 @@ IFREFELSEREF
 	ENDC
 	PUSHINT 1
 	SENDRAWMSG
-	.loc ../contracts/DePool.sol, 872
+	.loc ../contracts/DePool.tsol, 873
 	BLKDROP 3
 	CALLREF {
 		CALL $sendAcceptAndReturnChange_facfbc02_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 798
+	.loc ../contracts/DePool.tsol, 799
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro participateInElections
 DROP
@@ -5022,7 +5020,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 877
+.loc ../contracts/DePool.tsol, 878
 OVER
 PUSHCONT {
 	LDU 64
@@ -5042,7 +5040,7 @@ LDU 32
 LDU 256
 LDREF
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $participateInElections_09a8c347_internal_macro$
 }
@@ -5057,14 +5055,14 @@ THROW 0
 CALL $participateInElections_09a8c347_internal_macro$
 
 .macro participateInElections_09a8c347_internal_macro
-.loc ../contracts/ValidatorBase.sol, 15
+.loc ../contracts/ValidatorBase.tsol, 15
 GETGLOB 9
 GETGLOB 10
 SDEQ
 THROWIFNOT 113
-.loc ../contracts/ValidatorBase.sol, 16
+.loc ../contracts/ValidatorBase.tsol, 16
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 885
+	.loc ../contracts/DePool.tsol, 886
 	GETGLOB 16
 	PUSHCONT {
 		PUSHINT 3
@@ -5075,22 +5073,22 @@ PUSHCONT {
 		BLKDROP 6
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 888
+	.loc ../contracts/DePool.tsol, 889
 	ACCEPT
-	.loc ../contracts/DePool.sol, 889
+	.loc ../contracts/DePool.tsol, 890
 	FALSE ; decl return flag
 	CALLREF {
 		CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 	}
 	PUSHCONT {
-		.loc ../contracts/DePoolRounds.sol, 175
+		.loc ../contracts/DePoolRounds.tsol, 175
 		GETGLOB 14
 		ADDCONST -3
 		UFITS 64
 		CALLREF {
 			CALL $roundAt_efe99a24_internal_macro$
 		}
-		.loc ../contracts/DePool.sol, 891
+		.loc ../contracts/DePool.tsol, 892
 		DUP
 		INDEX 6
 		NEQINT 2
@@ -5104,7 +5102,7 @@ PUSHCONT {
 			PUSHINT 4
 		}
 		IFJMP
-		.loc ../contracts/DePool.sol, 893
+		.loc ../contracts/DePool.tsol, 894
 		PUSH2 S5, S0
 		SECOND
 		NEQ
@@ -5118,12 +5116,12 @@ PUSHCONT {
 			PUSHINT 4
 		}
 		IFJMP
-		.loc ../contracts/DePool.sol, 895
+		.loc ../contracts/DePool.tsol, 896
 		BLKPUSH 6, 7
 		TUPLE 6
 		PUSHINT 20
 		SETINDEXVAR
-		.loc ../contracts/DePool.sol, 896
+		.loc ../contracts/DePool.tsol, 897
 		DUP
 		PUSHINT 22
 		INDEXVAR
@@ -5140,10 +5138,10 @@ PUSHCONT {
 		CALLREF {
 			CALL $_sendElectionRequest_52528db9_internal_macro$
 		}
-		.loc ../contracts/DePool.sol, 897
+		.loc ../contracts/DePool.tsol, 898
 		PUSHINT 3
 		SETINDEX 6
-		.loc ../contracts/DePoolRounds.sol, 180
+		.loc ../contracts/DePoolRounds.tsol, 180
 		GETGLOB 14
 		ADDCONST -3
 		UFITS 64
@@ -5151,27 +5149,27 @@ PUSHCONT {
 		CALLREF {
 			CALL $setRound_35d1b2f6_internal_macro$
 		}
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	IFRET
-	.loc ../contracts/DePool.sol, 900
+	.loc ../contracts/DePool.tsol, 901
 	BLKDROP 6
 	CALLREF {
 		CALL $_returnChange_260d9040_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 877
+	.loc ../contracts/DePool.tsol, 878
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	generateRound_ebbb0126_internal
 .type	generateRound_ebbb0126_internal, @function
 CALL $generateRound_ebbb0126_internal_macro$
 
 .macro generateRound_ebbb0126_internal_macro
-.loc ../contracts/DePool.sol, 906
+.loc ../contracts/DePool.tsol, 907
 GETGLOB 14
 PUSHINT 0
 PUSHPOW2DEC 32
@@ -5187,51 +5185,51 @@ PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 GETGLOB 14
-.loc ../contracts/ProxyBase.sol, 11
+.loc ../contracts/ProxyBase.tsol, 11
 MODPOW2 1
 GETGLOB 11
 SECOND
 PUSHINT 32
 DICTUGET
 THROWIFNOT 50
-.loc ../contracts/ProxyBase.sol, 0
+.loc ../contracts/ProxyBase.tsol, 0
 PUSHINT 23
 TUPLEVAR
-.loc ../contracts/DePool.sol, 932
+.loc ../contracts/DePool.tsol, 933
 GETGLOB 14
 INC
 UFITS 64
 SETGLOB 14
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	updateRound2_d5ebbeae_internal
 .type	updateRound2_d5ebbeae_internal, @function
 CALL $updateRound2_d5ebbeae_internal_macro$
 
 .macro updateRound2_d5ebbeae_internal_macro
-.loc ../contracts/DePool.sol, 944
+.loc ../contracts/DePool.tsol, 945
 PUSH S3
 INDEX 6
 EQINT 2
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 947
+	.loc ../contracts/DePool.tsol, 948
 	PUSH S3
 	PUSHINT 6
 	SETINDEX 6
 	POP S4
-	.loc ../contracts/DePool.sol, 948
+	.loc ../contracts/DePool.tsol, 949
 	PUSH S3
 	INDEX 7
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 949
+		.loc ../contracts/DePool.tsol, 950
 		PUSH S3
 		PUSHINT 8
 		SETINDEX 7
 		POP S4
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 951
+	.loc ../contracts/DePool.tsol, 952
 	PUSH S3
 	PUSHINT 0
 	SETINDEX 2
@@ -5242,7 +5240,7 @@ PUSHCONT {
 	INDEX 6
 	EQINT 8
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 953
+		.loc ../contracts/DePool.tsol, 954
 		PUSHINT 1
 		PUSH S4
 		FIRST
@@ -5258,14 +5256,14 @@ PUSHCONT {
 		STU 64
 		STU 8
 		ENDC
-		PUSHINT 0
+		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
 }
 IFELSE
-.loc ../contracts/DePool.sol, 959
+.loc ../contracts/DePool.tsol, 960
 PUSH S3
 INDEX 5
 ROT
@@ -5281,7 +5279,7 @@ EQUAL
 AND
 AND
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 965
+	.loc ../contracts/DePool.tsol, 966
 	PUSH2 S0, S1
 	INDEX 3
 	ADD
@@ -5289,10 +5287,10 @@ PUSHCONT {
 	PUXC S2, S-1
 	SETINDEX 2
 	POP S2
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 969
+.loc ../contracts/DePool.tsol, 970
 DROP
 NOW
 OVER
@@ -5300,7 +5298,7 @@ THIRD
 ADDCONST 60
 GEQ
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 970
+	.loc ../contracts/DePool.tsol, 971
 	DUP
 	INDEX 6
 	EQINT 6
@@ -5309,7 +5307,7 @@ PUSHCONT {
 	NEQINT 0
 	AND
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 974
+		.loc ../contracts/DePool.tsol, 975
 		DUP
 		INDEX 7
 		CALLREF {
@@ -5325,10 +5323,10 @@ PUSHCONT {
 		EQINT 6
 		OR
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 981
+			.loc ../contracts/DePool.tsol, 982
 			PUSHINT 7
 			SETINDEX 6
-			.loc ../contracts/DePool.sol, 982
+			.loc ../contracts/DePool.tsol, 983
 			DUP
 			PUSHINT 22
 			INDEXVAR
@@ -5340,22 +5338,22 @@ PUSHCONT {
 			CALLREF {
 				CALL $_recoverStake_2ed56c97_internal_macro$
 			}
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		IF
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	isEmptyRound_5e3598c9_internal
 .type	isEmptyRound_5e3598c9_internal, @function
 CALL $isEmptyRound_5e3598c9_internal_macro$
 
 .macro isEmptyRound_5e3598c9_internal_macro
-.loc ../contracts/DePool.sol, 989
+.loc ../contracts/DePool.tsol, 990
 DUP
 INDEX 6
 EQINT 9
@@ -5363,61 +5361,61 @@ SWAP
 INDEX 8
 EQINT 0
 OR
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	updateRounds_ec375038_internal
 .type	updateRounds_ec375038_internal, @function
 CALL $updateRounds_ec375038_internal_macro$
 
 .macro updateRounds_ec375038_internal_macro
-.loc ../contracts/DePool.sol, 993
+.loc ../contracts/DePool.tsol, 994
 CALLREF {
 	CALL $roundTimeParams_73c24cb0_internal_macro$
 }
 DROP2
-.loc ../contracts/DePool.sol, 994
+.loc ../contracts/DePool.tsol, 995
 CALLREF {
 	CALL $getCurValidatorData_61ae336b_internal_macro$
 }
-.loc ../contracts/DePool.sol, 995
+.loc ../contracts/DePool.tsol, 996
 CALLREF {
 	CALL $getPrevValidatorHash_22954fac_internal_macro$
 }
-.loc ../contracts/DePool.sol, 996
+.loc ../contracts/DePool.tsol, 997
 NOW
 PUSH2 S2, S5
 SUB
 UFITS 32
 GEQ
-.loc ../contracts/DePoolRounds.sol, 173
+.loc ../contracts/DePoolRounds.tsol, 173
 GETGLOB 14
 DEC
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 174
+.loc ../contracts/DePoolRounds.tsol, 174
 GETGLOB 14
 ADDCONST -2
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 175
+.loc ../contracts/DePoolRounds.tsol, 175
 GETGLOB 14
 ADDCONST -3
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 176
+.loc ../contracts/DePoolRounds.tsol, 176
 GETGLOB 14
 ADDCONST -4
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1003
+.loc ../contracts/DePool.tsol, 1004
 GETGLOB 16
 DUP
 PUSHCONT {
@@ -5456,7 +5454,7 @@ PUSHCONT {
 }
 IF
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1004
+	.loc ../contracts/DePool.tsol, 1005
 	GETGLOB 10
 	NEWC
 	STSLICECONST x42_
@@ -5466,22 +5464,22 @@ PUSHCONT {
 	ENDC
 	PUSHINT 160
 	SENDRAWMSG
-	.loc ../contracts/DePool.sol, 1005
+	.loc ../contracts/DePool.tsol, 1006
 	GETGLOB 2
 	ISNULL
 	IFNOTREF {
 		CALL $c7_to_c4$
 	}
 	THROW 0
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 1008
+.loc ../contracts/DePool.tsol, 1009
 PUSH3 S5, S8, S7
 CALLREF {
 	CALL $updateRound2_d5ebbeae_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1011
+.loc ../contracts/DePool.tsol, 1012
 OVER
 INDEX 6
 EQINT 4
@@ -5491,12 +5489,12 @@ PUSH S7
 EQUAL
 AND
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1015
+	.loc ../contracts/DePool.tsol, 1016
 	OVER
 	PUSHINT 5
 	SETINDEX 6
 	POP S2
-	.loc ../contracts/DePool.sol, 1016
+	.loc ../contracts/DePool.tsol, 1017
 	OVER
 	PUSHINT 22
 	INDEXVAR
@@ -5508,10 +5506,10 @@ PUSHCONT {
 	CALLREF {
 		CALL $_recoverStake_2ed56c97_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 1020
+.loc ../contracts/DePool.tsol, 1021
 ROLL 4
 PUSH S2
 INDEX 5
@@ -5523,7 +5521,7 @@ EQINT 9
 AND
 AND
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1025
+	.loc ../contracts/DePool.tsol, 1026
 	GETGLOB 13
 	SWAP
 	FIRST
@@ -5532,35 +5530,35 @@ PUSHCONT {
 	DICTUDEL
 	DROP
 	SETGLOB 13
-	.loc ../contracts/DePool.sol, 1026
+	.loc ../contracts/DePool.tsol, 1027
 	PUSH2 S0, S1
-	.loc ../contracts/DePool.sol, 1027
+	.loc ../contracts/DePool.tsol, 1028
 	POP S2
-	.loc ../contracts/DePool.sol, 1028
+	.loc ../contracts/DePool.tsol, 1029
 	PUSH S3
 	POP S3
-	.loc ../contracts/DePool.sol, 1029
+	.loc ../contracts/DePool.tsol, 1030
 	CALLREF {
 		CALL $generateRound_ebbb0126_internal_macro$
 	}
 	POP S4
-	.loc ../contracts/DePool.sol, 1032
+	.loc ../contracts/DePool.tsol, 1033
 	PUSH3 S4, S7, S6
 	CALLREF {
 		CALL $updateRound2_d5ebbeae_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 1035
+	.loc ../contracts/DePool.tsol, 1036
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1036
+		.loc ../contracts/DePool.tsol, 1037
 		PUSH2 S1, S5
 		SETINDEX 1
 		POP S2
-		.loc ../contracts/DePool.sol, 1037
+		.loc ../contracts/DePool.tsol, 1038
 		PUSH2 S1, S9
 		SETINDEX 4
 		POP S2
-		.loc ../contracts/DePool.sol, 1038
+		.loc ../contracts/DePool.tsol, 1039
 		CALLREF {
 			CALL $getElector_28167edb_internal_macro$
 		}
@@ -5568,20 +5566,20 @@ PUSHCONT {
 		PUSHINT 21
 		SETINDEXVAR
 		POP S2
-		.loc ../contracts/DePool.sol, 1039
+		.loc ../contracts/DePool.tsol, 1040
 		PUSH2 S1, S7
 		SETINDEX 5
 		POP S2
-		.loc ../contracts/DePool.sol, 1040
+		.loc ../contracts/DePool.tsol, 1041
 		CALLREF {
 			CALL $roundTimeParams_73c24cb0_internal_macro$
 		}
 		BLKDROP2 3, 1
-		.loc ../contracts/DePool.sol, 1041
+		.loc ../contracts/DePool.tsol, 1042
 		PUXC S2, S-1
 		SETINDEX 3
 		POP S2
-		.loc ../contracts/DePool.sol, 1043
+		.loc ../contracts/DePool.tsol, 1044
 		GETGLOB 10
 		PUSH S2
 		PUSHINT 16
@@ -5631,13 +5629,13 @@ IFREFELSEREF
 			DUP
 			TRIPLE
 }
-		.loc ../contracts/DePoolRounds.sol, 340
+		.loc ../contracts/DePoolRounds.tsol, 340
 		DUP
 		SECOND
-		.loc ../contracts/DePoolRounds.sol, 341
+		.loc ../contracts/DePoolRounds.tsol, 341
 		OVER
 		THIRD
-		.loc ../contracts/DePoolRounds.sol, 343
+		.loc ../contracts/DePoolRounds.tsol, 343
 		ROT
 		FIRST
 		PUSH S2
@@ -5665,42 +5663,42 @@ IFREFELSEREF
 		ADD
 		UFITS 64
 		BLKDROP2 2, 1
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 		PUXC S2, S-1
 		PUSHINT 17
 		SETINDEXVAR
 		POP S2
-		.loc ../contracts/DePool.sol, 1044
+		.loc ../contracts/DePool.tsol, 1045
 		OVER
 		PUSHINT 17
 		INDEXVAR
 		GETGLOB 18
 		LESS
-		.loc ../contracts/DePool.sol, 1045
+		.loc ../contracts/DePool.tsol, 1046
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1046
+			.loc ../contracts/DePool.tsol, 1047
 			OVER
 			PUSHINT 6
 			SETINDEX 6
 			POP S2
-			.loc ../contracts/DePool.sol, 1047
+			.loc ../contracts/DePool.tsol, 1048
 			OVER
 			PUSHINT 3
 			SETINDEX 7
 			POP S2
-			.loc ../contracts/DePool.sol, 1048
+			.loc ../contracts/DePool.tsol, 1049
 			OVER
 			PUSHINT 0
 			SETINDEX 2
 			POP S2
 		}
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1050
+			.loc ../contracts/DePool.tsol, 1051
 			OVER
 			PUSHINT 2
 			SETINDEX 6
 			POP S2
-			.loc ../contracts/DePool.sol, 1051
+			.loc ../contracts/DePool.tsol, 1052
 			OVER
 			PUSHINT 22
 			INDEXVAR
@@ -5716,26 +5714,26 @@ IFREFELSEREF
 			SENDRAWMSG
 		}
 		IFELSE
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 1056
+	.loc ../contracts/DePool.tsol, 1057
 	GETGLOB 16
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1057
+		.loc ../contracts/DePool.tsol, 1058
 		PUSH S2
 		PUSHINT 1
 		SETINDEX 6
 		POP S3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 1060
+.loc ../contracts/DePool.tsol, 1061
 ROLL 3
-.loc ../contracts/DePoolRounds.sol, 178
+.loc ../contracts/DePoolRounds.tsol, 178
 GETGLOB 14
 DEC
 UFITS 64
@@ -5743,9 +5741,9 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1061
+.loc ../contracts/DePool.tsol, 1062
 ROT
-.loc ../contracts/DePoolRounds.sol, 179
+.loc ../contracts/DePoolRounds.tsol, 179
 GETGLOB 14
 ADDCONST -2
 UFITS 64
@@ -5753,9 +5751,9 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1062
+.loc ../contracts/DePool.tsol, 1063
 SWAP
-.loc ../contracts/DePoolRounds.sol, 180
+.loc ../contracts/DePoolRounds.tsol, 180
 GETGLOB 14
 ADDCONST -3
 UFITS 64
@@ -5763,7 +5761,7 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 181
+.loc ../contracts/DePoolRounds.tsol, 181
 GETGLOB 14
 ADDCONST -4
 UFITS 64
@@ -5771,7 +5769,7 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 BLKDROP 6
 
 .globl	checkPureDePoolBalance_ad433b79_internal
@@ -5779,33 +5777,33 @@ BLKDROP 6
 CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 
 .macro checkPureDePoolBalance_ad433b79_internal_macro
-.loc ../contracts/DePool.sol, 1068
+.loc ../contracts/DePool.tsol, 1069
 PUSHINT 0
 CALLREF {
 	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1069
+.loc ../contracts/DePool.tsol, 1070
 DEPTH
 ADDCONST -2
 PICK
 UFITS 64
-.loc ../contracts/DePool.sol, 1070
+.loc ../contracts/DePool.tsol, 1071
 PUSHINT 10000000000
 ROT
 ADD
 ADD
-.loc ../contracts/DePool.sol, 1071
+.loc ../contracts/DePool.tsol, 1072
 GETPARAM 7
 FIRST
 OVER
 LESS
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1072
+	.loc ../contracts/DePool.tsol, 1073
 	GETPARAM 7
 	FIRST
 	SUB
 	UFITS 256
-	.loc ../contracts/DePool.sol, 1073
+	.loc ../contracts/DePool.tsol, 1074
 	PUSHSLICE xc00000000000000000000000002b7eb1df
 	NEWC
 	STSLICE
@@ -5813,15 +5811,15 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc ../contracts/DePool.sol, 1074
+	.loc ../contracts/DePool.tsol, 1075
 	FALSE
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 1076
+.loc ../contracts/DePool.tsol, 1077
 DROP
 TRUE
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro ticktock
 DROP
@@ -5832,9 +5830,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1080
+.loc ../contracts/DePool.tsol, 1081
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $ticktock_3e036d63_internal_macro$
 }
@@ -5849,28 +5847,28 @@ THROW 0
 CALL $ticktock_3e036d63_internal_macro$
 
 .macro ticktock_3e036d63_internal_macro
-.loc ../contracts/DePool.sol, 209
+.loc ../contracts/DePool.tsol, 210
 GETGLOB 9
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
 SDEQ
 THROWIF 108
-.loc ../contracts/DePool.sol, 1081
+.loc ../contracts/DePool.tsol, 1082
 CALLREF {
 	CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 }
 IFREF {
 	CALL $updateRounds_ec375038_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1085
+.loc ../contracts/DePool.tsol, 1086
 GETGLOB 9
 MYADDR
 SDEQ
 IFNOTREF {
 	CALL $_returnChange_260d9040_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro completeRoundWithChunk
 DROP
@@ -5881,11 +5879,11 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1091
+.loc ../contracts/DePool.tsol, 1092
 LDU 64
 LDU 8
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $completeRoundWithChunk_82a3b012_internal_macro$
 }
@@ -5900,53 +5898,53 @@ THROW 0
 CALL $completeRoundWithChunk_82a3b012_internal_macro$
 
 .macro completeRoundWithChunk_82a3b012_internal_macro
-.loc ../contracts/DePool.sol, 215
+.loc ../contracts/DePool.tsol, 216
 GETGLOB 9
 MYADDR
 SDEQ
 THROWIFNOT 120
-.loc ../contracts/DePool.sol, 216
+.loc ../contracts/DePool.tsol, 217
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1092
+	.loc ../contracts/DePool.tsol, 1093
 	ACCEPT
-	.loc ../contracts/DePool.sol, 1093
+	.loc ../contracts/DePool.tsol, 1094
 	OVER
-	.loc ../contracts/DePoolRounds.sol, 171
+	.loc ../contracts/DePoolRounds.tsol, 171
 	GETGLOB 14
 	ADDCONST -4
 	UFITS 64
 	EQUAL
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 	GETGLOB 16
 	OR
 	PUSHCONT {
 		DROP2
 	}
 	IFNOTJMP
-	.loc ../contracts/DePool.sol, 1096
+	.loc ../contracts/DePool.tsol, 1097
 	CALLREF {
 		CALL $checkPureDePoolBalance_ad433b79_internal_macro$
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1097
+		.loc ../contracts/DePool.tsol, 1098
 		DROP2
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOTJMP
-	.loc ../contracts/DePool.sol, 1099
+	.loc ../contracts/DePool.tsol, 1100
 	OVER
 	CALLREF {
 		CALL $fetchRound_d130e988_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 1100
+	.loc ../contracts/DePool.tsol, 1101
 	DUP
 	ISNULL
 	THROWIF 519
-	.loc ../contracts/DePool.sol, 1101
+	.loc ../contracts/DePool.tsol, 1102
 	DUP
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/DePool.sol, 1102
+	.loc ../contracts/DePool.tsol, 1103
 	DUP
 	INDEX 6
 	NEQINT 8
@@ -5954,12 +5952,12 @@ PUSHCONT {
 		BLKDROP 3
 	}
 	IFJMP
-	.loc ../contracts/DePool.sol, 1105
+	.loc ../contracts/DePool.tsol, 1106
 	OVER
 	CALLREF {
 		CALL $_returnOrReinvest_00bdd5b7_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 1107
+	.loc ../contracts/DePool.tsol, 1108
 	OVER
 	LESSINT 25
 	OVER
@@ -5969,12 +5967,12 @@ PUSHCONT {
 	NOT
 	AND
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1108
+		.loc ../contracts/DePool.tsol, 1109
 		PUSHINT 2
 		PUSH S2
 		MUL
 		UFITS 8
-		.loc ../contracts/DePool.sol, 1109
+		.loc ../contracts/DePool.tsol, 1110
 		DUP
 		LESSINT 25
 		PUSHCONT {
@@ -5999,7 +5997,7 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 1113
+		.loc ../contracts/DePool.tsol, 1114
 		DROP
 		PUSH2 S1, S2
 		MYADDR
@@ -6016,20 +6014,20 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 1116
+	.loc ../contracts/DePool.tsol, 1117
 	XCHG S1, S2
 	CALLREF {
 		CALL $setRound_35d1b2f6_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP
-	.loc ../contracts/DePool.sol, 1091
+	.loc ../contracts/DePool.tsol, 1092
 }
 CALLX
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro completeRound
 DROP
@@ -6040,11 +6038,11 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1119
+.loc ../contracts/DePool.tsol, 1120
 LDU 64
 LDU 32
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $completeRound_bf67132c_internal_macro$
 }
@@ -6059,42 +6057,42 @@ THROW 0
 CALL $completeRound_bf67132c_internal_macro$
 
 .macro completeRound_bf67132c_internal_macro
-.loc ../contracts/DePool.sol, 215
+.loc ../contracts/DePool.tsol, 216
 GETGLOB 9
 MYADDR
 SDEQ
 THROWIFNOT 120
-.loc ../contracts/DePool.sol, 1120
+.loc ../contracts/DePool.tsol, 1121
 ACCEPT
-.loc ../contracts/DePool.sol, 1121
+.loc ../contracts/DePool.tsol, 1122
 OVER
-.loc ../contracts/DePoolRounds.sol, 171
+.loc ../contracts/DePoolRounds.tsol, 171
 GETGLOB 14
 ADDCONST -4
 UFITS 64
 EQUAL
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 GETGLOB 16
 OR
 THROWIFNOT 522
-.loc ../contracts/DePool.sol, 1122
+.loc ../contracts/DePool.tsol, 1123
 OVER
 CALLREF {
 	CALL $fetchRound_d130e988_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1123
+.loc ../contracts/DePool.tsol, 1124
 DUP
 ISNULL
 THROWIF 519
-.loc ../contracts/DePool.sol, 1124
+.loc ../contracts/DePool.tsol, 1125
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 1125
+.loc ../contracts/DePool.tsol, 1126
 INDEX 6
 EQINT 8
 THROWIFNOT 518
-.loc ../contracts/DePool.sol, 1127
+.loc ../contracts/DePool.tsol, 1128
 PUSHINT 1
 PUSH S2
 MYADDR
@@ -6111,34 +6109,34 @@ STU 8
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 1129
+.loc ../contracts/DePool.tsol, 1130
 CALLREF {
 	CALL $c7_to_c4$
 }
 COMMIT
-.loc ../contracts/DePool.sol, 1132
+.loc ../contracts/DePool.tsol, 1133
 DUP
 ADDCONST 24
 UFITS 32
 PUSHINT 25
 DIV
-.loc ../contracts/DePool.sol, 1133
+.loc ../contracts/DePool.tsol, 1134
 PUSHINT 250
 GREATER
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1135
+	.loc ../contracts/DePool.tsol, 1136
 	PUSHINT 6250
 	UFITS 32
-	.loc ../contracts/DePool.sol, 1136
+	.loc ../contracts/DePool.tsol, 1137
 	OVER
-	.loc ../contracts/DePool.sol, 1140
+	.loc ../contracts/DePool.tsol, 1141
 	PUSHINT 0
 	PUSHCONT {
 		OVER
 		GTINT 0
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1141
+		.loc ../contracts/DePool.tsol, 1142
 		PUSH2 S1, S2
 		LESS
 		DUP
@@ -6158,7 +6156,7 @@ PUSHCONT {
 			PUSH S2
 		}
 		IFELSE
-		.loc ../contracts/DePool.sol, 1145
+		.loc ../contracts/DePool.tsol, 1146
 		PUSH2 S0, S5
 		MYADDR
 		FALSE
@@ -6174,28 +6172,28 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 1146
+		.loc ../contracts/DePool.tsol, 1147
 		PUSH S2
 		SUBR
 		UFITS 32
 		POP S2
-		.loc ../contracts/DePool.sol, 1140
+		.loc ../contracts/DePool.tsol, 1141
 		INC
 		FITS 256
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	WHILE
 	BLKDROP 3
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1149
+	.loc ../contracts/DePool.tsol, 1150
 	PUSHINT 0
 	PUSHCONT {
 		PUSH2 S0, S1
 		LESS
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1150
+		.loc ../contracts/DePool.tsol, 1151
 		PUSHINT 25
 		PUSH S3
 		MYADDR
@@ -6212,15 +6210,15 @@ PUSHCONT {
 		ENDC
 		PUSHINT 1
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 1149
+		.loc ../contracts/DePool.tsol, 1150
 		ADDCONST 25
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	WHILE
 	DROP
 }
 IFELSE
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 DROP2
 
 .macro onStakeAccept
@@ -6232,7 +6230,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1161
+.loc ../contracts/DePool.tsol, 1162
 OVER
 PUSHCONT {
 	LDU 64
@@ -6248,7 +6246,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $onStakeAccept_27c4467a_internal_macro$
 }
@@ -6263,7 +6261,7 @@ THROW 0
 CALL $onStakeAccept_27c4467a_internal_macro$
 
 .macro onStakeAccept_27c4467a_internal_macro
-.loc ../contracts/DePool.sol, 1162
+.loc ../contracts/DePool.tsol, 1163
 GETGLOB 9
 PUSHINT 0
 GETGLOB 11
@@ -6286,67 +6284,67 @@ PUSHCONT {
 }
 IFNOT
 THROWIFNOT 107
-.loc ../contracts/DePool.sol, 1163
+.loc ../contracts/DePool.tsol, 1164
 PUSH S2
 CALLREF {
 	CALL $fetchRound_d130e988_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1164
+.loc ../contracts/DePool.tsol, 1165
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1165
+	.loc ../contracts/DePool.tsol, 1166
 	PUSHINT 529
 	CALLREF {
 		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 4
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 1167
+.loc ../contracts/DePool.tsol, 1168
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 1168
+.loc ../contracts/DePool.tsol, 1169
 GETGLOB 9
 OVER
 PUSHINT 22
 INDEXVAR
 SDEQ
 THROWIFNOT 148
-.loc ../contracts/DePool.sol, 1169
+.loc ../contracts/DePool.tsol, 1170
 TUCK
 PUSHINT 21
 INDEXVAR
 SDEQ
 THROWIFNOT 127
-.loc ../contracts/DePool.sol, 1170
+.loc ../contracts/DePool.tsol, 1171
 DUP
 FIRST
 PUSH S3
 EQUAL
 THROWIFNOT 126
-.loc ../contracts/DePool.sol, 1171
+.loc ../contracts/DePool.tsol, 1172
 DUP
 INDEX 6
 EQINT 3
 THROWIFNOT 125
-.loc ../contracts/DePool.sol, 1173
+.loc ../contracts/DePool.tsol, 1174
 ACCEPT
-.loc ../contracts/DePool.sol, 1174
+.loc ../contracts/DePool.tsol, 1175
 PUSHINT 4
 SETINDEX 6
-.loc ../contracts/DePool.sol, 1175
+.loc ../contracts/DePool.tsol, 1176
 PUSHINT 0
 SETINDEX 7
-.loc ../contracts/DePool.sol, 1176
+.loc ../contracts/DePool.tsol, 1177
 ROT
 OVER
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1178
+.loc ../contracts/DePool.tsol, 1179
 PUSHINT 20
 INDEXVAR
 FIRST
@@ -6358,7 +6356,7 @@ STU 32
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro onStakeReject
 DROP
@@ -6369,7 +6367,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1182
+.loc ../contracts/DePool.tsol, 1183
 OVER
 PUSHCONT {
 	LDU 64
@@ -6385,7 +6383,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $onStakeReject_3b6912fb_internal_macro$
 }
@@ -6400,7 +6398,7 @@ THROW 0
 CALL $onStakeReject_3b6912fb_internal_macro$
 
 .macro onStakeReject_3b6912fb_internal_macro
-.loc ../contracts/DePool.sol, 1185
+.loc ../contracts/DePool.tsol, 1186
 GETGLOB 9
 PUSHINT 0
 GETGLOB 11
@@ -6423,67 +6421,67 @@ PUSHCONT {
 }
 IFNOT
 THROWIFNOT 107
-.loc ../contracts/DePool.sol, 1186
+.loc ../contracts/DePool.tsol, 1187
 PUSH S2
 CALLREF {
 	CALL $fetchRound_d130e988_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1187
+.loc ../contracts/DePool.tsol, 1188
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1188
+	.loc ../contracts/DePool.tsol, 1189
 	PUSHINT 529
 	CALLREF {
 		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 4
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 1190
+.loc ../contracts/DePool.tsol, 1191
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 1191
+.loc ../contracts/DePool.tsol, 1192
 GETGLOB 9
 OVER
 PUSHINT 22
 INDEXVAR
 SDEQ
 THROWIFNOT 148
-.loc ../contracts/DePool.sol, 1192
+.loc ../contracts/DePool.tsol, 1193
 TUCK
 PUSHINT 21
 INDEXVAR
 SDEQ
 THROWIFNOT 127
-.loc ../contracts/DePool.sol, 1193
+.loc ../contracts/DePool.tsol, 1194
 DUP
 FIRST
 PUSH S3
 EQUAL
 THROWIFNOT 126
-.loc ../contracts/DePool.sol, 1194
+.loc ../contracts/DePool.tsol, 1195
 DUP
 INDEX 6
 EQINT 3
 THROWIFNOT 125
-.loc ../contracts/DePool.sol, 1196
+.loc ../contracts/DePool.tsol, 1197
 ACCEPT
-.loc ../contracts/DePool.sol, 1197
+.loc ../contracts/DePool.tsol, 1198
 PUSHINT 2
 SETINDEX 6
-.loc ../contracts/DePool.sol, 1198
+.loc ../contracts/DePool.tsol, 1199
 PUSHINT 4
 SETINDEX 7
-.loc ../contracts/DePool.sol, 1199
+.loc ../contracts/DePool.tsol, 1200
 ROT
 OVER
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1201
+.loc ../contracts/DePool.tsol, 1202
 PUSHINT 20
 INDEXVAR
 FIRST
@@ -6495,58 +6493,58 @@ STU 32
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	totalParticipantFunds_b67587bf_internal
 .type	totalParticipantFunds_b67587bf_internal, @function
 CALL $totalParticipantFunds_b67587bf_internal_macro$
 
 .macro totalParticipantFunds_b67587bf_internal_macro
-.loc ../contracts/DePool.sol, 1206
+.loc ../contracts/DePool.tsol, 1207
 PUSHINT 0
-.loc ../contracts/DePool.sol, 1207
+.loc ../contracts/DePool.tsol, 1208
 CALLREF {
 	CALL $minRound_bdc18b15_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1208
+.loc ../contracts/DePool.tsol, 1209
 PUSHCONT {
 	DUP
 	ISNULL
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1209
+	.loc ../contracts/DePool.tsol, 1210
 	DUP
 	ISNULL
 	THROWIF 63
 	UNPAIR
-	.loc ../contracts/DePool.sol, 1210
+	.loc ../contracts/DePool.tsol, 1211
 	DUP
 	INDEX 6
-	.loc ../contracts/DePool.sol, 1211
+	.loc ../contracts/DePool.tsol, 1212
 	PUSH2 S2, S4
 	NEQ
 	OVER
 	NEQINT 9
 	AND
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1212
+		.loc ../contracts/DePool.tsol, 1213
 		DUP
 		EQINT 8
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1213
+			.loc ../contracts/DePool.tsol, 1214
 			OVER
 			INDEX 7
 			EQINT 7
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1214
+				.loc ../contracts/DePool.tsol, 1215
 				OVER
 				INDEX 10
 				PUSH S2
 				INDEX 9
 			}
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1216
+				.loc ../contracts/DePool.tsol, 1217
 				OVER
 				INDEX 8
 				PUSH S2
@@ -6564,7 +6562,7 @@ PUSHCONT {
 			ADD
 			UFITS 64
 			POP S4
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		PUSHCONT {
 			DUP
@@ -6583,12 +6581,12 @@ PUSHCONT {
 			OR
 			OR
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1224
+				.loc ../contracts/DePool.tsol, 1225
 				OVER
 				INDEX 8
 			}
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1226
+				.loc ../contracts/DePool.tsol, 1227
 				OVER
 				INDEX 10
 			}
@@ -6599,32 +6597,32 @@ PUSHCONT {
 			POP S4
 		}
 		IFELSE
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 1229
+	.loc ../contracts/DePool.tsol, 1230
 	DROP2
 	CALLREF {
 		CALL $nextRound_da54d41d_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 WHILE
-.loc ../contracts/DePool.sol, 1231
+.loc ../contracts/DePool.tsol, 1232
 DROP
 NIP
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	cutDePoolReward_35b96c94_internal
 .type	cutDePoolReward_35b96c94_internal, @function
 CALL $cutDePoolReward_35b96c94_internal_macro$
 
 .macro cutDePoolReward_35b96c94_internal_macro
-.loc ../contracts/DePool.sol, 1235
+.loc ../contracts/DePool.tsol, 1236
 GETPARAM 7
 FIRST
 UFITS 64
-.loc ../contracts/DePool.sol, 1237
+.loc ../contracts/DePool.tsol, 1238
 OVER
 INDEX 8
 PUSH S3
@@ -6637,7 +6635,7 @@ CALLREF {
 }
 ADD
 UFITS 64
-.loc ../contracts/DePool.sol, 1239
+.loc ../contracts/DePool.tsol, 1240
 OVER
 GETGLOB 21
 PUSH S2
@@ -6645,7 +6643,7 @@ ADD
 UFITS 64
 LESS
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1240
+	.loc ../contracts/DePool.tsol, 1241
 	PUSH S2
 	GETGLOB 21
 	PUSH S2
@@ -6655,43 +6653,43 @@ PUSHCONT {
 	SUB
 	UFITS 64
 	MIN
-	.loc ../contracts/DePool.sol, 1241
+	.loc ../contracts/DePool.tsol, 1242
 	PUSH S3
 	SUBR
 	UFITS 64
 	POP S3
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 1243
+.loc ../contracts/DePool.tsol, 1244
 DROP2
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	acceptRewardAndStartRoundCompleting_58a60f67_internal
 .type	acceptRewardAndStartRoundCompleting_58a60f67_internal, @function
 CALL $acceptRewardAndStartRoundCompleting_58a60f67_internal_macro$
 
 .macro acceptRewardAndStartRoundCompleting_58a60f67_internal_macro
-.loc ../contracts/DePool.sol, 1247
+.loc ../contracts/DePool.tsol, 1248
 OVER
 INDEX 8
 PUSH S2
 INDEX 10
 SUB
 UFITS 64
-.loc ../contracts/DePool.sol, 1248
+.loc ../contracts/DePool.tsol, 1249
 SUB
 UFITS 64
-.loc ../contracts/DePool.sol, 1249
+.loc ../contracts/DePool.tsol, 1250
 DUP2
 SETINDEX 12
 POP S2
-.loc ../contracts/DePool.sol, 1251
+.loc ../contracts/DePool.tsol, 1252
 OVER
 CALLREF {
 	CALL $cutDePoolReward_35b96c94_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1253
+.loc ../contracts/DePool.tsol, 1254
 DUP
 PUSHINT 40000000
 PUSH S3
@@ -6704,7 +6702,7 @@ UFITS 64
 MIN
 SUB
 UFITS 64
-.loc ../contracts/DePool.sol, 1255
+.loc ../contracts/DePool.tsol, 1256
 DUP
 GETGLOB 19
 PUSHINT 100
@@ -6713,13 +6711,13 @@ UFITS 64
 PUXC S2, S-1
 SETINDEX 13
 POP S2
-.loc ../contracts/DePool.sol, 1257
+.loc ../contracts/DePool.tsol, 1258
 GETGLOB 20
 PUSHINT 100
 MULDIV
 UFITS 64
 SETINDEX 14
-.loc ../contracts/DePool.sol, 1258
+.loc ../contracts/DePool.tsol, 1259
 DUP
 INDEX 14
 GETGLOB 10
@@ -6733,12 +6731,12 @@ STZEROES
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 1260
+.loc ../contracts/DePool.tsol, 1261
 PUSHINT 5
 CALLREF {
 	CALL $startRoundCompleting_f756a4fe_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro onSuccessToRecoverStake
 DROP
@@ -6749,7 +6747,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1265
+.loc ../contracts/DePool.tsol, 1266
 OVER
 PUSHCONT {
 	LDU 64
@@ -6763,7 +6761,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $onSuccessToRecoverStake_bcc583bd_internal_macro$
 }
@@ -6778,7 +6776,7 @@ THROW 0
 CALL $onSuccessToRecoverStake_bcc583bd_internal_macro$
 
 .macro onSuccessToRecoverStake_bcc583bd_internal_macro
-.loc ../contracts/DePool.sol, 1266
+.loc ../contracts/DePool.tsol, 1267
 GETGLOB 9
 PUSHINT 0
 GETGLOB 11
@@ -6801,44 +6799,44 @@ PUSHCONT {
 }
 IFNOT
 THROWIFNOT 107
-.loc ../contracts/DePool.sol, 1267
+.loc ../contracts/DePool.tsol, 1268
 OVER
 CALLREF {
 	CALL $fetchRound_d130e988_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1268
+.loc ../contracts/DePool.tsol, 1269
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1269
+	.loc ../contracts/DePool.tsol, 1270
 	PUSHINT 529
 	CALLREF {
 		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 3
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 1271
+.loc ../contracts/DePool.tsol, 1272
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 1272
+.loc ../contracts/DePool.tsol, 1273
 GETGLOB 9
 OVER
 PUSHINT 22
 INDEXVAR
 SDEQ
 THROWIFNOT 148
-.loc ../contracts/DePool.sol, 1273
+.loc ../contracts/DePool.tsol, 1274
 TUCK
 PUSHINT 21
 INDEXVAR
 SDEQ
 THROWIFNOT 127
-.loc ../contracts/DePool.sol, 1274
+.loc ../contracts/DePool.tsol, 1275
 ACCEPT
-.loc ../contracts/DePool.sol, 1275
+.loc ../contracts/DePool.tsol, 1276
 DEPTH
 ADDCONST -2
 PICK
@@ -6846,40 +6844,40 @@ UFITS 64
 PUSHINT 90000000
 ADD
 UFITS 64
-.loc ../contracts/DePool.sol, 1276
+.loc ../contracts/DePool.tsol, 1277
 FALSE ; decl return flag
 PUSH S2
 INDEX 6
 EQINT 5
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1277
+	.loc ../contracts/DePool.tsol, 1278
 	PUSH2 S1, S2
 	INDEX 8
 	LESS
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1281
+		.loc ../contracts/DePool.tsol, 1282
 		PUSH S2
 		PUSHINT 6
 		SETINDEX 6
 		POP S3
-		.loc ../contracts/DePool.sol, 1282
+		.loc ../contracts/DePool.tsol, 1283
 		BLKPUSH 2, 2
 		SETINDEX 10
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1285
+		.loc ../contracts/DePool.tsol, 1286
 		PUSH S2
 		PUSHINT 6
 		SETINDEX 6
 		POP S3
-		.loc ../contracts/DePool.sol, 1286
+		.loc ../contracts/DePool.tsol, 1287
 		PUSH S2
 		PUSHINT 6
 		SETINDEX 7
 	}
 	IFELSE
 	POP S3
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 PUSHCONT {
 	FALSE ; decl return flag
@@ -6887,18 +6885,18 @@ PUSHCONT {
 	INDEX 6
 	EQINT 7
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1289
+		.loc ../contracts/DePool.tsol, 1290
 		OVER2
 		SETINDEX 9
 		POP S4
-		.loc ../contracts/DePool.sol, 1290
+		.loc ../contracts/DePool.tsol, 1291
 		PUSH S3
 		INDEX 8
 		PUSH S4
 		INDEX 10
 		SUB
 		UFITS 64
-		.loc ../contracts/DePool.sol, 1291
+		.loc ../contracts/DePool.tsol, 1292
 		PUSH2 S0, S3
 		LEQ
 		DUP
@@ -6912,7 +6910,7 @@ PUSHCONT {
 		}
 		IF
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1292
+			.loc ../contracts/DePool.tsol, 1293
 			PUSH S4
 			PUSHINT 6
 			CALLREF {
@@ -6923,14 +6921,14 @@ PUSHCONT {
 			PUSH2 S3, S0
 			GREATER
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1294
+				.loc ../contracts/DePool.tsol, 1295
 				BLKPUSH 2, 4
 				CALLREF {
 					CALL $acceptRewardAndStartRoundCompleting_58a60f67_internal_macro$
 				}
 			}
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1296
+				.loc ../contracts/DePool.tsol, 1297
 				PUSH S4
 				PUSHINT 7
 				CALLREF {
@@ -6941,11 +6939,11 @@ PUSHCONT {
 		}
 		IFELSE
 		POP S5
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 		DROP
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1299
+		.loc ../contracts/DePool.tsol, 1300
 		PUSHINT 530
 		CALLREF {
 			CALL $errorEvent_bd4f4fc9_internal_macro$
@@ -6954,19 +6952,19 @@ PUSHCONT {
 		PUSHINT 4
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DUP
 	IFRET
 	DROP
 }
 IFELSE
 IFRET
-.loc ../contracts/DePool.sol, 1302
+.loc ../contracts/DePool.tsol, 1303
 DROP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro onFailToRecoverStake
 DROP
@@ -6977,7 +6975,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1305
+.loc ../contracts/DePool.tsol, 1306
 OVER
 PUSHCONT {
 	LDU 64
@@ -6991,7 +6989,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $onFailToRecoverStake_a7cc9bcd_internal_macro$
 }
@@ -7006,7 +7004,7 @@ THROW 0
 CALL $onFailToRecoverStake_a7cc9bcd_internal_macro$
 
 .macro onFailToRecoverStake_a7cc9bcd_internal_macro
-.loc ../contracts/DePool.sol, 1306
+.loc ../contracts/DePool.tsol, 1307
 GETGLOB 9
 PUSHINT 0
 GETGLOB 11
@@ -7029,55 +7027,55 @@ PUSHCONT {
 }
 IFNOT
 THROWIFNOT 107
-.loc ../contracts/DePool.sol, 1307
+.loc ../contracts/DePool.tsol, 1308
 OVER
 CALLREF {
 	CALL $fetchRound_d130e988_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1308
+.loc ../contracts/DePool.tsol, 1309
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1309
+	.loc ../contracts/DePool.tsol, 1310
 	PUSHINT 529
 	CALLREF {
 		CALL $errorEvent_bd4f4fc9_internal_macro$
 	}
 	BLKDROP 3
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IFJMP
-.loc ../contracts/DePool.sol, 1311
+.loc ../contracts/DePool.tsol, 1312
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 1312
+.loc ../contracts/DePool.tsol, 1313
 GETGLOB 9
 OVER
 PUSHINT 22
 INDEXVAR
 SDEQ
 THROWIFNOT 148
-.loc ../contracts/DePool.sol, 1313
+.loc ../contracts/DePool.tsol, 1314
 TUCK
 PUSHINT 21
 INDEXVAR
 SDEQ
 THROWIFNOT 127
-.loc ../contracts/DePool.sol, 1314
+.loc ../contracts/DePool.tsol, 1315
 ACCEPT
-.loc ../contracts/DePool.sol, 1315
+.loc ../contracts/DePool.tsol, 1316
 FALSE ; decl return flag
 OVER
 INDEX 6
 EQINT 5
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1317
+	.loc ../contracts/DePool.tsol, 1318
 	OVER
 	PUSHINT 6
 	SETINDEX 6
 	POP S2
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 PUSHCONT {
 	FALSE ; decl return flag
@@ -7085,7 +7083,7 @@ PUSHCONT {
 	INDEX 6
 	EQINT 7
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1320
+		.loc ../contracts/DePool.tsol, 1321
 		PUSH S2
 		PUSHINT 7
 		CALLREF {
@@ -7094,7 +7092,7 @@ PUSHCONT {
 		POP S3
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1322
+		.loc ../contracts/DePool.tsol, 1323
 		PUSHINT 521
 		CALLREF {
 			CALL $errorEvent_bd4f4fc9_internal_macro$
@@ -7103,18 +7101,18 @@ PUSHCONT {
 		PUSHINT 4
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DUP
 	IFRET
 	DROP
 }
 IFELSE
 IFRET
-.loc ../contracts/DePool.sol, 1324
+.loc ../contracts/DePool.tsol, 1325
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro terminator
 DROP
@@ -7125,9 +7123,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1334
+.loc ../contracts/DePool.tsol, 1335
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $terminator_a9898b9b_internal_macro$
 }
@@ -7142,7 +7140,7 @@ THROW 0
 CALL $terminator_a9898b9b_internal_macro$
 
 .macro terminator_a9898b9b_internal_macro
-.loc ../contracts/DePool.sol, 119
+.loc ../contracts/DePool.tsol, 119
 GETGLOB 5
 DUP
 ISNULL
@@ -7154,46 +7152,46 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePool.sol, 1335
+.loc ../contracts/DePool.tsol, 1336
 GETGLOB 16
 THROWIF 114
-.loc ../contracts/DePool.sol, 1336
+.loc ../contracts/DePool.tsol, 1337
 TRUE
 SETGLOB 16
-.loc ../contracts/DePool.sol, 1337
+.loc ../contracts/DePool.tsol, 1338
 CALLREF {
 	CALL $c7_to_c4$
 }
 COMMIT
-.loc ../contracts/DePool.sol, 1338
+.loc ../contracts/DePool.tsol, 1339
 ACCEPT
-.loc ../contracts/DePool.sol, 1340
+.loc ../contracts/DePool.tsol, 1341
 PUSHINT 0
 CALLREF {
 	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1341
+.loc ../contracts/DePool.tsol, 1342
 GETPARAM 7
 FIRST
-.loc ../contracts/DePool.sol, 1342
+.loc ../contracts/DePool.tsol, 1343
 PUSH2 S0, S1
 GREATER
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1343
+	.loc ../contracts/DePool.tsol, 1344
 	PUSH2 S0, S1
 	SUB
 	UFITS 128
-	.loc ../contracts/DePool.sol, 1344
+	.loc ../contracts/DePool.tsol, 1345
 	DUP
 	GETGLOB 21
 	GREATER
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1345
+		.loc ../contracts/DePool.tsol, 1346
 		DUP
 		GETGLOB 21
 		SUB
 		UFITS 128
-		.loc ../contracts/DePool.sol, 1346
+		.loc ../contracts/DePool.tsol, 1347
 		GETGLOB 10
 		NEWC
 		STSLICECONST x42_
@@ -7205,14 +7203,14 @@ PUSHCONT {
 		ENDC
 		PUSHINT 0
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IF
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 	DROP
 }
 IF
-.loc ../contracts/DePoolRounds.sol, 173
+.loc ../contracts/DePoolRounds.tsol, 173
 DROP2
 GETGLOB 14
 DEC
@@ -7220,56 +7218,56 @@ UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 174
+.loc ../contracts/DePoolRounds.tsol, 174
 GETGLOB 14
 ADDCONST -2
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 175
+.loc ../contracts/DePoolRounds.tsol, 175
 GETGLOB 14
 ADDCONST -3
 UFITS 64
 CALLREF {
 	CALL $roundAt_efe99a24_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1354
+.loc ../contracts/DePool.tsol, 1355
 PUSH S2
 PUSHINT 1
 CALLREF {
 	CALL $startRoundCompleting_f756a4fe_internal_macro$
 }
 POP S3
-.loc ../contracts/DePool.sol, 1355
+.loc ../contracts/DePool.tsol, 1356
 OVER
 PUSHINT 1
 CALLREF {
 	CALL $startRoundCompleting_f756a4fe_internal_macro$
 }
 POP S2
-.loc ../contracts/DePool.sol, 1356
+.loc ../contracts/DePool.tsol, 1357
 DUP
 INDEX 6
 EQINT 2
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1357
+	.loc ../contracts/DePool.tsol, 1358
 	PUSHINT 1
 	CALLREF {
 		CALL $startRoundCompleting_f756a4fe_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 1359
+.loc ../contracts/DePool.tsol, 1360
 PUSHREF {
 	.blob xc000000000000000000000000024035429
 }
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 1360
+.loc ../contracts/DePool.tsol, 1361
 ROT
-.loc ../contracts/DePoolRounds.sol, 178
+.loc ../contracts/DePoolRounds.tsol, 178
 GETGLOB 14
 DEC
 UFITS 64
@@ -7277,9 +7275,9 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1361
+.loc ../contracts/DePool.tsol, 1362
 SWAP
-.loc ../contracts/DePoolRounds.sol, 179
+.loc ../contracts/DePoolRounds.tsol, 179
 GETGLOB 14
 ADDCONST -2
 UFITS 64
@@ -7287,7 +7285,7 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 180
+.loc ../contracts/DePoolRounds.tsol, 180
 GETGLOB 14
 ADDCONST -3
 UFITS 64
@@ -7295,7 +7293,7 @@ SWAP
 CALLREF {
 	CALL $setRound_35d1b2f6_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro setValidatorRewardFraction
 DROP
@@ -7306,10 +7304,10 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1368
+.loc ../contracts/DePool.tsol, 1369
 LDU 8
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $setValidatorRewardFraction_48eaf800_internal_macro$
 }
@@ -7324,7 +7322,7 @@ THROW 0
 CALL $setValidatorRewardFraction_48eaf800_internal_macro$
 
 .macro setValidatorRewardFraction_48eaf800_internal_macro
-.loc ../contracts/DePool.sol, 119
+.loc ../contracts/DePool.tsol, 119
 GETGLOB 5
 DUP
 ISNULL
@@ -7336,27 +7334,27 @@ IF
 GETGLOB 2
 EQUAL
 THROWIFNOT 101
-.loc ../contracts/DePool.sol, 1369
+.loc ../contracts/DePool.tsol, 1370
 DUP
 GETGLOB 20
 LESS
 THROWIFNOT 143
-.loc ../contracts/DePool.sol, 1370
+.loc ../contracts/DePool.tsol, 1371
 DUP
 GTINT 0
 THROWIFNOT 144
-.loc ../contracts/DePool.sol, 1371
+.loc ../contracts/DePool.tsol, 1372
 ACCEPT
-.loc ../contracts/DePool.sol, 1373
+.loc ../contracts/DePool.tsol, 1374
 SETGLOB 20
-.loc ../contracts/DePool.sol, 1374
+.loc ../contracts/DePool.tsol, 1375
 PUSHINT 100
 GETGLOB 20
 SUB
 UFITS 8
 DUP
 SETGLOB 19
-.loc ../contracts/DePool.sol, 1375
+.loc ../contracts/DePool.tsol, 1376
 GETGLOB 20
 PUSHSLICE xc00000000000000000000000002123bdd7
 NEWC
@@ -7366,15 +7364,15 @@ STU 8
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro receiveFunds
 DROP
 GETGLOB 6
 THROWIFNOT 76
-.loc ../contracts/DePool.sol, 1379
+.loc ../contracts/DePool.tsol, 1380
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $receiveFunds_005c33e1_internal_macro$
 }
@@ -7388,19 +7386,19 @@ THROW 0
 CALL $receiveFunds_005c33e1_internal_macro$
 
 .macro receiveFunds_005c33e1_internal_macro
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro receive_macro
 GETGLOB 6
 THROWIFNOT 76
-.loc ../contracts/DePool.sol, 1383
+.loc ../contracts/DePool.tsol, 1384
 GETGLOB 9
 MYADDR
 SDEQ
 IFNOTREF {
 	CALL $_returnChange_260d9040_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 DUP
 IFREF {
 	CALL $upd_only_time_in_c4$
@@ -7409,14 +7407,14 @@ IFREF {
 .macro fallback_macro
 GETGLOB 6
 THROWIFNOT 76
-.loc ../contracts/DePool.sol, 1389
+.loc ../contracts/DePool.tsol, 1390
 GETGLOB 9
 MYADDR
 SDEQ
 IFNOTREF {
 	CALL $_returnChange_260d9040_internal_macro$
 }
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 DUP
 IFREF {
 	CALL $upd_only_time_in_c4$
@@ -7430,56 +7428,56 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1395
+.loc ../contracts/DePool.tsol, 1396
 DUP
 LDU 32
 POP S2
-.loc ../contracts/DePool.sol, 1396
+.loc ../contracts/DePool.tsol, 1397
 DUP
 PUSHINT 327920780
 EQUAL
-.loc ../contracts/DePool.sol, 1397
+.loc ../contracts/DePool.tsol, 1398
 OVER
 PUSHINT 1437643621
 EQUAL
-.loc ../contracts/DePool.sol, 1398
+.loc ../contracts/DePool.tsol, 1399
 DUP2
 OR
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1399
+	.loc ../contracts/DePool.tsol, 1400
 	PUSH S3
 	LDU 64
 	POP S5
-	.loc ../contracts/DePool.sol, 1400
+	.loc ../contracts/DePool.tsol, 1401
 	DUP
 	CALLREF {
 		CALL $fetchRound_d130e988_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 1401
+	.loc ../contracts/DePool.tsol, 1402
 	PUSH S3
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1402
+		.loc ../contracts/DePool.tsol, 1403
 		OVER
-		.loc ../contracts/DePoolRounds.sol, 170
+		.loc ../contracts/DePoolRounds.tsol, 170
 		GETGLOB 14
 		ADDCONST -3
 		UFITS 64
 		EQUAL
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 		THROWIFNOT 524
-		.loc ../contracts/DePool.sol, 1403
+		.loc ../contracts/DePool.tsol, 1404
 		DUP
 		ISNULL
 		THROWIF 63
-		.loc ../contracts/DePool.sol, 1404
+		.loc ../contracts/DePool.tsol, 1405
 		DUP
 		INDEX 6
 		EQINT 3
 		THROWIFNOT 525
-		.loc ../contracts/DePool.sol, 1405
+		.loc ../contracts/DePool.tsol, 1406
 		PUSHINT 2
 		SETINDEX 6
-		.loc ../contracts/DePool.sol, 1406
+		.loc ../contracts/DePool.tsol, 1407
 		DUP
 		PUSHINT 20
 		INDEXVAR
@@ -7491,63 +7489,63 @@ PUSHCONT {
 		ENDC
 		PUSHINT 0
 		SENDRAWMSG
-		.loc ../contracts/DePool.sol, 1407
+		.loc ../contracts/DePool.tsol, 1408
 	}
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1409
+		.loc ../contracts/DePool.tsol, 1410
 		OVER
-		.loc ../contracts/DePoolRounds.sol, 171
+		.loc ../contracts/DePoolRounds.tsol, 171
 		GETGLOB 14
 		ADDCONST -4
 		UFITS 64
 		EQUAL
-		.loc ../contracts/DePoolRounds.sol, 0
+		.loc ../contracts/DePoolRounds.tsol, 0
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1410
+			.loc ../contracts/DePool.tsol, 1411
 			DUP
 			ISNULL
 			THROWIF 63
-			.loc ../contracts/DePool.sol, 1411
+			.loc ../contracts/DePool.tsol, 1412
 			DUP
 			INDEX 6
 			EQINT 7
 			THROWIFNOT 526
-			.loc ../contracts/DePool.sol, 1412
+			.loc ../contracts/DePool.tsol, 1413
 			PUSHINT 6
 			SETINDEX 6
-			.loc ../contracts/DePool.sol, 1413
+			.loc ../contracts/DePool.tsol, 1414
 		}
 		PUSHCONT {
 			OVER
-			.loc ../contracts/DePoolRounds.sol, 170
+			.loc ../contracts/DePoolRounds.tsol, 170
 			GETGLOB 14
 			ADDCONST -3
 			UFITS 64
 			EQUAL
-			.loc ../contracts/DePoolRounds.sol, 0
+			.loc ../contracts/DePoolRounds.tsol, 0
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1415
+				.loc ../contracts/DePool.tsol, 1416
 				DUP
 				ISNULL
 				THROWIF 63
-				.loc ../contracts/DePool.sol, 1416
+				.loc ../contracts/DePool.tsol, 1417
 				DUP
 				INDEX 6
 				EQINT 5
 				THROWIFNOT 527
-				.loc ../contracts/DePool.sol, 1417
+				.loc ../contracts/DePool.tsol, 1418
 				PUSHINT 4
 				SETINDEX 6
-				.loc ../contracts/DePool.sol, 1418
+				.loc ../contracts/DePool.tsol, 1419
 			}
 			PUSHCONT {
-				.loc ../contracts/DePool.sol, 1420
+				.loc ../contracts/DePool.tsol, 1421
 				THROW 528
 			}
 			IFELSE
 		}
 		IFELSE
-		.loc ../contracts/DePool.sol, 1422
+		.loc ../contracts/DePool.tsol, 1423
 		OVER
 		PUSHSLICE xc000000000000000000000000063d70437
 		NEWC
@@ -7558,17 +7556,17 @@ PUSHCONT {
 		SENDRAWMSG
 	}
 	IFELSE
-	.loc ../contracts/DePool.sol, 1424
+	.loc ../contracts/DePool.tsol, 1425
 	DUP
 	ISNULL
 	THROWIF 63
 	CALLREF {
 		CALL $setRound_35d1b2f6_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 IF
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 BLKDROP 4
 CALLREF {
 	CALL $c7_to_c4$
@@ -7583,9 +7581,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1430
+.loc ../contracts/DePool.tsol, 1431
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $getLastRoundInfo_705e798e_internal_macro$
 }
@@ -7599,11 +7597,11 @@ THROW 0
 CALL $getLastRoundInfo_705e798e_internal_macro$
 
 .macro getLastRoundInfo_705e798e_internal_macro
-.loc ../contracts/DePool.sol, 1431
+.loc ../contracts/DePool.tsol, 1432
 GETGLOB 15
 DICTEMPTY
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1433
+	.loc ../contracts/DePool.tsol, 1434
 	GETGLOB 9
 	NEWC
 	STSLICECONST x62_
@@ -7620,7 +7618,7 @@ PUSHCONT {
 	TUPLE 12
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1435
+	.loc ../contracts/DePool.tsol, 1436
 	FALSE
 	GETGLOB 15
 	PUSHINT 1
@@ -7685,7 +7683,7 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro getParticipantInfo
 DROP
@@ -7696,7 +7694,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1444
+.loc ../contracts/DePool.tsol, 1445
 OVER
 PUSHCONT {
 	LDREF
@@ -7706,7 +7704,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $getParticipantInfo_71bdce55_internal_macro$
 }
@@ -7757,7 +7755,7 @@ THROW 0
 CALL $getParticipantInfo_71bdce55_internal_macro$
 
 .macro getParticipantInfo_71bdce55_internal_macro
-.loc ../contracts/DePool.sol, 1444
+.loc ../contracts/DePool.tsol, 1445
 PUSHINT 0
 BLKPUSH 3, 0
 NEWDICT
@@ -7765,54 +7763,54 @@ BLKPUSH 2, 0
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../contracts/DePool.sol, 1457
+.loc ../contracts/DePool.tsol, 1458
 PUSH S8
 CALLREF {
 	CALL $fetchParticipant_738c2c87_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1458
+.loc ../contracts/DePool.tsol, 1459
 DUP
 ISNULL
 THROWIF 116
-.loc ../contracts/DePool.sol, 1459
+.loc ../contracts/DePool.tsol, 1460
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePool.sol, 1461
+.loc ../contracts/DePool.tsol, 1462
 DUP
 INDEX 4
 POP S7
-.loc ../contracts/DePool.sol, 1462
+.loc ../contracts/DePool.tsol, 1463
 DUP
 SECOND
 POP S6
-.loc ../contracts/DePool.sol, 1463
+.loc ../contracts/DePool.tsol, 1464
 DUP
 INDEX 5
 POP S8
-.loc ../contracts/DePool.sol, 1465
+.loc ../contracts/DePool.tsol, 1466
 DUP
 INDEX 6
 POP S2
-.loc ../contracts/DePool.sol, 1466
+.loc ../contracts/DePool.tsol, 1467
 INDEX 7
-.loc ../contracts/DePool.sol, 1468
+.loc ../contracts/DePool.tsol, 1469
 CALLREF {
 	CALL $minRound_bdc18b15_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1469
+.loc ../contracts/DePool.tsol, 1470
 PUSHCONT {
 	DUP
 	ISNULL
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1470
+	.loc ../contracts/DePool.tsol, 1471
 	DUP
 	ISNULL
 	THROWIF 63
 	UNPAIR
-	.loc ../contracts/DePool.sol, 1471
+	.loc ../contracts/DePool.tsol, 1472
 	PUSH2 S11, S0
 	PUSHINT 16
 	INDEXVAR
@@ -7855,19 +7853,19 @@ PUSHCONT {
 		ENDS
 		TRIPLE
 	}
-	.loc ../contracts/DePool.sol, 1472
+	.loc ../contracts/DePool.tsol, 1473
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1473
+		.loc ../contracts/DePool.tsol, 1474
 		BLKPUSH 2, 0
 		ISNULL
 		THROWIF 63
-		.loc ../contracts/DePool.sol, 1474
+		.loc ../contracts/DePool.tsol, 1475
 		DUP
 		FIRST
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1475
+			.loc ../contracts/DePool.tsol, 1476
 			DUP
 			FIRST
 			PUSH2 S9, S3
@@ -7879,22 +7877,22 @@ PUSHCONT {
 			PUSHINT 64
 			DICTUSETB
 			POP S9
-			.loc ../contracts/DePool.sol, 1476
+			.loc ../contracts/DePool.tsol, 1477
 			DUP
 			FIRST
 			PUSH S13
 			ADD
 			UFITS 64
 			POP S13
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		IF
-		.loc ../contracts/DePool.sol, 1478
+		.loc ../contracts/DePool.tsol, 1479
 		DUP
 		SECOND
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1479
+			.loc ../contracts/DePool.tsol, 1480
 			DUP
 			SECOND
 			DUP
@@ -7917,7 +7915,7 @@ PUSHCONT {
 			PUSHINT 64
 			DICTUSETB
 			POP S8
-			.loc ../contracts/DePool.sol, 1480
+			.loc ../contracts/DePool.tsol, 1481
 			DUP
 			SECOND
 			DUP
@@ -7928,15 +7926,15 @@ PUSHCONT {
 			ADD
 			UFITS 64
 			POP S13
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePool.sol, 1482
+		.loc ../contracts/DePool.tsol, 1483
 		DUP
 		THIRD
 		ISNULL
 		PUSHCONT {
-			.loc ../contracts/DePool.sol, 1483
+			.loc ../contracts/DePool.tsol, 1484
 			DUP
 			THIRD
 			DUP
@@ -7959,7 +7957,7 @@ PUSHCONT {
 			PUSHINT 64
 			DICTUSETB
 			POP S7
-			.loc ../contracts/DePool.sol, 1484
+			.loc ../contracts/DePool.tsol, 1485
 			DUP
 			THIRD
 			DUP
@@ -7970,24 +7968,24 @@ PUSHCONT {
 			ADD
 			UFITS 64
 			POP S13
-			.loc ../contracts/DePool.sol, 0
+			.loc ../contracts/DePool.tsol, 0
 		}
 		IFNOT
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 		DROP
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 1487
+	.loc ../contracts/DePool.tsol, 1488
 	DROP2
 	CALLREF {
 		CALL $nextRound_da54d41d_internal_macro$
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 WHILE
 DROP
 BLKDROP2 1, 9
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro getDePoolInfo
 DROP
@@ -7998,9 +7996,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1492
+.loc ../contracts/DePool.tsol, 1493
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $getDePoolInfo_b7297b54_internal_macro$
 }
@@ -8057,29 +8055,29 @@ THROW 0
 CALL $getDePoolInfo_b7297b54_internal_macro$
 
 .macro getDePoolInfo_b7297b54_internal_macro
-.loc ../contracts/DePool.sol, 1508
+.loc ../contracts/DePool.tsol, 1509
 GETGLOB 16
-.loc ../contracts/DePool.sol, 1509
+.loc ../contracts/DePool.tsol, 1510
 GETGLOB 17
-.loc ../contracts/DePool.sol, 1510
+.loc ../contracts/DePool.tsol, 1511
 GETGLOB 18
-.loc ../contracts/DePool.sol, 1511
+.loc ../contracts/DePool.tsol, 1512
 GETGLOB 19
-.loc ../contracts/DePool.sol, 1512
+.loc ../contracts/DePool.tsol, 1513
 GETGLOB 20
-.loc ../contracts/DePool.sol, 1513
+.loc ../contracts/DePool.tsol, 1514
 GETGLOB 21
-.loc ../contracts/DePool.sol, 1515
+.loc ../contracts/DePool.tsol, 1516
 GETGLOB 10
-.loc ../contracts/DePool.sol, 1516
+.loc ../contracts/DePool.tsol, 1517
 GETGLOB 11
-.loc ../contracts/DePool.sol, 1518
+.loc ../contracts/DePool.tsol, 1519
 PUSHINT 500000000
-.loc ../contracts/DePool.sol, 1519
+.loc ../contracts/DePool.tsol, 1520
 PUSHINT 40000000
-.loc ../contracts/DePool.sol, 1520
+.loc ../contracts/DePool.tsol, 1521
 PUSHINT 90000000
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro getParticipants
 DROP
@@ -8090,9 +8088,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1524
+.loc ../contracts/DePool.tsol, 1525
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $getParticipants_5aa68ac0_internal_macro$
 }
@@ -8128,13 +8126,13 @@ IFREF {
 THROW 0
 
 .macro getParticipants_5aa68ac0_internal_macro
-.loc ../contracts/DePool.sol, 1524
+.loc ../contracts/DePool.tsol, 1525
 PUSHINT 0
 NEWDICT
 PAIR
-.loc ../contracts/DePool.sol, 1525
+.loc ../contracts/DePool.tsol, 1526
 NEWDICT
-.loc ../contracts/DePool.sol, 1526
+.loc ../contracts/DePool.tsol, 1527
 GETGLOB 12
 PUSHINT 267
 DICTMINREF
@@ -8159,27 +8157,27 @@ IFREF {
 	}
 	PAIR
 }
-.loc ../contracts/DePool.sol, 1527
+.loc ../contracts/DePool.tsol, 1528
 PUSHCONT {
 	DUP
 	ISNULL
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/DePool.sol, 1528
+	.loc ../contracts/DePool.tsol, 1529
 	DUP
 	ISNULL
 	THROWIF 63
 	UNPAIR
 	DROP
-	.loc ../contracts/DePool.sol, 1529
+	.loc ../contracts/DePool.tsol, 1530
 	PUSH2 S0, S1
 	PUSHINT 267
 	DICTGET
 	NULLSWAPIFNOT
 	NIP
 	PUSHCONT {
-		.loc ../contracts/DePool.sol, 1530
+		.loc ../contracts/DePool.tsol, 1531
 		PUSH2 S0, S1
 		NEWC
 		STONE
@@ -8187,7 +8185,7 @@ PUSHCONT {
 		PUSHINT 267
 		DICTSETB
 		POP S2
-		.loc ../contracts/DePool.sol, 1531
+		.loc ../contracts/DePool.tsol, 1532
 		PUSH2 S0, S2
 		UNPAIR
 		OVER
@@ -8197,10 +8195,10 @@ PUSHCONT {
 		DICTUSET
 		PAIR
 		POP S3
-		.loc ../contracts/DePool.sol, 0
+		.loc ../contracts/DePool.tsol, 0
 	}
 	IFNOT
-	.loc ../contracts/DePool.sol, 1533
+	.loc ../contracts/DePool.tsol, 1534
 	GETGLOB 12
 	PUSHINT 267
 	DICTGETNEXT
@@ -8226,11 +8224,11 @@ PUSHCONT {
 		}
 		PAIR
 	}
-	.loc ../contracts/DePool.sol, 0
+	.loc ../contracts/DePool.tsol, 0
 }
 WHILE
 DROP2
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .macro getDePoolBalance
 DROP
@@ -8241,9 +8239,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePool.sol, 1537
+.loc ../contracts/DePool.tsol, 1538
 ENDS
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 CALLREF {
 	CALL $getDePoolBalance_c0ed9a9f_internal_macro$
 }
@@ -8279,25 +8277,25 @@ THROW 0
 CALL $getDePoolBalance_c0ed9a9f_internal_macro$
 
 .macro getDePoolBalance_c0ed9a9f_internal_macro
-.loc ../contracts/DePool.sol, 1538
+.loc ../contracts/DePool.tsol, 1539
 PUSHINT 0
 CALLREF {
 	CALL $totalParticipantFunds_b67587bf_internal_macro$
 }
-.loc ../contracts/DePool.sol, 1539
+.loc ../contracts/DePool.tsol, 1540
 GETPARAM 7
 FIRST
-.loc ../contracts/DePool.sol, 1540
+.loc ../contracts/DePool.tsol, 1541
 SUBR
 FITS 256
-.loc ../contracts/DePool.sol, 0
+.loc ../contracts/DePool.tsol, 0
 
 .globl	roundAt_efe99a24_internal
 .type	roundAt_efe99a24_internal, @function
 CALL $roundAt_efe99a24_internal_macro$
 
 .macro roundAt_efe99a24_internal_macro
-.loc ../contracts/DePoolRounds.sol, 184
+.loc ../contracts/DePoolRounds.tsol, 184
 GETGLOB 13
 PUSHINT 64
 DICTUGETREF
@@ -8359,14 +8357,14 @@ IFREF {
 DUP
 ISNULL
 THROWIF 63
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .globl	fetchRound_d130e988_internal
 .type	fetchRound_d130e988_internal, @function
 CALL $fetchRound_d130e988_internal_macro$
 
 .macro fetchRound_d130e988_internal_macro
-.loc ../contracts/DePoolRounds.sol, 188
+.loc ../contracts/DePoolRounds.tsol, 188
 GETGLOB 13
 PUSHINT 64
 DICTUGETREF
@@ -8425,14 +8423,14 @@ IFREF {
 		TUPLEVAR
 	}
 }
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .globl	setRound_35d1b2f6_internal
 .type	setRound_35d1b2f6_internal, @function
 CALL $setRound_35d1b2f6_internal_macro$
 
 .macro setRound_35d1b2f6_internal_macro
-.loc ../contracts/DePoolRounds.sol, 192
+.loc ../contracts/DePoolRounds.tsol, 192
 GETGLOB 13
 SWAP
 CALLREF {
@@ -8488,14 +8486,14 @@ ROTREV
 PUSHINT 64
 DICTUSETREF
 SETGLOB 13
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .globl	minRound_bdc18b15_internal
 .type	minRound_bdc18b15_internal, @function
 CALL $minRound_bdc18b15_internal_macro$
 
 .macro minRound_bdc18b15_internal_macro
-.loc ../contracts/DePoolRounds.sol, 196
+.loc ../contracts/DePoolRounds.tsol, 196
 GETGLOB 13
 PUSHINT 64
 DICTUMINREF
@@ -8556,14 +8554,14 @@ IFREF {
 	}
 	PAIR
 }
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .globl	nextRound_da54d41d_internal
 .type	nextRound_da54d41d_internal, @function
 CALL $nextRound_da54d41d_internal_macro$
 
 .macro nextRound_da54d41d_internal_macro
-.loc ../contracts/DePoolRounds.sol, 200
+.loc ../contracts/DePoolRounds.tsol, 200
 GETGLOB 13
 PUSHINT 64
 DICTUGETNEXT
@@ -8625,14 +8623,14 @@ IFREF {
 	}
 	PAIR
 }
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .globl	toTruncatedRound_3c8490ce_internal
 .type	toTruncatedRound_3c8490ce_internal, @function
 CALL $toTruncatedRound_3c8490ce_internal_macro$
 
 .macro toTruncatedRound_3c8490ce_internal_macro
-.loc ../contracts/DePoolRounds.sol, 374
+.loc ../contracts/DePoolRounds.tsol, 374
 DUP
 FIRST
 OVER
@@ -8670,7 +8668,7 @@ PUSHINT 19
 INDEXVAR
 PUSHINT 16
 TUPLEVAR
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .macro getRounds
 DROP
@@ -8681,9 +8679,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolRounds.sol, 396
+.loc ../contracts/DePoolRounds.tsol, 396
 ENDS
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 CALLREF {
 	CALL $getRounds_6984d070_internal_macro$
 }
@@ -8715,29 +8713,29 @@ IFREF {
 THROW 0
 
 .macro getRounds_6984d070_internal_macro
-.loc ../contracts/DePoolRounds.sol, 396
+.loc ../contracts/DePoolRounds.tsol, 396
 NEWDICT
-.loc ../contracts/DePoolRounds.sol, 397
+.loc ../contracts/DePoolRounds.tsol, 397
 CALLREF {
 	CALL $minRound_bdc18b15_internal_macro$
 }
-.loc ../contracts/DePoolRounds.sol, 398
+.loc ../contracts/DePoolRounds.tsol, 398
 PUSHCONT {
 	DUP
 	ISNULL
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/DePoolRounds.sol, 399
+	.loc ../contracts/DePoolRounds.tsol, 399
 	DUP
 	ISNULL
 	THROWIF 63
 	UNPAIR
-	.loc ../contracts/DePoolRounds.sol, 400
+	.loc ../contracts/DePoolRounds.tsol, 400
 	CALLREF {
 		CALL $toTruncatedRound_3c8490ce_internal_macro$
 	}
-	.loc ../contracts/DePoolRounds.sol, 401
+	.loc ../contracts/DePoolRounds.tsol, 401
 	PUSH2 S0, S2
 	ROT
 	FIRST
@@ -8768,22 +8766,22 @@ PUSHCONT {
 	PUSHINT 64
 	DICTUSETB
 	POP S2
-	.loc ../contracts/DePoolRounds.sol, 402
+	.loc ../contracts/DePoolRounds.tsol, 402
 	CALLREF {
 		CALL $nextRound_da54d41d_internal_macro$
 	}
-	.loc ../contracts/DePoolRounds.sol, 0
+	.loc ../contracts/DePoolRounds.tsol, 0
 }
 WHILE
 DROP
-.loc ../contracts/DePoolRounds.sol, 0
+.loc ../contracts/DePoolRounds.tsol, 0
 
 .globl	getOrCreateParticipant_870b9686_internal
 .type	getOrCreateParticipant_870b9686_internal, @function
 CALL $getOrCreateParticipant_870b9686_internal_macro$
 
 .macro getOrCreateParticipant_870b9686_internal_macro
-.loc ../contracts/ParticipantBase.sol, 12
+.loc ../contracts/ParticipantBase.tsol, 12
 GETGLOB 12
 PUSHINT 267
 DICTGETREF
@@ -8806,18 +8804,18 @@ IFREF {
 		TUPLE 8
 	}
 }
-.loc ../contracts/ParticipantBase.sol, 13
+.loc ../contracts/ParticipantBase.tsol, 13
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/ParticipantBase.sol, 14
+	.loc ../contracts/ParticipantBase.tsol, 14
 	DUP
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/ParticipantBase.sol, 0
+	.loc ../contracts/ParticipantBase.tsol, 0
 }
 IFNOTJMP
-.loc ../contracts/ParticipantBase.sol, 16
+.loc ../contracts/ParticipantBase.tsol, 16
 DROP
 PUSHINT 0
 BLKPUSH 3, 0
@@ -8828,14 +8826,14 @@ PUSHREFSLICE {
 }
 DUP
 TUPLE 8
-.loc ../contracts/ParticipantBase.sol, 0
+.loc ../contracts/ParticipantBase.tsol, 0
 
 .globl	fetchParticipant_738c2c87_internal
 .type	fetchParticipant_738c2c87_internal, @function
 CALL $fetchParticipant_738c2c87_internal_macro$
 
 .macro fetchParticipant_738c2c87_internal_macro
-.loc ../contracts/ParticipantBase.sol, 30
+.loc ../contracts/ParticipantBase.tsol, 30
 GETGLOB 12
 PUSHINT 267
 DICTGETREF
@@ -8858,18 +8856,18 @@ IFREF {
 		TUPLE 8
 	}
 }
-.loc ../contracts/ParticipantBase.sol, 0
+.loc ../contracts/ParticipantBase.tsol, 0
 
 .globl	_setOrDeleteParticipant_a31677f8_internal
 .type	_setOrDeleteParticipant_a31677f8_internal, @function
 CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 
 .macro _setOrDeleteParticipant_a31677f8_internal_macro
-.loc ../contracts/ParticipantBase.sol, 34
+.loc ../contracts/ParticipantBase.tsol, 34
 DUP
 FIRST
 PUSHCONT {
-	.loc ../contracts/ParticipantBase.sol, 37
+	.loc ../contracts/ParticipantBase.tsol, 37
 	OVER
 	GETGLOB 12
 	PUSH S2
@@ -8895,7 +8893,7 @@ PUSHCONT {
 	DICTSETREF
 }
 PUSHCONT {
-	.loc ../contracts/ParticipantBase.sol, 35
+	.loc ../contracts/ParticipantBase.tsol, 35
 	OVER
 	GETGLOB 12
 	PUSHINT 267
@@ -8904,7 +8902,7 @@ PUSHCONT {
 }
 IFELSE
 SETGLOB 12
-.loc ../contracts/ParticipantBase.sol, 0
+.loc ../contracts/ParticipantBase.tsol, 0
 DROP2
 
 .globl	getCurValidatorData_61ae336b_internal
@@ -8912,10 +8910,10 @@ DROP2
 CALL $getCurValidatorData_61ae336b_internal_macro$
 
 .macro getCurValidatorData_61ae336b_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 6
+.loc ../contracts/ConfigParamsBase.tsol, 6
 PUSHINT 0
 DUP
-.loc ../contracts/ConfigParamsBase.sol, 7
+.loc ../contracts/ConfigParamsBase.tsol, 7
 PUSHINT 34
 CONFIGPARAM
 DUP
@@ -8925,28 +8923,28 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 8
+.loc ../contracts/ConfigParamsBase.tsol, 8
 THROWIFNOT 508
-.loc ../contracts/ConfigParamsBase.sol, 9
+.loc ../contracts/ConfigParamsBase.tsol, 9
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 10
+.loc ../contracts/ConfigParamsBase.tsol, 10
 LDU 8
 LDU 32
 PLDU 32
 XCHG S2
 DROP
 POP S2
-.loc ../contracts/ConfigParamsBase.sol, 11
+.loc ../contracts/ConfigParamsBase.tsol, 11
 OVER
 POP S3
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	getPrevValidatorHash_22954fac_internal
 .type	getPrevValidatorHash_22954fac_internal, @function
 CALL $getPrevValidatorHash_22954fac_internal_macro$
 
 .macro getPrevValidatorHash_22954fac_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 15
+.loc ../contracts/ConfigParamsBase.tsol, 15
 PUSHINT 32
 CONFIGPARAM
 DUP
@@ -8956,25 +8954,25 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 16
+.loc ../contracts/ConfigParamsBase.tsol, 16
 THROWIFNOT 507
-.loc ../contracts/ConfigParamsBase.sol, 17
+.loc ../contracts/ConfigParamsBase.tsol, 17
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 18
+.loc ../contracts/ConfigParamsBase.tsol, 18
 LDU 8
 PLDU 32
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	roundTimeParams_73c24cb0_internal
 .type	roundTimeParams_73c24cb0_internal, @function
 CALL $roundTimeParams_73c24cb0_internal_macro$
 
 .macro roundTimeParams_73c24cb0_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 21
+.loc ../contracts/ConfigParamsBase.tsol, 21
 PUSHINT 0
 BLKPUSH 3, 0
-.loc ../contracts/ConfigParamsBase.sol, 28
+.loc ../contracts/ConfigParamsBase.tsol, 28
 PUSHINT 15
 CONFIGPARAM
 PUSHCONT {
@@ -8996,16 +8994,16 @@ POP S8
 POP S6
 POP S4
 POP S2
-.loc ../contracts/ConfigParamsBase.sol, 29
+.loc ../contracts/ConfigParamsBase.tsol, 29
 THROWIFNOT 509
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	getMaxStakeFactor_3562a37c_internal
 .type	getMaxStakeFactor_3562a37c_internal, @function
 CALL $getMaxStakeFactor_3562a37c_internal_macro$
 
 .macro getMaxStakeFactor_3562a37c_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 33
+.loc ../contracts/ConfigParamsBase.tsol, 33
 PUSHINT 17
 CONFIGPARAM
 DUP
@@ -9015,29 +9013,29 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 34
+.loc ../contracts/ConfigParamsBase.tsol, 34
 THROWIFNOT 516
-.loc ../contracts/ConfigParamsBase.sol, 35
+.loc ../contracts/ConfigParamsBase.tsol, 35
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 36
+.loc ../contracts/ConfigParamsBase.tsol, 36
 LDGRAMS
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 37
+.loc ../contracts/ConfigParamsBase.tsol, 37
 LDGRAMS
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 38
+.loc ../contracts/ConfigParamsBase.tsol, 38
 LDGRAMS
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 39
+.loc ../contracts/ConfigParamsBase.tsol, 39
 PLDU 32
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	getElector_28167edb_internal
 .type	getElector_28167edb_internal, @function
 CALL $getElector_28167edb_internal_macro$
 
 .macro getElector_28167edb_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 43
+.loc ../contracts/ConfigParamsBase.tsol, 43
 PUSHINT 1
 CONFIGPARAM
 DUP
@@ -9047,13 +9045,13 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 44
+.loc ../contracts/ConfigParamsBase.tsol, 44
 THROWIFNOT 517
-.loc ../contracts/ConfigParamsBase.sol, 45
+.loc ../contracts/ConfigParamsBase.tsol, 45
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 46
+.loc ../contracts/ConfigParamsBase.tsol, 46
 PLDU 256
-.loc ../contracts/ConfigParamsBase.sol, 47
+.loc ../contracts/ConfigParamsBase.tsol, 47
 PUSHINT -1
 NEWC
 STSLICECONST x9_
@@ -9061,14 +9059,14 @@ STI 8
 STU 256
 ENDC
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	_recoverStake_2ed56c97_internal
 .type	_recoverStake_2ed56c97_internal, @function
 CALL $_recoverStake_2ed56c97_internal_macro$
 
 .macro _recoverStake_2ed56c97_internal_macro
-.loc ../contracts/ProxyBase.sol, 15
+.loc ../contracts/ProxyBase.tsol, 15
 SWAP
 PUSHINT 1000000000
 PUSHINT 90000000
@@ -9091,14 +9089,14 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/ProxyBase.sol, 0
+.loc ../contracts/ProxyBase.tsol, 0
 
 .globl	_sendElectionRequest_52528db9_internal
 .type	_sendElectionRequest_52528db9_internal, @function
 CALL $_sendElectionRequest_52528db9_internal_macro$
 
 .macro _sendElectionRequest_52528db9_internal_macro
-.loc ../contracts/ProxyBase.sol, 28
+.loc ../contracts/ProxyBase.tsol, 28
 OVER
 INDEX 5
 PUSH S2
@@ -9141,7 +9139,7 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/ProxyBase.sol, 0
+.loc ../contracts/ProxyBase.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

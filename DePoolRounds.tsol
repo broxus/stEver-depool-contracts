@@ -2,7 +2,7 @@
 
 pragma solidity >=0.6.0;
 
-import "DePoolLib.sol";
+import "DePoolLib.tsol";
 
 enum RoundStep {
     // Receiving half of vesting/lock stake from participants

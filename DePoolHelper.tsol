@@ -3,8 +3,8 @@
 pragma solidity >0.5.0;
 pragma AbiHeader expire;
 
-import "IDePool.sol";
-import "Participant.sol";
+import "IDePool.tsol";
+import "Participant.tsol";
 
 interface ITimer {
     function setTimer(uint timer) external;
