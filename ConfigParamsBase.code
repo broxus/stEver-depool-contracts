@@ -21,10 +21,10 @@ THROW 0
 CALL $getCurValidatorData_61ae336b_internal_macro$
 
 .macro getCurValidatorData_61ae336b_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 6
+.loc ../contracts/ConfigParamsBase.tsol, 6
 PUSHINT 0
 DUP
-.loc ../contracts/ConfigParamsBase.sol, 7
+.loc ../contracts/ConfigParamsBase.tsol, 7
 PUSHINT 34
 CONFIGPARAM
 DUP
@@ -34,28 +34,28 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 8
+.loc ../contracts/ConfigParamsBase.tsol, 8
 THROWIFNOT 508
-.loc ../contracts/ConfigParamsBase.sol, 9
+.loc ../contracts/ConfigParamsBase.tsol, 9
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 10
+.loc ../contracts/ConfigParamsBase.tsol, 10
 LDU 8
 LDU 32
 PLDU 32
 XCHG S2
 DROP
 POP S2
-.loc ../contracts/ConfigParamsBase.sol, 11
+.loc ../contracts/ConfigParamsBase.tsol, 11
 OVER
 POP S3
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	getPrevValidatorHash_22954fac_internal
 .type	getPrevValidatorHash_22954fac_internal, @function
 CALL $getPrevValidatorHash_22954fac_internal_macro$
 
 .macro getPrevValidatorHash_22954fac_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 15
+.loc ../contracts/ConfigParamsBase.tsol, 15
 PUSHINT 32
 CONFIGPARAM
 DUP
@@ -65,25 +65,25 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 16
+.loc ../contracts/ConfigParamsBase.tsol, 16
 THROWIFNOT 507
-.loc ../contracts/ConfigParamsBase.sol, 17
+.loc ../contracts/ConfigParamsBase.tsol, 17
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 18
+.loc ../contracts/ConfigParamsBase.tsol, 18
 LDU 8
 PLDU 32
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	roundTimeParams_73c24cb0_internal
 .type	roundTimeParams_73c24cb0_internal, @function
 CALL $roundTimeParams_73c24cb0_internal_macro$
 
 .macro roundTimeParams_73c24cb0_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 21
+.loc ../contracts/ConfigParamsBase.tsol, 21
 PUSHINT 0
 BLKPUSH 3, 0
-.loc ../contracts/ConfigParamsBase.sol, 28
+.loc ../contracts/ConfigParamsBase.tsol, 28
 PUSHINT 15
 CONFIGPARAM
 PUSHCONT {
@@ -105,16 +105,16 @@ POP S8
 POP S6
 POP S4
 POP S2
-.loc ../contracts/ConfigParamsBase.sol, 29
+.loc ../contracts/ConfigParamsBase.tsol, 29
 THROWIFNOT 509
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	getMaxStakeFactor_3562a37c_internal
 .type	getMaxStakeFactor_3562a37c_internal, @function
 CALL $getMaxStakeFactor_3562a37c_internal_macro$
 
 .macro getMaxStakeFactor_3562a37c_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 33
+.loc ../contracts/ConfigParamsBase.tsol, 33
 PUSHINT 17
 CONFIGPARAM
 DUP
@@ -124,29 +124,29 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 34
+.loc ../contracts/ConfigParamsBase.tsol, 34
 THROWIFNOT 516
-.loc ../contracts/ConfigParamsBase.sol, 35
+.loc ../contracts/ConfigParamsBase.tsol, 35
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 36
+.loc ../contracts/ConfigParamsBase.tsol, 36
 LDGRAMS
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 37
+.loc ../contracts/ConfigParamsBase.tsol, 37
 LDGRAMS
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 38
+.loc ../contracts/ConfigParamsBase.tsol, 38
 LDGRAMS
 NIP
-.loc ../contracts/ConfigParamsBase.sol, 39
+.loc ../contracts/ConfigParamsBase.tsol, 39
 PLDU 32
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .globl	getElector_28167edb_internal
 .type	getElector_28167edb_internal, @function
 CALL $getElector_28167edb_internal_macro$
 
 .macro getElector_28167edb_internal_macro
-.loc ../contracts/ConfigParamsBase.sol, 43
+.loc ../contracts/ConfigParamsBase.tsol, 43
 PUSHINT 1
 CONFIGPARAM
 DUP
@@ -156,13 +156,13 @@ PUSHCONT {
 	SWAP
 }
 IFNOT
-.loc ../contracts/ConfigParamsBase.sol, 44
+.loc ../contracts/ConfigParamsBase.tsol, 44
 THROWIFNOT 517
-.loc ../contracts/ConfigParamsBase.sol, 45
+.loc ../contracts/ConfigParamsBase.tsol, 45
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 46
+.loc ../contracts/ConfigParamsBase.tsol, 46
 PLDU 256
-.loc ../contracts/ConfigParamsBase.sol, 47
+.loc ../contracts/ConfigParamsBase.tsol, 47
 PUSHINT -1
 NEWC
 STSLICECONST x9_
@@ -170,7 +170,7 @@ STI 8
 STU 256
 ENDC
 CTOS
-.loc ../contracts/ConfigParamsBase.sol, 0
+.loc ../contracts/ConfigParamsBase.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

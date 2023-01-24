@@ -10,12 +10,12 @@ IFREF {
 GETGLOB 6
 THROWIF 51
 ENDS
-.loc ../contracts/DePoolProxy.sol, 20
+.loc ../contracts/DePoolProxy.tsol, 20
 GETGLOB 9
 GETGLOB 11
 SDEQ
 THROWIFNOT 102
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -30,7 +30,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 36
+.loc ../contracts/DePoolProxy.tsol, 36
 OVER
 PUSHCONT {
 	LDU 64
@@ -57,7 +57,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $process_new_stake_ceee2488_internal_macro$
 }
@@ -68,12 +68,12 @@ CALLREF {
 THROW 0
 
 .macro process_new_stake_ceee2488_internal_macro
-.loc ../contracts/DePoolProxy.sol, 24
+.loc ../contracts/DePoolProxy.tsol, 24
 GETGLOB 9
 GETGLOB 11
 SDEQ
 THROWIFNOT 102
-.loc ../contracts/DePoolProxy.sol, 27
+.loc ../contracts/DePoolProxy.tsol, 27
 GETPARAM 7
 FIRST
 DEPTH
@@ -84,7 +84,7 @@ ADD
 UFITS 128
 GEQ
 THROWIFNOT 103
-.loc ../contracts/DePoolProxy.sol, 45
+.loc ../contracts/DePoolProxy.tsol, 45
 REVERSE 7, 0
 DEPTH
 ADDCONST -2
@@ -113,7 +113,7 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 
 .macro onStakeAccept
 DROP
@@ -124,11 +124,11 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 51
+.loc ../contracts/DePoolProxy.tsol, 51
 LDU 64
 LDU 32
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $onStakeAccept_0ef2c095_internal_macro$
 }
@@ -142,7 +142,7 @@ THROW 0
 CALL $onStakeAccept_0ef2c095_internal_macro$
 
 .macro onStakeAccept_0ef2c095_internal_macro
-.loc ../contracts/DePoolProxy.sol, 53
+.loc ../contracts/DePoolProxy.tsol, 53
 GETGLOB 9
 XCHG S2
 DEPTH
@@ -172,7 +172,7 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 
 .macro onStakeReject
 DROP
@@ -183,11 +183,11 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 61
+.loc ../contracts/DePoolProxy.tsol, 61
 LDU 64
 LDU 32
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $onStakeReject_8f2cf700_internal_macro$
 }
@@ -201,7 +201,7 @@ THROW 0
 CALL $onStakeReject_8f2cf700_internal_macro$
 
 .macro onStakeReject_8f2cf700_internal_macro
-.loc ../contracts/DePoolProxy.sol, 62
+.loc ../contracts/DePoolProxy.tsol, 62
 GETGLOB 9
 XCHG S2
 DEPTH
@@ -231,7 +231,7 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 
 .macro recover_stake
 DROP
@@ -242,7 +242,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 74
+.loc ../contracts/DePoolProxy.tsol, 74
 OVER
 PUSHCONT {
 	LDU 64
@@ -256,7 +256,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $recover_stake_9f030e0c_internal_macro$
 }
@@ -271,12 +271,12 @@ THROW 0
 CALL $recover_stake_9f030e0c_internal_macro$
 
 .macro recover_stake_9f030e0c_internal_macro
-.loc ../contracts/DePoolProxy.sol, 24
+.loc ../contracts/DePoolProxy.tsol, 24
 GETGLOB 9
 GETGLOB 11
 SDEQ
 THROWIFNOT 102
-.loc ../contracts/DePoolProxy.sol, 27
+.loc ../contracts/DePoolProxy.tsol, 27
 GETPARAM 7
 FIRST
 DEPTH
@@ -287,7 +287,7 @@ ADD
 UFITS 128
 GEQ
 THROWIFNOT 103
-.loc ../contracts/DePoolProxy.sol, 75
+.loc ../contracts/DePoolProxy.tsol, 75
 SWAP
 DEPTH
 ADDCONST -2
@@ -307,7 +307,7 @@ STU 64
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 
 .macro onSuccessToRecoverStake
 DROP
@@ -318,10 +318,10 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 79
+.loc ../contracts/DePoolProxy.tsol, 79
 LDU 64
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $onSuccessToRecoverStake_e4a7e66e_internal_macro$
 }
@@ -335,7 +335,7 @@ THROW 0
 CALL $onSuccessToRecoverStake_e4a7e66e_internal_macro$
 
 .macro onSuccessToRecoverStake_e4a7e66e_internal_macro
-.loc ../contracts/DePoolProxy.sol, 80
+.loc ../contracts/DePoolProxy.tsol, 80
 GETGLOB 9
 SWAP
 DEPTH
@@ -364,7 +364,7 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 
 .macro fallback_macro
 GETGLOB 6
@@ -374,19 +374,19 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 88
+.loc ../contracts/DePoolProxy.tsol, 88
 DEPTH
 ADDCONST -4
 PICK
-.loc ../contracts/DePoolProxy.sol, 89
+.loc ../contracts/DePoolProxy.tsol, 89
 LDU 32
 PLDU 64
-.loc ../contracts/DePoolProxy.sol, 90
+.loc ../contracts/DePoolProxy.tsol, 90
 SWAP
 PUSHINT 4294967294
 EQUAL
 PUSHCONT {
-	.loc ../contracts/DePoolProxy.sol, 91
+	.loc ../contracts/DePoolProxy.tsol, 91
 	GETGLOB 9
 	OVER
 	DEPTH
@@ -415,10 +415,10 @@ PUSHCONT {
 	ENDC
 	PUSHINT 1
 	SENDRAWMSG
-	.loc ../contracts/DePoolProxy.sol, 0
+	.loc ../contracts/DePoolProxy.tsol, 0
 }
 IF
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 DROP
 DUP
 IFREF {
@@ -433,7 +433,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -447,9 +447,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 101
+.loc ../contracts/DePoolProxy.tsol, 101
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $withdrawExcessTons_67cc2de7_internal_macro$
 }
@@ -463,27 +463,27 @@ THROW 0
 CALL $withdrawExcessTons_67cc2de7_internal_macro$
 
 .macro withdrawExcessTons_67cc2de7_internal_macro
-.loc ../contracts/DePoolProxy.sol, 102
+.loc ../contracts/DePoolProxy.tsol, 102
 GETGLOB 9
 GETGLOB 12
 SDEQ
 THROWIFNOT 104
-.loc ../contracts/DePoolProxy.sol, 103
+.loc ../contracts/DePoolProxy.tsol, 103
 GETPARAM 7
 FIRST
-.loc ../contracts/DePoolProxy.sol, 104
+.loc ../contracts/DePoolProxy.tsol, 104
 DUP
 PUSHINT 2000000000
 UFITS 64
 GEQ
 PUSHCONT {
-	.loc ../contracts/DePoolProxy.sol, 105
+	.loc ../contracts/DePoolProxy.tsol, 105
 	DUP
 	PUSHINT 2000000000
 	UFITS 64
 	SUB
 	UFITS 128
-	.loc ../contracts/DePoolProxy.sol, 106
+	.loc ../contracts/DePoolProxy.tsol, 106
 	GETGLOB 12
 	NEWC
 	STSLICECONST x42_
@@ -495,10 +495,10 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc ../contracts/DePoolProxy.sol, 0
+	.loc ../contracts/DePoolProxy.tsol, 0
 }
 IF
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 DROP
 
 .macro getProxyInfo
@@ -510,9 +510,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DePoolProxy.sol, 114
+.loc ../contracts/DePoolProxy.tsol, 114
 ENDS
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 CALLREF {
 	CALL $getProxyInfo_1246ea56_internal_macro$
 }
@@ -553,11 +553,11 @@ THROW 0
 CALL $getProxyInfo_1246ea56_internal_macro$
 
 .macro getProxyInfo_1246ea56_internal_macro
-.loc ../contracts/DePoolProxy.sol, 115
+.loc ../contracts/DePoolProxy.tsol, 115
 GETGLOB 11
-.loc ../contracts/DePoolProxy.sol, 116
+.loc ../contracts/DePoolProxy.tsol, 116
 PUSHINT 1000000000
-.loc ../contracts/DePoolProxy.sol, 0
+.loc ../contracts/DePoolProxy.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

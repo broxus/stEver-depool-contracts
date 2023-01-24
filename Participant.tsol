@@ -4,7 +4,7 @@ pragma solidity >0.6.0;
 pragma AbiHeader expire;
 pragma AbiHeader time;
 
-import "DePoolLib.sol";
+import "DePoolLib.tsol";
 
 contract ParticipantContract {
     function sendTransaction(

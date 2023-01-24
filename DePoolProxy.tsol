@@ -1,10 +1,10 @@
 // 2020 (c) TON Venture Studio Ltd
 
 pragma solidity >=0.6.0;
-import "IElector.sol";
-import "IDePool.sol";
-import "IProxy.sol";
-import "DePoolLib.sol";
+import "IElector.tsol";
+import "IDePool.tsol";
+import "IProxy.tsol";
+import "DePoolLib.tsol";
 
 contract DePoolProxyContract is IProxy {
 

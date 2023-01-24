@@ -1,6 +1,6 @@
 pragma solidity >=0.6.0;
-import "DePoolLib.sol";
-import "IProxy.sol";
+import "DePoolLib.tsol";
+import "IProxy.tsol";
 
 contract ConfigParamsBase {
     function getCurValidatorData() virtual pure internal returns (uint256 hash, uint32 utime_since, uint32 utime_until) {

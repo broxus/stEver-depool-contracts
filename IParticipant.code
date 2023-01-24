@@ -25,7 +25,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/IParticipant.sol, 35
+.loc ../contracts/IParticipant.tsol, 35
 LDU 64
 LDU 64
 LDU 64
@@ -34,7 +34,7 @@ LDU 64
 LDI 1
 LDU 8
 ENDS
-.loc ../contracts/IParticipant.sol, 0
+.loc ../contracts/IParticipant.tsol, 0
 CALLREF {
 	CALL $onRoundComplete_14513b01_internal_macro$
 }
@@ -45,9 +45,9 @@ CALLREF {
 THROW 0
 
 .macro onRoundComplete_14513b01_internal_macro
-.loc ../contracts/IParticipant.sol, 35
+.loc ../contracts/IParticipant.tsol, 35
 BLKDROP 7
-.loc ../contracts/IParticipant.sol, 0
+.loc ../contracts/IParticipant.tsol, 0
 
 .macro receiveAnswer
 DROP
@@ -58,11 +58,11 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/IParticipant.sol, 47
+.loc ../contracts/IParticipant.tsol, 47
 LDU 32
 LDU 64
 ENDS
-.loc ../contracts/IParticipant.sol, 0
+.loc ../contracts/IParticipant.tsol, 0
 CALLREF {
 	CALL $receiveAnswer_81808287_internal_macro$
 }
@@ -73,9 +73,9 @@ CALLREF {
 THROW 0
 
 .macro receiveAnswer_81808287_internal_macro
-.loc ../contracts/IParticipant.sol, 47
+.loc ../contracts/IParticipant.tsol, 47
 DROP2
-.loc ../contracts/IParticipant.sol, 0
+.loc ../contracts/IParticipant.tsol, 0
 
 .macro onTransfer
 DROP
@@ -86,7 +86,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/IParticipant.sol, 51
+.loc ../contracts/IParticipant.tsol, 51
 OVER
 PUSHCONT {
 	LDREF
@@ -97,7 +97,7 @@ IF
 LDMSGADDR
 LDU 128
 ENDS
-.loc ../contracts/IParticipant.sol, 0
+.loc ../contracts/IParticipant.tsol, 0
 CALLREF {
 	CALL $onTransfer_733d56ae_internal_macro$
 }
@@ -108,9 +108,9 @@ CALLREF {
 THROW 0
 
 .macro onTransfer_733d56ae_internal_macro
-.loc ../contracts/IParticipant.sol, 51
+.loc ../contracts/IParticipant.tsol, 51
 DROP2
-.loc ../contracts/IParticipant.sol, 0
+.loc ../contracts/IParticipant.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

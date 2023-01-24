@@ -21,7 +21,7 @@ THROW 0
 CALL $_recoverStake_2ed56c97_internal_macro$
 
 .macro _recoverStake_2ed56c97_internal_macro
-.loc ../contracts/ProxyBase.sol, 15
+.loc ../contracts/ProxyBase.tsol, 15
 SWAP
 PUSHINT 1000000000
 PUSHINT 90000000
@@ -44,14 +44,14 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/ProxyBase.sol, 0
+.loc ../contracts/ProxyBase.tsol, 0
 
 .globl	_sendElectionRequest_52528db9_internal
 .type	_sendElectionRequest_52528db9_internal, @function
 CALL $_sendElectionRequest_52528db9_internal_macro$
 
 .macro _sendElectionRequest_52528db9_internal_macro
-.loc ../contracts/ProxyBase.sol, 28
+.loc ../contracts/ProxyBase.tsol, 28
 OVER
 INDEX 5
 PUSH S2
@@ -94,7 +94,7 @@ STBREFR
 ENDC
 PUSHINT 1
 SENDRAWMSG
-.loc ../contracts/ProxyBase.sol, 0
+.loc ../contracts/ProxyBase.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

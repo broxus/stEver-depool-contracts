@@ -25,7 +25,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/IDePoolInfoGetter.sol, 12
+.loc ../contracts/IDePoolInfoGetter.tsol, 12
 OVER
 PUSHCONT {
 	LDU 32
@@ -63,7 +63,7 @@ ROLLREV 12
 TUPLE 12
 SWAP
 ENDS
-.loc ../contracts/IDePoolInfoGetter.sol, 0
+.loc ../contracts/IDePoolInfoGetter.tsol, 0
 CALLREF {
 	CALL $receiveDePoolInfo_d85180fc_internal_macro$
 }
@@ -74,9 +74,9 @@ CALLREF {
 THROW 0
 
 .macro receiveDePoolInfo_d85180fc_internal_macro
-.loc ../contracts/IDePoolInfoGetter.sol, 12
+.loc ../contracts/IDePoolInfoGetter.tsol, 12
 DROP
-.loc ../contracts/IDePoolInfoGetter.sol, 0
+.loc ../contracts/IDePoolInfoGetter.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT

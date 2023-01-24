@@ -21,7 +21,7 @@ THROW 0
 CALL $getOrCreateParticipant_870b9686_internal_macro$
 
 .macro getOrCreateParticipant_870b9686_internal_macro
-.loc ../contracts/ParticipantBase.sol, 12
+.loc ../contracts/ParticipantBase.tsol, 12
 GETGLOB 10
 PUSHINT 267
 DICTGETREF
@@ -44,18 +44,18 @@ IFREF {
 		TUPLE 8
 	}
 }
-.loc ../contracts/ParticipantBase.sol, 13
+.loc ../contracts/ParticipantBase.tsol, 13
 DUP
 ISNULL
 PUSHCONT {
-	.loc ../contracts/ParticipantBase.sol, 14
+	.loc ../contracts/ParticipantBase.tsol, 14
 	DUP
 	ISNULL
 	THROWIF 63
-	.loc ../contracts/ParticipantBase.sol, 0
+	.loc ../contracts/ParticipantBase.tsol, 0
 }
 IFNOTJMP
-.loc ../contracts/ParticipantBase.sol, 16
+.loc ../contracts/ParticipantBase.tsol, 16
 DROP
 PUSHINT 0
 BLKPUSH 3, 0
@@ -64,14 +64,14 @@ PUSHINT 0
 PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 DUP
 TUPLE 8
-.loc ../contracts/ParticipantBase.sol, 0
+.loc ../contracts/ParticipantBase.tsol, 0
 
 .globl	fetchParticipant_738c2c87_internal
 .type	fetchParticipant_738c2c87_internal, @function
 CALL $fetchParticipant_738c2c87_internal_macro$
 
 .macro fetchParticipant_738c2c87_internal_macro
-.loc ../contracts/ParticipantBase.sol, 30
+.loc ../contracts/ParticipantBase.tsol, 30
 GETGLOB 10
 PUSHINT 267
 DICTGETREF
@@ -94,18 +94,18 @@ IFREF {
 		TUPLE 8
 	}
 }
-.loc ../contracts/ParticipantBase.sol, 0
+.loc ../contracts/ParticipantBase.tsol, 0
 
 .globl	_setOrDeleteParticipant_a31677f8_internal
 .type	_setOrDeleteParticipant_a31677f8_internal, @function
 CALL $_setOrDeleteParticipant_a31677f8_internal_macro$
 
 .macro _setOrDeleteParticipant_a31677f8_internal_macro
-.loc ../contracts/ParticipantBase.sol, 34
+.loc ../contracts/ParticipantBase.tsol, 34
 DUP
 FIRST
 PUSHCONT {
-	.loc ../contracts/ParticipantBase.sol, 37
+	.loc ../contracts/ParticipantBase.tsol, 37
 	OVER
 	GETGLOB 10
 	PUSH S2
@@ -131,7 +131,7 @@ PUSHCONT {
 	DICTSETREF
 }
 PUSHCONT {
-	.loc ../contracts/ParticipantBase.sol, 35
+	.loc ../contracts/ParticipantBase.tsol, 35
 	OVER
 	GETGLOB 10
 	PUSHINT 267
@@ -140,7 +140,7 @@ PUSHCONT {
 }
 IFELSE
 SETGLOB 10
-.loc ../contracts/ParticipantBase.sol, 0
+.loc ../contracts/ParticipantBase.tsol, 0
 DROP2
 
 .macro c4_to_c7
