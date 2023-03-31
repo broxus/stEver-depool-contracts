@@ -19,7 +19,7 @@ contract DePool is ValidatorBase, ProxyBase, ConfigParamsBase, ParticipantBase, 
     // Fee for 'addOrdinaryStake/addVesting/addLockStake' that will be returned
     uint64 constant STAKE_FEE = 0.5 ever;
     // Fee for returning/reinvesting participant's stake when rounds are completed.
-    uint64 constant RET_OR_REINV_FEE = 40_000_000;
+    uint64 constant RET_OR_REINV_FEE = 0.3 ever;
     // Number of participant's stakes reinvested in 1 transaction.
     uint8 constant MAX_MSGS_PER_TR = 25;
     // Max count of output actions

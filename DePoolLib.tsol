@@ -98,12 +98,12 @@ library InternalErrors {
 
 library DePoolLib {
 
-    uint64 constant PROXY_FEE = 0.09 ton; // 90_000_000 / 10_000 = 9_000 gas in masterchain
-    uint64 constant MIN_PROXY_BALANCE = 1 ton;
-    uint64 constant PROXY_CONSTRUCTOR_FEE = 1 ton;
-    uint64 constant DEPOOL_CONSTRUCTOR_FEE = 1 ton;
+    uint64 constant PROXY_FEE = 0.2 ever;
+    uint64 constant MIN_PROXY_BALANCE = 1 ever;
+    uint64 constant PROXY_CONSTRUCTOR_FEE = 1 ever;
+    uint64 constant DEPOOL_CONSTRUCTOR_FEE = 1 ever;
 
-    uint64 constant ELECTOR_FEE = 1 ton;
+    uint64 constant ELECTOR_FEE = 1 ever;
 
     uint64 constant MAX_UINT64 = 0xFFFF_FFFF_FFFF_FFFF;
     uint32 constant MAX_TIME = 0xFFFF_FFFF;
